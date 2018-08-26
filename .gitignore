@@ -32,5 +32,5 @@
 *.app
 
 # Test Cases
-.in
-.out
+*.in
+*.out

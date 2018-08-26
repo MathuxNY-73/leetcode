@@ -106,12 +106,12 @@ ListNode* copyLinkedList(ListNode* l1) {
     return head;
 }
 
-int addNumber(int* a, int b)
+int addNumber(int* res, int a, int b)
 {
-    int newVal = (*a + b);
+    int newVal = (a + b);
     int ret = floor(newVal / 10.0);
     newVal -= ret * 10;
-    *a = newVal;
+    *res = newVal;
     return ret;
 }
 
@@ -119,55 +119,45 @@ ListNode* addTwoNumber(ListNode* l1, ListNode* l2)
 {
     int ret = 0;
 
-    if(l1 == NULL)
-    {
-        return copyLinkedList(l2);
-    }
-
-    ListNode* l1_copy = copyLinkedList(l1);
-    ListNode* head = l1_copy;
-
-    ListNode* l1_copy_next = l1_copy;
+    ListNode* head = malloc(sizeof(ListNode));
+    ListNode* cur = head;
+    ListNode* cur_l1 = l1;
     ListNode* cur_l2 = l2;
-    ListNode* cur_l2_next = cur_l2;
-    while(l1_copy_next != NULL && cur_l2_next != NULL)
+
+    while(cur_l1 != NULL || cur_l2 != NULL)
     {
-        l1_copy = l1_copy_next;
-        cur_l2 = cur_l2_next;
+        int a = 0, b = 0;
+        if(cur_l1 != NULL) a = cur_l1->val;
+        if(cur_l2 != NULL) b = cur_l2->val;
 
-        ret = addNumber(&l1_copy->val, cur_l2->val + ret);
+        ListNode* tmp = malloc(sizeof(ListNode));
+        tmp->val = 0;
+        tmp->next = NULL;
 
-        l1_copy_next = l1_copy->next;
-        cur_l2_next = cur_l2->next;
-    }
-    if(cur_l2_next != NULL) {
-        l1_copy->next = copyLinkedList(cur_l2_next);
-        l1_copy_next = l1_copy->next;
-    }
+        cur->next = tmp;
+        cur = tmp;
 
-    while(l1_copy_next != NULL)
-    {
-        l1_copy = l1_copy_next;
+        ret = addNumber(&cur->val, a, b + ret);
 
-        ret = addNumber(&l1_copy->val, ret);
-
-        l1_copy_next = l1_copy->next;
+        if(cur_l1 != NULL) cur_l1 = cur_l1->next;
+        if(cur_l2 != NULL) cur_l2 = cur_l2->next;
     }
 
     if(ret > 0)
     {
-        ListNode* newNode = malloc(sizeof(ListNode));
-        newNode->val = 0;
-        newNode->next = NULL;
-        l1_copy->next = newNode;
-        l1_copy = newNode;
+        ListNode* tmp = malloc(sizeof(ListNode));
+        cur->next = tmp;
+        cur = tmp;
 
-        ret = addNumber(&l1_copy->val, ret);
+        cur->val = 0;
+        cur->next = NULL;
+        ret = addNumber(&cur->val, 0, ret);
     }
 
-    assert(ret == 0);
+    ListNode* tmp = head->next;
+    free(head);
 
-    return head;
+    return tmp;
 
 }
 
