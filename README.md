@@ -17,3 +17,11 @@ As of September 5<sup>th</sup>, 2018:
 - [X] Find a first working solution on the sample input
 - [X] Submit first solution. Got correct
 - [X] Problem solved
+
+### Minimum Cost to Hire K Workers
+The goal is to find K people to hire such that the cost of hiring is minimized. The constraints are that the salary should be propotionate to their quality among other workers and should not be less than expected minimum wage.  
+I solved this problem using the C++ language. [Problem link](https://leetcode.com/problems/minimum-cost-to-hire-k-workers/description/)  
+As of September 5<sup>th</sup>, 2018:
+- [X] Find a first working solution on the sample input
+- [X] Submit first solution. Got wrong
+- [ ] Problem solved
