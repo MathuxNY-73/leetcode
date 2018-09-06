@@ -51,87 +51,36 @@ class Solution {
 
 public:
     double mincostToHireWorkers(vector<int>& quality, vector<int>& wage, int K) {
-        auto sorted_quality = vector<pair<int, int>>(quality.size());
-        auto wages = vector<double>(K);
-        auto is_prev_min = vector<bool>(K);
-        
+        auto ratios = vector<pair<int, int>>(quality.size());
+        auto q = priority_queue<int, vector<int>, less<int>>();
+        auto sum = 0;
+        double res = 9999999999;
+
         for(auto i = 0; i < quality.size() ; ++i)
         {
-            sorted_quality[i] = make_pair(quality[i], i);
+            ratios[i] = make_pair(quality[i], wage[i]);
         }
-        
-        sort(sorted_quality.begin(), sorted_quality.end(), [&wage](const pair<int, int>& a, const pair<int, int>& b) -> bool {
-            return a.first == b.first ? 
-                wage[a.second] ==  wage[b.second] ?
-                    a.second < b.second : wage[a.second] < wage[b.second] : a.first < b.first;
+
+        sort(ratios.begin(), ratios.end(), [](const pair<int, int>& a, const pair<int, int>& b) -> bool {
+            return ((double)a.second/(double)a.first) < ((double)b.second/(double)b.first);
         });
-        
-        print(sorted_quality);
-        
-        auto min_diff = 9999999;
-        auto min_idx = 0;
-        auto i = 0;
-        for(auto it = sorted_quality.cbegin(); it != sorted_quality.cend() - K + 1 ; ++it, ++i)
+
+        //print(ratios);
+        for(auto&& it: ratios)
         {
-
-            auto max_min_w = max_element(it, it + K - 1, [&wage](const pair<int, int>& a, const pair<int, int>& b) -> bool {
-               return wage[a.second] < wage[b.second]; 
-            });
-
-            cout << "Hello 1 i=" << i << endl;
-            //auto r_min = (double)max_min_w->first / (double)it->first;
-            auto r_max = (double)(it+K-1)->first / (double)max_min_w->first;
-            
-            cout << "Hello 2 i=" << i << endl;
-            auto diff = (r_max * (double)wage[max_min_w->second]);
-            cout << "Hello 4 diff=" << diff << endl;
-            if(diff < min_diff)
+            //cout << "it.first:" << it.first << " it.second:" << it.second << endl;
+            q.push(it.first);
+            sum += it.first;
+            if(q.size() > K)
             {
-                min_diff = diff;
-                min_idx = i;
+                sum -= q.top();
+                q.pop();
+            }
+            if(q.size() == K)
+            {
+                res = min(res, sum * ((double)it.second/(double)it.first));
             }
         }
-
-        printf("%d\n", min_idx);
-        
-        is_prev_min[0] = true;
-        wages[0] = wage[sorted_quality[min_idx].second];
-        for(auto i = min_idx + 1 , j = 1; i < min_idx + K; ++i, ++j)
-        {
-            cout << "Hello 3 i=" << i << endl;
-            auto r = (double)sorted_quality[i].first / (double)sorted_quality[i-1].first;
-            auto idx = sorted_quality[i].second;
-            wages[j] = wages[j-1] * r;
-            if(wages[j] < wage[idx])
-            {
-                wages[j] = wage[idx];
-                wages[j-1] = wages[j] / r;
-                is_prev_min[j-1] = wages[j-1] == wage[sorted_quality[i-1].second];
-            }
-            else if(wages[j] > wage[idx] && !is_prev_min[j-1])
-            {
-                wages[j-1] = wage[sorted_quality[i-1].second];
-                wages[j] = wages[j-1] * r;
-                is_prev_min[j-1] = true;
-            }
-            
-            is_prev_min[j] = wages[j] == wage[idx] || is_prev_min[j-1];
-        }
-
-        print(wages);
-        
-        for(int i = min_idx + K - 2, j = K - 2 ; i > min_idx ; --i, --j)
-        {
-            if(!is_prev_min[j])
-            {
-                auto r = (double)sorted_quality[i].first / (double)sorted_quality[i-1].first;
-                wages[j-1] = wages[j] / r;
-                is_prev_min[j-1] = wages[j-1] == wage[sorted_quality[i-1].second];
-            }
-        }
-        
-        auto res = accumulate(wages.cbegin(), wages.cend(), (double)0);
-        
         return res;
     }
 };
