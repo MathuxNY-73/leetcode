@@ -27,3 +27,13 @@ As of September 6<sup>th</sup>, 2018:
 - [X] Looked at the help. Code a second solution.
 - [X] Submit second solution. Got correct
 - [X] Problem solved
+
+### Pow(x, n)
+The goal is to implement a function that compute x raised to the power of n.  
+I solved this problem using the C language. [Problem link](https://leetcode.com/problems/powx-n/description/)  
+As of September 11<sup>th</sup>, 2018:
+- [X] Find a first working solution on the sample input
+- [X] Submit first solution. Got timeout on bigger testcases
+- [X] Looked at the hints. Code a second solution.
+- [X] Submit second solution. Got correct
+- [X] Problem solved
