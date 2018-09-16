@@ -37,3 +37,11 @@ As of September 11<sup>th</sup>, 2018:
 - [X] Looked at the hints. Code a second solution.
 - [X] Submit second solution. Got correct
 - [X] Problem solved
+
+### Add Binary
+The goal is to implement a function that performs the sum of two binary numbers passed as strings.  
+I solved this problem using the C++ language. [Problem link](https://leetcode.com/problems/add-binary/description/)  
+As of September 16<sup>th</sup>, 2018:
+- [X] Find a first working solution on the sample input
+- [X] Submit solution. Got correct
+- [X] Problem solved
