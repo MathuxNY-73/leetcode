@@ -49,7 +49,9 @@ As of September 16<sup>th</sup>, 2018:
 ### Median Of Two Sorted Arrays
 The goal is to implement a function that compute the median of sorted set of numbers split between in two sorted arrays. The algorithm should have O(log(m+n)) complexity where n and m are the sizes of the two arrays.  
 I tried to solve this problem using the C++ language. [Problem link](https://leetcode.com/problems/median-of-two-sorted-arrays/description/)  
-As of September 25<sup>th</sup>, 2018:
-- [ ] Find a first working solution on the sample input
-- [ ] Submit solution.
-- [ ] Problem solved
+As of October 1<sup>st</sup>, 2018:
+- [X] Find a first working solution on the sample input
+- [X] Submit solution. Got wrong
+- [X] Find a second working solution on the sample input with hints
+- [X] Submit solution. Got correct
+- [X] Problem solved

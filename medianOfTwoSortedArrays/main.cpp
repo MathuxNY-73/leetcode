@@ -50,37 +50,73 @@ class Solution {
     }
 
 public:
-    double mincostToHireWorkers(vector<int>& quality, vector<int>& wage, int K) {
-        auto ratios = vector<pair<int, int>>(quality.size());
-        auto q = priority_queue<int, vector<int>, less<int>>();
-        auto sum = 0;
-        double res = 9999999999;
+    double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+        auto a = nums1.size() > nums2.size() ? nums2 : nums1;
+        auto b = nums1.size() > nums2.size() ? nums1 : nums2;
+        auto n = b.size();
+        auto m = a.size();
 
-        for(auto i = 0; i < quality.size() ; ++i)
+        int imin = 0, imax = m;
+        double res = 0;
+        for(;imin <= imax;)
         {
-            ratios[i] = make_pair(quality[i], wage[i]);
+            int i = ceil((imax + imin) / 2.0);
+            int j = floor((m+n+1) / 2.0) - i;
+
+            //printf("i: %d\n", i);
+            //printf("j: %d\n", j);
+
+            //printf("imin: %d\n", imin);
+            //printf("imax: %d\n", imax);
+            if(i < imax && a[i] < b[j-1])
+            {
+                imin = i + 1;
+            }
+            else if(i > imin && a[i - 1] > b[j])
+            {
+                imax = i - 1;
+            }
+            else
+            {
+                auto minRight = 0;
+                if(i == m)
+                {
+                    minRight = b[j];
+                }
+                else if(j == n)
+                {
+                    minRight = a[i];
+                }
+                else
+                {
+                    minRight = min(a[i], b[j]);
+                }
+
+                auto maxLeft = 0;
+                if(i == 0)
+                {
+                    maxLeft = b[j-1];
+                }
+                else if(j == 0)
+                {
+                    maxLeft = a[i-1];
+                }
+                else
+                {
+                    maxLeft = max(a[i-1], b[j-1]);
+                }
+                if((m+n) % 2 == 1)
+                {
+                    res = maxLeft;
+                }
+                else
+                {
+                    res = (minRight + maxLeft) / 2.0;
+                }
+                break;
+            }
         }
 
-        sort(ratios.begin(), ratios.end(), [](const pair<int, int>& a, const pair<int, int>& b) -> bool {
-            return ((double)a.second/(double)a.first) < ((double)b.second/(double)b.first);
-        });
-
-        //print(ratios);
-        for(auto&& it: ratios)
-        {
-            //cout << "it.first:" << it.first << " it.second:" << it.second << endl;
-            q.push(it.first);
-            sum += it.first;
-            if(q.size() > K)
-            {
-                sum -= q.top();
-                q.pop();
-            }
-            if(q.size() == K)
-            {
-                res = min(res, sum * ((double)it.second/(double)it.first));
-            }
-        }
         return res;
     }
 };
@@ -127,7 +163,7 @@ int main()
         fastscan(k);
 
         auto q = vector<int>(n);
-        auto w = vector<int>(n);
+        auto w = vector<int>(k);
 
         int i;
         fl(i,0,n)
@@ -135,12 +171,12 @@ int main()
                 fastscan(q[i]);
         }
 
-        fl(i,0,n)
+        fl(i,0,k)
         {
                 fastscan(w[i]);
         }
 
-        auto result = Solution().mincostToHireWorkers(q, w, k);
+        auto result = Solution().findMedianSortedArrays(q, w);
 
         printf("%f", result);
 
