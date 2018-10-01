@@ -55,3 +55,11 @@ As of October 1<sup>st</sup>, 2018:
 - [X] Find a second working solution on the sample input with hints
 - [X] Submit solution. Got correct
 - [X] Problem solved
+
+### Merge K Sorted Lists
+The goal is to implement a function that merges K sorted single linked lists. The complexity of the solution is a least O(N*log(k)) where N is the total number of nodes.  
+I tried to solve this problem using the C++ language. [Problem link](https://leetcode.com/problems/merge-k-sorted-lists/description/)  
+As of October 2<sup>nd</sup>, 2018:
+- [X] Find a first working solution on the sample input
+- [X] Submit solution. Got correct
+- [X] Problem solved
