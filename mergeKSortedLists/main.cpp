@@ -82,6 +82,82 @@ public:
         return head;
         
     }
+
+    ListNode* mergeKListsByPair(vector<ListNode*>& lists) {
+        auto q = queue<ListNode*>();
+
+        for(auto x: lists)
+        {
+            if(x != NULL)
+            {
+                q.push(x);
+            }
+        }
+
+        while(q.size() > 1)
+        {
+            auto a = q.front();
+            q.pop();
+            auto b = q.front();
+            q.pop();
+
+            q.push(merge2Lists(a,b));
+        }
+
+        if(q.empty())
+        {
+            return NULL;
+        }
+        
+        auto res = q.front();
+        q.pop();
+        return res;
+    }
+
+    ListNode* merge2Lists(ListNode* a,ListNode* b) {
+        auto cur_a = a;
+        auto cur_b = b;
+
+        ListNode* head;
+        if(cur_a->val < cur_b->val)
+        {
+            head = cur_a;
+            cur_a = cur_a->next;
+        }
+        else
+        {
+            head = cur_b;
+            cur_b = cur_b->next;
+        }
+        auto cur = head;
+
+        while(cur_a != NULL && cur_b != NULL)
+        {
+            if(cur_a->val < cur_b->val)
+            {
+                cur->next = cur_a;
+                cur = cur->next;
+                cur_a = cur_a->next;
+            }
+            else
+            {
+                cur->next = cur_b;
+                cur = cur->next;
+                cur_b = cur_b->next;
+            }
+        }
+
+        if(cur_b != NULL)
+        {
+            cur->next = cur_b;
+        }
+        else if(cur_a != NULL)
+        {
+            cur->next = cur_a;
+        }
+
+        return head;
+    }
 };
 
 inline void fastscan(int& number)

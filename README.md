@@ -62,4 +62,6 @@ I tried to solve this problem using the C++ language. [Problem link](https://lee
 As of October 2<sup>nd</sup>, 2018:
 - [X] Find a first working solution on the sample input
 - [X] Submit solution. Got correct
+- [X] Implement the optimized divide and conquer solution
+- [X] Submitted solution. Got correct
 - [X] Problem solved
