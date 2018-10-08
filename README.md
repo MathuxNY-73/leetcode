@@ -77,3 +77,12 @@ As of October 8<sup>th</sup>, 2018:
 - [X] Implement a Bottom-Up dynamic programming solution
 - [X] Submitted solution. Got correct
 - [X] Problem solved
+
+### First Missing Positive
+The goal is to implement a function that finds the first missing positive integers from a given list. As constraints the algorithm should only take O(n) time and take up only a constant extra space.  
+I tried to solve this problem using the C++ language. [Problem link](https://leetcode.com/problems/first-missing-positive/description/)  
+As of October 8<sup>th</sup>, 2018:
+- [X] Find a first working solution on the sample input. Solution sorts the array thus it takes O(n*log n) time.
+- [X] Submit solution. Got correct
+- [ ] Find a O(n) solution on the sample input.
+- [ ] Problem solved
