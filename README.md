@@ -88,3 +88,11 @@ As of October 8<sup>th</sup>, 2018:
 - [X] Submit solution. Got correct
 - [X] Find a O(n) and constant extra space solution on the sample input. With hints
 - [X] Problem solved
+
+### Letter Combinations of a Phone Number
+The goal is to implement a function that returns all the possible combination of letters from a cellular keyboard given a phone number.  
+I tried to solve this problem using the C++ language. [Problem link](https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/)  
+As of October 8<sup>th</sup>, 2018:
+- [X] Find a first working solution on the sample input.
+- [X] Submit solution. Got correct
+- [X] Problem solved
