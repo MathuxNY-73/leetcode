@@ -65,3 +65,15 @@ As of October 2<sup>nd</sup>, 2018:
 - [X] Implement the optimized divide and conquer solution
 - [X] Submitted solution. Got correct
 - [X] Problem solved
+
+### Regular Expression Matching
+The goal is to implement a function that preforms a regular expression matching with a pattern that can contain '.' and '*' characters.  
+I tried to solve this problem using the C++ language. [Problem link](https://leetcode.com/problems/regular-expression-matching/description/)  
+As of October 8<sup>th</sup>, 2018:
+- [X] Find a first working solution on the sample input with hints
+- [X] Submit solution. Got correct
+- [X] Implement a Top-Down dynamic programming solution
+- [X] Submitted solution. Got correct
+- [X] Implement a Bottom-Up dynamic programming solution
+- [X] Submitted solution. Got correct
+- [X] Problem solved

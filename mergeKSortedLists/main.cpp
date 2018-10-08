@@ -108,7 +108,7 @@ public:
         {
             return NULL;
         }
-        
+
         auto res = q.front();
         q.pop();
         return res;
