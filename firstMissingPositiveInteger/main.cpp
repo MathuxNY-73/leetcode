@@ -49,6 +49,32 @@ public:
         
         return res;
     }
+
+    int firstMissingPositiveWithSet(vector<int>& nums) {
+        auto s = set<int>();
+        
+        for(auto x: nums)
+        {
+            if(x > 0)
+            {
+                s.insert(x);
+            }
+        }
+        
+        auto res = 0;
+        bool found = false;
+        
+        while(!found)
+        {
+            ++res;
+            if(s.find(res) == s.cend())
+            {
+                found = true;
+            }
+        }
+        
+        return res;
+    }
 };
 
 inline void fastscan(int& number)
