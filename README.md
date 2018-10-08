@@ -86,5 +86,5 @@ As of October 8<sup>th</sup>, 2018:
 - [X] Submit solution. Got correct
 - [X] Find a O(n) solution on the sample input. However solution does not take constant extra space.
 - [X] Submit solution. Got correct
-- [ ] Find a O(n) and constant extra space solution on the sample input.
-- [ ] Problem solved
+- [X] Find a O(n) and constant extra space solution on the sample input. With hints
+- [X] Problem solved

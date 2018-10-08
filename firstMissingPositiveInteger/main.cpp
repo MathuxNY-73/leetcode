@@ -34,46 +34,31 @@ using namespace std;
 class Solution {
 public:
     int firstMissingPositive(vector<int>& nums) {
-        // This should disappear if we want linear time
-        sort(nums.begin(), nums.end());
-        
-        auto res = 1;
-        
-        for(auto x: nums)
-        {
-            if(x > 0 && x == res)
-            {
-                ++res;
-            }
-        }
-        
-        return res;
-    }
+        nums.push_back(0);
+        auto n = nums.size();
 
-    int firstMissingPositiveWithSet(vector<int>& nums) {
-        auto s = set<int>();
-        
-        for(auto x: nums)
+        for(auto it = nums.begin(); it != nums.end() ; ++it)
         {
-            if(x > 0)
+            if(*it < 0 || *it >= n)
             {
-                s.insert(x);
+                *it = 0;
             }
         }
-        
-        auto res = 0;
-        bool found = false;
-        
-        while(!found)
+
+        for(auto i = 0; i < n ; ++i)
         {
-            ++res;
-            if(s.find(res) == s.cend())
+            nums[nums[i] % n] += n;
+        }
+
+        for(auto i = 0; i < n ; ++i)
+        {
+            if(nums[i]/n == 0)
             {
-                found = true;
+                return i;
             }
         }
-        
-        return res;
+
+        return n;
     }
 };
 
