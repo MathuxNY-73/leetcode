@@ -34,3 +34,6 @@
 # Test Cases
 *.in
 *.out
+
+
+.vscode

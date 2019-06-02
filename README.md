@@ -96,3 +96,17 @@ As of October 8<sup>th</sup>, 2018:
 - [X] Find a first working solution on the sample input.
 - [X] Submit solution. Got correct
 - [X] Problem solved
+
+### Edit distance
+The goal is to implement a function that returns the minimum number of edits to a given string to match it to the example. 3 edition operations are possible:
+- Insert a character
+- Replace a character
+- Remove a character
+I tried to solved this problem using the C++ language. [Problem link](https://leetcode.com/problems/edit-distance/)  
+As of June 2<sup>nd</sup>, 2019:
+- [X] Find a first working solutionn on the sample input. Solution is recursive thus fails on big inputs
+- [X] Find a DP solution with a 2D array
+- [ ] Find a DP solution with a 1D array. Is it possible ?
+- [X] Submit solution. Got correct in 4 ms with 9.6 MB
+- [ ] Problem solved
+
