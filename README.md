@@ -106,7 +106,8 @@ I tried to solved this problem using the C++ language. [Problem link](https://le
 As of June 2<sup>nd</sup>, 2019:
 - [X] Find a first working solutionn on the sample input. Solution is recursive thus fails on big inputs
 - [X] Find a DP solution with a 2D array
-- [ ] Find a DP solution with a 1D array. Is it possible ?
 - [X] Submit solution. Got correct in 4 ms with 9.6 MB
-- [ ] Problem solved
+- [X] Find a DP solution with a 1D array. Is it possible ?
+- [X] Submit solution. Got correct in 4ms with 8.5 MB
+- [X] Problem solved
 

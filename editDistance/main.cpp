@@ -37,38 +37,38 @@ class Solution {
 private:
 public:
     int minDistance_2d(string word1, string word2) {
-        int edit_dist[word1.length() + 1][word2.length() + 1];
+        int edit_dist[word1.length() + 1];
 
         for(int i = 0 ; i <= word1.length() ; ++i)
         {
-            edit_dist[i][0] = i;
-        }
-        for(int i = 0 ; i <= word2.length() ; ++i)
-        {
-            edit_dist[0][i] = i;
+            edit_dist[i] = i;
         }
 
         for(int i = 0; i < word2.length(); ++i)
         {
+            auto diag = edit_dist[0];
+            edit_dist[0] = i + 1;
             for (int j = 0 ; j < word1.length() ; ++j)
             {
+                auto tmp = edit_dist[j+1];
                 if(word1[j] == word2[i])
                 {
-                    edit_dist[j+1][i+1] = edit_dist[j][i];
+                    edit_dist[j+1] = diag;
                 }
                 else {
-                    edit_dist[j+1][i+1] = min(
+                    edit_dist[j+1] = min(
                                      min(
-                                         edit_dist[j][i+1] + 1,
-                                         edit_dist[j+1][i] + 1
+                                         edit_dist[j] + 1,
+                                         edit_dist[j+1] + 1
                                          ),
-                                     edit_dist[j][i] + 1
+                                     diag + 1
                                      );
                 }
+                diag = tmp;
             }
         }
 
-        auto res = edit_dist[word1.length()][word2.length()];
+        auto res = edit_dist[word1.length()];
 
         return res;
     }
