@@ -102,6 +102,7 @@ The goal is to implement a function that returns the minimum number of edits to 
 - Insert a character
 - Replace a character
 - Remove a character
+
 I tried to solved this problem using the C++ language. [Problem link](https://leetcode.com/problems/edit-distance/)  
 As of June 2<sup>nd</sup>, 2019:
 - [X] Find a first working solutionn on the sample input. Solution is recursive thus fails on big inputs
@@ -111,3 +112,13 @@ As of June 2<sup>nd</sup>, 2019:
 - [X] Submit solution. Got correct in 4ms with 8.5 MB
 - [X] Problem solved
 
+
+### K Inverse Pairs Arrays
+Thie goal is to implement a function that returns the number of arraysof N distinct integers that contains exactly K inverse pairs. A pair of integers is inversed if a[i] > a[j] with i < j.  
+I tried to solve this problem using the C++ language. [Problem link](https://leetcode.com/problems/k-inverse-pairs-array/)  
+As of July 11<sup>th</sup>, 2019:
+- [X] Find a first working solutionn on the sample input.
+- [X] Submit solution. Got correct in 168 ms with 27.2 MB
+- [ ] Find a better solution
+- [ ] Submit solution.
+- [X] Problem solved
