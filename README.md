@@ -121,4 +121,6 @@ As of July 11<sup>th</sup>, 2019:
 - [X] Submit solution. Got correct in 168 ms with 27.2 MB
 - [x] Find a better solution
 - [x] Submit solution. Got correct in 112 ms with 17.8 MB
+- [X] Find a faster solution.
+- [X] Submit solution. Got correct in 12 ms with 17.8 MB. (Got better by using % instead of fmodl and int[] instead of vector\<int\>)
 - [X] Problem solved

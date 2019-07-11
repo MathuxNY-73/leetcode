@@ -43,24 +43,32 @@ private:
     }
 public:
     int kInversePairs(int n, int k) {
+        int permutation = n*(n - 1) / 2;
+        if (k > permutation)return 0;
         if(n == 0 || n == 1)
         {
             return k ? 0 : 1;
         }
 
-        auto base = pow(10,9) + 7;
-        auto dp = vector<int>(k+1,0);
+        int base = pow(10,9) + 7;
+        int* dp = new int[k+1];
+        memset(dp, 0, sizeof(int) * (k+1));
 
         dp[0] = 1;
 
         for(int i = 2 ; i <= n ; ++i)
         {
-            auto temp = vector<int>(dp);
+            int* temp = new int[k+1];
+            memset(temp, 0, sizeof(int) * (k+1));
+            temp[0] = 1;
+
             for(int j = 1 ; j <= k ; ++j)
             {
-                dp[j] = fmodl(fmodl(dp[j], base) + base - (j >= i ? temp[j - i] : 0), base);
-                dp[j] = fmodl(dp[j] + dp[j-1], base);
+                temp[j] = (dp[j] + base - (j >= i ? dp[j - i] : 0)) % base;
+                temp[j] = (temp[j] + temp[j-1]) % base;
             }
+            delete[] dp;
+            dp = temp;
         }
 
         return dp[k] < 0 ? base - dp[k] : dp[k];
