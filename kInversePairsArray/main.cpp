@@ -49,31 +49,21 @@ public:
         }
 
         auto base = pow(10,9) + 7;
-        auto dp = vector<int>(k+1, 0);
-        auto sum = 0;
+        auto dp = vector<int>(k+1,0);
 
         dp[0] = 1;
 
         for(int i = 2 ; i <= n ; ++i)
         {
-            sum = 1;
-            auto q = queue<int>();
-            q.push(1);
+            auto temp = vector<int>(dp);
             for(int j = 1 ; j <= k ; ++j)
             {
-                sum = fmodl(fmodl(sum, base) + fmodl(dp[j],base), base);
-                q.push(fmodl(dp[j], base));
-                if(q.size() > i)
-                {
-                    sum -= q.front();
-                    sum = sum < 0 ? base + sum : sum;
-                    q.pop();
-                }
-                dp[j] = sum;
+                dp[j] = fmodl(fmodl(dp[j], base) + base - (j >= i ? temp[j - i] : 0), base);
+                dp[j] = fmodl(dp[j] + dp[j-1], base);
             }
         }
 
-        return dp[k];
+        return dp[k] < 0 ? base - dp[k] : dp[k];
     }
 };
 
