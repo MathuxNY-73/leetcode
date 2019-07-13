@@ -25,6 +25,7 @@
 #include <functional>
 #include <stack>
 #include <array>
+#include <stdexcept>
 
 #define wl(n) while(n--)
 #define min(a,b) a < b ? a : b
@@ -32,6 +33,30 @@
 #define fl(i,a,b) for(i=a; i<b; ++i)
 
 using namespace std;
+
+class ModularInt {
+private:
+    int number;
+    int module;
+public:
+    ModularInt(const int& i, const int& m): number(i % m), module(m) {}
+
+    int getValue() const { return number; }
+    int getModule() const { return module; }
+
+    ModularInt operator +(const int& other) const {
+        return ModularInt((number + (other % module)) % module, module);
+    }
+
+    ModularInt operator +(const ModularInt& other) const {
+        return ModularInt((number + other.getValue()) % module, module);
+    }
+
+    ModularInt operator -(const ModularInt& other) const {
+        int res = number - other.getValue();
+        return ModularInt(res < 0 ? module + res : res, module);
+    }
+};
 
 class Solution {
 private:
@@ -51,27 +76,24 @@ public:
         }
 
         int base = pow(10,9) + 7;
-        int* dp = new int[k+1];
-        memset(dp, 0, sizeof(int) * (k+1));
+        auto dp = vector<ModularInt>(k+1, ModularInt(0, base));
 
-        dp[0] = 1;
+        dp[0] = ModularInt(1, base);
 
         for(int i = 2 ; i <= n ; ++i)
         {
-            int* temp = new int[k+1];
-            memset(temp, 0, sizeof(int) * (k+1));
-            temp[0] = 1;
-
+            auto temp = vector<ModularInt>(k+1, ModularInt(0,base));
+            temp[0] = ModularInt(1, base);
+ 
             for(int j = 1 ; j <= k ; ++j)
             {
-                temp[j] = (dp[j] + base - (j >= i ? dp[j - i] : 0)) % base;
-                temp[j] = (temp[j] + temp[j-1]) % base;
+                temp[j] = dp[j] - (j >= i ? dp[j - i] : ModularInt(0,base));
+                temp[j] = temp[j] + temp[j-1];
             }
-            delete[] dp;
             dp = temp;
         }
-
-        return dp[k] < 0 ? base - dp[k] : dp[k];
+        auto res = dp[k].getValue();
+        return res;
     }
 };
 
