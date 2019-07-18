@@ -124,3 +124,13 @@ As of July 11<sup>th</sup>, 2019:
 - [X] Find a faster solution.
 - [X] Submit solution. Got correct in 12 ms with 17.8 MB. (Got better by using % instead of fmodl and int[] instead of vector\<int\>)
 - [X] Problem solved
+
+### Implement Trie
+The goal is to implement a Trie (Prefix Tree) data structure. This is a leetcode challenge.  
+I tried to solve this problem using the C++ language. [Problem link](https://leetcode.com/problems/implement-trie-prefix-tree/)  
+As of July 18<sup>th</sup>, 2019:
+- [X] Find a first working solutionn on the sample input.
+- [X] Submit solution. Got correct in 76 ms with 45.4 MB
+- [ ] Find a better solution
+- [ ] Submit solution.
+- [X] Problem solved
