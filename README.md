@@ -151,6 +151,8 @@ I tried to solve this problem using the C++ language. [Problem link](https://lee
 As of July 22<sup>nd</sup>, 2019:
 - [X] Find a first working solutionn on the sample input.
 - [X] Submit solution. Got correct in 20 ms with 12.6 MB
+- [x] Find a better solution
+- [x] Submit solution. Got correct in 12 ms with 13.3 MB
 - [ ] Find a better solution
 - [ ] Submit solution.
 - [X] Problem solved

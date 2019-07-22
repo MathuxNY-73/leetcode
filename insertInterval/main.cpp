@@ -38,15 +38,32 @@ class Solution {
 public:
 
     vector<vector<int>> insert(vector<vector<int>>& intervals, vector<int>& newInterval) {
-        intervals.push_back(newInterval);
-        return merge(intervals);
+        auto n = intervals.size();
+        auto res = vector<vector<int>>(n +1);
+        if(n == 0) {
+            res[0] = newInterval;
+        }
+        else {
+            auto inserted = false;
+            int j = 0;
+            for(int i = 0; i < n && j < n + 1 ; ++i, ++j) {
+                if(!inserted && intervals[i][0] >= newInterval[0]) {
+                    res[j++] = newInterval;
+                    inserted = true;
+                }
+                res[j] = intervals[i];
+            }
+            if(!inserted) {
+                res[j] = newInterval;
+            }
+        }
+
+        return merge(res);
     }
 
 private:
     vector<vector<int>> merge(vector<vector<int>>& intervals) {
         auto res = vector<vector<int>>();
-
-        sort(intervals.begin(), intervals.end(), [](const vector<int>& lhs, const vector<int>& rhs) -> bool {return lhs[0] < rhs[0];});
 
         int max_end = 0;
 
