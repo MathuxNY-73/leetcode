@@ -134,3 +134,13 @@ As of July 18<sup>th</sup>, 2019:
 - [ ] Find a better solution
 - [ ] Submit solution.
 - [X] Problem solved
+
+### Merge Intervals
+The goal is to implement a function that will, given a list of intervals, merge all the intervals that overlap.  
+I tried to solve this problem using the C++ language. [Problem link](https://leetcode.com/problems/merge-intervals/)  
+As of July 22<sup>nd</sup>, 2019:
+- [X] Find a first working solutionn on the sample input.
+- [X] Submit solution. Got correct in 28 ms with 12.5 MB
+- [ ] Find a better solution
+- [ ] Submit solution.
+- [X] Problem solved
