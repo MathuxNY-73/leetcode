@@ -34,54 +34,59 @@
 
 using namespace std;
 
+void print_vector(vector<vector<int>>& v) {
+    printf("[");
+    for(auto& inter: v) {
+        printf("[");
+        for(auto& el: inter) {
+            printf("%d,", el);
+        }
+        printf("]");
+    }
+    printf("]\n");
+}
+
+
+
 class Solution {
 public:
 
     vector<vector<int>> insert(vector<vector<int>>& intervals, vector<int>& newInterval) {
-        auto n = intervals.size();
-        auto res = vector<vector<int>>(n +1);
-        if(n == 0) {
-            res[0] = newInterval;
-        }
-        else {
-            auto inserted = false;
-            int j = 0;
-            for(int i = 0; i < n && j < n + 1 ; ++i, ++j) {
-                if(!inserted && intervals[i][0] >= newInterval[0]) {
-                    res[j++] = newInterval;
+        auto res = vector<vector<int>>();
+        bool inserted = false;
+
+        for(auto it = intervals.cbegin() ; it != intervals.cend() ; ++it) {
+            if((*it)[1] < newInterval[0]) {
+                res.emplace_back(*it);
+            }
+            else if ((*it)[0] > newInterval[1]) {
+                if(it == intervals.cbegin() || (*(it-1))[1] < newInterval[0]) {
+                    res.emplace_back(vector<int>(newInterval));
+                    res.emplace_back(*it);
                     inserted = true;
                 }
-                res[j] = intervals[i];
-            }
-            if(!inserted) {
-                res[j] = newInterval;
-            }
-        }
-
-        return merge(res);
-    }
-
-private:
-    vector<vector<int>> merge(vector<vector<int>>& intervals) {
-        auto res = vector<vector<int>>();
-
-        int max_end = 0;
-
-        for(int i = 0; i < intervals.size() ; ++i) {
-            auto interval = vector<int>(2);
-            interval[0] = intervals[i][0];
-            max_end = intervals[i][1];
-
-            while(i + 1 < intervals.size() && max_end >= intervals[i+1][0]) {
-                if(intervals[i+1][1] > max_end) {
-                    max_end = intervals[i+1][1];
+                else {
+                    res.emplace_back(*it);
                 }
-                ++i;
             }
-            interval[1] = max_end;
-            res.push_back(interval);
+            else {
+                auto newV = vector<int>(2);
+                newV[0] = min(newInterval[0], (*it)[0]);
+                newV[1] = max(newInterval[1], (*it)[1]);
+                while(it + 1 != intervals.cend() && newV[1] >= (*(it+1))[0]) {
+                    if((*(it+1))[1] > newV[1]) {
+                        newV[1] = (*(it+1))[1];
+                    }
+                    ++it;
+                }
+                res.emplace_back(newV);
+                inserted = true;
+            }
         }
 
+        if(!inserted) {
+            res.emplace_back(newInterval);
+        }
         return res;
     }
 };
@@ -139,18 +144,6 @@ static inline int fastscan_string_w(char (&str)[], int buffer_size)
     return  size_of_str;
 }
 
-void print_vector(vector<vector<int>>& v) {
-    printf("[");
-    for(auto& inter: v) {
-        printf("[");
-        for(auto& el: inter) {
-            printf("%d,", el);
-        }
-        printf("]");
-    }
-    printf("]\n");
-}
-
 int main()
 {
     int t;
@@ -165,11 +158,12 @@ int main()
             fastscan(intervals[i][0]);
             fastscan(intervals[i][1]);
         }
-        auto newInterval = vector<int>(1,0);
+        auto newInterval = vector<int>(2,0);
         fastscan(newInterval[0]);
         fastscan(newInterval[1]);
 
         print_vector(intervals);
+        printf("newInterval: [%d, %d]\n", newInterval[0], newInterval[1]);
         auto res = Solution().insert(intervals, newInterval);
         print_vector(res);
 

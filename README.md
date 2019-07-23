@@ -153,6 +153,6 @@ As of July 22<sup>nd</sup>, 2019:
 - [X] Submit solution. Got correct in 20 ms with 12.6 MB
 - [x] Find a better solution
 - [x] Submit solution. Got correct in 12 ms with 13.3 MB
-- [ ] Find a better solution
-- [ ] Submit solution.
+- [x] Find another solution
+- [x] Submit solution. Got correct in 16 ms with 12.4 MB
 - [X] Problem solved
