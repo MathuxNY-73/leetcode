@@ -148,11 +148,13 @@ As of July 22<sup>nd</sup>, 2019:
 ### Insert Interval
 The goal is to implement a function that takes in a list of intervals and an interval to be inserted in the list of intervals. Should the new interval overlap others then a merging of overlapping interval is necessary.  
 I tried to solve this problem using the C++ language. [Problem link](https://leetcode.com/problems/insert-interval/)  
-As of July 22<sup>nd</sup>, 2019:
+As of July 23<sup>rd</sup>, 2019:
 - [X] Find a first working solutionn on the sample input.
 - [X] Submit solution. Got correct in 20 ms with 12.6 MB
 - [x] Find a better solution
 - [x] Submit solution. Got correct in 12 ms with 13.3 MB
 - [x] Find another solution
 - [x] Submit solution. Got correct in 16 ms with 12.4 MB
+- [x] Find another solution
+- [x] Submit solution. Got correct in 16 ms with 12.2 MB
 - [X] Problem solved

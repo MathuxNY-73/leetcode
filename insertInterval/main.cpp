@@ -53,40 +53,37 @@ public:
 
     vector<vector<int>> insert(vector<vector<int>>& intervals, vector<int>& newInterval) {
         auto res = vector<vector<int>>();
-        bool inserted = false;
+        auto start = newInterval[0], end = newInterval[1];
+        int i = 0;
+        int n = intervals.size();
 
-        for(auto it = intervals.cbegin() ; it != intervals.cend() ; ++it) {
-            if((*it)[1] < newInterval[0]) {
-                res.emplace_back(*it);
-            }
-            else if ((*it)[0] > newInterval[1]) {
-                if(it == intervals.cbegin() || (*(it-1))[1] < newInterval[0]) {
-                    res.emplace_back(vector<int>(newInterval));
-                    res.emplace_back(*it);
-                    inserted = true;
-                }
-                else {
-                    res.emplace_back(*it);
-                }
-            }
-            else {
-                auto newV = vector<int>(2);
-                newV[0] = min(newInterval[0], (*it)[0]);
-                newV[1] = max(newInterval[1], (*it)[1]);
-                while(it + 1 != intervals.cend() && newV[1] >= (*(it+1))[0]) {
-                    if((*(it+1))[1] > newV[1]) {
-                        newV[1] = (*(it+1))[1];
-                    }
-                    ++it;
-                }
-                res.emplace_back(newV);
-                inserted = true;
-            }
+        for(;i < n && intervals[i][1] < start; ++i) {
+            res.emplace_back(intervals[i]);
         }
 
-        if(!inserted) {
+        if(i == n) {
+            res.emplace_back(newInterval);
+            return res;
+        }
+        else if (intervals[i][0] > end) {
             res.emplace_back(newInterval);
         }
+        else {
+            auto newV = vector<int>(2);
+            newV[0] = min(intervals[i][0], start);
+            newV[1] = max(intervals[i][1], end);
+
+            for(++i; i < n && intervals[i][0] <= newV[1];++i) {
+                newV[1] = intervals[i][1] > newV[1] ? intervals[i][1]: newV[1];
+            }
+
+            res.emplace_back(newV);
+        }
+
+        for(;i < n ; ++i) {
+            res.emplace_back(intervals[i]);
+        }
+
         return res;
     }
 };
