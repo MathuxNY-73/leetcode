@@ -127,12 +127,12 @@ As of July 11<sup>th</sup>, 2019:
 
 ### Implement Trie
 The goal is to implement a Trie (Prefix Tree) data structure. This is a leetcode challenge.  
-I tried to solve this problem using the C++ language. [Problem link](https://leetcode.com/problems/implement-trie-prefix-tree/)  
+I tried to solve this problem using the C++ and C languages. [Problem link](https://leetcode.com/problems/implement-trie-prefix-tree/)  
 As of July 18<sup>th</sup>, 2019:
 - [X] Find a first working solutionn on the sample input.
 - [X] Submit solution. Got correct in 76 ms with 45.4 MB
-- [ ] Find a better solution
-- [ ] Submit solution.
+- [x] Find a better solution
+- [x] Submit solution. Got correct in 72 ms with 40.1 MB
 - [X] Problem solved
 
 ### Merge Intervals

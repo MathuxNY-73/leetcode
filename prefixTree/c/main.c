@@ -37,6 +37,7 @@ Node* newNode(char value) {
     Node* nNode = malloc(sizeof(Node));
     nNode->isEnd = false;
     nNode->value = value;
+    nNode->right = nNode->center = nNode->left = NULL;
     return nNode;
 }
 
@@ -45,11 +46,10 @@ void trieInsert(Trie* obj, char * word) {
     Node** curNode = &(obj->root);
     char* curWord = word;
 
-    while(*(curWord) != '\0') {
+    while((*curWord) != '\0') {
         if(!(*curNode)) {
-            *(curNode) = newNode(*(curWord));
+            *curNode = newNode(*(curWord));
         }
-
         if((*curNode)->value < *(curWord)) {
             curNode = &(*curNode)->right;
         }
@@ -120,20 +120,22 @@ bool trieStartsWith(Trie* obj, char * prefix) {
 }
 
 void freeDF(Node* root) {
-    if(!(root->left)) {
+    if(root->left) {
         freeDF(root->left);
     }
-    if(!root->center) {
+    if(root->center) {
         freeDF(root->center);
     }
-    if(!root->right) {
+    if(root->right) {
         freeDF(root->right);
     }
     free(root);
 }
 
 void trieFree(Trie* obj) {
-    freeDF(obj->root);
+    if(obj->root) {
+        freeDF(obj->root);
+    }
     free(obj);
 }
 
@@ -228,6 +230,7 @@ int main()
             }
             }
         }
+        trieFree(trie);
         printf("\n");
     }
     
