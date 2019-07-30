@@ -19,7 +19,7 @@
         _a < _b ? _a : _b; })
 #define fl(i,a,b) for(i=a; i<b; ++i)
 
-int fibonacci_memoized(int n, int* memo) {
+int fibonacci_memoized(int n, int memo[31]) {
 
     if(n == 0) {
         return 0;
@@ -35,14 +35,12 @@ int fibonacci_memoized(int n, int* memo) {
 }
 
 int fibonacci(int n) {
-
-    size_t memo_s = sizeof(int) * (n+1);
-    int* memo = malloc(memo_s);
-    memset(memo, -1, memo_s);
+    int memo[31];
+    memset(memo, -1, sizeof(int) * 31);
+    memo[0] = 0;
+    memo[1] = 1;
 
     int res = fibonacci_memoized(n, memo);
-
-    free(memo);
     return res;
 }
 

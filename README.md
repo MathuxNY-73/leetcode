@@ -165,6 +165,8 @@ I tried to solve this problem using the C language. [Problem link](https://leetc
 As of July 30<sup>th</sup>, 2019:
 - [X] Find a first working solutionn on the sample input.
 - [X] Submit solution. Got correct in 4 ms with 6.9 MB
-- [ ] Find a better solution
+- [x] Find a faster solution
+- [x] Submit solution. Got correct in 0 ms with 6.8 MB
+- [ ] Find a more economical solution
 - [ ] Submit solution.
 - [X] Problem solved
