@@ -19,29 +19,18 @@
         _a < _b ? _a : _b; })
 #define fl(i,a,b) for(i=a; i<b; ++i)
 
-int fibonacci_memoized(int n, int memo[31]) {
-
-    if(n == 0) {
-        return 0;
-    }
-    else if (n == 1) {
-        return 1;
-    };
-
-    if(memo[n] == -1) {
-        memo[n] = fibonacci_memoized(n-1, memo) + fibonacci_memoized(n-2, memo);
-    }
-    return memo[n];
-}
-
 int fibonacci(int n) {
-    int memo[31];
-    memset(memo, -1, sizeof(int) * 31);
-    memo[0] = 0;
-    memo[1] = 1;
-
-    int res = fibonacci_memoized(n, memo);
-    return res;
+    int a1=0,a2=1,a3=1;
+    if(N==0) return 0;
+    if (N<=2) return 1;
+    else
+        {
+            for(int i=3;i<=N;++i)
+                {   a1=a2;
+                    a2=a3;
+                    a3=a1+a2;}
+        }
+    return a3;
 }
 
 void fastscan_int(int* number)

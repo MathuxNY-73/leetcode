@@ -167,6 +167,6 @@ As of July 30<sup>th</sup>, 2019:
 - [X] Submit solution. Got correct in 4 ms with 6.9 MB
 - [x] Find a faster solution
 - [x] Submit solution. Got correct in 0 ms with 6.8 MB
-- [ ] Find a more economical solution
-- [ ] Submit solution.
+- [x] Find a more economical solution
+- [x] Submit solution. Got correct in 0 ms with 6.6 MB
 - [X] Problem solved
