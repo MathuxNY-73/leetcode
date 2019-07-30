@@ -158,3 +158,13 @@ As of July 23<sup>rd</sup>, 2019:
 - [x] Find another solution
 - [x] Submit solution. Got correct in 16 ms with 12.2 MB
 - [X] Problem solved
+
+### Fibonacci Number
+The goal is to implement a function that returns the n<sup>th</sup> Fibonacci Number.  
+I tried to solve this problem using the C language. [Problem link](https://leetcode.com/problems/fibonacci-number)  
+As of July 30<sup>th</sup>, 2019:
+- [X] Find a first working solutionn on the sample input.
+- [X] Submit solution. Got correct in 4 ms with 6.9 MB
+- [ ] Find a better solution
+- [ ] Submit solution.
+- [X] Problem solved
