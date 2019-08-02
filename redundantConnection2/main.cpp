@@ -39,31 +39,57 @@ void print_vector(const vector<int>& v) {
 }
 
 class Solution {
+private:
+    set<int> traverseBFS(int n, const unordered_map<int,vector<int>>& g) {
+        auto res = set<int>();
+        auto q = queue<int>();
+        q.push(n);
+        while(!q.empty()) {
+            int cur = q.front();
+            q.pop();
+
+            auto it = g.find(cur);
+            if(it != g.cend()) {
+                for(auto& p: it->second) {
+                    if(p != n) {
+                        res.emplace(p);
+                        q.push(p);
+                    }
+                }
+            }
+        }
+        return res;
+    }
 public:
 
     static vector<int> findRedundantDirectedConnection(vector<vector<int>>& edges) {
-        auto r_nodes = unordered_map<int, unordered_set<int>>();
-        auto p_nodes = unordered_map<int, unordered_set<int>>();
+        auto p_nodes = unordered_map<int, vector<int>>();
+        auto node_2_anc = -1;
 
         for(auto& edge: edges) {
             auto it_p = p_nodes.find(edge[1]);
-            auto it = r_nodes.find(edge[0]);
-            if(it == r_nodes.cend()) {
-                r_nodes[edge[0]] = unordered_set<int>();
-                r_nodes[edge[0]].emplace(edge[1]);
+            if(it_p == p_nodes.cend()) {
+                p_nodes[edge[1]] = vector<int>();
             }
             else {
-                printf("%d: ", it->first);
-                for(auto& r: it->second) {
-                    printf("%d, ", r);
+                node_2_anc = edge[1];
+            }
+            p_nodes[edge[1]].emplace_back(edge[0]);
+        }
+
+        if(node_2_anc > -1) {
+            auto it = p_nodes.find(node_2_anc);
+            for(auto& p: it->second) {
+                auto ps = traverseBFS(p,p_nodes);
+                if (ps.find(node_2_anc) != ps.cend()) {
+                    return {p,node_2_anc};
                 }
-                printf("\n");
-                if(it->second.find(edge[1]) != it->second.cend()) {
-                    return edge;
-                }
-                else {
-                    it->second.emplace(edge[1]);
-                }
+            }
+            return {it->second[1], node_2_anc};
+        }
+        else {
+            for(auto it = edges.crbegin() ; it != edges.crend() ; ++it) {
+                
             }
         }
         return vector<int>(2, -1);
