@@ -170,3 +170,19 @@ As of July 30<sup>th</sup>, 2019:
 - [x] Find a more economical solution
 - [x] Submit solution. Got correct in 0 ms with 6.6 MB
 - [X] Problem solved
+
+### Redundant connection II
+The goal is to find, in rooted directed tree, the edge that is redundant. If there are several possible solutions return the one that occurs last in the given edge array.  
+My approach is to:
+ 1. Build the tree by storing parents for each node
+ 2. If there exists a node with two parents then focus on it and find the edge that can be removed.
+ 3. If not reverse iterate through the list of edges and find the one that create a cycle
+I tried to solve this problem using the C++ language. [Problem link](https://leetcode.com/problems/redundant-connection-ii/)  
+As of August 3<sup>rd</sup>, 2019:
+- [x] Find a first working solutionn on the sample input.
+- [X] Submit solution. Got wrong
+- [x] Find a second working solution on the sample input
+- [x] Submit solution. Got correct in 12 ms with 11.9 MB
+- [ ] Find a faster solution
+- [ ] Submit solution
+- [X] Problem solved

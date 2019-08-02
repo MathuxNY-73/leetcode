@@ -40,7 +40,7 @@ void print_vector(const vector<int>& v) {
 
 class Solution {
 private:
-    set<int> traverseBFS(int n, const unordered_map<int,vector<int>>& g) {
+    static set<int> traverseBFS(int n, const unordered_map<int,vector<int>>& g) {
         auto res = set<int>();
         auto q = queue<int>();
         q.push(n);
@@ -89,7 +89,10 @@ public:
         }
         else {
             for(auto it = edges.crbegin() ; it != edges.crend() ; ++it) {
-                
+                auto ps = traverseBFS((*it)[0], p_nodes);
+                if (ps.find((*it)[1]) != ps.cend()) {
+                    return *it;
+                }
             }
         }
         return vector<int>(2, -1);
