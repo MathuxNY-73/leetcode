@@ -40,6 +40,8 @@ void print_vector(const vector<int>& v) {
 
 class Solution {
 private:
+    int p[1001];
+
     static set<int> traverseBFS(int n, const unordered_map<int,vector<int>>& g) {
         auto res = set<int>();
         auto q = queue<int>();
@@ -60,7 +62,50 @@ private:
         }
         return res;
     }
+
+    int find(int x) {
+        int cur = x;
+        while(p[cur] != cur) {
+            cur = p[cur];
+        }
+        return cur;
+    }
 public:
+
+    vector<int> findRedundantDirectedConnectionUF(vector<vector<int>>& edges) {
+        // Cycle_Edge will hold on the edge that potentially introduce a cycle.
+        vector<int> cycle_edge, res;
+
+        for(int i = 1 ; i <= edges.size() ; ++i) p[i] = i;
+
+        for(auto& edge: edges) {
+            int u = edge[0], v = edge[1];
+            int pu = find(u), pv = find(v);
+
+            if(p[v] != v) { // This is the second parent that we have here.
+                if(!cycle_edge.empty()) {
+                    res = {p[v], v};
+                }
+                else {
+                    cycle_edge = {p[v], v};
+                    res = {u, v};
+                }
+            }
+            else if (pu == pv) { // Cycle was found
+                if(cycle_edge.empty()) {
+                    cycle_edge = {u, v};
+                }
+                else {
+                    res = cycle_edge;
+                }
+            }
+
+            if(p[v] == v && pu != pv) {
+                p[v] = u;
+            }
+        }
+        return res.empty() ? cycle_edge : res;
+    }
 
     static vector<int> findRedundantDirectedConnection(vector<vector<int>>& edges) {
         auto p_nodes = unordered_map<int, vector<int>>();
@@ -169,7 +214,7 @@ int main()
             fastscan(edges[i][0]);
             fastscan(edges[i][1]);
         }
-        auto res = Solution::findRedundantDirectedConnection(edges);
+        auto res = Solution().findRedundantDirectedConnectionUF(edges);
         print_vector(res);
 
     }
