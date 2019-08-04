@@ -186,3 +186,11 @@ As of August 4<sup>th</sup>, 2019:
 - [x] Find a faster solution. I used Union Find structure
 - [x] Submit solution. Got correct in 8 ms with 10 MB
 - [X] Problem solved
+
+### Binary Tree Maximum Path Sum
+The goal is to find, in a rooted binary tree, the path whose node values sum up to the highest value.  
+I tried to solve this problem using the C++ language. [Problem link](https://leetcode.com/problems/binary-tree-maximum-path-sum/)  
+As of August 4<sup>th</sup>, 2019:
+- [ ] Find a first working solutionn on the sample input.
+- [ ] Submit solution.
+- [ ] Problem solved
