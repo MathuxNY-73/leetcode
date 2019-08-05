@@ -25,27 +25,66 @@
 #include <functional>
 #include <stack>
 #include <array>
+#include <limits>
 #include <stdexcept>
 
 #define wl(n) while(n--)
-#define min(a,b) a < b ? a : b
-#define max(a,b) a < b ? b : a
 #define fl(i,a,b) for(i=a; i<b; ++i)
 
 using namespace std;
 
-void print_vector(const vector<int>& v) {
-    printf("[%d, %d]\n", v[0], v[1]);
-}
+typedef struct TreeNode {
+    int val;
+    TreeNode* left;
+    TreeNode* right;
+
+    TreeNode(int x): val(x), left(NULL), right(NULL) {}
+    ~TreeNode() {
+        delete left;
+        delete right;
+    }
+} TreeNode;
 
 class Solution {
 private:
+    int max_sum = numeric_limits<int>::min();
+
+    int rec(TreeNode* node) {
+        int val;
+        if(node->left == NULL) {
+            if(node->right != NULL) {
+                val = max(node->val, node->val + rec(node->right));
+            }
+            else {
+                val = node->val;
+            }
+            max_sum = max(val, max_sum);
+        }
+        else {
+            auto val_l = rec(node->left);
+            int val_r = 0;
+            int child_max = 0;
+            if(node->right != NULL) {
+                val_r = rec(node->right);
+                child_max = max(val_r, val_l);
+            }
+            else {
+                child_max = val_l;
+            }
+            val = max(node->val, node->val + child_max);
+            max_sum = max(max(val,val + min(val_l, val_r)), max_sum);
+        }
+        return val;
+    }
+
 public:
-
-
+    int maxPathSum(TreeNode* root) {
+        rec(root);
+        return max_sum;
+    }
 };
 
-static inline void fastscan(int& number)
+static inline bool fastscan(int& number)
 {
     //variable to indicate sign of input number
     bool negative = false;
@@ -55,6 +94,10 @@ static inline void fastscan(int& number)
 
     // extract current character from buffer
     c = getchar_unlocked();
+    if (c == 'N') {
+        return false;
+    }
+
     if (c=='-')
     {
         // number is negative
@@ -73,9 +116,11 @@ static inline void fastscan(int& number)
     // value of the input number
     if (negative)
         number *= -1;
+
+    return true;
 }
 
-static inline int fastscan_string_w(char (&str)[], int buffer_size)
+static inline int fastscan_string_w(string& str, int buffer_size)
 {
     char c;
     int size_of_str = 0;
@@ -93,10 +138,11 @@ static inline int fastscan_string_w(char (&str)[], int buffer_size)
         {
             if(size_of_str > buffer_size)
                 exit(-1);
-            str[size_of_str] = c;
+            str.push_back(c);
         }
     return  size_of_str;
 }
+
 
 int main()
 {
@@ -107,16 +153,53 @@ int main()
     {
         int n=0;
         fastscan(n);
-        auto edges = vector<vector<int>>(n, vector<int>(2, 0));
 
-        int i;
-        fl(i, 0, n){
-            fastscan(edges[i][0]);
-            fastscan(edges[i][1]);
+        string number;
+        fastscan_string_w(number, 100);
+
+        if(number == "null") {
+            exit(1);
         }
-        auto res = Solution().findRedundantDirectedConnectionUF(edges);
-        print_vector(res);
+        int val = stoi(number);
+        auto root = new TreeNode(val);
+        number.clear();
 
+        auto q = queue<TreeNode*>();
+        q.push(root);
+
+        int i = 1;
+        while(!q.empty() && i < n) {
+            auto cur = q.front();
+            q.pop();
+
+            fastscan_string_w(number, 100);
+            printf("Left of %d is %s\n", cur->val, number.c_str());
+            if(number == "null") {
+                cur->left = NULL;
+            }
+            else {
+                cur->left = new TreeNode(stoi(number));
+            }
+            number.clear();
+            q.push(cur->left);
+            ++i;
+
+            fastscan_string_w(number, 100);
+            printf("Right of %d is %s\n", cur->val, number.c_str());
+            if(number == "null") {
+                cur->right = NULL;
+            }
+            else {
+                cur->right = new TreeNode(stoi(number));
+            }
+            number.clear();
+            q.push(cur->right);
+            ++i;
+        }
+
+        auto res = Solution().maxPathSum(root);
+        printf("%d\n", res);
+        delete root;
     }
 
     return 0;
