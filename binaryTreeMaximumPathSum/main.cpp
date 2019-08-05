@@ -50,6 +50,25 @@ private:
     int max_sum = numeric_limits<int>::min();
 
     int rec(TreeNode* node) {
+        if(node == NULL) {
+            return 0;
+        }
+        else {
+            auto val_l = max(rec(node->left), 0);
+            auto val_r = max(rec(node->right), 0);
+
+            // Sum at this point to close the path
+            auto sum_node_root_path = node->val + val_l + val_r;
+
+            // Update if the sum is better
+            max_sum = max(sum_node_root_path, max_sum);
+
+            // Let us continue building the path
+            return node->val + max(val_l, val_r);
+        }
+    }
+
+    int rec_orig(TreeNode* node) {
         int val;
         if(node->left == NULL) {
             if(node->right != NULL) {
