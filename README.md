@@ -202,7 +202,7 @@ The goal is create a Uniformly distributed number generator that takes into acco
 I tried to solve this problem using the C++ language. [Problem link](https://leetcode.com/problems/random-pick-with-blacklist/)  
 As of August 6<sup>th</sup>, 2019:
 - [x] Find a first working solutionn on the sample input. I used a whitelist.
-- [ ] Submit solution. Got a Memory Limit Exceeded Error
-- [ ] Find a better solution
-- [ ] Submit solution.
-- [ ] Problem solved
+- [x] Submit solution. Got a Memory Limit Exceeded Error
+- [x] Find a better solution
+- [x] Submit solution. Got correct in 236 ms with 51.4 MB, went down to 216 ms with 52.1MB by using uniform_int_distribution.
+- [x] Problem solved
