@@ -196,3 +196,13 @@ As of August 5<sup>th</sup>, 2019:
 - [x] Find a cleaner solution
 - [x] Submit solution. Got correct in 24 ms with 25.3 MB
 - [x] Problem solved
+
+### Random Pick With Blacklist
+The goal is create a Uniformly distributed number generator that takes into account a blacklist of number. The solution should use as less call to rand() as possible.  
+I tried to solve this problem using the C++ language. [Problem link](https://leetcode.com/problems/random-pick-with-blacklist/)  
+As of August 6<sup>th</sup>, 2019:
+- [x] Find a first working solutionn on the sample input. I used a whitelist.
+- [ ] Submit solution. Got a Memory Limit Exceeded Error
+- [ ] Find a better solution
+- [ ] Submit solution.
+- [ ] Problem solved
