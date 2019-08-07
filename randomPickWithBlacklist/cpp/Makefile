@@ -10,6 +10,7 @@ all: $(EXEC)
 main: main.o
 	@$(CXX) -o $@ $^ $(LDFLAGS)
 
+main.o: main.cpp input.hpp
 %.o : %.cpp
 	$(CXX) -o $@ -c $< $(CXFLAGS)
 
