@@ -207,4 +207,6 @@ As of August 8<sup>th</sup>, 2019:
 - [x] Submit solution. Got correct in 236 ms with 51.4 MB, went down to 216 ms with 52.1MB by using uniform_int_distribution.
 - [x] Write a solution in C
 - [x] Submit solution. Got correct in 188 ms with 47.4 MB
+- [x] Write a solution in C with Heapsort
+- [x] Submit solution. Got correct in 196 ms with 46.9 MB
 - [x] Problem solved

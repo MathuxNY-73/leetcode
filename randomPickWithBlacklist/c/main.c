@@ -21,8 +21,40 @@ void quicksort(int* array, int size) {
     qsort(array, size, sizeof(int), &cmp);
 }
 
+void heapify(int* array, int size, int i) {
+    int l = 2 * i + 1;
+    int r = 2*(i + 1);
+    int largest = i;
+    if(l < size && array[l] > array[i]) {
+        largest = l;
+    }
+
+    if(r < size && array[r] > array[largest]) {
+        largest = r;
+    }
+
+    if(largest != i) {
+        array[i] ^= array[largest];
+        array[largest] ^= array[i];
+        array[i] ^= array[largest];
+        heapify(array, size, largest);
+    }
+}
+
+void build_heap(int* array, int size) {
+    for(int i = (size / 2) - 1 ; i >= 0 ; --i) {
+        heapify(array, size, i);
+    }
+}
+
 void heap_sort(int* array, int size) {
-    l = array[]
+    build_heap(array, size);
+    for(int i = 1 ; i < size ; ++i) {
+        array[0] ^= array[size-i];
+        array[size-i] ^= array[0];
+        array[0] ^= array[size-i];
+        heapify(array, size - i , 0);
+    }
 }
 
 int bin_search(int key, int* array, int size) {
@@ -52,7 +84,7 @@ typedef struct {
 
 Solution* solutionCreate(int N, int* blacklist, int blacklistSize) {
     Solution* s = malloc(sizeof(Solution));
-    quicksort(blacklist, blacklistSize);
+    heap_sort(blacklist, blacklistSize);
     s->b = blacklist;
     s->bound = N - blacklistSize;
     s->b_size = blacklistSize;
@@ -97,6 +129,12 @@ int main()
         int nb_pick = 0;
         fastscan(&nb_pick);
 
+        int test[7] = {3,2,6,5,9,1,4};
+        heap_sort(&test, 7);
+        for(int i = 0 ; i < 7 ; ++i) {
+            printf("%d ", test[i]);
+        }
+        printf("\n");
         printf("2: %d\n", bin_search(2, blacklist, nb_blacklist));
         printf("1: %d\n", bin_search(1, blacklist, nb_blacklist));
 
