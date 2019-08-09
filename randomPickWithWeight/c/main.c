@@ -24,19 +24,15 @@ void quicksort(int* array, int size) {
 int bin_search(int key, int* array, int size) {
     int lo = 0;
     int hi = size - 1;
-    int mid = floor((hi + lo + 1) >> 1);
 
     while(lo < hi) {
-        if(lo == hi + 1 && array[hi] > key) {
-            return lo;
-        }
+        int mid = (hi + lo) >> 1;
         if(array[mid] <= key) {
-            lo = mid;
+            lo = mid + 1;
         }
         else if(array[mid] > key) {
-            hi = mid - 1;
+            hi = mid;
         }
-        mid = floor((hi + lo + 1) >> 1);
     }
     return lo;
 }
@@ -51,15 +47,13 @@ typedef struct {
 Solution* solutionCreate(int* w, int wSize) {
     Solution* s = malloc(sizeof(Solution));
     s->bound = 0;
-    s->m = malloc(sizeof(int)*wSize);
+    s->m = malloc(sizeof(int)*(s->m_size = wSize));
     memset(s->m, -1, sizeof(int)*wSize);
 
     for(int i = 0 ; i < wSize ; ++i) {
-        s->m[i] = s->bound;
         s->bound += w[i];
+        s->m[i] = s->bound;
     }
-
-    s->m_size = wSize;
 
     srand(time(NULL));
 

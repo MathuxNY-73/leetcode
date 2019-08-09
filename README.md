@@ -217,4 +217,6 @@ I tried to solve this problem using the C language. [Problem link](https://leetc
 As of August 9<sup>th</sup>, 2019:
 - [x] Find a first working solutionn on the sample input.
 - [x] Submit solution. Got correct in 120 ms with 30 MB
+- [x] Rewrite the solution to go faster.
+- [x] Submit solution. Got correct in 96 ms with 30.1 MB
 - [x] Problem solved
