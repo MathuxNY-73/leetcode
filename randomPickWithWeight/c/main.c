@@ -21,89 +21,62 @@ void quicksort(int* array, int size) {
     qsort(array, size, sizeof(int), &cmp);
 }
 
-void heapify(int* array, int size, int i) {
-    int l = 2 * i + 1;
-    int r = 2*(i + 1);
-    int largest = i;
-    if(l < size && array[l] > array[i]) {
-        largest = l;
-    }
-
-    if(r < size && array[r] > array[largest]) {
-        largest = r;
-    }
-
-    if(largest != i) {
-        array[i] ^= array[largest];
-        array[largest] ^= array[i];
-        array[i] ^= array[largest];
-        heapify(array, size, largest);
-    }
-}
-
-void build_heap(int* array, int size) {
-    for(int i = (size / 2) - 1 ; i >= 0 ; --i) {
-        heapify(array, size, i);
-    }
-}
-
-void heap_sort(int* array, int size) {
-    build_heap(array, size);
-    for(int i = 1 ; i < size ; ++i) {
-        array[0] ^= array[size-i];
-        array[size-i] ^= array[0];
-        array[0] ^= array[size-i];
-        heapify(array, size - i , 0);
-    }
-}
-
 int bin_search(int key, int* array, int size) {
     int lo = 0;
     int hi = size - 1;
-    int mid = floor((hi + lo + 1) / 2);
+    int mid = floor((hi + lo + 1) >> 1);
 
     while(lo < hi) {
-        int c = array[mid] - mid;
-        if(c <= key) {
+        if(lo == hi + 1 && array[hi] > key) {
+            return lo;
+        }
+        if(array[mid] <= key) {
             lo = mid;
         }
-        else if(c > key) {
+        else if(array[mid] > key) {
             hi = mid - 1;
         }
-        mid = floor((hi + lo + 1) / 2);
+        mid = floor((hi + lo + 1) >> 1);
     }
-    return lo == hi && array[lo] - lo <= key ? key + lo + 1 : key;
+    return lo;
 }
 
 typedef struct {
-    int* b;
+    int* m;
     int bound;
-    int b_size;
+    int m_size;
 } Solution;
 
 
-Solution* solutionCreate(int N, int* blacklist, int blacklistSize) {
+Solution* solutionCreate(int* w, int wSize) {
     Solution* s = malloc(sizeof(Solution));
-    heap_sort(blacklist, blacklistSize);
-    s->b = blacklist;
-    s->bound = N - blacklistSize;
-    s->b_size = blacklistSize;
+    s->bound = 0;
+    s->m = malloc(sizeof(int)*wSize);
+    memset(s->m, -1, sizeof(int)*wSize);
+
+    for(int i = 0 ; i < wSize ; ++i) {
+        s->m[i] = s->bound;
+        s->bound += w[i];
+    }
+
+    s->m_size = wSize;
 
     srand(time(NULL));
 
     return s;
 }
 
-int solutionPick(Solution* obj) {
+int solutionPickIndex(Solution* obj) {
     int picked = obj->bound;
     while(picked >= obj->bound) {
         picked = rand() / ((RAND_MAX + 1u) / obj->bound);
     }
-    int n_b = bin_search(picked, obj->b, obj->b_size);
+    int n_b = bin_search(picked, obj->m, obj->m_size);
     return n_b;
 }
 
 void solutionFree(Solution* obj) {
+    free(obj->m);
     free(obj);
 }
 
@@ -113,39 +86,29 @@ int main()
     fastscan(&t);
 
     wl(t) {
-        int n=0;
-        fastscan(&n);
-        int nb_blacklist = 0;
-        fastscan(&nb_blacklist);
-        int* blacklist = malloc(sizeof(int) * nb_blacklist);
+        int nb_weights = 0;
+        fastscan(&nb_weights);
+        int* weights= malloc(sizeof(int) * nb_weights);
 
         int i;
-        fl(i, 0, nb_blacklist){
-            fastscan(&blacklist[i]);
+        fl(i, 0, nb_weights){
+            fastscan(&weights[i]);
+            printf("%d ", weights[i]);
         }
+        printf("\n");
 
-        Solution* rand_gen = solutionCreate(n, blacklist, nb_blacklist);
+        Solution* rand_gen = solutionCreate(weights, nb_weights);
 
         int nb_pick = 0;
         fastscan(&nb_pick);
-
-        int test[7] = {3,2,6,5,9,1,4};
-        heap_sort(&test, 7);
-        for(int i = 0 ; i < 7 ; ++i) {
-            printf("%d ", test[i]);
-        }
-        printf("\n");
-        printf("2: %d\n", bin_search(2, blacklist, nb_blacklist));
-        printf("1: %d\n", bin_search(1, blacklist, nb_blacklist));
-
-        printf("N = %d, nb_blacklist: %d, nb_pick: %d\n", n, nb_blacklist, nb_pick);
+        printf("nb_weigths: %d, nb_pick: %d\n", nb_weights, nb_pick);
         wl(nb_pick) {
-            int res = solutionPick(rand_gen);
+            int res = solutionPickIndex(rand_gen);
             printf("%d ", res);
         }
 
         solutionFree(rand_gen);
-        free(blacklist);
+        free(weights);
         puts("");
     }
     return 0;

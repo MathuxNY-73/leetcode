@@ -210,3 +210,11 @@ As of August 8<sup>th</sup>, 2019:
 - [x] Write a solution in C with Heapsort
 - [x] Submit solution. Got correct in 196 ms with 46.9 MB
 - [x] Problem solved
+
+### Random Pick with Weights
+The goal is to create a random number generator that taks into account the weight for each number from 0 to len(weights).  
+I tried to solve this problem using the C language. [Problem link](https://leetcode.com/problems/random-pick-with-weight)  
+As of August 9<sup>th</sup>, 2019:
+- [x] Find a first working solutionn on the sample input.
+- [x] Submit solution. Got correct in 120 ms with 30 MB
+- [x] Problem solved
