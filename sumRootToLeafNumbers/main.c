@@ -22,15 +22,21 @@ typedef struct TreeNode {
 int p[1000];
 
 int treeDFS(struct TreeNode* root, int depth) {
+
+    if(root == NULL) {
+        return 0;
+    }
+
+    p[depth++] = root->val;
+
     if(root->left ==  NULL && root->right == NULL) {
         int res = 0;
         for(int i=0 ; i < depth ; ++i) {
-            res = res * 10 + p[0];
+            res = res * 10 + p[i];
         }
         return res;
     }
     else {
-        p[depth++] = root->val;
         int l = treeDFS(root->left, depth);
         int r = treeDFS(root->right, depth);
 
