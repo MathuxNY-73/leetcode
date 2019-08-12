@@ -1,64 +1,81 @@
-#include <math.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <assert.h>
-#include <limits.h>
-#include <stdbool.h>
-#include <time.h>
+#include <cassert>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <ctime>
 
-#include "input.h"
+#include <algorithm>
+#include <array>
+#include <fstream>
+#include <functional>
+#include <iostream>
+#include <list>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <random>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <stdexcept>
+#include <string>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
+
+#include "input.hpp"
+
 
 #define wl(n) while(n--)
 #define fl(i,a,b) for(i=a; i<b; ++i)
-#define min(a,b) a<=b?a:b
+
+using namespace std;
 
 typedef struct TreeNode {
-     int val;
-     struct TreeNode *left;
-     struct TreeNode *right;
+    int val;
+    TreeNode* left;
+    TreeNode* right;
+
+    TreeNode(int x): val(x), left(NULL), right(NULL) {}
+    ~TreeNode() {
+        delete left;
+        delete right;
+    }
 } TreeNode;
 
-typedef struct Queue {
-    int* q;
-    int size;
-    int front_idx;
-    int back_idx;
-} Queue;
+class Solution {
+private:
+    int treeDFS(const struct TreeNode* root, int sum) {
 
-void pushQueue(Queue* q,int el) {
-    
-}
+        if(root == NULL) {
+            return 0;
+        }
 
-int treeDFS(struct TreeNode* root, int sum) {
+        sum = sum * 10 + root->val;
 
-    if(root == NULL) {
-        return 0;
+        if(root->left ==  NULL && root->right == NULL) {
+            return sum;
+        }
+        else {
+            int l = treeDFS(root->left, sum);
+            int r = treeDFS(root->right, sum);
+
+            return r+l;
+        }
     }
 
-    sum = sum * 10 + root->val;
-
-    if(root->left ==  NULL && root->right == NULL) {
-        return sum;
+public:
+    int sumNumbers(const struct TreeNode* root){
+        return treeDFS(root, 0);
     }
-    else {
-        int l = treeDFS(root->left, sum);
-        int r = treeDFS(root->right, sum);
-
-        return r+l;
-    }
-}
-
-int sumNumbers(struct TreeNode* root){
-    return treeDFS(root, 0);
-}
+};
 
 int main()
 {
     int t;
-    fastscan(&t);
+    fastscan(t);
 
-     wl(t)
+    wl(t)
     {
         int n=0;
         fastscan(n);
@@ -106,7 +123,7 @@ int main()
             ++i;
         }
 
-        auto res = Solution().maxPathSum(root);
+        auto res = Solution().sumNumbers(root);
         printf("%d\n", res);
         delete root;
     }
