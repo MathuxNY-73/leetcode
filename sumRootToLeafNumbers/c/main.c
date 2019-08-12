@@ -19,15 +19,61 @@ typedef struct TreeNode {
      struct TreeNode *right;
 } TreeNode;
 
+TreeNode* createNode(int val) {
+    TreeNode* n = malloc(sizeof(TreeNode));
+    n->val = val;
+    n->left = NULL;
+    n->right = NULL;
+    return n;
+}
+
+void deleteTree(TreeNode* root) {
+    if(root != NULL) {
+        deleteTree(root->left);
+        deleteTree(root->right);
+        free(root);
+    }
+}
+
 typedef struct Queue {
-    int* q;
+    TreeNode** queue;
     int size;
+    int count;
     int front_idx;
     int back_idx;
 } Queue;
 
-void pushQueue(Queue* q,int el) {
-    
+Queue* createQueue(int size) {
+    TreeNode** queue = malloc(sizeof(TreeNode*)*size);
+    for(int i = 0 ; i < size ; ++i) {
+        queue[i] = NULL;
+    }
+    Queue* q = malloc(sizeof(Queue));
+    q->queue = queue;
+    q->size = size;
+    q->front_idx = 0;
+    q->back_idx = -1;
+    q->count = 0;
+    return q;
+}
+
+void deleteQueue(Queue* q) {
+    free(q->queue);
+    free(q);
+}
+
+void pushQueue(Queue* q, TreeNode* el) {
+    if(q->count < q->size) {
+        q->queue[(++q->back_idx) % q->size] = el;
+        ++q->count;
+    }
+}
+
+void popQueue(Queue* q) {
+    if(q->count > 0) {
+        q->queue[((q->front_idx)++) % q->size] = 0;
+        --q->count;
+    }
 }
 
 int treeDFS(struct TreeNode* root, int sum) {
@@ -61,54 +107,61 @@ int main()
      wl(t)
     {
         int n=0;
-        fastscan(n);
+        fastscan(&n);
 
-        string number;
+        if(n == 0) {
+            printf("0\n");
+            continue;
+        }
+
+        char number[100];
+        memset(number, '\0', sizeof(char)*100);
         fastscan_string_w(number, 100);
 
-        if(number == "null") {
+        if(!strncmp(number,"null", 4)) {
             exit(1);
         }
-        int val = stoi(number);
-        auto root = new TreeNode(val);
-        number.clear();
+        int val = atoi(number);
+        TreeNode* root = createNode(val);
+        memset(number, '\0', sizeof(char)*100);
 
-        auto q = queue<TreeNode*>();
-        q.push(root);
+        Queue* q = createQueue(20);
+        pushQueue(q, root);
 
         int i = 1;
-        while(!q.empty() && i < n) {
-            auto cur = q.front();
-            q.pop();
+        while(q->count && i < n) {
+            TreeNode* cur = q->queue[q->front_idx];
+            popQueue(q);
 
             fastscan_string_w(number, 100);
-            printf("Left of %d is %s\n", cur->val, number.c_str());
-            if(number == "null") {
+            printf("Left of %d is %s\n", cur->val, number);
+            if(!strncmp(number,"null", 4)) {
                 cur->left = NULL;
             }
             else {
-                cur->left = new TreeNode(stoi(number));
+                cur->left = createNode(atoi(number));
             }
-            number.clear();
-            q.push(cur->left);
+            memset(number, '\0', sizeof(char)*100);
+            pushQueue(q, cur->left);
             ++i;
 
             fastscan_string_w(number, 100);
-            printf("Right of %d is %s\n", cur->val, number.c_str());
-            if(number == "null") {
+            printf("Right of %d is %s\n", cur->val, number);
+            if(!strncmp(number, "null", 4)) {
                 cur->right = NULL;
             }
             else {
-                cur->right = new TreeNode(stoi(number));
+                cur->right = createNode(atoi(number));
             }
-            number.clear();
-            q.push(cur->right);
+            memset(number, '\0', sizeof(char)*100);
+            pushQueue(q, cur->right);
             ++i;
         }
+        deleteQueue(q);
 
-        auto res = Solution().maxPathSum(root);
+        int res = sumNumbers(root);
         printf("%d\n", res);
-        delete root;
+        deleteTree(root);
     }
 
     return 0;
