@@ -14,7 +14,7 @@ impl Solution {
         else {
             &nums2
         };
-        let b = if l2 > l1 {
+        let b = if l1 > l2 {
             &nums2
         }
         else {
@@ -23,28 +23,63 @@ impl Solution {
         let n = cmp::max(l1,l2);
         let m = cmp::min(l1,l2);
 
+        if m == 0 {
+            if (m % 2) == 0 {
+                ((a[n / 2] + a[(n+1)/2]) as f64) / 2.0
+            }
+            else {
+                a[n/2] as f64
+            }
+        }
+        else {
+
         let mut imax = m;
         let mut imin = 0;
-        let mut i = (imax + imin)/2;
-        let mut j = (n + m + 1) / 2 - i;
+
+        let mut maxLeft = 0;
+        let mut minRight = 0;
 
         while imin <= imax {
-            if &b[j-1] > &a[i] {
+            let i = (imax + imin)/2;
+            let j = (n + m + 1) / 2 - i;
+            if i < imax && a[j-1] > b[i] {
                 imin = i + 1;
             }
-            else if &a[i-1] > &b[j] {
+            else if i > imin && b[i-1] > a[j] {
                 imax = i - 1;
             }
-            i = (imax + imin)/2;
-            j = (n + m + 1) / 2 - i;
+            else {
+                if i == 0 {
+                    maxLeft = a[j-1];
+                }
+                else if j == 0 {
+                    maxLeft = b[i -1];
+                }
+                else {
+                    maxLeft = cmp::max(a[j-1], b[i-1]);
+                }
+
+                if i == m {
+                    minRight = a[j];
+                }
+                else if j == n {
+                    minRight = b[i];
+                }
+                else {
+                    minRight = cmp::min(a[j],b[i]);
+                }
+                break;
+            }
         }
 
-        if (n+m) % 2 == 0  { cmp::min(a[i-1], b[j-1]) as f64 } else { ((a[i-1] + b[i-1]) as f64) / 2.0 }
+            if (n+m) % 2 == 1 { maxLeft as f64 } else { ((maxLeft + minRight) as f64) / 2.0 }
+        }
     }
 }
 
 fn main() {
     let res = Solution::find_median_sorted_arrays(vec![0,1,3], vec![3,4,5,5]);
+    println!("Res is {}", res);
 }
 
 
