@@ -56,12 +56,21 @@ public:
         auto n = b.size();
         auto m = a.size();
 
+        if (!m) {
+            if(n & 1) {
+                return b[n/2];
+            }
+            else {
+                return (b[(n-1)/2] + b[n/2]) / 2.0;
+            }
+        }
+
         int imin = 0, imax = m;
         double res = 0;
         for(;imin <= imax;)
         {
-            int i = ceil((imax + imin) / 2.0);
-            int j = floor((m+n+1) / 2.0) - i;
+            int i = (imax + imin) / 2;
+            int j = (m+n+1) / 2 - i;
 
             //printf("i: %d\n", i);
             //printf("j: %d\n", j);
@@ -105,7 +114,7 @@ public:
                 {
                     maxLeft = max(a[i-1], b[j-1]);
                 }
-                if((m+n) % 2 == 1)
+                if((m+n) & 1)
                 {
                     res = maxLeft;
                 }

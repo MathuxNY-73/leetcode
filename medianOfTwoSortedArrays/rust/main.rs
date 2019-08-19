@@ -25,7 +25,7 @@ impl Solution {
 
         if m == 0 {
             if (m % 2) == 0 {
-                ((a[n / 2] + a[(n+1)/2]) as f64) / 2.0
+                ((a[n / 2] + a[(n-1)/2]) as f64) / 2.0
             }
             else {
                 a[n/2] as f64
