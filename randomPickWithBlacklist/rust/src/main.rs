@@ -1,3 +1,4 @@
+use std::collections::HashMap;
 use rand::distributions::Uniform;
 use rand::Rng;
 
