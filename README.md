@@ -201,8 +201,8 @@ As of August 5<sup>th</sup>, 2019:
 
 ### Random Pick With Blacklist
 The goal is create a Uniformly distributed number generator that takes into account a blacklist of number. The solution should use as less call to rand() as possible.  
-I tried to solve this problem using the C++ and C language. [Problem link](https://leetcode.com/problems/random-pick-with-blacklist/)  
-As of August 8<sup>th</sup>, 2019:
+I tried to solve this problem using the C++, C and Rust languages. [Problem link](https://leetcode.com/problems/random-pick-with-blacklist/)  
+As of August 23<sup>rd</sup>, 2019:
 - [x] Find a first working solutionn on the sample input. I used a whitelist.
 - [x] Submit solution. Got a Memory Limit Exceeded Error
 - [x] Find a better solution
@@ -211,6 +211,8 @@ As of August 8<sup>th</sup>, 2019:
 - [x] Submit solution. Got correct in 188 ms with 47.4 MB
 - [x] Write a solution in C with Heapsort
 - [x] Submit solution. Got correct in 196 ms with 46.9 MB
+- [x] Write a solution in Rust
+- [x] Submit solution. Got correct in 40 ms with 6.6 MB
 - [x] Problem solved
 
 ### Random Pick with Weights
