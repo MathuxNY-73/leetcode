@@ -247,5 +247,6 @@ As of August 26<sup>th</sup>, 2019:
 - [x] Submit solution. Got correct in 124 ms with 7.6 MB
 - [x] Rewrite solution using pthread_mutex in C
 - [x] Submit solution. Got correct in 164 ms with 7.8 MB
-- [ ] Write a C++ solution using std Mutex.
+- [x] Write a C++ solution using std Mutex.
+- [x] Submit solution. Got correct in 136 ms with 9.4 MB
 - [x] Problem solved
