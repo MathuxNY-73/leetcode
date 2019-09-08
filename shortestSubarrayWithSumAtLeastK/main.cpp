@@ -39,29 +39,27 @@ static const auto _____ = []()
 class Solution {
 public:
 
-    static int shortestSubarray(const vector<int>& A, int K) {
+    static int shortestSubarray(vector<int>& A, int K) {
+        auto dq = deque<pair<int, int>>();
         auto a_length = A.size();
-        auto min_length = a_length;
-        auto found = false;
+        auto min_length = a_length + 1;
+        auto cum = 0;
 
-        for(auto i = 0 ; i < a_length ; ++i) {
-            auto cum = 0;
-            for(auto j = i ; j < min(i + min_length, a_length) ; ++j) {
-                if(A[j] >= K) {
-                    return 1;
-                }
-                else {
-                    cum += A[j];
-                    if(cum >= K) {
-                        found = true;
-                        min_length = j - i + 1;
-                        //cout << "min_length: " << min_length << "\n";
-                        break;
-                    }
-                }
+        dq.push_back({0,-1});
+
+        for(auto i = 0; i < a_length ; ++i) {
+            cum += A[i];
+            while(!dq.empty() && dq.back().first >= cum) {
+                dq.pop_back();
             }
+            while(!dq.empty() && cum - dq.front().first >= K) {
+                auto diff = i - dq.front().second;
+                min_length = diff < min_length ? diff : min_length;
+                dq.pop_front();
+            }
+            dq.push_back(make_pair(cum, i));
         }
-        return found ? min_length : -1;
+        return min_length >= a_length + 1 ? -1 : min_length;
     }
 };
 

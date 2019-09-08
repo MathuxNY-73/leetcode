@@ -239,7 +239,7 @@ As of August 12<sup>th</sup>, 2019:
 
 ### Print in order
 The goal of this challenge is to print "firstsecondthird" using print functions outputing "first", "second" and "third". Those functions are called once and only once but by different threads. Thus the goal is to implement a mechanism that insure that the prints are done in the right order.  
-I triead to solve this problem using the C and C++ and C++ language [Problem link](https://leetcode.com/problems/print-in-order)  
+I triead to solve this problem using the C and C++ language [Problem link](https://leetcode.com/problems/print-in-order)  
 As of August 26<sup>th</sup>, 2019:
 - [x] Find a first working solutionn on the sample input.
 - [x] Submit solution. Got Time Limit Exceeded error. Suspected Spinlock.
@@ -253,18 +253,10 @@ As of August 26<sup>th</sup>, 2019:
 
 ### Shortest Subarray with sum at least K
 The goal of this challenge is to code a function that finds the length of the shortest subarray which element sums up to at least a given K.  
-I tried to solve this using the C++ language [Problem link](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/)  
+I tried to solve this problem using the C++ language [Problem link](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/)  
 As of September 6<sup>th</sup>, 2019:
 - [x] I wrote a smart BruteForce solution which in the worst case runs in O(n<sup>2<\sup>).
 - [x] Submit solution. Got Time Limit Exceeded Error, of course
-- [ ] Find a cleverer solution
-- [ ] Problem solvedproblem using the C++ language [Problem link](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/)  
-As of September 6<sup>th</sup>, 2019:
-- [x] I wrote a smart BruteForce solution which in the worst case runs in O(n<sup>2<\sup>).
-- [x] Submit solution. Got Time Limit Exceeded Error, of course
-
-### Shortest Subarray with sum at least K
-The goal of this challenge is to code a function that finds the length of the shortest subarray which element sums up to at least a given K.  
-I tried to solve this problem 
-- [ ] Find a cleverer solution
-- [ ] Problem solved
+- [x] Find a cleverer solution
+- [x] Submit solution. Got correct in 148 ms with 21.5 MB
+- [x] Problem solved
