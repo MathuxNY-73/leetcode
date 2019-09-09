@@ -255,7 +255,7 @@ As of August 26<sup>th</sup>, 2019:
 The goal of this challenge is to code a function that finds the length of the shortest subarray which element sums up to at least a given K.  
 I tried to solve this problem using the C++ language [Problem link](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/)  
 As of September 6<sup>th</sup>, 2019:
-- [x] I wrote a smart BruteForce solution which in the worst case runs in O(n<sup>2<\sup>).
+- [x] I wrote a smart BruteForce solution which in the worst case runs in O(n<sup>2</sup>).
 - [x] Submit solution. Got Time Limit Exceeded Error, of course
 - [x] Find a cleverer solution
 - [x] Submit solution. Got correct in 148 ms with 21.5 MB
