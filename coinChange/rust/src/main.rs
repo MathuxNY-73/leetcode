@@ -1,5 +1,4 @@
 use std::io;
-use std::cmp::Ordering;
 
 struct Solution {
 }
@@ -9,9 +8,9 @@ impl Solution {
         let mut dp = vec![0; (amount + 1) as usize];
         dp[0] = 1;
 
-        for i in 1..(amount+1) {
+        for c in coins {
+            for i in 1..(amount+1) {
             //println!("i: {}", i);
-            for c in &coins {
                 if i >= c {
                     dp[i as usize] += dp[(i - c) as usize] 
                 }

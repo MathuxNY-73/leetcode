@@ -260,3 +260,13 @@ As of September 6<sup>th</sup>, 2019:
 - [x] Find a cleverer solution
 - [x] Submit solution. Got correct in 148 ms with 21.5 MB
 - [x] Problem solved
+
+
+### Coin change
+The goal of this challenge is to code a function that computes the minimum amount a coins necessary to cash a certain amount. If no coin combination exists then the function returns -1.  
+I tried to solve this problem using the Rust language [Problem link](https://leetcode.com/problems/coin-change/)  
+As of September 10 <sup>th</sup>, 2019:
+- [x] I wrote a solution to the Coin Change problem but actually not the problem at hand. My solution counts the number of ways to add up the coin to that particular amount.
+- [ ] Find a first working solution on sample input.
+- [ ] Submit solution.
+- [ ] Problem solved
