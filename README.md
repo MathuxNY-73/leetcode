@@ -267,6 +267,6 @@ The goal of this challenge is to code a function that computes the minimum amoun
 I tried to solve this problem using the Rust language [Problem link](https://leetcode.com/problems/coin-change/)  
 As of September 10 <sup>th</sup>, 2019:
 - [x] I wrote a solution to the Coin Change problem but actually not the problem at hand. My solution counts the number of ways to add up the coin to that particular amount.
-- [ ] Find a first working solution on sample input.
-- [ ] Submit solution.
-- [ ] Problem solved
+- [x] Find a first working solution on sample input.
+- [x] Submit solution. Got correct in 4 ms with 3 MB
+- [x] Problem solved

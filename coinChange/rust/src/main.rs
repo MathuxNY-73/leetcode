@@ -1,24 +1,33 @@
 use std::io;
+use std::cmp::min;
 
 struct Solution {
 }
 
 impl Solution {
     pub fn coin_change(coins: Vec<i32>, amount: i32) -> i32 {
-        let mut dp = vec![0; (amount + 1) as usize];
-        dp[0] = 1;
+        let mut dp = vec![-1; (amount + 1) as usize];
+        dp[0] = 0;
 
         for c in coins {
             for i in 1..(amount+1) {
-            //println!("i: {}", i);
-                if i >= c {
-                    dp[i as usize] += dp[(i - c) as usize] 
+                //println!("i: {}", i);
+                if i == c {
+                    dp[i as usize] = 1;
+                }
+                else if i > c && dp[(i - c) as usize] > 0 {
+                    if dp[i as usize] == -1 {
+                        dp[i as usize] = dp[(i - c) as usize] + 1;
+                    }
+                    else {
+                        dp[i as usize] = min(dp[i as usize], dp[(i - c) as usize] + 1);
+                    }
                 }
             }
         }
 
         let res = dp[amount as usize];
-        if res == 0 { -1 } else { res }
+        res
     }
 }
 
