@@ -178,7 +178,8 @@ The goal is to find, in rooted directed tree, the edge that is redundant. If the
 My approach is to:
  1. Build the tree by storing parents for each node
  2. If there exists a node with two parents then focus on it and find the edge that can be removed.
- 3. If not reverse iterate through the list of edges and find the one that create a cycle
+ 3. If not reverse iterate through the list of edges and find the one that create a cycle  
+ 
 I tried to solve this problem using the C++ language. [Problem link](https://leetcode.com/problems/redundant-connection-ii/)  
 As of August 4<sup>th</sup>, 2019:
 - [x] Find a first working solutionn on the sample input.
@@ -277,5 +278,16 @@ I tried to solve this problem using the C language [Problem link](https://leetco
 As of September 20<sup>th</sup>, 2019:
 - [x] I wrote a solution to the problem that finds the longest increasing subarray (ie: formed of contiguous elements).
 - [ ] Find a first working solution on sample input.
+- [ ] Submit solution.
+- [ ] Problem solved
+
+### Find Minimum In Rotated Sorted Arrays
+The goal of this challenge is to code a function that returns the minimum element of a sorted element that has be rotated at one pivot point.  
+The first approach I used is the brute force search through the array in O(N), but I think it is possible to do it in O(log N) since the array is originally sorted.  
+I tried to solve this problem using the C++ language [Problem link](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)  
+As of September 20<sup>th</sup>, 2019:
+- [x] I wrote a solution brute forcing the problem.
+- [x] Submit solution. Got right in 4 ms with 8.9 MB
+- [ ] Find a first working solution on sample input using Binary Search.
 - [ ] Submit solution.
 - [ ] Problem solved
