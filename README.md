@@ -270,3 +270,12 @@ As of September 10 <sup>th</sup>, 2019:
 - [x] Find a first working solution on sample input.
 - [x] Submit solution. Got correct in 4 ms with 3 MB
 - [x] Problem solved
+
+### Longest Increasing Subsequence
+The goal of this challenge is to code a function that returns the length of the longest subsequence with increasing numbers. The subsequence needs not to be formed of contiguous numbers in the array.  
+I tried to solve this problem using the C language [Problem link](https://leetcode.com/problems/longest-increasing-subsequence/)  
+As of September 20<sup>th</sup>, 2019:
+- [x] I wrote a solution to the problem that finds the longest increasing subarray (ie: formed of contiguous elements).
+- [ ] Find a first working solution on sample input.
+- [ ] Submit solution.
+- [ ] Problem solved
