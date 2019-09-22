@@ -279,8 +279,11 @@ As of September 22<sup>nd</sup>, 2019:
 - [x] I wrote a solution to the problem that finds the longest increasing subarray (ie: formed of contiguous elements).
 - [x] Find a first working solution on sample input.
 - [x] Submit solution. Got wrong.
-- [ ] Submit solution.
-- [ ] Problem solved
+- [x] Find a second working solution using DP on sample input.
+- [x] Submit solution. Got correct in 24 ms with 7.1 MB. Complexity is O(n<sup>2</sup>)
+- [ ] Find a faster solution
+- [ ] Submit faster solution
+- [x] Problem solved
 
 ### Find Minimum In Rotated Sorted Arrays
 The goal of this challenge is to code a function that returns the minimum element of a sorted element that has be rotated at one pivot point.  

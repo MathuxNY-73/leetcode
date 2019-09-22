@@ -11,59 +11,34 @@
 
 #define wl(n) while(n--)
 #define fl(i,a,b) for(i=a; i<b; ++i)
-#define min(a,b) a<=b?a:b
+#define min(a,b) (a<=b?a:b)
+#define max(a,b) (a>=b?a:b)
 
-
-typedef struct Num {
-    int val;
-    int idx;
-} Num;
-
-int cmp_num(const void* l, const void* r) {
-    return (((Num*)l)->val - ((Num*)r)->val);
-}
 
 int lengthOfLIS(int* nums, int numsSize){
-    if(numsSize == 0) {
-        return 0;
-    }
-
-    bool* inSeq = malloc(sizeof(bool) * numsSize);
-    memset(inSeq, 0 , sizeof(bool) * numsSize);
-    Num* numsIdx = malloc(sizeof(Num) * numsSize);
-    memset(numsIdx, 0, sizeof(Num)*numsSize);
-
-    int max_lis = 1;
+    int* dp = malloc(sizeof(int) * (numsSize + 1));
+    memset(dp, 0, sizeof(int) * numsSize);
 
     for(int i = 0 ; i < numsSize ; ++i) {
-        numsIdx[i].val = nums[i];
-        numsIdx[i].idx = i;
-    }
+        int maxval = 0;
 
-    qsort(numsIdx, numsSize, sizeof(Num), &cmp_num);
-
-    for(int i = 0 ; i < numsSize && max_lis <= (numsSize / 2) ; ++i) {
-        if(!inSeq[i]) {
-            Num prev = numsIdx[i];
-            int lis = 1;
-            inSeq[i] = true;
-            for(int j = i + 1 ; j < numsSize ; ++j) {
-                if(numsIdx[j].val > prev.val && numsIdx[j].idx > prev.idx) {
-                    ++lis;
-                    prev = numsIdx[j];
-                    inSeq[j] = true;
-                }
-            }
-
-            if(lis > max_lis) {
-                max_lis = lis;
+        for(int j = 0 ; j < i ; ++j) {
+            if(nums[j] < nums[i]) {
+                maxval = max(maxval,dp[j]);
             }
         }
-    }
-    free(numsIdx);
-    free(inSeq);
 
-    return max_lis;
+        dp[i] = maxval + 1;
+    }
+
+    int res = 0;
+    for(int i = 0 ; i < numsSize + 1 ; ++i) {
+        if(dp[i] > res) {
+            res = dp[i];
+        }
+    }
+    free(dp);
+    return res;
 }
 
 int main()
