@@ -281,8 +281,8 @@ As of September 22<sup>nd</sup>, 2019:
 - [x] Submit solution. Got wrong.
 - [x] Find a second working solution using DP on sample input.
 - [x] Submit solution. Got correct in 24 ms with 7.1 MB. Complexity is O(n<sup>2</sup>)
-- [ ] Find a faster solution
-- [ ] Submit faster solution
+- [x] Find a faster solution with Binary Search
+- [x] Submit faster solution. Got correct in 4 ms with 7 MB.
 - [x] Problem solved
 
 ### Find Minimum In Rotated Sorted Arrays

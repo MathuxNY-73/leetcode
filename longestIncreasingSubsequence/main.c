@@ -14,31 +14,48 @@
 #define min(a,b) (a<=b?a:b)
 #define max(a,b) (a>=b?a:b)
 
+int binSearch(const int* a, int s, int el, bool* found) {
+    int l = 0, r = s - 1;
+    int m = (l+r) / 2;
+    *found = false;
+
+    while(l <= r) {
+
+        if(el == a[m]) {
+            *found = true;
+            return m;
+        }
+        else if(el < a[m]) {
+            r = m - 1;
+        }
+        else {
+            l = m + 1;
+        }
+
+        m = (l+r) / 2;
+    }
+
+    return l;
+}
 
 int lengthOfLIS(int* nums, int numsSize){
-    int* dp = malloc(sizeof(int) * (numsSize + 1));
+    int* dp = malloc(sizeof(int) * (numsSize));
     memset(dp, 0, sizeof(int) * numsSize);
+    int dp_size = 0;
 
     for(int i = 0 ; i < numsSize ; ++i) {
-        int maxval = 0;
-
-        for(int j = 0 ; j < i ; ++j) {
-            if(nums[j] < nums[i]) {
-                maxval = max(maxval,dp[j]);
-            }
+        bool found;
+        int idx = binSearch(dp, dp_size, nums[i], &found);
+        if(idx == dp_size) {
+            dp[dp_size++] = nums[i];
         }
-
-        dp[i] = maxval + 1;
-    }
-
-    int res = 0;
-    for(int i = 0 ; i < numsSize + 1 ; ++i) {
-        if(dp[i] > res) {
-            res = dp[i];
+        else if (!found) {
+            dp[idx] = nums[i];
         }
     }
+
     free(dp);
-    return res;
+    return dp_size;
 }
 
 int main()
