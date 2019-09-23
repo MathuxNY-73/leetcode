@@ -56,3 +56,28 @@ int fastscan_string_w(char *str, int buffer_size)
         }
     return  size_of_str;
 }
+
+int myPartition(int* a, int l, int h) {
+    int p = a[h], i = l;
+    for(int j = l ; j < h ; ++j) {
+        if (a[j] < p) {
+            int tmp = a[j];
+            a[j] = a[i];
+            a[i] = tmp;
+            ++i;
+        }
+    }
+    int tmp = a[h];
+    a[h] = a[i];
+    a[i] = tmp;
+    return i;
+}
+
+void myQuicksort(int* a, int l, int h) {
+    if(l < h) {
+        int p = myPartition(a, l, h);
+        myQuicksort(a, p + 1, h);
+        myQuicksort(a, l, p - 1);
+    }
+}
+
