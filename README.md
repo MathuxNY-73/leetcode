@@ -295,3 +295,14 @@ As of September 20<sup>th</sup>, 2019:
 - [ ] Find a first working solution on sample input using Binary Search.
 - [ ] Submit solution.
 - [ ] Problem solved
+
+### Find Number of LIS (Longest Increasing Subsequence)
+The goal of this challenge is to code a function that finds the number of Longest Increasing Subsequence. The subsequence needs not be contiguous.  
+The first approach I used is the Dynamic Programming approach to find the length of the LIS and then find the number of LIS in the array.  
+I tried to solve this problem using the C++ language [Problem link](https://leetcode.com/problems/number-of-longest-increasing-subsequence/)  
+As of September 20<sup>th</sup>, 2019:
+- [x] I wrote a solution using Dynamic Programing and thus a O(N<sup>2</sup>) solution.
+- [x] Submit solution. Got right in 40 ms with 9.2 MB
+- [ ] Find a faster working solution on sample.
+- [ ] Submit solution.
+- [x] Problem solved

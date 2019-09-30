@@ -43,10 +43,10 @@ public:
                 if(nums[j] < nums[i]) {
                     if(dp[j].first >  max_item) {
                         max_item = dp[j].first;
-                        cnt = 1;
+                        cnt = dp[j].second;
                     }
                     else if (dp[j].first == max_item) {
-                        ++cnt;
+                        cnt += dp[j].second;
                     }
                 }
             }
@@ -58,16 +58,11 @@ public:
         }
         printf("\n");
 
-        auto max_item = 0;
-        for(int i = 0 ; i < n_size ; ++i) {
-            if(dp[i].first > max_item) {
-                max_item = dp[i].first;
-            }
-        }
+        auto max_item = max_element(dp.cbegin(), dp.cend(), [](const pair<int,int>& l, const pair<int, int>& r) -> bool {return l.first < r.first;});
 
         auto count = 0;
         for(int i = 0 ; i < n_size ; ++i) {
-            if(dp[i].first == max_item) {
+            if(dp[i].first == max_item->first) {
                 count += dp[i].second;
             }
         }
