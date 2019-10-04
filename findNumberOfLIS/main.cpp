@@ -31,8 +31,10 @@
 using namespace std;
 
 class Solution {
+private:
+    vector<int> tree;
 public:
-    static int findNumberOfLIS(const vector<int>& nums) {
+    int findNumberOfLIS(const vector<int>& nums) {
         auto n_size = nums.size();
         auto dp = vector<pair<int,int>>(n_size, {0,0});
 
@@ -45,7 +47,7 @@ public:
                         max_item = dp[j].first;
                         cnt = dp[j].second;
                     }
-                    else if (dp[j].first == max_item) {
+                     else if (dp[j].first == max_item) {
                         cnt += dp[j].second;
                     }
                 }
@@ -85,7 +87,7 @@ int main()
         for(int i = 0 ; i < n ; ++i) {
             fastscan(nums[i]);
         }
-        auto res = Solution::findNumberOfLIS(nums);
+        auto res = Solution().findNumberOfLIS(nums);
         printf("%d\n", res);
     }
 
