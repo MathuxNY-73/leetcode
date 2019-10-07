@@ -124,11 +124,13 @@ public:
 
         for(auto& el : nums) {
             auto q = query(root, el - 1);
+            printf("For %d: found (%d, %d)\n", el - 1, q.first, q.second);
             insert(root, {q.first + 1, q.second}, el);
         }
 
         return root.val.second;
     }
+
 };
 
 int main()
