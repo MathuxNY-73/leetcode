@@ -30,6 +30,44 @@
 
 using namespace std;
 
+typedef struct Node {
+    int start;
+    int end;
+    struct Node* left;
+    struct Node* right;
+    pair<int, int> val;
+
+    Node(int start, int end) {
+        left = NULL;
+        right = NULL;
+        this->start = start;
+        this->end = end;
+        val = {0,1};
+    }
+
+    ~Node() {
+        delete left;
+        delete right;
+
+        left = NULL;
+        right = NULL;
+    }
+
+    struct Node& get_left() {
+        if(left == NULL) {
+            left = new Node(start, start + (end - start) / 2);
+        }
+        return *left;
+    }
+
+    struct Node& get_right() {
+        if(right == NULL) {
+            right = new Node(start + (end - start) / 2 + 1, end);
+        }
+        return *right;
+    }
+} Node;
+
 class Solution {
 private:
     pair<int, int> merge(const pair<int, int>& a, const pair<int, int>& b) const {
@@ -42,35 +80,33 @@ private:
         return a.first > b.first ? a : b;
     }
 
-    void insert(vector<pair<int, int>>& tree, pair<int, int> val, int key, int idx, int lo, int hi) const {
-        if(lo == hi) {
-            tree[idx] = merge(val, tree[idx]);
+    void insert(Node& tree, pair<int, int> val, int key) const {
+        if(tree.start == tree.end) {
+            tree.val = merge(val, tree.val);
             return;
         }
 
-        int mid = (lo + hi) / 2;
+        auto mid = tree.start + (tree.end - tree.start) / 2;
 
         if(key <= mid) {
-            insert(tree, val, key, 2*idx + 1, lo, mid);
+            insert(tree.get_left(), val, key);
         }
         else {
-            insert(tree, val, key, 2 * (idx + 1), mid + 1, hi);
+            insert(tree.get_right(), val, key);
         }
 
-        tree[idx] = merge(tree[2*idx + 1], tree[2*(idx+1)]);
+        tree.val = merge(tree.get_left().val, tree.get_right().val);
     }
 
-    pair<int, int> query(const vector<pair<int, int>>& tree, int key, int idx, int lo, int hi) {
-        auto mid = (lo + hi) / 2;
-
-        if(key >= hi) {
-            return tree[idx];
+    pair<int, int> query(Node& tree, int key) const {
+        if(key >= tree.end) {
+            return tree.val;
         }
-        else if (key < lo) {
+        else if (key < tree.start) {
             return {0, 1};
         }
         else {
-            return merge(query(tree, key, 2*idx + 1, lo, mid), query(tree, key, 2*(idx+1), mid + 1, hi));
+            return merge(query(tree.get_left(), key), query(tree.get_right(), key));
         }
     }
 public:
@@ -81,16 +117,17 @@ public:
             return 0;
         }
 
-        auto tree = vector<pair<int, int>>(4 * n_size, {0,1});
-
         auto max_el = *(max_element(nums.cbegin(), nums.cend()));
         auto min_el = *(min_element(nums.cbegin(), nums.cend()));
+
+        auto root = Node(min_el, max_el);
+
         for(auto& el : nums) {
-            auto q = query(tree, el - 1, 0, min_el, max_el);
-            insert(tree, {q.first + 1, q.second}, el, 0, min_el, max_el);
+            auto q = query(root, el - 1);
+            insert(root, {q.first + 1, q.second}, el);
         }
 
-        return tree[0].second;
+        return root.val.second;
     }
 };
 
