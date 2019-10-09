@@ -289,12 +289,12 @@ As of September 22<sup>nd</sup>, 2019:
 The goal of this challenge is to code a function that returns the minimum element of a sorted element that has be rotated at one pivot point.  
 The first approach I used is the brute force search through the array in O(N), but I think it is possible to do it in O(log N) since the array is originally sorted.  
 I tried to solve this problem using the C++ language [Problem link](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)  
-As of September 20<sup>th</sup>, 2019:
+As of October 9<sup>th</sup>, 2019:
 - [x] I wrote a solution brute forcing the problem.
 - [x] Submit solution. Got right in 4 ms with 8.9 MB
-- [ ] Find a first working solution on sample input using Binary Search.
-- [ ] Submit solution.
-- [ ] Problem solved
+- [x] Find a first working solution on sample input using Binary Search.
+- [x] Submit solution. Got right in 4 ms with 8.8 MB
+- [x] Problem solved
 
 ### Find Number of LIS (Longest Increasing Subsequence)
 The goal of this challenge is to code a function that finds the number of Longest Increasing Subsequence. The subsequence needs not be contiguous.  
@@ -303,8 +303,8 @@ I tried to solve this problem using the C++ and rust languages [Problem link](ht
 As of October 8<sup>th</sup>, 2019:
 - [x] I wrote a solution using Dynamic Programing and thus a O(N<sup>2</sup>) solution.
 - [x] Submit solution. Got right in 40 ms with 9.2 MB
-- [x] Find a solution based on Segment Tree.
+- [x] Find a solution based on Segment Tree. Solved in O(N*Log(N))
 - [x] Submit solution. Got right in 60 ms with 38.5 MB
-- [x] Find a faster working solution on sample with Rust
+- [x] Find a faster working solution on sample with Rust using DP in O(N*Log(N))
 - [x] Submit solution. Got right in 0 ms with 2.7 MB
 - [x] Problem solved

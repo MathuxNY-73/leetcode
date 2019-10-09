@@ -37,6 +37,22 @@ public:
     static int findMin(const vector<int>& nums) {
         return *min_element(nums.cbegin(), nums.cend());
     }
+
+    static int findMinBin(const vector<int>& nums) {
+        int l = 0, r = nums.size() - 1;
+
+        while(l < r) {
+            auto m = l + (r - l) / 2;
+            if(nums[m] >= nums[l] && nums[m] > nums[r]) {
+                l = m + 1;
+            }
+            else {
+                r = m;
+            }
+        }
+
+        return nums[l];
+    }
 };
 
 int main()
@@ -55,7 +71,7 @@ int main()
             fastscan(nums[i]);
         }
 
-        int res = Solution::findMin(nums);
+        int res = Solution::findMinBin(nums);
         printf("%d\n", res);
     }
 
