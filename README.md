@@ -308,3 +308,11 @@ As of October 8<sup>th</sup>, 2019:
 - [x] Find a faster working solution on sample with Rust using DP in O(N*Log(N))
 - [x] Submit solution. Got right in 0 ms with 2.7 MB
 - [x] Problem solved
+
+### Pancake Sort
+The goal of this challenge is to sort an array of integers using only flips, meaning flipping the n<sup>th</sup> first integers of the array. The output is the sequence of those k, with k meaning that the k<sup>th</sup> first integers of the array will be flipped.  
+I tired to solve this problem using the C language [Problem link](https://leetcode.com/problems/pancake-sorting/)  
+As of October 9<sup>th</sup>, 2019:
+- [x] I wrote a naive solution in O(N<sup>2</sup>).
+- [x] Submit solution. Got right in 4 ms with 7.4 MB
+- [x] Problem solved
