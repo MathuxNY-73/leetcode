@@ -1,5 +1,5 @@
 # leetcode
-The repository contains all the problems I have tried to solve on the leetcode [website](https://leetcode.com/problemset/all/)
+The repsitory contains all the problems I have tried to solve on the leetcode [website](https://leetcode.com/problemset/all/)
 
 ### Add two numbers
 The goal is to sum two numbers given as two linked lists. The digits are ordered in reverse order meaning the least significant digit comes first.  
@@ -313,8 +313,19 @@ As of October 8<sup>th</sup>, 2019:
 
 ### Pancake Sort
 The goal of this challenge is to sort an array of integers using only flips, meaning flipping the n<sup>th</sup> first integers of the array. The output is the sequence of those k, with k meaning that the k<sup>th</sup> first integers of the array will be flipped.  
-I tired to solve this problem using the C language [Problem link](https://leetcode.com/problems/pancake-sorting/)  
+I tried to solve this problem using the C language [Problem link](https://leetcode.com/problems/pancake-sorting/)  
 As of October 9<sup>th</sup>, 2019:
 - [x] I wrote a naive solution in O(N<sup>2</sup>).
 - [x] Submit solution. Got right in 4 ms with 7.4 MB
 - [x] Problem solved
+
+### Remove Nth Node From End of List
+The goal of this challenge is to remove the n<sup>th</sup> starting from the end of a linked list.  
+I tried to solve this problem using the C++ language [Problem link](https://leetcode.com/explore/interview/card/google/60/linked-list-5/3064/)  
+As of October 14<sup>th</sup>, 2019:
+- [x] I wrote a recursive solution.
+- [x] Submit solution. Got right in 0 ms with 8.5 MB
+- [ ] Find a solution that requires only one pass on the linked list
+- [ ] Submit solution
+- [x] Problem solved
+
