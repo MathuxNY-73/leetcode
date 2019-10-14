@@ -321,11 +321,11 @@ As of October 9<sup>th</sup>, 2019:
 
 ### Remove Nth Node From End of List
 The goal of this challenge is to remove the n<sup>th</sup> starting from the end of a linked list.  
-I tried to solve this problem using the C++ language [Problem link](https://leetcode.com/explore/interview/card/google/60/linked-list-5/3064/)  
+I tried to solve this problem using the C++ language [Problem link](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)  
 As of October 14<sup>th</sup>, 2019:
 - [x] I wrote a recursive solution.
 - [x] Submit solution. Got right in 0 ms with 8.5 MB
-- [ ] Find a solution that requires only one pass on the linked list
-- [ ] Submit solution
+- [x] Find a solution that requires only one pass on the linked list
+- [x] Submit solution. Got right in 4 ms with 8.4 MB
 - [x] Problem solved
 

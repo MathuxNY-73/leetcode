@@ -65,12 +65,23 @@ public:
         auto dummy = ListNode(-1);
         dummy.next = head;
 
-        auto first = second = dummy.next;
+        auto first = dummy.next;
+        auto second = &dummy;
 
         auto cnt = 0;
         while(cnt < n) {
-            
+            first = first->next;
+            ++cnt;
         }
+
+        while(first != NULL) {
+            first = first->next;
+            second = second->next;
+        }
+
+        second->next = second->next->next;
+
+        return dummy.next;
     }
 };
 
@@ -103,7 +114,7 @@ int main()
             cur = tmp;
         }
 
-        auto res = Solution().removeNthFromEnd(head, r);
+        auto res = Solution().removeNthFromEndOnePass(head, r);
 
         cur = res;
         while(cur != NULL) {
