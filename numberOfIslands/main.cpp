@@ -26,32 +26,73 @@
 #include "input.hpp"
 
 #define wl(n) while(n--)
-#define min(a,b) a < b ? a : b
-#define max(a,b) a < b ? b : a
 #define fl(i,a,b) for(i=a; i<b; ++i)
 
 using namespace std;
 
 class Solution {
-public:
-    static int findMin(const vector<int>& nums) {
-        return *min_element(nums.cbegin(), nums.cend());
+private:
+    vector<vector<pair<int,int>>> par;
+
+    pair<int, int> get_parent(int x, int y) const {
+        auto i = x, j = y;
+        auto p = par[i][j];
+        while(p.first != i && p.second != j) {
+            i = p.first;
+            j = p.second;
+            p = par[i][j];
+        }
+
+        return p;
     }
 
-    static int findMinBin(const vector<int>& nums) {
-        int l = 0, r = nums.size() - 1;
+    void set_parent(int x, int y, const pair<int, int>& par_coord) {
+        par[x][y] = par_coord;
+    }
 
-        while(l < r) {
-            auto m = l + (r - l) / 2;
-            if(nums[m] >= nums[l] && nums[m] > nums[r]) {
-                l = m + 1;
+    void initialize_sets(int n, int m) {
+        par = vector<vector<pair<int,int>>>(n, vector<pair<int, int>>(m, {0,0}));
+
+        for(int i = 0; i < n ; ++i) {
+            for(int j = 0 ; j < m ; ++j) {
+                par[i][j] = {i,j};
             }
-            else {
-                r = m;
+        }
+    }
+public:
+    int numsIslands(const vector<vector<char>>& grid) {
+        auto n = grid.size();
+        if(n == 0) {
+            return 0;
+        }
+        auto m = grid[0].size();
+        initialize_sets(n, m);
+
+        for(int i = 0; i < n ; ++i){
+            for(int j = 0 ; j < m ; ++j) {
+                if(grid[i][j] == '1') {
+                    auto p = {i, j};
+                    if (j > 0 && grid[i][j - 1] == '1') {
+                        set_parent(i, j, get_parent(i, j - 1));
+                    }
+                    else if (i > 0 && grid[i - 1][j] == '1') {
+                        set_parent(i, j, get_parent(i - 1, j));
+                    }
+                }
             }
         }
 
-        return nums[l];
+        auto count = 0;
+        for(int i = 0 ; i < n ; ++i) {
+            for(int j = 0 ; j < m ; ++j) {
+                auto [x, y] = get_parent(i, j);
+                if(grid[i][j] == '1' && (x == i && y == j)) {
+                    ++count;
+                }
+            }
+        }
+
+        return count;
     }
 };
 
@@ -62,16 +103,25 @@ int main()
 
     wl(t)
     {
-        int n=0;
+        int n=0, m = 0;
         fastscan(n);
-        auto nums = vector<int>(n, 0);
+        fastscan(m);
+        auto grid = vector<vector<char>>(m, vector<char>(n, '0'));
+        printf("n: %d, m: %d\n", n, m);
+
 
         int i;
-        fl(i, 0, n){
-            fastscan(nums[i]);
+        fl(i, 0, m){
+            int j;
+            fl(j, 0, n){
+                cin >> grid[i][j];
+                cout << grid[i][j];
+            }
+            cout << "\n";
         }
+        cin.ignore();
 
-        int res = Solution::findMinBin(nums);
+        auto res = Solution().numsIslands(grid);
         printf("%d\n", res);
     }
 
