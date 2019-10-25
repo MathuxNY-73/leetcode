@@ -68,26 +68,37 @@ public:
         auto m = grid[0].size();
         initialize_sets(n, m);
 
+        auto visited = unordered_set<pair<int, int>>();
+
+        auto count = 0;
         for(int i = 0; i < n ; ++i){
             for(int j = 0 ; j < m ; ++j) {
                 if(grid[i][j] == '1') {
-                    auto p = {i, j};
-                    if (j > 0 && grid[i][j - 1] == '1') {
-                        set_parent(i, j, get_parent(i, j - 1));
+                    if(visited.find({i,j}) == visited.cend()) {
+                        ++count;
+                        auto q = queue<pair<int,int>>();
+                        q.push({i,j});
+                        while(!q.empty()) {
+                            auto cur = q.front();
+                            q.pop();
+                            if(visited.find(cur) == visited.cend()){
+                                visited.emplace(cur);
+                                auto [l,k] = cur;
+                                if(l > 0 && grid[l-1][k] == '1') {
+                                    q.push({l - 1, k});
+                                }
+                                if(l < n - 1 && grid[l+1][k] == '1') {
+                                    q.push({l+1,k});
+                                }
+                                if(k > 0 && grid[l][k-1] == '1') {
+                                    q.push({l, k-1});
+                                }
+                                if(k < m - 1 && grid[l][k+1] == '1') {
+                                    q.push({l, k+1});
+                                }
+                            }
+                        }
                     }
-                    else if (i > 0 && grid[i - 1][j] == '1') {
-                        set_parent(i, j, get_parent(i - 1, j));
-                    }
-                }
-            }
-        }
-
-        auto count = 0;
-        for(int i = 0 ; i < n ; ++i) {
-            for(int j = 0 ; j < m ; ++j) {
-                auto [x, y] = get_parent(i, j);
-                if(grid[i][j] == '1' && (x == i && y == j)) {
-                    ++count;
                 }
             }
         }
