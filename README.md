@@ -331,10 +331,11 @@ As of October 14<sup>th</sup>, 2019:
 
 ### Number of Islands
 The goal of this challenge is to code a function that finds the number of islands in a matrix of 0s and 1s where 1 is earth and 0 is water. Is considered an island earth that is not connected vertically nor horizontally to another chunk of earth.  
-I tried to solve this problem using the C++ language[Problem link](https://leetcode.com/explore/interview/card/google/61/trees-and-graphs/3069/)  
+I tried to solve this problem using the C++ language[Problem link](https://leetcode.com/problems/number-of-islands/submissions/)  
 As of October 23<sup>rd</sup>, 2019:
 - [x] Write a solution that works on sample input
 - [x] Submit solution. Got wrong
-- [ ] Write a solution that works for edge cases
-- [ ] Submit solution.
-- [ ] Problem solved
+- [x] Write a solution that works for edge cases
+- [x] Submit solution. Got right in 76 ms with 15.4 MB
+- [ ] Find a faster solution for the problem.
+- [x] Problem solved

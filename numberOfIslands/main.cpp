@@ -59,6 +59,12 @@ private:
             }
         }
     }
+
+    struct PairHasher {
+        size_t operator()(const pair<int,int>& k) const {
+            return (hash<int>()(k.first) ^ (hash<int>()(k.second) << 1)) >> 1;
+        }
+    };
 public:
     int numsIslands(const vector<vector<char>>& grid) {
         auto n = grid.size();
@@ -68,13 +74,12 @@ public:
         auto m = grid[0].size();
         initialize_sets(n, m);
 
-        auto visited = unordered_set<pair<int, int>>();
+        auto visited = unordered_set<pair<int, int>, PairHasher>();
 
         auto count = 0;
         for(int i = 0; i < n ; ++i){
             for(int j = 0 ; j < m ; ++j) {
                 if(grid[i][j] == '1') {
-                    if(visited.find({i,j}) == visited.cend()) {
                         ++count;
                         auto q = queue<pair<int,int>>();
                         q.push({i,j});
@@ -98,7 +103,6 @@ public:
                                 }
                             }
                         }
-                    }
                 }
             }
         }
