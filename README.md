@@ -339,3 +339,13 @@ As of October 23<sup>rd</sup>, 2019:
 - [x] Submit solution. Got right in 76 ms with 15.4 MB
 - [ ] Find a faster solution for the problem.
 - [x] Problem solved
+
+### Minimum Area Rectangle II
+The goal of this challenge is to code a function that finds the minimum area that can be formed by a rectangle in a given set of points.  
+I tried to solve this problem using the C++ language [Problem link](https://leetcode.com/problems/minimum-area-rectangle-ii/)  
+As of October 28<sup>th</sup>, 2019:
+- [x] Write a solution that works on sample input. The solution I have is O(n<sup>3</sup>) in time.
+- [x] Submit solution. Got correct in 1416 ms with 418.2 MB
+- [ ] Find a faster solution. Is it possible to do it in O(n<sup>2</sup>) ?
+- [ ] Submit new solution
+- [x] Problem solved
