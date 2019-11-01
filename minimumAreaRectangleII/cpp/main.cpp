@@ -55,7 +55,7 @@ public:
             s.insert(points[i]);
         }
 
-        auto min_area = numeric_limits<double>::max();
+        auto min_area = DBL_MAX;
         auto rec = false;
 
         for(auto i = 0 ; i < n ; ++i) {
