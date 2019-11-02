@@ -348,4 +348,6 @@ As of October 28<sup>th</sup>, 2019:
 - [x] Submit solution. Got correct in 256 ms with 77.7 MB
 - [x] Find a faster solution. Is it possible to do it in O(n<sup>2</sup>) ? No it is not possible best case is O(N<sup>2</sup>logN)
 - [x] Submit new solution. Got right in 108 ms with 14.1 MB
+- [x] Write the solution in Rust.
+- [x] Submit solution. Got right in 16 ms with 4.5 MB
 - [x] Problem solved
