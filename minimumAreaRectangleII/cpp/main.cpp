@@ -59,27 +59,23 @@ public:
         auto rec = false;
 
         for(auto i = 0 ; i < n ; ++i) {
-            for(auto j = 0 ; j < n ; ++j) {
-                if (i != j) {
-                for(auto k = 0 ; k < n ; ++k) {
-                    if(j != k && k != i) {
-                        vector<int> vec_a = {points[j][0] - points[i][0], points[j][1] - points[i][1]};
-                        vector<int> vec_b = {points[k][0] - points[i][0], points[k][1] - points[i][1]};
-                        auto prod = vec_a[0] * vec_b[0] + vec_a[1] * vec_b[1];
-                        if(prod == 0) {
-                            // It is a right angle
-                            vector<int> fourth_point = {vec_a[0] + vec_b[0] + points[i][0],
-                                                 vec_a[1] + vec_b[1] + points[i][1]};
-                            if(s.find(fourth_point) != s.cend()) {
-                                rec = true;
-                                auto area = vec_l2_norm(vec_a) * vec_l2_norm(vec_b);
-                                if (area < min_area) {
-                                    min_area = area;
-                                }
+            for(auto j = i + 1 ; j < n ; ++j) {
+                for(auto k = j + 1 ; k < n ; ++k) {
+                    vector<int> vec_a = {points[j][0] - points[i][0], points[j][1] - points[i][1]};
+                    vector<int> vec_b = {points[k][0] - points[i][0], points[k][1] - points[i][1]};
+                    auto prod = vec_a[0] * vec_b[0] + vec_a[1] * vec_b[1];
+                    if(prod == 0) {
+                        // It is a right angle
+                        vector<int> fourth_point = {vec_a[0] + vec_b[0] + points[i][0],
+                                                    vec_a[1] + vec_b[1] + points[i][1]};
+                        if(s.find(fourth_point) != s.cend()) {
+                            rec = true;
+                            auto area = vec_l2_norm(vec_a) * vec_l2_norm(vec_b);
+                            if (area < min_area) {
+                                min_area = area;
                             }
                         }
                     }
-                }
                 }
             }
         }
