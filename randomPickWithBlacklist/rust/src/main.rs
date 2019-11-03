@@ -1,3 +1,5 @@
+extern crate input;
+
 use std::io;
 use std::collections::HashMap;
 use rand::distributions::Uniform;
@@ -51,7 +53,7 @@ impl Solution {
 }
 
 fn main() {
-    use myio::Scanner;
+    use input::Scanner;
 
     let (stdin, stdout) = (io::stdin(), io::stdout());
     let mut scan = Scanner::new(stdin.lock());
@@ -74,7 +76,3 @@ fn main() {
         println!("");
     }
 }
-
-
-
-

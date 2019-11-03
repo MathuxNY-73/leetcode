@@ -25,6 +25,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "input"
+version = "0.1.0"
+
+[[package]]
 name = "lazy_static"
 version = "1.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -80,6 +84,7 @@ dependencies = [
 name = "solution"
 version = "0.1.0"
 dependencies = [
+ "input 0.1.0",
  "rand 0.7.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 

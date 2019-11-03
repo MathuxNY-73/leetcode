@@ -4,10 +4,3 @@
 name = "input"
 version = "0.1.0"
 
-[[package]]
-name = "solution"
-version = "0.1.0"
-dependencies = [
- "input 0.1.0",
-]
-

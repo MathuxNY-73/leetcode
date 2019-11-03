@@ -1,3 +1,5 @@
+extern crate input;
+
 use std::io;
 use std::cmp::min;
 
@@ -32,7 +34,7 @@ impl Solution {
 }
 
 fn main() {
-    use myio::Scanner;
+    use input::Scanner;
 
     let (stdin, _stdout) = (io::stdin(), io::stdout());
     let mut scan = Scanner::new(stdin.lock());
