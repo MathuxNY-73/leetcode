@@ -35,6 +35,33 @@ class Solution:
         #print('Pick is {}'.format(r))
         return self._whitelist.get(r, r)
 
+class SolutionBinarySearch:
+    def __init__(self, N: int, blacklist: List[int]) -> None:
+        self._blacklist = blacklist
+        self._blacklist.sort()
+        self._b_size = len(self._blacklist)
+        self._n = N
+
+    def bin_search(self, k: int) -> int:
+        i = 0; j = self._b_size - 1
+        while i < j:
+            m = (i + j + 1) // 2
+            c = self._blacklist[m] - m
+            if c <= k:
+                i = m
+            else:
+                j = m - 1
+
+        if i == j and self._blacklist[i] - i <= k:
+            return k + i + 1
+        else:
+            return k
+
+    def pick(self) -> int:
+        r = random.randint(0, self._n - self._b_size - 1)
+        return self.bin_search(r)
+
+
 def main():
     lines = []
     for line in sys.stdin:
@@ -49,7 +76,7 @@ def main():
             blacklist = [int(x) for x in lines.pop(0).split()]
         print(blacklist)
         n_pick = int(lines.pop(0))
-        res = Solution(N, blacklist)
+        res = SolutionBinarySearch(N, blacklist)
 
         for _ in range(n_pick):
             print(res.pick())
