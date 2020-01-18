@@ -278,8 +278,8 @@ As of September 10 <sup>th</sup>, 2019:
 
 ### Longest Increasing Subsequence
 The goal of this challenge is to code a function that returns the length of the longest subsequence with increasing numbers. The subsequence needs not to be formed of contiguous numbers in the array.  
-I tried to solve this problem using the C language [Problem link](https://leetcode.com/problems/longest-increasing-subsequence/)  
-As of September 22<sup>nd</sup>, 2019:
+I tried to solve this problem using the C and C++ languages [Problem link](https://leetcode.com/problems/longest-increasing-subsequence/)  
+As of January 18<sup>th</sup>, 2019:
 - [x] I wrote a solution to the problem that finds the longest increasing subarray (ie: formed of contiguous elements).
 - [x] Find a first working solution on sample input.
 - [x] Submit solution. Got wrong.
@@ -287,6 +287,8 @@ As of September 22<sup>nd</sup>, 2019:
 - [x] Submit solution. Got correct in 24 ms with 7.1 MB. Complexity is O(n<sup>2</sup>)
 - [x] Find a faster solution with Binary Search
 - [x] Submit faster solution. Got correct in 4 ms with 7 MB.
+- [x] Rewrite solution with DP in C++
+- [x] Submit solution. Got correct
 - [x] Problem solved
 
 ### Find Minimum In Rotated Sorted Arrays
