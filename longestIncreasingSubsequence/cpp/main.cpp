@@ -32,7 +32,7 @@ using namespace std;
 
 class Solution {
 public:
-    int lengthOfLIS(const vector<int>& nums) {
+    int lengthOfLIS(const vector<int>& nums) const {
         auto n_size = nums.size();
         auto dp = vector<int>(n_size, 1);
 
@@ -50,6 +50,18 @@ public:
         }
 
         return res;
+    }
+
+    int lengthOfLISBinSearch(const vector<int>& nums) const {
+        auto n_size = nums.size();
+        auto dp = vector<int>(n_size, 0);
+        auto lis_length = 0;
+
+        for(int i = 0 ; i < n_size ; ++i) {
+            int lo = 0, hi = lis_length;
+            while(lo < hi) {
+            }
+        }
     }
 };
 
