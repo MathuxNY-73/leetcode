@@ -58,10 +58,24 @@ public:
         auto lis_length = 0;
 
         for(int i = 0 ; i < n_size ; ++i) {
-            int lo = 0, hi = lis_length;
+            auto lo = 0, hi = lis_length;
             while(lo < hi) {
+                int m = (lo + hi) / 2;
+                if (dp[m] < nums[i]) {
+                    lo = m + 1;
+                }
+                else {
+                    hi = m;
+                }
+            }
+
+            dp[lo] = nums[i];
+            if(lo == lis_length) {
+                ++lis_length;
             }
         }
+
+        return lis_length;
     }
 };
 
@@ -79,7 +93,7 @@ int main()
         for(int i = 0 ; i < n ; ++i) {
             fastscan(nums[i]);
         }
-        auto res = Solution().lengthOfLIS(nums);
+        auto res = Solution().lengthOfLISBinSearch(nums);
         printf("%d\n", res);
     }
 
