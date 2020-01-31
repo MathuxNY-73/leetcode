@@ -306,7 +306,7 @@ As of October 9<sup>th</sup>, 2019:
 The goal of this challenge is to code a function that finds the number of Longest Increasing Subsequence. The subsequence needs not be contiguous.  
 The first approach I used is the Dynamic Programming approach to find the length of the LIS and then find the number of LIS in the array.  
 I tried to solve this problem using the C++, rust and Python languages [Problem link](https://leetcode.com/problems/number-of-longest-increasing-subsequence/)  
-As of January 28<sup>th</sup>, 2020:
+As of February 1<sup>st</sup>, 2020:
 - [x] I wrote a solution using Dynamic Programing and thus a O(N<sup>2</sup>) solution.
 - [x] Submit solution. Got right in 40 ms with 9.2 MB
 - [x] Find a solution based on Segment Tree. Solved in O(N*Log(N))
@@ -315,6 +315,8 @@ As of January 28<sup>th</sup>, 2020:
 - [x] Submit solution. Got right in 0 ms with 2.7 MB
 - [x] Retry the problem using the python language using DP
 - [x] Submit solution. Got right in 1700 ms with 12.9 MB
+- [x] Rewrite solution in python using Segment Tree.
+- [x] Submit solution. Got right in 404 ms with 15.5 MB
 - [x] Problem solved
 
 ### Pancake Sort
