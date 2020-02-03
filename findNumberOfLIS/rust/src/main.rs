@@ -1,5 +1,12 @@
 use std::io;
-use std::collections::HashMap;
+
+mod seg_tree;
+mod seg_tree_max;
+mod seg_tree_lis;
+
+use seg_tree::SegmentTreeSum;
+use seg_tree_max::SegmentTreeMax;
+use seg_tree_lis::SegmentTreeLis;
 
 struct Solution {
 }
@@ -64,12 +71,24 @@ impl Solution {
             v[lis - 1].last().unwrap().1
         }
     }
+
+    pub fn find_number_of_lis_seg_tree(&self, nums: Vec<i32>) -> (i32,i32) {
+        if nums.len() == 0 {
+            return (0,1)
+        }
+
+        let tr = SegmentTreeLis::build(&nums);
+        //println!("Sum is: {:?}", tr.get(1,0,nums.len() - 1, 0, nums.len() - 1));
+        //tr.update(1, 0, nums.len() - 1, 2, 100);
+        //let s = tr.get(1, 0, nums.len() - 1, 0, nums.len() - 1);
+        tr.root.val
+    }
 }
 
 fn main() {
     use myio::Scanner;
 
-    let (stdin, stdout) = (io::stdin(), io::stdout());
+    let (stdin, _stdout) = (io::stdin(), io::stdout());
     let mut scan = Scanner::new(stdin.lock());
 
     let t = scan.token::<usize>();
@@ -84,8 +103,8 @@ fn main() {
         }
         println!("");*/
 
-        let res = Solution::find_number_of_lis(nums);
-        println!("{}", res);
+        let res = Solution{}.find_number_of_lis_seg_tree(nums);
+        println!("{:?}", res.1);
     }
 }
 

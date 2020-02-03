@@ -49,7 +49,7 @@ class SegTree:
         #    print("Max recursion reached!")
         #    return
         if v.start == v.end:
-            print("Set val={} for [{},{}] with k={}".format(val, v.start, v.end, k))
+            #print("Set val={} for [{},{}] with k={}".format(val, v.start, v.end, k))
             v.val = SegTree.combine(val, v.val)
         else:
             m = (v.start + v.end) // 2
@@ -57,9 +57,9 @@ class SegTree:
                 SegTree.add(v.get_left(), val, k, cnt -1)
             else:
                 SegTree.add(v.get_right(), val, k, cnt -1)
-            print("For interval [{},{}], val was {} for k= {}".format(v.start, v.end, v.val, k))
+            #print("For interval [{},{}], val was {} for k= {}".format(v.start, v.end, v.val, k))
             v.val = SegTree.combine(v.get_left().val, v.get_right().val)
-            print("For interval [{},{}], val is {} for k= {}".format(v.start, v.end, v.val, k))
+            #print("For interval [{},{}], val is {} for k= {}".format(v.start, v.end, v.val, k))
 
     def combine(l: (int, int), r: (int, int)) -> (int, int):
         if l[0] > r[0]:
