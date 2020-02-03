@@ -377,3 +377,11 @@ As of November 4<sup>th</sup>, 2019:
 - [x] Write a solution that works on the sample input. I wrote a solution that works in O(N*log k)
 - [x] Submit solution. Got correct in 64 ms with 16.1 MB
 - [x] Problem solved
+
+### Longest Continuous Increasing Subsequence
+The goal of this challenge is to code a function that computes the length of the longest continuously increasing subsequence in a given array.  
+I tried to solve this problem using the C++ language [Problem link](https://leetcode.com/problems/longest-continuous-increasing-subsequence)  
+As February 3<sup>rd</sup>, 2020:
+- [x] Write a solution that works on the sample input. The solution I have is in O(n) time complexity and O(1) memory
+- [x] Submit solution. Got correct in 0 ms with 9.4 MB
+- [x] Problem solved
