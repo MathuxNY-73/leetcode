@@ -387,3 +387,14 @@ As February 3<sup>rd</sup>, 2020:
 - [x] Write a solution that works on the sample input. The solution I have is in O(n) time complexity and O(1) memory
 - [x] Submit solution. Got correct in 0 ms with 9.4 MB
 - [x] Problem solved
+
+### Increasing Triplet Subsequence
+The goal of this challenge is to verify that there exists a triplet of numbers in an array such that:
+$arr[i] < arr[j] < arr[k] with 0 <= i < j < k <= n-1$  
+The solution should run in O(n) time with O(1) memory.  
+I tried to solve this problem using the C++ language [Problem link](https://leetcode.com/problems/increasing-triplet-subsequence)  
+As of February 4<sup>th</sup>, 2020:
+- [x] Write the brute-force solution. Run in O(n<sup>3</sup>) with O(1) memory
+- [x] Submit solution. Got correct in 148 ms with 9.1 MB
+- [ ] Find solution that can run in O(n) time
+- [ ] Problem solved
