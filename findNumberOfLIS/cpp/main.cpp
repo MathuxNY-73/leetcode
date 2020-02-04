@@ -30,6 +30,13 @@
 
 using namespace std;
 
+static int fast_stream = []() {
+                             ios::sync_with_stdio(false);
+                             cin.tie(nullptr);
+                             cout.tie(nullptr);
+                             return 0;
+                         }();
+
 typedef struct Node {
     int start;
     int end;
@@ -131,6 +138,60 @@ public:
         return root.val.second;
     }
 
+    int findNumberOfLISDP(const vector<int>& nums) const {
+        auto n_size = nums.size();
+
+        if (n_size == 0) {
+            return 0;
+        }
+
+        auto dp = vector<vector<pair<int,int>>>(n_size, vector<pair<int,int>>());
+        auto lis = 0;
+
+        for(auto el: nums) {
+            int l1 = 0, r = lis;// TODO: put something here
+            while(l1 < r) {
+                int m = (l1 + r) / 2;
+                if(el <= dp[m].back().first) {
+                    r = m;
+                }
+                else {
+                    l1 = m + 1;
+                }
+            }
+
+            int cnt = 1;
+
+            if (l1 > 0) {
+                int l2 = 0;
+                r = dp[l1-1].size();
+                int lvl = 10;
+                while(l2 < r) {
+                    int m = (l2 + r) / 2;
+                    if(el > dp[l1-1][m].first) {
+                        r = m;
+                    }
+                    else {
+                        l2 = m + 1;
+                    }
+                    --lvl;
+                }
+
+                cnt = dp[l1 - 1].back().second;
+                cnt -= (l2 > 0 ? dp[l1-1][l2 - 1].second : 0);
+            }
+
+            auto new_t = make_pair(el, cnt + (dp[l1].size() > 0 ? dp[l1].back().second : 0));
+            dp[l1].push_back(new_t);
+
+            if (l1==lis) {
+                ++lis;
+            }
+        }
+
+        return dp[lis - 1].back().second;
+    }
+
 };
 
 int main()
@@ -147,7 +208,7 @@ int main()
         for(int i = 0 ; i < n ; ++i) {
             fastscan(nums[i]);
         }
-        auto res = Solution().findNumberOfLIS(nums);
+        auto res = Solution().findNumberOfLISDP(nums);
         printf("%d\n", res);
     }
 
