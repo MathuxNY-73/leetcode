@@ -9,6 +9,7 @@
 #include <fstream>
 #include <functional>
 #include <iostream>
+#include <limits>
 #include <list>
 #include <map>
 #include <numeric>
@@ -41,15 +42,24 @@ class Solution {
 public:
     bool increasingTriplet(const vector<int>& nums) const {
         int n = nums.size();
+        if (n < 3) {
+            return false;
+        }
+        int first = std::numeric_limits<int>::max();
+        int second = std::numeric_limits<int>::max();
 
-        for(int i = 0 ; i < n ; ++i){
-            for(int j = i + 1 ; j < n ; ++j) {
-                if (nums[i] >= nums[j]) continue;
-                for(int k = j + 1 ; k < n ; ++k) {
-                    if (nums[j] < nums[k]) return true;
-                }
+        for (int i = 0 ; i < n ; ++i) {
+            if (nums[i] > first && nums[i] > second) {
+                return true;
+            }
+            else if (nums[i] < first) {
+                first = nums[i];
+            }
+            else if (nums[i] > first) {
+                second = nums[i];
             }
         }
+
         return false;
     }
 };
