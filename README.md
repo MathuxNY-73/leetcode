@@ -399,3 +399,16 @@ As of February 5<sup>th</sup>, 2020:
 - [x] Find solution that can run in O(n) time
 - [x] Submit solution. Got correct in 0 ms with 9 MB
 - [x] Problem solved
+
+### Find median from a data stream
+The goal of this challenge is to code a class that computes the median of a
+serie of number that are added one by one, like a stream of numbers. At any
+given point the median can be computed.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/find-median-from-data-stream)  
+As of February 20<sup>th</sup>, 2020:
+- [X] Write a first solution using priority queues which in C++ are implemented
+      using heaps. Time complexity of one step is O(log n) in that case,
+      overall space complexity is O(n)
+- [X] Submit solution. Got correct in 
+- [X] Problem solved
