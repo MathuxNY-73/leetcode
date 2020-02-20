@@ -412,3 +412,16 @@ As of February 20<sup>th</sup>, 2020:
       overall space complexity is O(n)
 - [X] Submit solution. Got correct in 160 ms with 42.4 MB
 - [X] Problem solved
+
+### Queens that can attack the king
+The goal of this challenge is to code a function that output the coordinates of
+queens on a chessboard which can directly attack the king. There should not be
+any obstacle on the path between the queens and the king.  
+I tried to solve this problem using the Python language [Problem
+link](https://leetcode.com/problems/queens-that-can-attack-the-king)  
+As of February 20<sup>th</sup>, 2020:
+- [X] Write a first solution using the BFS. The solution is O(1) in time
+      complexity as at most 7 * 3 squares will be put into the queue. The space
+      complexity is also O(1) for the same reasons
+- [X] Submit solution. Got correct in 44 ms with 12.8 MB
+- [X] Problem solved
