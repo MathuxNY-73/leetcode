@@ -63,8 +63,7 @@ class MedianFinder {
             }
         }
     public:
-        MedianFinder(): lo(priority_queue<int>()),
-                        hi(priority_queue<int, vector<int>, greater<int>>()) {}
+        MedianFinder() {}
 
         void addNum(int num) {
             if(!lo.empty() && num > lo.top()) {

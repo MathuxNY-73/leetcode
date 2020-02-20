@@ -410,5 +410,5 @@ As of February 20<sup>th</sup>, 2020:
 - [X] Write a first solution using priority queues which in C++ are implemented
       using heaps. Time complexity of one step is O(log n) in that case,
       overall space complexity is O(n)
-- [X] Submit solution. Got correct in 164 ms with 42.5 MB
+- [X] Submit solution. Got correct in 160 ms with 42.4 MB
 - [X] Problem solved
