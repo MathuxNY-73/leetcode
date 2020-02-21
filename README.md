@@ -429,11 +429,14 @@ As of February 20<sup>th</sup>, 2020:
 ### Moving Window Average from Data Stream
 The goal of this challenge is to code a function that compute a window average
 of numbers in a data stream.  
-I tried to solve this problem using the Python language [Problem
+I tried to solve this problem using the Python and C languages [Problem
 link](https://leetcode.com/problems/moving-average-from-data-stream)  
 As February 21<sup>st</sup>, 2020:
 - [X] Write a first solution using Queue. The solution is O(1) in time
       complexity as we keep a sum and count always up to date. It is O(W) in
       space complexity with W being the window size.
 - [X] Submit solution. Got correct in 108 ms with 15.4 MB
+- [X] Rewrite the solution in C this time using a cycling array. As the size of
+      the array is fixed in my solution then memory complexity is O(1)
+- [X] Submit solution. Got correct in 32 ms with 12.3 MB
 - [X] Problem solved
