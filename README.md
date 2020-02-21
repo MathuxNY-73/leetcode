@@ -425,3 +425,15 @@ As of February 20<sup>th</sup>, 2020:
       complexity is also O(1) for the same reasons
 - [X] Submit solution. Got correct in 44 ms with 12.8 MB
 - [X] Problem solved
+
+### Moving Window Average from Data Stream
+The goal of this challenge is to code a function that compute a window average
+of numbers in a data stream.  
+I tried to solve this problem using the Python language [Problem
+link](https://leetcode.com/problems/moving-average-from-data-stream)  
+As February 21<sup>st</sup>, 2020:
+- [X] Write a first solution using Queue. The solution is O(1) in time
+      complexity as we keep a sum and count always up to date. It is O(W) in
+      space complexity with W being the window size.
+- [X] Submit solution. Got correct in 108 ms with 15.4 MB
+- [X] Problem solved
