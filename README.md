@@ -446,9 +446,9 @@ The goal of this challenge is to code a class that can compute the product of
 the last K numbers in a serie of N numbers added 1 by 1. In my first solution I
 used an vector to store the prefix product. It is also possible to answer the
 problem using a Segment Tree maybe even a BIT (aka Fenwick Tree).  
-I tried to solve this problem using the C++ language [Problem
+I tried to solve this problem using the C++, C and Rust languages [Problem
 link](https://leetcode.com/problems/product-of-the-last-k-numbers)  
-As February 21<sup>st</sup>, 2020:
+As February 24<sup>th</sup>, 2020:
 - [X] Write a first solution using an array. The solution is O(1) in time
       complexity as we compute the prefix product each time we add a number. It
       is O(N) in space complexity as at most N prefix products are stored.
@@ -456,5 +456,7 @@ As February 21<sup>st</sup>, 2020:
 - [X] Rewrite a solution in C using Segment Tree. The solution is O(log N) in
       time complexity and O(4 * N) in space complexity.
 - [X] Submit solution. Got correct in 172 ms with 46.6 MB
-- [ ] Write a second solution in Rust with Fenwick Tree.
+- [X] Write a second solution in Rust with Fenwick Tree. The solution is O(log
+      N) ins time complexity and O(N) in space complexity.
+- [X] Submit solution. Got correct in 48 ms with 15.3 MB
 - [X] Problem solved
