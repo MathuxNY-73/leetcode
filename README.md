@@ -453,4 +453,8 @@ As February 21<sup>st</sup>, 2020:
       complexity as we compute the prefix product each time we add a number. It
       is O(N) in space complexity as at most N prefix products are stored.
 - [X] Submit solution. Got correct in 180 ms with 62.4 MB
+- [X] Rewrite a solution in C using Segment Tree. The solution is O(log N) in
+      time complexity and O(4 * N) in space complexity.
+- [X] Submit solution. Got correct in 172 ms with 46.6 MB
+- [ ] Write a second solution in Rust with Fenwick Tree.
 - [X] Problem solved
