@@ -478,3 +478,17 @@ As of February 25<sup>th</sup>, 2020:
       complexity is O(N)
 - [X] Submit solution. Got correct in 0 ms with 8.9 MB
 - [X] Problem solved
+
+### Word Squares
+The goal of this challenge is to implement a function that would form word
+squares (ie: a matrix of word where the k<sup>th</sup> row would read the same
+word as the k<sup>th</sup> column).  
+I tried to solve this problem using the Python language [Problem
+link](https://leetcode.com/problems/word-squares/) 
+As of February 25<sup>th</sup>, 2020:
+- [X] Write a first solution. I used backtracking to perform the search but I
+      brute force the retireval of good words so I ended up with a time
+      complexity of O(N<sup>2</sup>K) with N the number of words and K the
+      number of letters in the words
+- [X] Submit solution. Got Time Limit Exceeded
+- [ ] Problem solved
