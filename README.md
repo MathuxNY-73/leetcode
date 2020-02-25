@@ -460,3 +460,21 @@ As February 24<sup>th</sup>, 2020:
       N) ins time complexity and O(N) in space complexity.
 - [X] Submit solution. Got correct in 48 ms with 15.3 MB
 - [X] Problem solved
+
+### Implement stack using queues
+The goal of this challenge is to implement the APIs of a stack data structure
+using only queues as underlying storage. In my first solution, I used 2 queues
+to solve this problem. Then I saw it was possible to implement a stack using
+only one queue.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/implement-stack-using-queues)  
+As of February 25<sup>th</sup>, 2020:
+- [X] Write a first solution. I used 2 queues in that first solution and my push
+      operation would take O(1) in time complexity and my pop would take O(N) in
+      time complexity. Overall the space complexity is O(N)
+- [X] Submit solution. Got correct in 0 ms with 9.1 MB
+- [X] Write a second solution. In that solution I used 1 queue. My push would
+      then take O(N) in time complexity and my pop O(1). The overall space
+      complexity is O(N)
+- [X] Submit solution. Got correct in 0 ms with 8.9 MB
+- [X] Problem solved
