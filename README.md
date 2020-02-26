@@ -497,3 +497,26 @@ As of February 25<sup>th</sup>, 2020:
 - [X] Submit solution. Got correct in 5196 ms with 16.3 MB
 - [X] Problem solved
 
+### Implement queue using stacks
+The goal of this challenge is to implement the APIs of a queue data structure
+using only stacks as underlying storage. In my first solution, I used 1 stack
+and 1 temporary stack for push operation. Then it appeared to me that I could
+improve the run time a little bit by using 2 stacks.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/implement-queue-using-stacks)  
+As of February 26<sup>th</sup>, 2020:
+- [X] Write a first solution. I used 1 stack and 1 temporary stack for push
+      operations. The time complexity for pushing is O(N) as I destack data into
+      temporary stack, add the element and restack the data onto the stack. The
+      rest of the operations is O(1) in time complexity. The overall is O(N) in
+      space complexity
+- [X] Submit solution. Got correct in 0 ms with 8.9 MB
+- [X] Write a second solution. This time I used 2 stacks. I push in 1 stack
+      making the operation O(1) in time complexity. Now the pop operation
+      destack the first stack into the second when this one is empty otherwise
+      keep on destacking the second stack. This means that the time complexity
+      of the pop operation is an amortized O(1) as we need to transfer the data
+      from stack 1 to stack 2 only when stack 2 has been emptied. Other
+      operations are O(1). The overall space complexity is O(N).
+- [X] Submit solution. Got correct in 0 ms with 8.9 MB
+- [X] Problem solved
