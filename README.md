@@ -520,3 +520,15 @@ As of February 26<sup>th</sup>, 2020:
       operations are O(1). The overall space complexity is O(N).
 - [X] Submit solution. Got correct in 0 ms with 8.9 MB
 - [X] Problem solved
+
+### Longest palindromic substring
+The goal of this challenge is to implement a function that finds the longest
+palindromic substring contained in a given string.  
+I tried to solve this problem using the Python language [Problem
+link](https://leetcode.com/problems/longest-palindromic-substring/)  
+As February 26<sup>th</sup>, 2020:
+- [X] Write a first solution. This solution is brute force so the time
+      complexity is O(N * N * N/2) = O(N<sup>3</sup>) in time complexity and
+      O(1) in space complexity
+- [X] Submit solution. Got Time Limit Exceeded
+- [ ] Problem solved
