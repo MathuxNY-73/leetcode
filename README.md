@@ -524,11 +524,18 @@ As of February 26<sup>th</sup>, 2020:
 ### Longest palindromic substring
 The goal of this challenge is to implement a function that finds the longest
 palindromic substring contained in a given string.  
-I tried to solve this problem using the Python language [Problem
+I tried to solve this problem using the Python and C++ languages [Problem
 link](https://leetcode.com/problems/longest-palindromic-substring/)  
-As February 26<sup>th</sup>, 2020:
+As February 27<sup>th</sup>, 2020:
 - [X] Write a first solution. This solution is brute force so the time
       complexity is O(N * N * N/2) = O(N<sup>3</sup>) in time complexity and
       O(1) in space complexity
 - [X] Submit solution. Got Time Limit Exceeded
-- [ ] Problem solved
+- [X] Write a second solution in C++. This solution runs in O(N<sup>2</sup>) in
+      time complexity and O(1) in space complexity. It consists in runing
+      through every character in the string and consider this character the
+      center of the palindrome and then expand around this center to see if we
+      can form a palindrome.
+- [X] Submit solution. Got correct in 44 ms with 104.1 MB (Why so high memory
+      consumption ?)
+- [X] Problem solved
