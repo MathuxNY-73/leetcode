@@ -41,7 +41,7 @@ static int fast_stream = []() {
 
 class Solution {
     public:
-        string longestPalindrome(string s) const {
+        string longestPalindromeOld(string s) const {
             if (s.size() == 0) {
                 return "";
             }
@@ -67,6 +67,36 @@ class Solution {
             }
 
             return s.substr(max_idx - length / 2, length);
+        }
+
+        string longestPalindrome(string s) const {
+            if (s.size() == 0) {
+                return "";
+            }
+
+            int start=0, end=0;
+            for(int i = 0; i < s.size() ; ++i) {
+                int l_odd = exploreAroundCenter(s, i, i);
+                int l_even = exploreAroundCenter(s, i, i+1);
+                //fprintf(stderr, "Odd length: %d, Even length: %d\n", l_odd, l_even);
+
+                int max_l = max(l_odd, l_even);
+                if (max_l > end - start) {
+                    int m = ceil((double)max_l / 2.0);
+                    start = i - m + 1;
+                    end = i + max_l / 2;
+                }
+            }
+
+            return s.substr(start, end - start + 1);
+        }
+
+        int exploreAroundCenter(string s, int start, int end) const {
+            int l = start, r = end;
+            while((l >= 0 && r < s.size()) && s[l] == s[r]) {
+                --l; ++r;
+            }
+            return r - l - 1;
         }
 
         int exploreFromTheCenterOdd(string s, int i) const {
