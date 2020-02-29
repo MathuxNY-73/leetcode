@@ -544,3 +544,17 @@ As February 27<sup>th</sup>, 2020:
 - [X] Submit solution. Got correct in 24 ms with 3 MB
 - [ ] Implement Manacher's Algorithm
 - [X] Problem solved
+
+### Find the duplicate number
+
+The goal of this challenge is to implement a function that can find the number
+that was duplicated in a array of size N + 1 containing only numbers from 1 to
+N.  
+I tried to solve this problem using the C language [Problem
+link](https://leetcode.com/problems/find-the-duplicate-number/)  
+As of February 29<sup>th</sup>, 2020:
+- [X] Write a first solution. This solution is using the Floyd's tortoise and
+      hare algorithm to find the cycle in the linked list represented by the
+      array of number. It runs in O(N) time complexity using O(1) space.
+- [X] Submit solution. Got correct in 0 ms with 6.8 MB
+- [X] Problem solved
