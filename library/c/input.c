@@ -47,7 +47,8 @@ int fastscan_string_w(char *str, int buffer_size)
     for (; c != ' '
              && c != '\n'
              && c != '\0'
-             && c != EOF;
+             && c != EOF
+             && size_of_str < buffer_size;
          c=getchar_unlocked(),++size_of_str)
         {
             if(size_of_str > buffer_size)
