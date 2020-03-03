@@ -524,9 +524,9 @@ As of February 26<sup>th</sup>, 2020:
 ### Longest palindromic substring
 The goal of this challenge is to implement a function that finds the longest
 palindromic substring contained in a given string.  
-I tried to solve this problem using the Python, C++ and Rust languages [Problem
+I tried to solve this problem using the Python, C++, C and Rust languages [Problem
 link](https://leetcode.com/problems/longest-palindromic-substring/)  
-As February 27<sup>th</sup>, 2020:
+As of March 3<sup>rd</sup>, 2020:
 - [X] Write a first solution. This solution is brute force so the time
       complexity is O(N * N * N/2) = O(N<sup>3</sup>) in time complexity and
       O(1) in space complexity
@@ -542,7 +542,9 @@ As February 27<sup>th</sup>, 2020:
       in time complexity and O(N<sup>2</sup>) in space complexity for we store
       the DP array.
 - [X] Submit solution. Got correct in 24 ms with 3 MB
-- [ ] Implement Manacher's Algorithm
+- [X] Implement Manacher's Algorithm in C. The solution runs in O(N) time
+      complexity and O(N) space complexity.
+- [X] Submit solution. Got correct in 4 ms with 5.6 MB
 - [X] Problem solved
 
 ### Find the duplicate number

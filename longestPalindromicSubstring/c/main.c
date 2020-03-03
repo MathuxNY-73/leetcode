@@ -16,30 +16,32 @@
 
 #define SIZE 10000 + 1
 
-char* changeString(char* s, int s_size) {
-    char* newString = malloc(sizeof(char) * (2 * s_size + 3));
-    memset(newString, '\0', sizeof(char) * (2*s_size + 3));
-
-    newString[0] = '@';
+void changeString(char* s, char* q, int s_size) {
+    q[0] = '@';
 
     int i = 0;
     for(; i < s_size ; ++i) {
-        newString[2*i + 1] = '#';
-        newString[2*(i + 1)] = s[i];
+        q[2*i + 1] = '#';
+        q[2*(i + 1)] = s[i];
     }
 
-    newString[2*i + 1] = '#';
-    newString[2*i + 2] = '$';
-    newString[2*i + 3] = '\0';
-
-    return newString;
+    q[2*i + 1] = '#';
+    q[2*i + 2] = '$';
+    q[2*i + 3] = '\0';
 }
 
 char* substr(char* s, int pos, int length) {
-
+    /*memset(substr, '\0', sizeof(char) * (length+1));
+    int i = pos;
+    for(; i < pos + length ; ++i) {
+        //fprintf(stderr, "%c ", s[i]);
+        substr[i - pos] = s[i];
+    }
+    //fprintf(stderr, "i=%d\n", i);
+    substr[i] = '\0';
+    */
     s[pos+length] = '\0';
-
-    return s + pos * sizeof(char);
+    return s + pos;
 }
 
 char * longestPalindrome(char * s){
@@ -51,7 +53,9 @@ char * longestPalindrome(char * s){
         ++s_size;
     }
 
-    char* q = changeString(s, s_size);
+    char q[2*SIZE+3];
+    memset(q, '\0', sizeof(char) * (2*SIZE + 3));
+    changeString(s, q, s_size);
 
     int center = 0, r = 0;
 
@@ -72,9 +76,7 @@ char * longestPalindrome(char * s){
         }
     }
 
-    fprintf(stderr, "%s of size %d so %d\n", q, s_size, 2*s_size+3);
-    free(q);
-
+    //fprintf(stderr, "%s of size %d so %d\n", q, s_size, 2*s_size+3);
     int max_center = 0;
     int max_length = 0;
 
@@ -85,7 +87,7 @@ char * longestPalindrome(char * s){
         }
     }
 
-    fprintf(stderr,"Center is %d and length is %d\n", max_center, max_length);
+    //fprintf(stderr,"Center is %d and length is %d\n", max_center, max_length);
 
     return substr(s, (max_center - 1 - max_length) / 2, max_length);
 }
