@@ -491,7 +491,7 @@ As of February 25<sup>th</sup>, 2020:
       complexity of O(N<sup>2</sup>K) with N the number of words and K the
       number of letters in the words
 - [X] Submit solution. Got Time Limit Exceeded
-- [X] Write a new solution that uses Triein order to reduce the complexity of
+- [X] Write a new solution that uses Trie in order to reduce the complexity of
       search for candidate words. This time the time complexity is O(N
       26<sup>K</sup> K).
 - [X] Submit solution. Got correct in 5196 ms with 16.3 MB
@@ -548,7 +548,6 @@ As of March 3<sup>rd</sup>, 2020:
 - [X] Problem solved
 
 ### Find the duplicate number
-
 The goal of this challenge is to implement a function that can find the number
 that was duplicated in a array of size N + 1 containing only numbers from 1 to
 N.  
