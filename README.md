@@ -559,3 +559,27 @@ As of February 29<sup>th</sup>, 2020:
       array of number. It runs in O(N) time complexity using O(1) space.
 - [X] Submit solution. Got correct in 0 ms with 6.8 MB
 - [X] Problem solved
+
+### Diameter of Binary Tree
+The goal of this challenge is to implement a function that compute diameter of a
+Binary Tree which is the longest path between two nodes of the tree.  
+I tried to solve this problem using the C++ language [Problem link]()  
+As of March 4<sup>th</sup>, 2020:
+- [X] Write a first solution. This solution will simply find the deepest
+      children of both the left and right subtrees of the root and, at the root,
+      simply add the length of those 2 paths. The time complexity of this
+      algorithm is O(N) since all the nodes of the tree are visited. It is O(1)
+      extra space complexity.
+- [X] Submit solution. Got wrong answer. Should consider the fact that the
+      longest path may not go through the root, Dummy !
+- [ ] Problem solved
+
+### Trapping rain water
+The goal of the challenge is to find the amount of water that could be trapped
+in between walls of a certain height. We are given the array of those heights
+and must find the volume of water that could be trapped in between the walls.  
+I tried to solve this problem using the Python language [Problem link]()  
+As of March 4<sup>th</sup>, 2020:
+- [ ] Find a first solution.
+- [ ] Submit solution.
+- [ ] Problem solved
