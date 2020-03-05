@@ -581,9 +581,15 @@ As of March 4<sup>th</sup>, 2020:
 The goal of the challenge is to find the amount of water that could be trapped
 in between walls of a certain height. We are given the array of those heights
 and must find the volume of water that could be trapped in between the walls.  
-I tried to solve this problem using the Python language [Problem
+I tried to solve this problem using the Python and C languages [Problem
 link](https://leetcode.com/problems/trapping-rain-water)  
-As of March 4<sup>th</sup>, 2020:
-- [ ] Find a first solution.
-- [ ] Submit solution.
-- [ ] Problem solved
+As of March 5<sup>th</sup>, 2020:
+- [X] Find a first solution. A smart brute-force that iterates through the
+      number in order of height then indices and find surrounding bars. The
+      algorithm runs in worst case in O(N<sup>2</sup>) time complexity using
+      O(N) extra space.
+- [X] Submit solution. Got right in 208 ms with 30.4 MB
+- [X] Find a better solution in C. Using stacks it is possible to bring down the
+      time complexity to O(N).
+- [X] Submit solution. Got correct in 4 ms with 6 MB
+- [X] Problem solved
