@@ -563,22 +563,26 @@ As of February 29<sup>th</sup>, 2020:
 ### Diameter of Binary Tree
 The goal of this challenge is to implement a function that compute diameter of a
 Binary Tree which is the longest path between two nodes of the tree.  
-I tried to solve this problem using the C++ language [Problem link]()  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/diameter-of-binary-tree/)  
 As of March 4<sup>th</sup>, 2020:
 - [X] Write a first solution. This solution will simply find the deepest
       children of both the left and right subtrees of the root and, at the root,
       simply add the length of those 2 paths. The time complexity of this
-      algorithm is O(N) since all the nodes of the tree are visited. It is O(1)
-      extra space complexity.
+      algorithm is O(N) since all the nodes of the tree are visited. It is O(N)
+      extra space complexity considering the recursive call stack.
 - [X] Submit solution. Got wrong answer. Should consider the fact that the
       longest path may not go through the root, Dummy !
-- [ ] Problem solved
+- [X] Rewrite the solution to take into account the aforementioned problem.
+- [X] Submit solution. Got correct in 8 ms with 19 MB
+- [X] Problem solved
 
 ### Trapping rain water
 The goal of the challenge is to find the amount of water that could be trapped
 in between walls of a certain height. We are given the array of those heights
 and must find the volume of water that could be trapped in between the walls.  
-I tried to solve this problem using the Python language [Problem link]()  
+I tried to solve this problem using the Python language [Problem
+link](https://leetcode.com/problems/trapping-rain-water)  
 As of March 4<sup>th</sup>, 2020:
 - [ ] Find a first solution.
 - [ ] Submit solution.

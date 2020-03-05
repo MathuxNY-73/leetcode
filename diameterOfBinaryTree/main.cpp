@@ -54,24 +54,24 @@ typedef struct TreeNode {
 
 class Solution {
     private:
-        int dfs(TreeNode* n) const {
+        int dfs(TreeNode* n, int& sum_max) const {
             if(n == NULL) {
                 return -1;
             }
             else {
-                auto l = dfs(n->left);
-                auto r = dfs(n->right);
+                auto l = dfs(n->left, sum_max);
+                auto r = dfs(n->right, sum_max);
+
+                sum_max = max(l + r + 2, sum_max);
 
                 return max(l, r) + 1;
             }
         }
     public:
         int diameterOfBinaryTree(TreeNode* root) const {
-            if (root == NULL) {
-                return 0;
-            }
-
-            return dfs(root->right) + dfs(root->left) + 2;
+            int sum_max = 0;
+            dfs(root, sum_max);
+            return sum_max;
         }
 };
 
