@@ -597,3 +597,20 @@ As of March 5<sup>th</sup>, 2020:
       space.
 - [X] Submit solution. Got correct in 4 ms with 8 MB
 - [X] Problem solved
+
+### Flip Equivalent of Binary Tree
+The goal of the challenge is to check is 2 Binary Trees are equivalent up to
+some flips. A flip is just a swapping a the right child with the left child of a
+node.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/flip-equivalent-binary-trees)  
+As of March 6<sup>th</sup>, 2020:
+- [X] Find a first working solution. A recursive algortihm that will check every
+      node a the trees in a dfs manner to see if each node is equivalent. The
+      algorithm runs in O(min(N1, N2)) as every node in the smallest tree will
+      be visited, it will stop before visiting the rest of the nodes of the
+      largest tree should there be one. It runs with O(min(N1, N2)) extra space
+      as, again, there will as many recursive calls as there are nodes in the
+      smallest tree.
+- [X] Submit solution. Got correct in 0 ms with 11 MB
+- [X] Problem solved

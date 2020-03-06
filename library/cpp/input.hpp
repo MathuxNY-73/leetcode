@@ -6,6 +6,17 @@
 
 #include <string>
 
+typedef struct TreeNode {
+    int val;
+    TreeNode* left;
+    TreeNode* right;
+    TreeNode(int x): val(x), left(NULL), right(NULL) {}
+    ~TreeNode() {
+        if (left != NULL) delete(left);
+        if (right != NULL) delete(right);
+    }
+} TreeNode;
+
 static inline void fastscan(int& number) {
     //variable to indicate sign of input number
     bool negative = false;
@@ -80,5 +91,8 @@ static inline int fastscan_string_w(std::string& str, int buffer_size)
         }
     return  size_of_str;
 };
+
+void readBinaryTree(TreeNode**, int);
+void printBinaryTree(TreeNode*);
 
 #endif
