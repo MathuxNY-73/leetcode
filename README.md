@@ -614,3 +614,14 @@ As of March 6<sup>th</sup>, 2020:
       smallest tree.
 - [X] Submit solution. Got correct in 0 ms with 11 MB
 - [X] Problem solved
+
+### Minimum flips to make a OR b = c
+The goal of this challenge is to determine the minimum amount of bit flips to
+make a OR b equal to a given c.  
+I tried to solve this problem using the C language [Problem
+link](https://leetcode.com/problems/minimum-flips-to-make-a-or-b-equal-to-c)  
+As of March 7<sup>th</sup>, 2020:
+- [X] Find a first solution. A simple bit manipulation and the algo runs in O(1)
+      time complexity with O(1) extra space needed
+- [X] Submit solution. Got correct in 0 ms with 5.1 MB
+- [X] Problem solved
