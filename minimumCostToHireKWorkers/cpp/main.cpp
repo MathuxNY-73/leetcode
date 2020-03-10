@@ -65,14 +65,15 @@ public:
             return ((double)a.second/(double)a.first) < ((double)b.second/(double)b.first);
         });
 
-        //print(ratios);
+        print(ratios);
         for(auto&& it: ratios)
         {
-            //cout << "it.first:" << it.first << " it.second:" << it.second << endl;
+            cout << "it.first:" << it.first << " it.second:" << it.second << endl;
             q.push(it.first);
             sum += it.first;
             if(q.size() > K)
             {
+                cout << "Removing: " << q.top() << endl;
                 sum -= q.top();
                 q.pop();
             }
