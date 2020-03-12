@@ -627,3 +627,16 @@ As of March 7<sup>th</sup>, 2020:
       time complexity with O(1) extra space needed
 - [X] Submit solution. Got correct in 0 ms with 5.1 MB
 - [X] Problem solved
+
+### Meeting Room II
+The goal of this problem is to determine the minimum number of meeting rooms
+needed to accomodate every meetings given by an interval with a start and an end
+date.  
+I tried to solve this problem using the Python language [Problem
+link](https://leetcode.com/problems/meeting-rooms-ii/)  
+As of March 12<sup>th</sup>, 2020:
+- [X] Find a first solution. I used a priority queue to determine the number of
+      meeting occuring at the same time. The algo runs in O(N log N)
+      time complexity with O(N) extra space needed
+- [X] Submit solution. Got correct in 68 ms with 17.2 MB
+- [X] Problem solved

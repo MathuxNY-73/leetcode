@@ -13,7 +13,12 @@ class Solution:
       if len(intervals) == 0:
             return 0
 
-      s_to_e = {i[0]: i[1] for i in intervals}
+      s_to_e = {}
+      for i in intervals:
+          if not i[0] in s_to_e.keys():
+              s_to_e[i[0]] = []
+          s_to_e[i[0]].append(i[1])
+
       s_to_e = collections.OrderedDict(sorted(s_to_e.items()))
       pool = []
 
@@ -21,7 +26,10 @@ class Solution:
       for k, v in s_to_e.items():
           while len(pool) > 0 and k >= min(pool):
               heapq.heappop(pool)
-          heapq.heappush(pool, v)
+
+          for e in v:
+              heapq.heappush(pool, e)
+
           res = max(res, len(pool))
 
       return res
