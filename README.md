@@ -604,9 +604,9 @@ As of March 5<sup>th</sup>, 2020:
 The goal of the challenge is to check is 2 Binary Trees are equivalent up to
 some flips. A flip is just a swapping a the right child with the left child of a
 node.  
-I tried to solve this problem using the C++ language [Problem
+I tried to solve this problem using the C++ and Rust language [Problem
 link](https://leetcode.com/problems/flip-equivalent-binary-trees)  
-As of March 6<sup>th</sup>, 2020:
+As of March 13<sup>th</sup>, 2020:
 - [X] Find a first working solution. A recursive algortihm that will check every
       node a the trees in a dfs manner to see if each node is equivalent. The
       algorithm runs in O(min(N1, N2)) as every node in the smallest tree will
@@ -615,6 +615,11 @@ As of March 6<sup>th</sup>, 2020:
       as, again, there will as many recursive calls as there are nodes in the
       smallest tree.
 - [X] Submit solution. Got correct in 0 ms with 11 MB
+- [X] Write a new solution using canonical representation of a binary tree. In
+      this approach I am ordering children of each node before comparing them.
+      The run time complexity remains O(min(N1, N2)) as the recursion go as far
+      as the smallest tree. Same for the space complexity.
+- [X] Submit solution. Got correct in 0 ms with 2.2 MB
 - [X] Problem solved
 
 ### Minimum flips to make a OR b = c
