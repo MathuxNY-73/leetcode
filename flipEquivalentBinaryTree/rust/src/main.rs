@@ -113,13 +113,12 @@ fn read_b_tree<T: io::BufRead>(scan: &mut Scanner<T>, size: usize)
     } else {
 
         let r = scan.token::<String>();
-        println!("Token is {}", r);
         if r == "N" {
             Ok(None)
         } else {
             let mut q = VecDeque::new();
             let root = Rc::new(RefCell::new(TreeNode::new(r.parse::<i32>()?)));
-            q.push_back(&root);
+            q.push_back(Rc::clone(&root));
 
             let mut cnt: usize = 1;
             while cnt < size && !q.is_empty() {
@@ -128,22 +127,20 @@ fn read_b_tree<T: io::BufRead>(scan: &mut Scanner<T>, size: usize)
                     _ => Err("Queue should not be empty"),
                 }?;
 
-                let v = Rc::clone(node);
-
                 let left = scan.token::<String>();
                 let right = scan.token::<String>();
 
                 if left != "N" {
                     let left_n = Rc::new(RefCell::new(TreeNode::new(left.parse::<i32>()?)));
-                    v.borrow_mut().left = Some(Rc::clone(&left_n));
-                    q.push_back(&left_n);
+                    node.borrow_mut().left = Some(Rc::clone(&left_n));
+                    q.push_back(Rc::clone(&left_n));
                 }
                 cnt += 1;
 
                 if right != "N" {
                     let right_n = Rc::new(RefCell::new(TreeNode::new(right.parse::<i32>()?)));
-                    v.borrow_mut().right = Some(Rc::clone(&right_n));
-                    q.push_back(&right_n);
+                    node.borrow_mut().right = Some(Rc::clone(&right_n));
+                    q.push_back(Rc::clone(&right_n));
                 }
                 cnt += 1;
             }
