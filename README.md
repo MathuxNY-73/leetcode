@@ -645,3 +645,18 @@ As of March 12<sup>th</sup>, 2020:
       time complexity with O(N) extra space needed
 - [X] Submit solution. Got correct in 68 ms with 17.2 MB
 - [X] Problem solved
+
+### Plus one
+The goal of this challenge is to add one to a number represented by an array of
+its digits.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/plus-one/)  
+As of March 14<sup>th</sup>, 2020:
+- [X] Find a first working solution. I simply run through the array storing the
+      carry-on one digit to the next. The algo runs in O(N) times as it goes
+      through every element in the array. Since a new array is created it needs
+      O(N) extra space. This however could be overcome by changing the array in
+      place.
+- [X] Submit solution. Got correct in 4 ms with 8 MB
+- [X] Problem solved
+
