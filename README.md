@@ -660,3 +660,17 @@ As of March 14<sup>th</sup>, 2020:
 - [X] Submit solution. Got correct in 4 ms with 8 MB
 - [X] Problem solved
 
+### Peak index in a mountain array
+The goal of this challenge is to code a function that would return the index of
+the max number in the array formatted as a mountain, which means that, if index
+i is the peak of the mountain then A[0] < A[1] < ... < A[i-1] < A[i] > A[i+1] >
+... > A[n-2] > A[n-1]  
+I tried to solve this problem using the Python language [Problem
+link](https://leetcode.com/problems/peak-index-in-a-mountain-array/)  
+As of March 14<sup>th</sup>, 2020:
+- [X] Find a first working solution. I brute-forced the problem by simply
+      passing over each element and finding the peak. It is O(N) time complexity
+      and O(1) extra space.
+- [X] Submit solution. Got correct in 88 ms with 14.3 MB
+- [ ] Find a second more subtle solution using Binary Search
+- [ ] Problem solved
