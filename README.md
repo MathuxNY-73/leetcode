@@ -672,5 +672,7 @@ As of March 14<sup>th</sup>, 2020:
       passing over each element and finding the peak. It is O(N) time complexity
       and O(1) extra space.
 - [X] Submit solution. Got correct in 88 ms with 14.3 MB
-- [ ] Find a second more subtle solution using Binary Search
-- [ ] Problem solved
+- [X] Find a second more subtle solution using Binary Search. Using binary
+      search the algorithm runs in O(log N) and needs O(1) extra space
+- [X] Submit solution. Got correct in 72 ms with 14.2 MB
+- [X] Problem solved

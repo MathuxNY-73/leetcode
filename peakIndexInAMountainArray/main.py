@@ -10,10 +10,22 @@ from queue import PriorityQueue
 import numpy as np
 
 class Solution:
-    def peakIndexInMountainArray(self, A: List[int]) -> int:
+    def peakIndexInMountainArrayN(self, A: List[int]) -> int:
         for i, e in enumerate(A):
             if i > 0 and i < len(A) - 1 and A[i] > A[i-1] and A[i] > A[i+1]:
                 return i
+
+    def peakIndexInMountainArray(self, A: List[int]) -> int:
+        l = 0
+        r = len(A)
+        while l < r:
+            m = (l + r) // 2
+            #print(f"m is {m} and h[m]={h[m]} and l={l} and r={r}")
+            if A[m] < A[m+1]:
+                l = m + 1
+            else:
+                r = m
+        return r
 
 def main():
     lines = []
