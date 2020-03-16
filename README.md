@@ -676,3 +676,20 @@ As of March 14<sup>th</sup>, 2020:
       search the algorithm runs in O(log N) and needs O(1) extra space
 - [X] Submit solution. Got correct in 72 ms with 14.2 MB
 - [X] Problem solved
+
+### Merge sorted arrays
+The goal of this challenge is to code a function that merges two sorted arrays
+into one of the array.  
+I tried to solve this problem using the C language [Problem
+link](https://leetcode.com/problems/merge-sorted-array/)  
+As of March 16<sup>th</sup>, 2020:
+- [X] Find a first working solution. I just made a copy of the first array and
+      use two pointers, one on each array, adding numbers one after the other
+      depending on their comparison. This solution runs in O(N+M) time using
+      O(M) extra space.
+- [X] Submit solution. Got correct in 0 ms with 5.8 MB
+- [X] Write a second solution that would go throught the arrays backward so that
+      I do not need extra space to store the first array. No the algorithm still
+      runs in O(N+M) time complexity but using only O(1) extra space.
+- [X] Submit solution. Got correct in 4 ms with 5.9 MB. Why ?
+- [X] Problem solved
