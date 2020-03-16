@@ -693,3 +693,21 @@ As of March 16<sup>th</sup>, 2020:
       runs in O(N+M) time complexity but using only O(1) extra space.
 - [X] Submit solution. Got correct in 4 ms with 5.9 MB. Why ?
 - [X] Problem solved
+
+### Find First and Last Position of Element in Sorted Array
+The goal of this challenge is to code a function that can find the index of the
+first target element and the index of the last in a sorted array. The target
+element is an integer that can be duplicated many times or not exist at all in
+the array. The goal is to find an algorithm that can perform the search in O(log
+N) time.  
+I tried to solve this problem using the C language [Problem
+link](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)  
+As of March 16<sup>th</sup>, 2020:
+- [X] Find a first working solution. I decided to go with ternary search making
+      the search for one of the element run in O(log N) time but then starting
+      from the found index I expand outward to find the start and end index of
+      the serie of duplicated numbers. Of course, it brings down the complexity
+      to O(N). The algo needs O(1) extra space.
+- [X] Submit solution. Got correct in 4 ms with 7.2 MB
+- [ ] Find solution to really run in O(log N) time.
+- [ ] Problem solved
