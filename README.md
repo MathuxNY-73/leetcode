@@ -702,12 +702,14 @@ the array. The goal is to find an algorithm that can perform the search in O(log
 N) time.  
 I tried to solve this problem using the C language [Problem
 link](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)  
-As of March 16<sup>th</sup>, 2020:
+As of March 17<sup>th</sup>, 2020:
 - [X] Find a first working solution. I decided to go with ternary search making
       the search for one of the element run in O(log N) time but then starting
       from the found index I expand outward to find the start and end index of
       the serie of duplicated numbers. Of course, it brings down the complexity
       to O(N). The algo needs O(1) extra space.
 - [X] Submit solution. Got correct in 4 ms with 7.2 MB
-- [ ] Find solution to really run in O(log N) time.
-- [ ] Problem solved
+- [X] Find solution to really run in O(log N) time. This time I used binary
+      search to find the first and last index of the element.
+- [X] Submit solution. Got correct in 4 ms with 7.2 MB
+- [X] Problem solved

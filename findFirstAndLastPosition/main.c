@@ -16,6 +16,22 @@
 
 #define SIZE 10000
 
+int binary_search(int* nums, int numsSize, int target, bool left) {
+    int lo = 0, hi = numsSize;
+    while(lo < hi) {
+        int m = lo + (hi - lo) / 2;
+        if (target < nums[m] || (left && nums[m] == target)) {
+            hi = m;
+        }
+        else {
+            lo = m + 1;
+        }
+    }
+
+    return lo;
+
+}
+
 int* searchRange(int* nums, int numsSize, int target, int* returnSize){
     int* res = malloc(sizeof(int) * 2);
     memset(res, 0, sizeof(int) * 2);
@@ -26,34 +42,14 @@ int* searchRange(int* nums, int numsSize, int target, int* returnSize){
         return res;
     }
 
-    int lo = 0, hi = numsSize - 1;
-    while(lo < hi) {
-        int m1 = lo + (hi - lo) / 3;
-        int m2 = hi - (hi - lo) / 3;
-        if (target < nums[m1]) {
-            hi = m1 - 1;
-        }
-        else if (target >= nums[m2]) {
-            lo = m2;
-        }
-        else {
-            lo = m1;
-            hi = m2 - 1;
-        }
-    }
+    res[0] = binary_search(nums, numsSize, target, true);
 
-    if(nums[lo] != target) {
+    if(res[0] == numsSize || nums[res[0]] != target) {
         res[0] = res[1] = -1;
         return res;
     }
 
-    for(int i = lo ;i >= 0 && nums[i] == target ; --i) {
-        res[0] = i;
-    }
-
-    for(int i = lo; i < numsSize && nums[i] == target ; ++i) {
-        res[1] = i;
-    }
+    res[1] = binary_search(nums, numsSize, target, false) - 1;
 
     return res;
 }
