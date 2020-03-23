@@ -39,9 +39,54 @@ static int fast_stream = []() {
 
 class Solution {
 public:
-    bool backspaceCompare(string S, string T) {
+        bool backspaceCompare(string S, string T) {
 
-    }
+            int ptr_s = 0;
+            for(int i = 0 ; i < S.size(); ++i) {
+                if(S[i] == '#') {
+                    ptr_s = max(ptr_s - 1, 0);
+                }
+                else{
+                    S[ptr_s] = S[i];
+                    ++ptr_s;
+                }
+            }
+
+            int ptr_t = 0;
+            for(int i = 0 ; i < T.size(); ++i) {
+                if(T[i] == '#') {
+                    ptr_t = max(ptr_t - 1, 0);
+                }
+                else{
+                    T[ptr_t] = T[i];
+                    ++ptr_t;
+                }
+            }
+
+            /*
+            printf("ptr_s=%d, ", ptr_s);
+            for(int i = 0 ; i < ptr_s ; ++i) {
+                printf("%c", S[i]);
+            }
+            printf(", ptr_t=%d, ", ptr_t);
+            for(int i = 0 ; i < ptr_t ; ++i) {
+                printf("%c", T[i]);
+            }
+            printf("\n");
+            */
+
+            if(ptr_s != ptr_t) {
+                return false;
+            }
+
+            for(int i = 0 ; i < ptr_s ; ++i) {
+                if(S[i] != T[i]) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
 };
 
 int main()
@@ -51,19 +96,16 @@ int main()
 
     wl(t)
     {
-        int n=0;
-        fastscan(n);
+        int n=0, m = 0;
+        cin >> n >> m;
 
-        auto nums = vector<int>(n, 0);
-        for(int i = 0 ; i < n ; ++i) {
-            fastscan(nums[i]);
-        }
-        auto res = Solution().plusOneB(nums);
-        for(auto& d: res) {
-            printf("%d", d);
-        }
-        printf("\n");
+        string S, T;
 
+        cin >> S >> T;
+
+        bool res = Solution().backspaceCompare(S, T);
+
+        printf("%s\n", res ? "true" : "false");
     }
 
     return 0;
