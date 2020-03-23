@@ -718,7 +718,7 @@ As of March 17<sup>th</sup>, 2020:
 The of this challenge is to code a function that compares 2 strings with a
 special character '#' is used to represent a backspace. The goal is to implement
 this comparison in O(N) time and using O(1) extra space.  
-I tried to solve this problem using the C++ language [Problem
+I tried to solve this problem using the C++ and C languages [Problem
 link](https://leetcode.com/problems/backspace-string-compare/)  
 As of March 23<sup>rd</sup>, 2020:
 - [X] Find a first working solution. I decided to use 2 pointers to modify the
@@ -726,5 +726,6 @@ As of March 23<sup>rd</sup>, 2020:
       the backspacing applied. The algorithm does run in O(N) and needs only
       constant extra space O(1).
 - [X] Submit solution. Got correct in 0 ms with 6.4 MB
-- [ ] Find a solution that does not require to modify the string
+- [X] Find a solution that does not require to modify the string. The trick is
+      to start from the end of the string with 2 pointers.
 - [X] Problem solved
