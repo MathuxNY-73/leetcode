@@ -729,3 +729,19 @@ As of March 23<sup>rd</sup>, 2020:
 - [X] Find a solution that does not require to modify the string. The trick is
       to start from the end of the string with 2 pointers.
 - [X] Problem solved
+
+### Copy list with random pointers
+The goal of this problem is to implement a function that does a deep copy of a
+linked list where nodes hold a next node pointer as well as a random node
+pointer, that can point to any node in the linked list.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/copy-list-with-random-pointer/)  
+As of March 24<sup>th</sup>, 2020:
+- [X] Find a first working solution. I decided to go with a solution that
+      intertwine nodes from the original list with nodes from the new list so
+      that for random pointer I only need to do `new_node->random =
+      old_node->random->next`. The solution runs in O(3*N) = O(N) because I am
+      running 3 times on the list. It uses O(1) extra space, not counting the
+      space needed to store the new list.
+- [X] Submit solution. Got correct in 8 ms with 11 MB
+- [X] Problem solved
