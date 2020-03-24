@@ -745,3 +745,15 @@ As of March 24<sup>th</sup>, 2020:
       space needed to store the new list.
 - [X] Submit solution. Got correct in 8 ms with 11 MB
 - [X] Problem solved
+
+### Merge Two Sorted Lists
+The goal of this problem is to implemented a function that merges 2 sorted
+singly linked list.  
+I tried to solve this problem using the C language [Problem
+link](https://leetcode.com/problems/merge-two-sorted-lists)  
+As of March 25<sup>th</sup>, 2020:
+- [ ] Find a first working solution. I decided to go with function that creates
+      a new list instead of just using the node from the previous ones. Thus it
+      runs necessarily in O(N+M) but it uses O(N+M) extra space.
+- [ ] Submit solution. Got correct in 0 ms with 6.1 MB
+- [ ] Problem solved

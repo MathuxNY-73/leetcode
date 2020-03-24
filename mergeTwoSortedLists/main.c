@@ -21,14 +21,21 @@ struct ListNode {
     struct ListNode *next;
 };
 
+struct ListNode* create_node() {
+    struct ListNode* n = malloc(sizeof(struct ListNode));
+    n->next = NULL;
+    n->val = 0;
+    return n;
+}
+
 struct ListNode* mergeTwoLists(struct ListNode* l1, struct ListNode* l2){
     struct ListNode* l = l1;
     struct ListNode* r = l2;
-    struct ListNode* dummy = malloc(sizeof(struct ListNode));
+    struct ListNode* dummy = create_node();
     struct ListNode* cur = dummy;
 
-    while(l && r) {
-        cur->next = malloc(sizeof(struct ListNode));
+    while(l != NULL && r != NULL) {
+        cur->next = create_node();
         cur = cur->next;
 
         if(l->val > r->val) {
@@ -41,15 +48,15 @@ struct ListNode* mergeTwoLists(struct ListNode* l1, struct ListNode* l2){
         }
     }
 
-    while(l) {
-        cur->next = malloc(sizeof(struct ListNode));
+    while(l != NULL) {
+        cur->next = create_node();
         cur = cur->next;
         cur->val = l->val;
         l = l->next;
     }
 
-    while(r) {
-        cur->next = malloc(sizeof(struct ListNode));
+    while(r != NULL) {
+        cur->next = create_node();
         cur = cur->next;
         cur->val = r->val;
         r = r->next;
@@ -58,6 +65,14 @@ struct ListNode* mergeTwoLists(struct ListNode* l1, struct ListNode* l2){
     struct ListNode* head = dummy->next;
     free(dummy);
     return head;
+}
+
+void free_list(struct ListNode* l) {
+    while(l) {
+        struct ListNode* tmp = l->next;
+        free(l);
+        l = tmp;
+    }
 }
 
 int main()
@@ -69,10 +84,10 @@ int main()
         int n = 0, m = 0;
         fastscan(&n);
 
-        struct ListNode* dummy = malloc(sizeof(struct ListNode));
+        struct ListNode* dummy = create_node();
         struct ListNode* cur = dummy;
         while(n--) {
-            cur->next = malloc(sizeof(struct ListNode));
+            cur->next = create_node();
             cur = cur->next;
 
             int v = 0;
@@ -84,7 +99,7 @@ int main()
         fastscan(&m);
         cur = dummy;
         while(m--) {
-            cur->next = malloc(sizeof(struct ListNode));
+            cur->next = create_node();
             cur = cur->next;
 
             int v = 0;
@@ -95,9 +110,19 @@ int main()
         struct ListNode* l2 = dummy->next;
         free(dummy);
 
+        struct ListNode* res = mergeTwoLists(l1,l2);
 
-        bool res = backspaceCompare(S, T);
-        printf("%s\n", res ? "true" : "false");
+        cur = res;
+        while(cur) {
+            printf("%d ", cur->val);
+            cur = cur->next;
+        }
+        printf("\n");
+
+        free_list(l1);
+        free_list(l2);
+        free_list(res);
+
     }
     return 0;
 }
