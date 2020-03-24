@@ -749,11 +749,14 @@ As of March 24<sup>th</sup>, 2020:
 ### Merge Two Sorted Lists
 The goal of this problem is to implemented a function that merges 2 sorted
 singly linked list.  
-I tried to solve this problem using the C language [Problem
+I tried to solve this problem using the C and Python language [Problem
 link](https://leetcode.com/problems/merge-two-sorted-lists)  
 As of March 25<sup>th</sup>, 2020:
-- [ ] Find a first working solution. I decided to go with function that creates
+- [X] Find a first working solution. I decided to go with function that creates
       a new list instead of just using the node from the previous ones. Thus it
       runs necessarily in O(N+M) but it uses O(N+M) extra space.
-- [ ] Submit solution. Got correct in 0 ms with 6.1 MB
-- [ ] Problem solved
+- [X] Submit solution. Got correct in 0 ms with 6.1 MB
+- [X] Write a second solution in Python this time simply ordering the nodes of
+      the two lists and return the merge so it uses only O(1) extra space.
+- [X] Submit solution. Got correct in 32 ms with 12.9 MB
+- [X] Problem solved
