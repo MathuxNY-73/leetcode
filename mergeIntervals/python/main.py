@@ -10,22 +10,28 @@ from queue import PriorityQueue
 import numpy as np
 
 class Solution:
-    def peakIndexInMountainArrayN(self, A: List[int]) -> int:
-        for i, e in enumerate(A):
-            if i > 0 and i < len(A) - 1 and A[i] > A[i-1] and A[i] > A[i+1]:
-                return i
+    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+        if len(intervals) == 0:
+            return []
 
-    def peakIndexInMountainArray(self, A: List[int]) -> int:
-        l = 0
-        r = len(A)
-        while l < r:
-            m = (l + r) // 2
-            #print(f"m is {m} and h[m]={h[m]} and l={l} and r={r}")
-            if A[m] < A[m+1]:
-                l = m + 1
-            else:
-                r = m
-        return r
+        start = [i[0] for i in intervals]
+        end = [i[1] for i in intervals]
+
+        start.sort()
+        end.sort()
+
+        res = []
+        i = 1; s = start[0]
+        while i <= len(start):
+            if i == len(start):
+                res.append([s, end[i - 1]])
+            elif start[i] > end[i-1]:
+                res.append([s, end[i - 1]])
+                s = start[i]
+
+            i+= 1
+
+        return res
 
 def main():
     lines = []
@@ -35,9 +41,10 @@ def main():
     T = int(lines.pop(0))
 
     for t in range(0,T):
-        _ = int(lines.pop(0))
-        A = [int(x) for x in lines.pop(0).split()]
-        res = Solution().peakIndexInMountainArray(A)
+        n = int(lines.pop(0))
+        A = [[int(x) for x in l.split()] for l in (lines.pop(0) for _ in range(n))]
+        print(A)
+        res = Solution().merge(A)
         print(res)
 
 if __name__ == "__main__":

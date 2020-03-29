@@ -143,12 +143,15 @@ As of July 18<sup>th</sup>, 2019:
 
 ### Merge Intervals
 The goal is to implement a function that will, given a list of intervals, merge all the intervals that overlap.  
-I tried to solve this problem using the C++ language. [Problem link](https://leetcode.com/problems/merge-intervals/)  
-As of July 22<sup>nd</sup>, 2019:
+I tried to solve this problem using the C++ and Python languages. [Problem link](https://leetcode.com/problems/merge-intervals/)  
+As of March 29<sup>th</sup>, 2020:
 - [X] Find a first working solutionn on the sample input.
 - [X] Submit solution. Got correct in 28 ms with 12.5 MB
-- [ ] Find a better solution
-- [ ] Submit solution.
+- [X] Solve back the problem in python. I chose to separate the start and end
+      time in separate arrays, sort them and run through the array to find the
+      correct intervals. Thus the solution runs in O(N log N) time with O(2*N)
+      extra space needed.
+- [X] Submit solution. Got correct in 88 ms with 15.6 MB
 - [X] Problem solved
 
 ### Insert Interval
