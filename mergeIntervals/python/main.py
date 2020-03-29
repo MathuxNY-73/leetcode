@@ -11,6 +11,18 @@ import numpy as np
 
 class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+
+        intervals.sort(key=lambda i: i[0])
+
+        merged = []
+        for i in intervals:
+            if not merged or merged[-1][1] < i[0]:
+                merged.append(i)
+            else:
+                merged[-1][1] = max(i[1], merged[-1][1])
+        return merged
+
+    def mergeS(self, intervals: List[List[int]]) -> List[List[int]]:
         if len(intervals) == 0:
             return []
 
