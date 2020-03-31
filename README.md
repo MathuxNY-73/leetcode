@@ -763,3 +763,19 @@ As of March 25<sup>th</sup>, 2020:
       the two lists and return the merge so it uses only O(1) extra space.
 - [X] Submit solution. Got correct in 32 ms with 12.9 MB
 - [X] Problem solved
+
+### Count Complete Tree Nodes
+The goal of this problem is to implement a function that would count the number
+of nodes in a complete binary tree.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/count-complete-tree-nodes/)  
+As of March 31<sup>st</sup>, 2020:
+- [X] Find a first working solution. I decided to implement a binary search to
+      find the number of nodes in the last level since in a complete binary tree
+      the nodes of the last level are as far left as possible. With this
+      solution I would be able to compute the number of nodes in O((log N) ^ 2).
+      There is no need for extra memory space so it is O(1) space complexity
+- [X] Submit solution. Got wrong, my implementation got too complicated and
+      untractable. I need to simplify things.
+- [ ] Find a better implementation
+- [ ] Problem solved

@@ -42,35 +42,36 @@ static int fast_stream = []() {
 class Solution {
     public:
 
-        int runThruTree(TreeNode* r, int h, int m, int l, int r) {
-            if(r == NULL) {
+        int runThruTree(TreeNode* root, int h, int m, int l, int r) {
+            if(root == NULL) {
                 // Should never happen
                 exit(1);
             }
 
+            //printf("h=%d, val=%d\n", h, root->val);
             if(!h) {
-                return (r->left ? 1 : 0) +
-                    (r->right ? 1 : 0);
+                return (root->left ? 1 : 0) +
+                    (root->right ? 1 : 0);
             }
             else {
                 int mid = l + ((r - l) >> 1);
-                if (m =< mid) {
-                    return runThruTree(r->left, h - 1, m, l, mid);
+                if (m <= mid) {
+                    return runThruTree(root->left, h - 1, m, l, mid);
                 }
                 else {
-                    return runThruTree(r->right, h - 1, m, mid + 1, r);
+                    return runThruTree(root->right, h - 1, m, mid + 1, r);
                 }
             }
         }
 
     int countNodes(TreeNode* root) {
-        int h = 0;
+        int h = -1;
         stack<TreeNode*> s;
 
         s.push(root);
 
         while(!s.empty()) {
-            auto cur = s.back();
+            auto cur = s.top();
             s.pop();
 
             if (cur != NULL) {
@@ -79,11 +80,38 @@ class Solution {
             }
         }
 
-        int l = 0, r = pow(2, h - 1);
-        while(l < r) {
-            int m = l + ((r - l) >> 1);
-            int c = runThruTree(root, h - 1, m, l, r);
+        if (h == -1) {
+            return 0;
         }
+        if (h == 0) {
+            return 1;
+        }
+
+        //printf("h=%d\n", h);
+        int l = 0, r = pow(2, h - 1);
+        int c = 0, cur_h = h - 1;
+        TreeNode* cur = root;
+        while(l <= r && cur_h >= 0) {
+            int m = l + ((r - l) >> 1);
+            //printf("l = %d, r = %d, cur_h=%d, m = %d\n", l, r, cur_h, m);
+            c = runThruTree(cur, max(cur_h, 0), m, l, r);
+            //printf("l = %d, r = %d, cur_h=%d,  m = %d and c=%d\n", l, r, cur_h, m ,c);
+            //printBinaryTree(cur);
+            if(c == 1) {
+                return pow(2, h) + 2 * max(m - 1, 0);
+            }
+            else if (c == 2) {
+                l = m + 1;
+                cur = root->right;
+            }
+            else {
+                r = m - 1;
+                cur = root->left;
+            }
+            --cur_h;
+        }
+        //printf("h=%d, l=%d, r=%d, c=%d\n", h, l, r, c);
+        return pow(2, h) - 1 + (l - 1) * 2 + c;
     }
 };
 
@@ -97,18 +125,14 @@ int main()
         int n=0;
         fastscan(n);
 
-        TreeNode** root1 = new TreeNode*;
-        readBinaryTree(root1, n);
+        TreeNode** root = new TreeNode*;
+        readBinaryTree(root, n);
+        //printBinaryTree(*root);
 
-        fastscan(n);
-        TreeNode** root2 = new TreeNode*;
-        readBinaryTree(root2, n);
-
-        bool res = Solution().flipEquiv(*root1, *root2);
-        printf("%s\n", res ? "true": "false");
-        delete(*root1);
-        delete(*root2);
-        delete(root1); delete(root2);
+        int res = Solution().countNodes(*root);
+        printf("%d\n", res);
+        delete(*root);
+        delete(root);
     }
 
     return 0;
