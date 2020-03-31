@@ -777,5 +777,7 @@ As of March 31<sup>st</sup>, 2020:
       There is no need for extra memory space so it is O(1) space complexity
 - [X] Submit solution. Got wrong, my implementation got too complicated and
       untractable. I need to simplify things.
-- [ ] Find a better implementation
-- [ ] Problem solved
+- [X] Find a better implementation. This time I based my algorithm on the index
+      of the leaf node to do the binary search.
+- [X] Submit solution. Got correct in 32 ms with 26.2 MB
+- [X] Problem solved

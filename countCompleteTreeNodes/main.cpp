@@ -42,26 +42,22 @@ static int fast_stream = []() {
 class Solution {
     public:
 
-        int runThruTree(TreeNode* root, int h, int m, int l, int r) {
-            if(root == NULL) {
-                // Should never happen
-                exit(1);
-            }
+        bool runThruTree(TreeNode* root, int h, int m, int l, int r) {
 
-            //printf("h=%d, val=%d\n", h, root->val);
-            if(!h) {
-                return (root->left ? 1 : 0) +
-                    (root->right ? 1 : 0);
-            }
-            else {
+            TreeNode* cur = root;
+            while(h > 0) {
                 int mid = l + ((r - l) >> 1);
                 if (m <= mid) {
-                    return runThruTree(root->left, h - 1, m, l, mid);
+                    r = mid;
+                    cur = cur->left;
                 }
                 else {
-                    return runThruTree(root->right, h - 1, m, mid + 1, r);
+                    l = mid + 1;
+                    cur = cur->right;
                 }
+                --h;
             }
+            return cur != NULL;
         }
 
     int countNodes(TreeNode* root) {
@@ -88,30 +84,25 @@ class Solution {
         }
 
         //printf("h=%d\n", h);
-        int l = 0, r = pow(2, h - 1);
-        int c = 0, cur_h = h - 1;
+        int l = 0, r = pow(2, h) - 1;
+        int cur_h = h;
         TreeNode* cur = root;
-        while(l <= r && cur_h >= 0) {
+        while(l <= r && cur) {
             int m = l + ((r - l) >> 1);
-            //printf("l = %d, r = %d, cur_h=%d, m = %d\n", l, r, cur_h, m);
-            c = runThruTree(cur, max(cur_h, 0), m, l, r);
-            //printf("l = %d, r = %d, cur_h=%d,  m = %d and c=%d\n", l, r, cur_h, m ,c);
-            //printBinaryTree(cur);
-            if(c == 1) {
-                return pow(2, h) + 2 * max(m - 1, 0);
-            }
-            else if (c == 2) {
+            //printf("Hello m=%d, cur = %p\n",m , cur);
+            auto e = runThruTree(cur, cur_h, m, l, r);
+            if (e) {
                 l = m + 1;
-                cur = root->right;
+                cur = cur->right;
             }
             else {
                 r = m - 1;
-                cur = root->left;
+                cur = cur->left;
             }
             --cur_h;
         }
         //printf("h=%d, l=%d, r=%d, c=%d\n", h, l, r, c);
-        return pow(2, h) - 1 + (l - 1) * 2 + c;
+        return pow(2, h) - 1 + l;
     }
 };
 
