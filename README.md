@@ -781,3 +781,18 @@ As of March 31<sup>st</sup>, 2020:
       of the leaf node to do the binary search.
 - [X] Submit solution. Got correct in 32 ms with 26.2 MB
 - [X] Problem solved
+
+### Single number
+The goal of this problem is to find the only number that is not duplicated in an
+array.  
+This problem is featured of the [30-day leetcoding of April
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+I tried to solve this problem using the C language [Problem
+link](https://leetcode.com/problems/single-number/)  
+As of April 1<sup>st</sup>, 2020:
+- [X] Find a first working solution. I decided to go with the bit manipulation
+      trick to find the number that was not duplicated. I XOR every number in
+      the array and the result of this operation gives the single number. This
+      algorithm runs in O(N) in time complexity and uses O(1) extra space
+- [X] Submit solution. Got correct in 8 ms with 6.8 MB
+- [X] Problem solved
