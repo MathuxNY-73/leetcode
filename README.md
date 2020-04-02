@@ -824,4 +824,8 @@ As of April 2<sup>nd</sup>, 2020:
       conclusion the time complexity of this approach is O(243 * 3 + log N + log
       log N + log log log N + ...)= O(log N). The space complexity is O(log N)
 - [X] Submit solution. Got correct in 0 ms with 6.4 MB
+- [X] Reduce memory consumption by using Floyd's tortoise and hare algorithm.
+      Write the solution in C. Still the solution takes O(log N) in time
+      complexity but now it does not need extra memory space so O(1)
+- [X] Submit solution. Got correct in 0 ms with 5.1 MB
 - [X] Problem solved
