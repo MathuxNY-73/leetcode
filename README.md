@@ -809,7 +809,7 @@ after some mathemtical reasoning we see that it is not possible for numbers of
 14 digits.  
 This problem featured in the the [30-day leetcoding of April
 2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
-I tried to solve this problem using the C++ language [Problem
+I tried to solve this problem using the C and C++ languages [Problem
 link](https://leetcode.com/problems/happy-number/)  
 As of April 2<sup>nd</sup>, 2020:
 - [X] Find a first working solution. The approach I used is getting the digits
@@ -828,4 +828,18 @@ As of April 2<sup>nd</sup>, 2020:
       Write the solution in C. Still the solution takes O(log N) in time
       complexity but now it does not need extra memory space so O(1)
 - [X] Submit solution. Got correct in 0 ms with 5.1 MB
+- [X] Problem solved
+
+### Maximum Subarray
+The goal of this challenge is to compute the maximum sum that can be formed with
+a subarray of contiguous intergers, which can be either positive or negative.  
+This problem featured in the the [30-day leetcoding of April
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+I tried to solve this problem with the C language [Problem
+link](https://leetcode.com/problems/maximum-subarray/)  
+As of April 3<sup>rd</sup>, 2020:
+- [X] Find a first working solution. I decided to use a form of a dynamic
+      programming and run through all elements in the array. Thus the time
+      complexity of O(n) and extra space need of O(1)
+- [X] Submit solution. Got correct in 4 ms with 5.9 MB
 - [X] Problem solved
