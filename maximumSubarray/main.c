@@ -16,16 +16,37 @@
 
 #define SIZE 1001
 
+int crossum(int* nums, int l, int r, int m) {
+
+    int sum = 0, left = INT_MIN;
+    for(int i = m ; i >= l ; --i) {
+        sum += nums[i];
+        left = max(sum, left);
+    }
+
+
+    int right = INT_MIN; sum = 0;
+    for(int i = m+1 ; i <= r ; ++i) {
+        sum += nums[i];
+        right = max(sum, right);
+    }
+
+    return left + right;
+}
+
 int maxSubArrayRec(int* nums, int l, int r) {
     if(l == r) {
         return nums[l];
     }
 
     int m = l + ((r - l) >> 1);
-    return max(maxSubArrayRec(nums, l, m), 0) +
-        max(maxSubArrayRec(nums, m + 1, r), 0);
-}
 
+    int left = maxSubArrayRec(nums, l, m);
+    int right = maxSubArrayRec(nums, m+1, r);
+    int cross = crossum(nums, l, r, m);
+
+    return max(max(left, right), cross);
+}
 
 int maxSubArrayDC(int* nums, int numsSize){
     if (numsSize == 0) {
@@ -65,7 +86,7 @@ int main()
             fastscan(&nums[i]);
         }
 
-        int res = maxSubArray(nums, n);
+        int res = maxSubArrayDC(nums, n);
         printf("%d\n", res);
     }
     return 0;

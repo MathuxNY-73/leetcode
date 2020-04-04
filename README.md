@@ -837,9 +837,13 @@ This problem featured in the the [30-day leetcoding of April
 2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
 I tried to solve this problem with the C language [Problem
 link](https://leetcode.com/problems/maximum-subarray/)  
-As of April 3<sup>rd</sup>, 2020:
+As of April 4<sup>th</sup>, 2020:
 - [X] Find a first working solution. I decided to use a form of a dynamic
       programming and run through all elements in the array. Thus the time
       complexity of O(n) and extra space need of O(1)
 - [X] Submit solution. Got correct in 4 ms with 5.9 MB
+- [X] Implement the divide and conquer solution. Now the solution is slower than
+      the Kadane's algorithm since it runs in O(N log N) time complexity and we
+      need O(log N) space for the recursive call stack.
+- [X] Submit solution. Got correct in 8 ms with 6.3 MB
 - [X] Problem solved
