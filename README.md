@@ -847,3 +847,20 @@ As of April 4<sup>th</sup>, 2020:
       need O(log N) space for the recursive call stack.
 - [X] Submit solution. Got correct in 8 ms with 6.3 MB
 - [X] Problem solved
+
+### Move zeroes
+The goal of this challenge is, given an array of integers, move all the zeroes
+of the array to the end of the array. The algorithm should keep the original
+ordering of the element, be done in-place and optimize the number of operation
+to be done.  
+This problem featured in the the [30-day leetcoding of April
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+I tried to solve this problem with the C++ language [Problem
+link](https://leetcode.com/problems/move-zeroes/)  
+As of April 4<sup>th</sup>, 2020:
+- [X] Find a first working solution. I decided to use a 2-pointers solution. One
+      moving slower everytime a zero is found and then swap the non-zero
+      elements between those 2 pointers. This solution needs O(N) swaps in the
+      worst case and is done in-place so it requires O(1) extra space.
+- [X] Submit solution. Got correct in 8 ms with 7.2 MB
+- [X] Problem solved
