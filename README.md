@@ -864,3 +864,19 @@ As of April 4<sup>th</sup>, 2020:
       worst case and is done in-place so it requires O(1) extra space.
 - [X] Submit solution. Got correct in 8 ms with 7.2 MB
 - [X] Problem solved
+
+### Best time to buy and sell stock II
+The goal of this challenge is, given an array of prices for each day, find the
+maximum profit that can be made by buying and selling stocks at those prices.  
+This problem featured in the the [30-day leetcoding of April
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+I tried to solve this problem using the Python language [Problem
+link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)  
+As of April 5<sup>th</sup>, 2020:
+- [X] Find a first working solution. I decided to simply use the peak and valley
+      approach. When the trend of number starts going down then simply add the
+      difference between the peak and the minimum element of the subarray so
+      formed. The time complexity of this solution is O(N) and it needs O(1)
+      extra space.
+- [ ] Submit solution. Got correct in 60 ms with 15.2 MB
+- [X] Problem solved
