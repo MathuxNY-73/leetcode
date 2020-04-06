@@ -878,5 +878,23 @@ As of April 5<sup>th</sup>, 2020:
       difference between the peak and the minimum element of the subarray so
       formed. The time complexity of this solution is O(N) and it needs O(1)
       extra space.
-- [ ] Submit solution. Got correct in 60 ms with 15.2 MB
+- [X] Submit solution. Got correct in 60 ms with 15.2 MB
+- [X] Problem solved
+
+### Group Anagrams
+The goal of this challenge is to group words that are anagrams together in subarrays.  
+This problem featured in the the [30-day leetcoding of April
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/group-anagrams/)  
+As of April 6<sup>th</sup>, 2020: 
+- [X] Find a first working solution. I decided to use sort and compare for each
+      word in the given array. I sort each word and then use those sorted words
+      to group the original words. Anagrams should compare the same when sorted.
+      Sorting takes O(K log K) where K is the length of the word. Since I do
+      that for every word I get a time complexity of O(NK log K). Then I run
+      again over the word to group them, so overall time complexity is O(NK log
+      K). Since I need to save the sorted words and their indices I need O(NK)
+      extra space.
+- [X] Submit solution. Got correct in 112 ms with 15.7 MB
 - [X] Problem solved
