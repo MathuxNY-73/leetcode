@@ -897,4 +897,8 @@ As of April 6<sup>th</sup>, 2020:
       K). Since I need to save the sorted words and their indices I need O(NK)
       extra space.
 - [X] Submit solution. Got correct in 112 ms with 15.7 MB
+- [ ] Second solution. This solution is faster than the previous as what is done
+      now is to count the occurences of each character in the string. Using this
+      approach the time complexity goes down to O(NK).
+- [ ] Submit solution. Got correct in 40 ms with 15.4 MB
 - [X] Problem solved

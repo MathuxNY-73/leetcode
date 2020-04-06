@@ -40,8 +40,53 @@ static int fast_stream = []() {
                          }();
 
 class Solution {
+
+    struct Hasher {
+        static constexpr size_t P = 37;
+        static constexpr size_t N = 1000000007;
+        size_t operator()(const int (&value)[26]) const {
+            size_t res = 0;
+            size_t x = 1;
+            for (auto v : value) {
+                res += v * x;
+                res %= N;
+                x *= P;
+                x %= N;
+            }
+            return res;
+        }
+    };
+
+    size_t get_key(const string& word) const {
+        int cnt[26];
+        memset(cnt, 0, sizeof(int) * 26);
+        for (auto& c : word) {
+            ++cnt[c - 'a'];
+        }
+        return hash(cnt);
+    }
+
+    Hasher hash;
+
     public:
-        vector<vector<string>> groupAnagrams(const vector<string>& strs) const {
+         vector<vector<string>> groupAnagrams(const vector<string>& strs) const {
+             unordered_map<size_t, vector<string>> m_str;
+
+             for(auto& w: strs) {
+                 auto k = get_key(w);
+                 m_str[k].push_back(w);
+             }
+
+             vector<vector<string>> res;
+             res.reserve(m_str.size());
+             for(auto& [_, v]: m_str) {
+                 res.push_back(v);
+             }
+
+             return res;
+        }
+
+        vector<vector<string>> groupAnagramsSort(const vector<string>& strs) const {
             vector<string> sorted(strs);
             unordered_map<string, int> m_str;
 
