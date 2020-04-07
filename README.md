@@ -897,8 +897,29 @@ As of April 6<sup>th</sup>, 2020:
       K). Since I need to save the sorted words and their indices I need O(NK)
       extra space.
 - [X] Submit solution. Got correct in 112 ms with 15.7 MB
-- [ ] Second solution. This solution is faster than the previous as what is done
+- [X] Second solution. This solution is faster than the previous as what is done
       now is to count the occurences of each character in the string. Using this
       approach the time complexity goes down to O(NK).
-- [ ] Submit solution. Got correct in 40 ms with 15.4 MB
+- [X] Submit solution. Got correct in 40 ms with 15.4 MB
+- [X] Problem solved
+
+### Counting elements
+The goal of this challenge is to count the number of elements whose successor
+(ie: x+1) is in the given array.  
+The problem featured in the [30-day leetcoding of April
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+I tried to solve this problem using the C++ language [Problem link]()  
+As of April 7<sup>th</sup>, 2020:
+- [X] Find a first working solution. I decided to use a HashTable to store all
+      the distinct numbers that are in the array. That way, during a second pass
+      over the array I can check, for each x, if x + 1 is also in the array. The
+      overall time complexity is O(N) and I need O(N) extra space to store the
+      hash table.
+- [X] Submit solution. Got correct in 0 ms with 6.9 MB
+- [X] Find another solution more efficient in memory. Using a sort I can order
+      the element and then pass through the array and add to the result the
+      count of numbers x where x + 1 follows. The time complexity is then O(N
+      log N) for sorting but the space needed is thus brought down to O(1) as
+      sorting is done in-place.
+- [X] Submit solution. Got correct in 4 ms with 6.5 MB
 - [X] Problem solved
