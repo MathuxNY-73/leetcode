@@ -923,3 +923,19 @@ As of April 7<sup>th</sup>, 2020:
       sorting is done in-place.
 - [X] Submit solution. Got correct in 4 ms with 6.5 MB
 - [X] Problem solved
+
+### Middle of the Linked List
+The goal of this challenge is find and return the middle node of a given linked
+list.  
+The problem featured in the [30-day leetcoding of April
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+I tried to solve this problem using the C language [Problem
+link](https://leetcode.com/problems/middle-of-the-linked-list/)  
+As of April 8<sup>th</sup>, 2020:
+- [X] Find a first working solution. I went with the 2 pointers solution. I have
+      one pointer moving through the list twice as fast as the other. When the
+      first pointer arrives at the end of the list then the second one is in the
+      middle of the list. The time complexity of this algorithm is O(N) since we
+      are running through the list just once. We need only O(1) extra space.
+- [X] Submit solution. Got correct in 0 ms with 5.3 MB
+- [X] Problem solved
