@@ -944,3 +944,21 @@ As of April 8<sup>th</sup>, 2020:
       are running through the list just once. We need only O(1) extra space.
 - [X] Submit solution. Got correct in 0 ms with 5.3 MB
 - [X] Problem solved
+
+### Min Stack
+The goal is to implement a stack that would also return the minimum value in the
+stack. The `getMin` operation should run in O(1) time.  
+The problem featured in the [30-day leetcoding of April
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/min-stack/)  
+As of April 10<sup>th</sup>, 2020:
+- [X] Find a first working solution. I just used an array to store the element
+      and use it as a stack. I also have a variable to keeps the minimum in the
+      array. It means that every time I pop an element I needed to find again
+      the minimum in the remaining array. So it makes the pop operation run in
+      O(N) time complexity. The space complexity is O(N).
+- [X] Submit solution. Got correct in 40 ms with 14.4 MB
+- [ ] Implement a solution that keeps track of the minimum for each added
+      element.
+- [X] Problem solved
