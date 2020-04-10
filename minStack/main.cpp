@@ -41,44 +41,38 @@ static int fast_stream = []() {
 
 class MinStack {
     private:
-        vector<int> s;
-        int m;
+        stack<pair<int, int>> s;
     public:
         /** initialize your data structure here. */
-        MinStack(): s(vector<int>()), m(numeric_limits<int>::max()) {
+        MinStack(): s(stack<pair<int, int>>()) {
         }
 
         void push(int x) {
-            s.push_back(x);
-            m = min(x, m);
+            int m = x;
+            if(!s.empty()) {
+                m = min(m, s.top().second);
+            }
+            s.emplace(make_pair(x, m));
         }
 
         void pop() {
-            if(s.size() == 0) {
-                return;
-            }
-
-            int rem = s.back();
-            s.pop_back();
-
-            if(rem == m) {
-                m = numeric_limits<int>::max();
-                for(auto& x: s) {
-                    m = min(m, x);
-                }
+            if(!s.empty()) {
+                s.pop();
             }
         }
 
         int top() const {
-            if(s.size() == 0) {
+            if(s.empty()) {
                 exit(1);
             }
-
-            return s.back();
+            return s.top().first;
         }
 
         int getMin() {
-            return m;
+            if(s.empty()) {
+                exit(1);
+            }
+            return s.top().second;
         }
 };
 

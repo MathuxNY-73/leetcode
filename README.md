@@ -959,6 +959,9 @@ As of April 10<sup>th</sup>, 2020:
       the minimum in the remaining array. So it makes the pop operation run in
       O(N) time complexity. The space complexity is O(N).
 - [X] Submit solution. Got correct in 40 ms with 14.4 MB
-- [ ] Implement a solution that keeps track of the minimum for each added
-      element.
+- [X] Implement a solution that keeps track of the minimum for each added
+      element. Instead of a single value I store a tuple with the element and
+      the minimum value so far. That way the pop operation now takes O(1) time
+      complexity.
+- [X] Submit solution. Got correct in 40 ms with 14.6 MB
 - [X] Problem solved
