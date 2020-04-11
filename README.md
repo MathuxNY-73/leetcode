@@ -568,9 +568,11 @@ As of February 29<sup>th</sup>, 2020:
 ### Diameter of Binary Tree
 The goal of this challenge is to implement a function that compute diameter of a
 Binary Tree which is the longest path between two nodes of the tree.  
+This problem featured in the the [30-day leetcoding of April
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
 I tried to solve this problem using the C++ language [Problem
 link](https://leetcode.com/problems/diameter-of-binary-tree/)  
-As of March 4<sup>th</sup>, 2020:
+As of April 11<sup>th</sup>, 2020:
 - [X] Write a first solution. This solution will simply find the deepest
       children of both the left and right subtrees of the root and, at the root,
       simply add the length of those 2 paths. The time complexity of this
@@ -580,6 +582,9 @@ As of March 4<sup>th</sup>, 2020:
       longest path may not go through the root, Dummy !
 - [X] Rewrite the solution to take into account the aforementioned problem.
 - [X] Submit solution. Got correct in 8 ms with 19 MB
+- [X] Reimplement solution in Python for the 30-day of leetcoding. Used the DFS
+      approach.
+- [X] Submit solution. Got correct in 44 ms with 15.2 MB
 - [X] Problem solved
 
 ### Trapping rain water
