@@ -988,4 +988,8 @@ As of April 12<sup>th</sup>, 2020:
       time complexity of running the algorithm is O((log N)<sup>2</sup>). The
       algorithm needs O(N) extra space.
 - [X] Submit solution. Got correct in 4 ms with 6.2 MB
+- [X] Rewrite the solution using a Max Heap tools from the algorithm library.
+      The time complexity remains O(N log N) but since we are doing every thing
+      in place then I brought down the space complexity to O(1)
+- [X] Submit solution. Got correct in 0 ms with 6.1 MB
 - [X] Problem solved

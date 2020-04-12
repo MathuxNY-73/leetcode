@@ -41,7 +41,7 @@ static int fast_stream = []() {
 
 class Solution {
     public:
-        int lastStoneWeight(const vector<int>& stones) const {
+        int lastStoneWeightPq(const vector<int>& stones) const {
             priority_queue<int> q;
 
             for(auto x: stones) {
@@ -59,6 +59,30 @@ class Solution {
             if (!q.empty()) {
                 res = q.top();
                 q.pop();
+            }
+
+            return res;
+        }
+
+        int lastStoneWeight(vector<int>& stones) const {
+            make_heap(stones.begin(), stones.end());
+
+            while(stones.size() > 1) {
+                pop_heap(stones.begin(), stones.end());
+                int s1 = stones.back();
+                stones.pop_back();
+
+                pop_heap(stones.begin(), stones.end());
+                int s2 = stones.back();
+                stones.pop_back();
+
+                stones.push_back(s1 - s2);
+                push_heap(stones.begin(), stones.end());
+            }
+
+            int res = 0;
+            if (stones.size() == 1) {
+                res = stones.back();
             }
 
             return res;
