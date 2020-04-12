@@ -970,3 +970,22 @@ As of April 10<sup>th</sup>, 2020:
       complexity.
 - [X] Submit solution. Got correct in 40 ms with 14.6 MB
 - [X] Problem solved
+
+### Last Stone Weight
+The goal of this challenge is to create a function that returns the weight of
+the last remaining stone after applying the following process:
+ 1. Pick the two heaviest stones $x$ and $y$ in the array with $x \leq y$
+ 2. Smash the stones together:
+  - if $x = y$ then the stones
+  - if $x \neq y$ then y becomes a stone of weight $y-x$
+The problem featured in the [30-day leetcoding of April
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/last-stone-weight/)  
+As of April 12<sup>th</sup>, 2020:
+- [X] Find a first working solution. I used a priority queue to keep the
+      element sorted. The time complexity for building a heap is O(N log N), the
+      time complexity of running the algorithm is O((log N)<sup>2</sup>). The
+      algorithm needs O(N) extra space.
+- [X] Submit solution. Got correct in 4 ms with 6.2 MB
+- [X] Problem solved
