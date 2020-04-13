@@ -43,18 +43,19 @@ class Solution {
     public:
         int maxSubArrayLen(const vector<int>& nums, int k) {
             int n = nums.size();
-            vector<int> prefix_sum(n + 1, 0);
+            unordered_map<int, int> m;
+            m.reserve(n + 1);
 
-            for(size_t i = 0 ; i < n ; ++i) {
-                prefix_sum[i + 1] = nums[i] + prefix_sum[i];
-            }
-
-            int res = 0;
-            for(int i = n ; i > 0 ; --i){
-                for(int j = 0; j < i ; ++j) {
-                    if (prefix_sum[i] - prefix_sum[j] == k) {
-                        res = max(res, i - j);
-                    }
+            m.emplace(0, -1);
+            int res = 0, cum = 0;
+            for(int i = 0 ; i < n ; ++i){
+                cum += nums[i];
+                if(m.find(cum) == m.cend()) {
+                    m.emplace(cum, i);
+                }
+                auto it = m.find(cum - k);
+                if (it != m.cend()) {
+                    res = max(res, i - it->second);
                 }
             }
 

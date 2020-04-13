@@ -1028,4 +1028,8 @@ As of April 13<sup>th</sup>, 2020:
       largest subarray. This solution runs in O(N<sup>2</sup>) and uses O(N)
       extra space.
 - [X] Submit solution. Got Time Limit Exceeded
-- [ ] Problem solved
+- [X] Optimize the previous solution. I used a map to store the prefix sum at
+      the first index seen. Then the new time complexity is O(N) with O(N) extra
+      space needed
+- [X] Submit solution. Got correct in 36 ms with 10.9 MB
+- [X] Problem solved
