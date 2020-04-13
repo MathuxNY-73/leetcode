@@ -993,3 +993,17 @@ As of April 12<sup>th</sup>, 2020:
       in place then I brought down the space complexity to O(1)
 - [X] Submit solution. Got correct in 0 ms with 6.1 MB
 - [X] Problem solved
+
+### Contiguous array
+The goal of this challenge is to write a function that outputs the longest
+contiguous subarray which contains equal number of 1s and 0s in a binary array.  
+The problem featured in the [30-day leetcoding of April
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/contiguous-array/)  
+As of April 13<sup>th</sup>, 2020:
+- [X] Find a first working solution. I tried the brute-force solution, running
+      through all the possible subarrays. This solution runs in
+      $\mathcal{O}(N^{2})$. This solution only needs constant space O(1)
+- [X] Submit solution. Got Time Limit Exceeded
+- [ ] Problem solved
