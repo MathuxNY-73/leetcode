@@ -1016,3 +1016,16 @@ As of April 13<sup>th</sup>, 2020:
       extra space.
 - [X] Submit solution. Got correct in 104 ms with 17.7 MB
 - [X] Problem solved
+
+### Maximum size subarray with sum equal k
+The goal of this challenge is to find the largest subarray of integers whose
+elements sum up to k.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/)  
+As of April 13<sup>th</sup>, 2020:
+- [X] Find a frist working solution. I computed the prefix sums and then iterate
+      through the array of prefix sums to find the start and end indices of the
+      largest subarray. This solution runs in O(N<sup>2</sup>) and uses O(N)
+      extra space.
+- [X] Submit solution. Got Time Limit Exceeded
+- [ ] Problem solved
