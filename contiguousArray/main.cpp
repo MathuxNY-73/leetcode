@@ -28,7 +28,7 @@
 #define wl(n) while(n--)
 #define fl(i,a,b) for(i=a; i<b; ++i)
 
-#define SIZE 1001
+#define SIZE 4 * 50000
 
 using namespace std;
 
@@ -42,20 +42,23 @@ static int fast_stream = []() {
 class Solution {
     public:
         int findMaxLength(const vector<int>& nums) {
-            int n = nums.size();
-            int res = 0;
+            unordered_map<int, int> m;
+            int sum = 0, max_l = 0;
 
-            for(int i = 0 ; i < n ; ++i) {
-                int ones = 0, zeros = 0;
-                for(int j = i ; j < n ; ++j) {
-                    if (nums[j]) ++ones;
-                    else ++zeros;
+            m.emplace(0, -1);
 
-                    if (ones == zeros) res = max(res, ones + zeros);
+            for(int i = 0 ; i < nums.size() ; ++i) {
+                sum += (nums[i] ? 1 : -1);
+                auto it = m.find(sum);
+                if (it == m.cend()) {
+                    m.emplace(sum , i);
+                }
+                else {
+                    max_l = max(max_l, i - it->second);
                 }
             }
 
-            return res;
+            return max_l;
         }
 };
 

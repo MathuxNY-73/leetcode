@@ -1006,4 +1006,13 @@ As of April 13<sup>th</sup>, 2020:
       through all the possible subarrays. This solution runs in
       $\mathcal{O}(N^{2})$. This solution only needs constant space O(1)
 - [X] Submit solution. Got Time Limit Exceeded
-- [ ] Problem solved
+- [X] Find a second solution. This time I keep track of the prefix sum of the
+      array. Assigning value -1 to zero element, I know ones and zeroes are
+      balanced whenever the sum is zero. Also if I get the same sum at index i
+      and j with $j > i$ then ones and zeros are balanced between those indices,
+      so I need to keep track of the prefix sum at each index. I used a hash map
+      to store the smallest index where each value of the prefix sum was
+      encountered first. This solution then runs in O(N) time and uses O(N)
+      extra space.
+- [X] Submit solution. Got correct in 104 ms with 17.7 MB
+- [X] Problem solved
