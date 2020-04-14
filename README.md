@@ -1033,3 +1033,20 @@ As of April 13<sup>th</sup>, 2020:
       space needed
 - [X] Submit solution. Got correct in 36 ms with 10.9 MB
 - [X] Problem solved
+
+### Perform string shifts
+The goal of this challenge is to perform a serie of string shifts on a given
+string and return the result of the application of those shifts on the string.  
+The problem featured in the [30-day leetcoding of April
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+I tried to solve this problem using the C++ language [Problem link]()  
+As of April 14<sup>th</sup>, 2020:
+- [X] Find a first working solution. I just summed up the shifts, considering
+      left shifts as moving a cursor to the right, so a positive move, and
+      right shifts as negative moves. I just apply the total to the string
+      modulo the length of the string. It then requires one pass over the shifts
+      array O(N) and one pass over the string to build the result string O(L).
+      So a time complexity of O(N+L) and an extra space need of O(L) for the
+      result string.
+- [X] Submit solution. Got correct in 0 ms with 6.7 MB
+- [X] Problem solved.
