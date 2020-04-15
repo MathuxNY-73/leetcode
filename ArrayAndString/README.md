@@ -1,5 +1,5 @@
-# leetcode
-The repsitory contains all the problems I have tried to solve on the leetcode [website](https://leetcode.com/problemset/all/)
+# Array and String Challenges
+The repsitory contains the problems related to Array and Strings that I tried to solve on the leetcode [website](https://leetcode.com/problemset/all/)
 
 ### Median Of Two Sorted Arrays
 The goal is to implement a function that compute the median of sorted set of numbers split between in two sorted arrays. The algorithm should have O(log(m+n)) complexity where n and m are the sizes of the two arrays.  
@@ -270,4 +270,24 @@ As of April 14<sup>th</sup>, 2020:
       So a time complexity of O(N+L) and an extra space need of O(L) for the
       result string.
 - [X] Submit solution. Got correct in 0 ms with 6.7 MB
+- [X] Problem solved.
+
+### Product Of Array Except Self
+The goal of this challenge is, given an array of integers, to compute for each
+element, the product of all the integers in the array without this element. That
+is to say res[i] = product of all nums[j] where j != i.
+The problem should be solved in O(N) without using division.  
+The problem featured in the [30-day leetcoding of April
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+I tried to solve this problem using the C language [Problem
+link](https://leetcode.com/problems/product-of-array-except-self/)  
+As of April 15<sup>th</sup>, 2020:
+- [X] Find a first working solution. I used two arrays to store the prefix and
+      suffix products of the nums array and then the result res[i] is basically
+      the product between the prefix product before ith element and the suffix
+      product after ith element. The run time complexity is O(N) and since I
+      need two arrays to store the prefix and suffix products the space
+      complexity is O(2*N) = O(N).
+- [X] Submit solution. Got correct in 48 ms with 14.4 MB
+- [ ] Follow up: find a solution that needs constant space.
 - [X] Problem solved.
