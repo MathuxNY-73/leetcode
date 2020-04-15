@@ -52,3 +52,16 @@ As of April 12<sup>th</sup>, 2020:
       in place then I brought down the space complexity to O(1)
 - [X] Submit solution. Got correct in 0 ms with 6.1 MB
 - [X] Problem solved
+
+### Best time to buy and sell stock
+The goal of this challenge is, given an array of prices for each day, find the
+maximum profit that can be made by buying and selling stocks only once at those prices.  
+I tried to solve this problem using the Python language [Problem
+link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)  
+As of April 15<sup>th</sup>, 2020:
+- [X] Find a first working solution. Following on the peak and valley approach I
+      run through the array to find the maximum difference between peak and
+      valley. The time complexity of this solution is O(N) and it needs O(1)
+      extra space.
+- [X] Submit solution. Got correct in 68 ms with 15.1 MB
+- [X] Problem solved
