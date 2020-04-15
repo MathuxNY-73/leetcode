@@ -22,27 +22,21 @@ int* productExceptSelf(int* nums, int numsSize, int* returnSize){
         return nums;
     }
 
-    int* up = malloc(sizeof(int) * (numsSize + 1));
-    int* down = malloc(sizeof(int) * (numsSize + 1));
-    memset(up, 0, sizeof(int) * (numsSize + 1));
-    memset(down, 0, sizeof(int) * (numsSize + 1));
-
-    up[0] = down[numsSize] = 1;
-
-    for(int i = 0, j = numsSize - 1; i < numsSize && j >= 0 ; ++i, --j) {
-        up[i + 1] = up[i] * nums[i];
-        down[j] = down[j + 1] * nums[j];
-    }
-
     int* res = malloc(sizeof(int) * numsSize);
     memset(res, 0, sizeof(int) * numsSize);
 
-    for(int i = 0 ; i < numsSize ; ++i) {
-        res[i] = up[i] * down[i+1];
+    res[0] = nums[0];
+    for(int i = 1 ; i < numsSize ; ++i) {
+        res[i] = res[i - 1] * nums[i];
     }
 
-    free(up);
-    free(down);
+    int suff_prod = 1;
+    for(int i = numsSize - 1 ; i > 0 ; --i) {
+        res[i] = res[i - 1] * suff_prod;
+        suff_prod *= nums[i];
+    }
+    res[0] = suff_prod;
+
     return res;
 }
 

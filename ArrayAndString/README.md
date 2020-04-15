@@ -289,5 +289,12 @@ As of April 15<sup>th</sup>, 2020:
       need two arrays to store the prefix and suffix products the space
       complexity is O(2*N) = O(N).
 - [X] Submit solution. Got correct in 48 ms with 14.4 MB
-- [ ] Follow up: find a solution that needs constant space.
+- [X] Follow up: find a solution that needs constant space. Since allocating the
+      answer array is not considered for space complexity analysis, then the
+      modification is fairly straightforward as we just need to store the prefix
+      product in the answer array and keep a variable to compute the suffix
+      product whilst going down the answer array to modify it. The run time
+      complexity is still O(N) but now, as we do not need any intermediate
+      arrays the space complexity is O(1).
+- [X] Submit solution. Got correct in 40 ms with 13.5 MB
 - [X] Problem solved.
