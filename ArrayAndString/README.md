@@ -298,3 +298,22 @@ As of April 15<sup>th</sup>, 2020:
       arrays the space complexity is O(1).
 - [X] Submit solution. Got correct in 40 ms with 13.5 MB
 - [X] Problem solved.
+
+### Valid Parenthesis String
+The goal of this challenge is to determine if a given string containing only the
+characters '(', ')' and '*', where '*' can either be '(', ')' or the empty
+string, can be made valid (ie: every '(' has a corresponding ')' further down in
+the string)  
+The problem featured in the [30-day leetcoding of April
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+I tried to solve this problem using the Python language [Problem
+link](https://leetcode.com/problems/valid-parenthesis-string/)  
+As of April 16<sup>th</sup>, 2020:
+- [X] Find a first working solution. I used two stacks holding the indices of
+      opening parenthesis and stars and went through the string pop the stacks
+      at every closing parenthesis. If at the end there are still open
+      parenthesis, I check if they can be matched to a star positionned after
+      them in the string. The time complexity of this solution is O(N) since I
+      run once through the string. It uses O(2*N) = O(N) extra space.
+- [X] Submit solution. Got correct in 20 ms with 14 MB
+- [X] Problem solved
