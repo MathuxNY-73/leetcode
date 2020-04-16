@@ -308,7 +308,7 @@ The problem featured in the [30-day leetcoding of April
 2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
 I tried to solve this problem using the Python language [Problem
 link](https://leetcode.com/problems/valid-parenthesis-string/)  
-As of April 16<sup>th</sup>, 2020:
+As of April 17<sup>th</sup>, 2020:
 - [X] Find a first working solution. I used two stacks holding the indices of
       opening parenthesis and stars and went through the string pop the stacks
       at every closing parenthesis. If at the end there are still open
@@ -316,4 +316,9 @@ As of April 16<sup>th</sup>, 2020:
       them in the string. The time complexity of this solution is O(N) since I
       run once through the string. It uses O(2*N) = O(N) extra space.
 - [X] Submit solution. Got correct in 20 ms with 14 MB
+- [X] Implemented a new solution based this time on the interval of the values
+      that the balance between opening and closing parenthesis can take. At each
+      character we will compute the bounds of the interval. This solution runs
+      in O(N) and needs O(1) extra space.
+- [X] Submit solution. Got correct in 28 ms with 13.8 MB
 - [X] Problem solved
