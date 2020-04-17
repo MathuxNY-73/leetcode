@@ -41,14 +41,25 @@ As of August 12<sup>th</sup>, 2019:
 - [x] Problem solved
 
 ### Number of Islands
-The goal of this challenge is to code a function that finds the number of islands in a matrix of 0s and 1s where 1 is earth and 0 is water. Is considered an island earth that is not connected vertically nor horizontally to another chunk of earth.  
-I tried to solve this problem using the C++ language[Problem link](https://leetcode.com/problems/number-of-islands/submissions/)  
-As of October 23<sup>rd</sup>, 2019:
+The goal of this challenge is to code a function that finds the number of
+islands in a matrix of 0s and 1s where 1 is earth and 0 is water. Is considered
+an island earth that is not connected vertically nor horizontally to another
+chunk of earth.  
+The problem featured in the [30-day leetcoding of April
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+I tried to solve this problem using the C++ and Python languages[Problem
+link](https://leetcode.com/problems/number-of-islands/submissions/)  
+As of April 17<sup>th</sup>, 2020:
 - [x] Write a solution that works on sample input
 - [x] Submit solution. Got wrong
 - [x] Write a solution that works for edge cases
 - [x] Submit solution. Got right in 76 ms with 15.4 MB
-- [ ] Find a faster solution for the problem.
+- [X] Solve again the problem in 30-day of leetcoding. Wrote in Python using a
+      BFS approach. The algorithm would go over every element in the grid and
+      once land (ie: 1) is found then do a BFS to discover all the island. The
+      solution runs in O(N*M) since all the elements are going to be visited and
+      it needs O(min(N, M)) extra space for the queue.
+- [X] Submit solution. Gor correct in 268 ms with 16.5 MB
 - [x] Problem solved
 
 ### Diameter of Binary Tree
