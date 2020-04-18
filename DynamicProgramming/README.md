@@ -128,3 +128,20 @@ As of April 4<sup>th</sup>, 2020:
       need O(log N) space for the recursive call stack.
 - [X] Submit solution. Got correct in 8 ms with 6.3 MB
 - [X] Problem solved
+
+### Minimum Path Sum
+The goal of this challenge is to compute the sum of the minimum path in a given
+matrix, to go from the top left corner down to the bottom right corner.  
+This problem featured in the the [30-day leetcoding of April
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/minimum-path-sum/)  
+As of April 18<sup>th</sup>, 2020:
+- [X] Find a first working solution. I decided to use dynamic programming to
+      solve this problem by modifying the grid in place. I run through the
+      matrix taking the minimum of the two paths leading to the current cell.
+      Since the algorithm runs through every elements of the matrix the time
+      complexity is O(N*M). I am modifying the grid in place so the algo needs
+      constant extra space (1)
+- [X] Submit solution. Got correct in 4 ms with 8.3 MB
+- [X] Problem solved
