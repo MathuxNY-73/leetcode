@@ -322,3 +322,20 @@ As of April 17<sup>th</sup>, 2020:
       in O(N) and needs O(1) extra space.
 - [X] Submit solution. Got correct in 28 ms with 13.8 MB
 - [X] Problem solved
+
+### Search in rotated sorted array
+The goal of this challenge is to search for a given element in a rotated sorted
+array. It means that the array was sorted and then rotated at a given index. The
+algorithm should run in O(log N).  
+The problem featured in the [30-day leetcoding of April
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/search-in-rotated-sorted-array/)  
+As of April 19<sup>th</sup>, 2020:
+- [X] Find a first working solution. The run time complexity constraint forces
+      me to use binary search on the array. In the algorithm I then consider the
+      cases where the array rotated either at the right or left of the pivot
+      index. The run time complexity is therefore O(log N) and the space
+      complexity is O(1).
+- [X] Submit solution. Got correct in 0 ms with 6.5 MB
+- [X] Problem solve
