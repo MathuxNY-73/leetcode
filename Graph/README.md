@@ -123,3 +123,17 @@ As of March 31<sup>st</sup>, 2020:
       of the leaf node to do the binary search.
 - [X] Submit solution. Got correct in 32 ms with 26.2 MB
 - [X] Problem solved
+  
+### Construct BST from Preorder Traversal
+The goal of this challenge is to implement a function that would take a BST in
+the form of preorder traversal list and return the reconstructed BST.  
+This problem featured in the the [30-day leetcoding of April
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/)  
+As of April 20<sup>th</sup>, 2020:
+- [X] Find a first working solution. After scratching my head I came up with a
+      recursive solution that runs through the array once so the time complexity
+      is O(N). The recursive stack will need at most O(N) extra space
+- [X] Submit solution. Got correct in 4 ms with 12 MB
+- [X] Problem solved
