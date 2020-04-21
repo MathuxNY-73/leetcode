@@ -339,3 +339,20 @@ As of April 19<sup>th</sup>, 2020:
       complexity is O(1).
 - [X] Submit solution. Got correct in 0 ms with 6.5 MB
 - [X] Problem solve
+
+### Leftmost column with at least a one
+The goal of this challenge is to code a function that uses the given API of a
+binary matrix to find the leftmost column that contains at least a one. It is an
+interactive problem and the function should less than 1000 requests with
+matrices that can be as big as 100x100.  
+The problem featured in the [30-day leetcoding of April
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+I tried to solve this problem using the C++ language [Problem link]()  
+As of April 21<sup>st</sup>, 2020:
+- [X] Find a first working solution. My idea was to do binary search on each row
+      and return the minimum column index found when running over all the
+      matrix' rows. On each row the binary search takes O(log M) time thus the
+      overall time complexity is O(N log M). There is constant extra space
+      needed so O(1)
+- [X] Submit solution. Got correct in 8 ms with 8.3 MB
+- [X] Problem solved
