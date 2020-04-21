@@ -355,4 +355,11 @@ As of April 21<sup>st</sup>, 2020:
       overall time complexity is O(N log M). There is constant extra space
       needed so O(1)
 - [X] Submit solution. Got correct in 8 ms with 8.3 MB
+- [X] Previous solution can be optimized. When a best index column is found then
+      there is no need to consider rows where element at `best column index - 1`
+      is zero. Doing that we will only binary search columns that can be better.
+      In the worst case, we will only visit O(N+M) elements in the matrix.
+      Indeed at each row, in the worst case we would skip 1 more element on the
+      right of the matrix.
+- [X] Submit solution. Got correct in 4 ms with 8.3 MB
 - [X] Problem solved

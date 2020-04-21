@@ -93,6 +93,40 @@ class Solution {
 
             return best_c == dim[1] ? -1 : best_c;
         }
+
+        int leftMostColumnWithOneOpt(BinaryMatrix &binaryMatrix) {
+            auto dim = binaryMatrix.dimensions();
+
+            if(dim[0] == 0 || dim[1] == 0) {
+                return -1;
+            }
+
+            int best_c = dim[1];
+            for(int i = 0; i < dim[0] ; ++i) {
+                if (!binaryMatrix.get(i, best_c - 1)) {
+                    continue;
+                }
+                int l = 0, h = best_c - 1;
+                while(l < h) {
+                    int m = l + ((h - l) >> 1);
+                    if (binaryMatrix.get(i, m)) {
+                        h = m;
+                    }
+                    else {
+                        l = m + 1;
+                    }
+                }
+                best_c = min(best_c, h);
+
+                if(!best_c) {
+                    // If best_c == 0 then no need to go further
+                    return best_c;
+                }
+            }
+
+            return best_c == dim[1] ? -1 : best_c;
+        }
+
 };
 
 int main()
@@ -115,7 +149,7 @@ int main()
         }
         auto b = BinaryMatrixImp(nums);
 
-        auto res = Solution().leftMostColumnWithOne(b);
+        auto res = Solution().leftMostColumnWithOneOpt(b);
         printf("%d\n", res);
     }
 
