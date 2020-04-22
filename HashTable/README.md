@@ -83,3 +83,18 @@ As of April 13<sup>th</sup>, 2020:
       space needed
 - [X] Submit solution. Got correct in 36 ms with 10.9 MB
 - [X] Problem solved
+
+### Subarray sum equals k
+The goal of this challenge is to count all the contiguous subarrays where
+numbers sum up to k.  
+The problem featured in the [30-day leetcoding of April
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+I tried to solve this problem using the Python language [Problem
+link](https://leetcode.com/problems/subarray-sum-equals-k/)  
+As of April 22<sup>n</sup>, 2020:
+- [X] Find a first working solution. I used a hash table to sotre the count the
+      occurences of prefix sums in the array. I am runing through all the
+      elements in the array, so the time complexity is O(N). I need to store all
+      the prefix sum then the space complexity is O(N).
+- [X] Submit solution. Got correct in 104 ms with 16.3 MB
+- [X] Problem solved
