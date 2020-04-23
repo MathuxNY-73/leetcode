@@ -32,7 +32,7 @@ The goal of this challenge is to compute the bitwise AND of every integers
 between two given numbers m and n with 0 <= m <= n <= INT_MAX.  
 This problem is featured of the [30-day leetcoding of April
 2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
-I tried to solve this problem using the C language [Problem
+I tried to solve this problem using the C and Rust languages [Problem
 link](https://leetcode.com/problems/bitwise-and-of-numbers-range/)  
 As of April 23<sup>rd</sup>, 2020:
 - [X] Find a first working solution. After some tries, it appeared to me that
@@ -41,4 +41,10 @@ As of April 23<sup>rd</sup>, 2020:
       this prefix. The time complexity is at most the size of an interger in
       bits so O(32) = O(1). The algo does not need extra space so O(1)
 - [X] Submit solution. Got correct in 12 ms with 5.4 MB
+- [X] There exists a simpler solution actually to find the common prefix. The
+      idea based on the Brian Kerninghan's algorithm is to iteratively remove
+      the rightmost set bit until n is smaller or equal to m and then do a
+      bitwise AND between m and the modified n. Again the algorithm is O(1) in
+      both time and space complexity.
+- [X] Submit solution. Got correct in 4 ms with 2 MB
 - [X] Problem solved.
