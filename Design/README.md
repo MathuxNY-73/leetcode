@@ -121,3 +121,32 @@ As of April 10<sup>th</sup>, 2020:
       complexity.
 - [X] Submit solution. Got correct in 40 ms with 14.6 MB
 - [X] Problem solved
+
+### LRU Cache
+The goal of this challenge is to implement an LRUCache cache. The LRUCache will
+be specified a capacity and whenever the capacity of the cache is reach then it
+will discard the least recently used element to make space for the new one.  
+The problem featured in the [30-day leetcoding of April
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/lru-cache/)  
+As of April 24<sup>th</sup>, 2020:
+- [X] Find a first working solution. I had the idea of using a doubly linked
+      list and a hash map to store the nodes of the linked list. Using a double
+      linked list allows me to move cache elements around in O(1). Thus using
+      this solution, retrieving a node and putting it to the front of the list
+      as most recently used element is O(1) in time complexity. Putting an
+      element in the cache is also O(1). In one case no other operation is
+      needed than to create a new node and adding it the hash map so O(1), in
+      the other case we need to discard the LRU element. Since I have a pointer
+      on the tail of the linked list then I just need to update the pointer,
+      discard the previous tail and add a new element to the front of the list.
+      All of those operation can be done in O(1) with the doubly-linked list.
+      Since I need to store the linked list and the hash map the space
+      complexity is O(2 * capacity) = O(capacity).
+- [X] Submit solution. Got correct in 132 ms with 35.2 MB
+- [ ] It was not necessary to re implement the doubly linked list myself, I
+      could have used the std:list of C++. In python there exist
+      OrderedDictionary which suit this problem. Re implement the solution using
+      those standard containers
+- [X] Problem solved.
