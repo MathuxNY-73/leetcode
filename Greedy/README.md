@@ -65,3 +65,21 @@ As of April 15<sup>th</sup>, 2020:
       extra space.
 - [X] Submit solution. Got correct in 68 ms with 15.1 MB
 - [X] Problem solved
+
+### Jump Game
+The goal of this challenge is to determine if it is possible to jump to the last
+element of an array where each integer represent the maximum length of the jump
+we can make from this index.  
+The problem featured in the [30-day leetcoding of April
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/jump-game/)  
+As of April 25<sup>th</sup>, 2020:
+- [X] Find a first working solution. In my solution, I maintain a max variable
+      which holds the maximum index that we can reach running through every
+      element of the array. If maximum is reach and we are not at the end of the
+      array then it is not possible to jump to the end. Since I run through
+      every element in the array the time complexity of this algorithm is O(n).
+      As no extra space is needed, the space complexity of the algo is O(1)
+- [X] Submit solution. Got correct in 4 ms with 7.9 MB
+- [X] Problem solved
