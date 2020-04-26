@@ -145,3 +145,18 @@ As of April 18<sup>th</sup>, 2020:
       constant extra space (1)
 - [X] Submit solution. Got correct in 4 ms with 8.3 MB
 - [X] Problem solved
+
+### Longest Common Subsequence
+The goal of this challenge is to compute the length of the longest common
+subsequence between two strings.  
+This problem featured in the the [30-day leetcoding of April
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+I tried to solve this problem using the C language [Problem
+link](https://leetcode.com/problems/longest-common-subsequence/)  
+As of April 26<sup>th</sup>, 2020:
+- [X] Find a first working solution. I decided to take the dynamic programming
+      approach to compute this length. That way the run time complexity of the
+      algorithm is O(M*N) and since I use a 2D array for keeping the result of
+      subproblems then the space complexity of the solution is O(M*N).
+- [X] Submit solution. Got correct in 12 ms with 9.2 MB
+- [X] Problem solved
