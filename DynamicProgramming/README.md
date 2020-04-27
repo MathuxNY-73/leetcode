@@ -160,3 +160,21 @@ As of April 26<sup>th</sup>, 2020:
       subproblems then the space complexity of the solution is O(M*N).
 - [X] Submit solution. Got correct in 12 ms with 9.2 MB
 - [X] Problem solved
+
+### Maximal Square
+The goal of this challenge is to compute the area of the largest square formed
+by 1 in a matrix of 0s and 1s.  
+This problem featured in the the [30-day leetcoding of April
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/maximal-square/)  
+As of April 27<sup>th</sup>, 2020:
+- [X] Find a first working solution. I decided to go for the dynamic programming
+      approach, going through all elements in the matrix storing at dp\[i\]\[j\]
+      the largest square that can be formed at index i and j. I also update a
+      variable to keep the max area found so far. Since the algorithm is going
+      through each element in the matrix then the complexity is O(N * M). I need
+      also a N * M matrix to keep the results of the subproblems so O(N * M)
+      extra space is needed.
+- [X] Submit solution. Got correct in 8 ms with 8.8 MB
+- [X] Problem solved
