@@ -150,3 +150,24 @@ As of April 24<sup>th</sup>, 2020:
       OrderedDictionary which suit this problem. Re implement the solution using
       those standard containers
 - [X] Problem solved.
+
+### First Unique Number
+The goal of this challenge is to implement a queue that can return the first non
+duplicated number in the queue.  
+The problem featured in the [30-day leetcoding of April
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+I tried to solve this problem using the C++ language [Problem link]()  
+As of April 28<sup>th</sup>, 2020:
+- [X] Find a first working solution. I used hints, the idea here is to use a
+      combination of hash map and doubly-linked list to perform the
+      `showFirstUnique` and `add` operations in O(1) time. The idea is that, the
+      numbers are added to the list one by one and the hash maps stores a
+      pointer to the added nodes. Whenever a number which already added before
+      is added a second time then, the number is removed from the list. Thus the
+      space complexity of this approach is O(2 * N) = O(N). The time complexity
+      of building the FirstUnique queue is O(M) where M is the size of the
+      original array passed to the ctor.
+- [X] Submit solution. Got correct in 504 ms with 136 MB
+- [ ] Again instead of recoding the doubly-linked list myself it is possible to
+      use the std::list container
+- [X] Problem solved
