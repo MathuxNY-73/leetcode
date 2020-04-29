@@ -19,13 +19,24 @@ As of August 4<sup>th</sup>, 2019:
 - [X] Problem solved
 
 ### Binary Tree Maximum Path Sum
-The goal is to find, in a rooted binary tree, the path whose node values sum up to the highest value.  
-I tried to solve this problem using the C++ language. [Problem link](https://leetcode.com/problems/binary-tree-maximum-path-sum/)  
-As of August 5<sup>th</sup>, 2019:
+The goal is to find, in a rooted binary tree, the path whose node values sum up
+to the highest value.  
+This problem featured in the the [30-day leetcoding of April
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+I tried to solve this problem using the C++ and Python languages. [Problem
+link](https://leetcode.com/problems/binary-tree-maximum-path-sum/)  
+As of April 29<sup>th</sup>, 2020:
 - [x] Find a first working solutionn on the sample input.
 - [x] Submit solution. Got correct in 24 ms with 25.1 MB
 - [x] Find a cleaner solution
 - [x] Submit solution. Got correct in 24 ms with 25.3 MB
+- [X] Retry the problem using Python language for the 30-day of leetcoding of
+      April 2020. The solution compute for the maximum path sum at any node in
+      the binary tree. My solution visits each node at most once so runtime
+      complexity is O(N). To run through the tree I use a DFS thus the space
+      complexity of the algorithm is the space of the recursive call stack which
+      is proportional to the height of the tree O(h) =  O(log N).
+- [X] Submit solution. Got correct in 92 ms with 20.2 MB
 - [x] Problem solved
 
 ### Sum Root to Leaf Numbers
@@ -67,7 +78,7 @@ The goal of this challenge is to implement a function that compute diameter of a
 Binary Tree which is the longest path between two nodes of the tree.  
 This problem featured in the the [30-day leetcoding of April
 2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
-I tried to solve this problem using the C++ language [Problem
+I tried to solve this problem using the C++ and Python languages [Problem
 link](https://leetcode.com/problems/diameter-of-binary-tree/)  
 As of April 11<sup>th</sup>, 2020:
 - [X] Write a first solution. This solution will simply find the deepest
