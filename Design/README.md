@@ -157,7 +157,7 @@ duplicated number in the queue.
 The problem featured in the [30-day leetcoding of April
 2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
 I tried to solve this problem using the C++ language [Problem link]()  
-As of April 28<sup>th</sup>, 2020:
+As of April 29<sup>th</sup>, 2020:
 - [X] Find a first working solution. I used hints, the idea here is to use a
       combination of hash map and doubly-linked list to perform the
       `showFirstUnique` and `add` operations in O(1) time. The idea is that, the
@@ -168,6 +168,6 @@ As of April 28<sup>th</sup>, 2020:
       of building the FirstUnique queue is O(M) where M is the size of the
       original array passed to the ctor.
 - [X] Submit solution. Got correct in 504 ms with 136 MB
-- [ ] Again instead of recoding the doubly-linked list myself it is possible to
+- [X] Again instead of recoding the doubly-linked list myself it is possible to
       use the std::list container
 - [X] Problem solved
