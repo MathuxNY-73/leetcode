@@ -148,3 +148,20 @@ As of April 20<sup>th</sup>, 2020:
       is O(N). The recursive stack will need at most O(N) extra space
 - [X] Submit solution. Got correct in 4 ms with 12 MB
 - [X] Problem solved
+
+### Check if a string is a valid sequence from root to leaves path in a binary tree
+The goal of this challenge is to implement some kind of prefix tree with binary
+string in a binary tree. The goal is, given a binary string, to check whether it
+exists in the given binary tree starting from root to leave.  
+This problem featured in the the [30-day leetcoding of April
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+I tried to solve this problem using the Python language [Problem
+link]()  
+As of April 30<sup>th</sup>, 2020:
+- [X] Find a first working solution. I used a DFS approach to check if the array
+      is valid node by node. For each character in the string I check at most
+      two nodes of the tree. The runtime complexity is therefore O(2 * S) = O(S)
+      where S is the size of the string. The extra-space needed is O(min(S, log
+      N)) for the recursive callstack.
+- [X] Submit solution. Got correct 100 ms with 15.3 MB
+- [X] Problem solved
