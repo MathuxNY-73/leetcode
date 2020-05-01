@@ -363,3 +363,15 @@ As of April 21<sup>st</sup>, 2020:
       right of the matrix.
 - [X] Submit solution. Got correct in 4 ms with 8.3 MB
 - [X] Problem solved
+
+### First Bad Version
+The goal of this challenge is to code a function that returns the first bad
+version of a software by using a simple `isBadVersion` API.  
+I tried to solve this problem using the C language [Problem
+link](https://leetcode.com/problems/first-bad-version/)  
+As of May 1<sup>st</sup>, 2020:
+- [X] Find a first working solution. This is a simple binary search problem. The
+      runtime of my algorithm is therefore O(log N). No extra space is needed,
+      so O(1) in space complexity.
+- [X] Submit solution. Got correct in 0 ms with 5.1 MB
+- [X] Problem solved
