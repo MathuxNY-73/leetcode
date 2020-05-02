@@ -98,3 +98,22 @@ As of April 22<sup>n</sup>, 2020:
       the prefix sum then the space complexity is O(N).
 - [X] Submit solution. Got correct in 104 ms with 16.3 MB
 - [X] Problem solved
+
+### Jewels and Stones
+The goal of this challenge is to determine how many of the stones we have are
+jewels. Stones are represented by case sensitive letters and we should check if
+any of these are jewels.  
+I tried to solve this problem using the C language [Problem
+link](https://leetcode.com/problems/jewels-and-stones/)  
+As of May 2<sup>nd</sup>, 2020:
+- [X] Find a first working solution. I used a simple table where the indices are
+      computed from the position of the letter in the alphabet. Since I am
+      running through the Jewels string to populate the table and through the
+      Stones string to count the number of jewels in the string then the run
+      time complexity of the solution is O(N+M), since Jewels is bounded by the
+      number of uppercase and lowercase letter then the runtime complexity
+      becomes O(N+56) = O(N). I need to store the occurences of letters in the
+      Jewels string thus at most 56 letters, thus the space needed is O(56) =
+      O(1).
+- [X] Submit solution. Got correct in 0 ms with 5.1 MB
+- [X] Problem solved
