@@ -375,3 +375,21 @@ As of May 1<sup>st</sup>, 2020:
       so O(1) in space complexity.
 - [X] Submit solution. Got correct in 0 ms with 5.1 MB
 - [X] Problem solved
+
+### Ransom Note
+The goal of this challenge is to determine if it is possible to build a ransom
+note from a given set of magazine's lowercase letters.  
+I tried to solve this problem using the Python language [Problem
+link](https://leetcode.com/problems/ransom-note/)  
+As of May 3<sup>rd</sup>, 2020:
+- [X] Find a first working solution. I simply used a hash map to count the
+      frequencies of letters in the magazine's letters and then ran through the
+      letters in the ransom note decreasing the number of avaiblable letters
+      everytime. Whenever the letter count would become negative then the ransom
+      note cannot be constructed with those magazine's letters. The function
+      runs through the magazines letters as well as the ransom note letters,
+      thus the time complexity of the algorithm is O(N + M). I need a hash map
+      of size 26 to store the frequencies of each letters thus the space
+      complexity is O(26) = O(1).
+- [X] Submit solution. Got correct in 48 ms with 13.8 MB
+- [X] Problem solved
