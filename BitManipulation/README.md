@@ -48,3 +48,17 @@ As of April 23<sup>rd</sup>, 2020:
       both time and space complexity.
 - [X] Submit solution. Got correct in 4 ms with 2 MB
 - [X] Problem solved.
+
+### Number Complement
+The goal of this challenge is to compute the complement of a given number
+without complementing the leading zeroes of its int 32 representation. For
+example, 5 written 101 in binary would complement to 2 written 010 in binary.  
+I tried to solve this problem using the Rust language [Problem
+link](https://leetcode.com/problems/number-complement/)  
+As of May the 4<sup>th</sup> be with you, 2020:
+- [X] Find a first working solution. The idea is to run through the bits of the
+      number by shifting it to the right and set the corresponding bit of the
+      result until it reaches zero. Since we visit at most 32 bits then the run
+      time complexity is O(1). No extra space is needed so O(1) complexity.
+- [X] Submit solution. Got correct in 0 ms with 2.1 MB
+- [X] Problem solved
