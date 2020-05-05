@@ -393,3 +393,19 @@ As of May 3<sup>rd</sup>, 2020:
       complexity is O(26) = O(1).
 - [X] Submit solution. Got correct in 48 ms with 13.8 MB
 - [X] Problem solved
+
+### First Unique Character in a string
+The goal of this challenge is to retrieve the first non-repeating character in a
+given string.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/first-unique-character-in-a-string/)  
+As of May 5<sup>th</sup>, 2020:
+- [X] Find a first working solution. I used a hash table approach to store the
+      frequencies of each character in the string. In a second pass over the
+      string I then return the index of the first character which frequency is
+      equal to 1. I need to make to passes over the string thus the run time
+      complexity of this algorithm is O(2 * N) = O(N). I need to store the
+      frequencies of the character in the string which are all lowercase thus I
+      need O(26) = O(1) extra space.
+- [X] Submit solution. Got correct in 36 ms with 10.7 MB
+- [X] Problem solved
