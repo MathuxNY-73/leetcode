@@ -409,3 +409,22 @@ As of May 5<sup>th</sup>, 2020:
       need O(26) = O(1) extra space.
 - [X] Submit solution. Got correct in 36 ms with 10.7 MB
 - [X] Problem solved
+
+### Majority Element
+The goal of this challenge is to retrieve, in a given array, the element that
+appears more than floor(n/2). This element is guaranteed to exist.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/majority-element/)  
+As of May 6<sup>th</sup>, 2020:
+- [X] Find a first working solution. I first used a hash table approach to count
+      the number of occurences of each element in the array. After, I would run
+      ove the hash table to find the element whose number occurences is higher
+      than floor(n/2). Since I am running once over the array and once over the
+      hash table then the space complexity is O(2 * N) = O(N). I need a hash
+      table to store the number of occurences thus the space complexity is O(N)
+      as well.
+- [X] Submit solution. Got correct in 40 ms with 21.1 MB
+- [X] Optimize the solution using Boyer-Moore algorithm. This time the space
+      needed is constant O(1) but the runtime complexity remains at O(N).
+- [X] Submit solution. Got correct in 32 ms with 19.8 MB
+- [X] Problem solved
