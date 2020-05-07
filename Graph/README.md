@@ -165,3 +165,17 @@ As of April 30<sup>th</sup>, 2020:
       N)) for the recursive callstack.
 - [X] Submit solution. Got correct 100 ms with 15.3 MB
 - [X] Problem solved
+
+### Counsins in Binary Tree
+The goal of this problem is to determine if two given values are associated with
+cousin nodes in a given binary tree. Cousin nodes should have the same depth but
+not the same parent.  
+I tried to solve this problem using the Python language [Problem
+link](https://leetcode.com/problems/cousins-in-binary-tree/)  
+As of May 7<sup>th</sup>, 2020:
+- [X] Find a first working solution. I run through all nodes in the tree storing
+      the parent and depth of wanted nodes in a storage, in this case a hashmap.
+      Since I run through each node at the worst the run time complexity is
+      O(N). Extra space needed is O(log N) for recursive call stack for the DFS.
+- [X] Submit solution. Got correct in 36 ms with 13.8 MB
+- [X] Problem solved.
