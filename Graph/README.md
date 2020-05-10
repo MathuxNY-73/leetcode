@@ -170,12 +170,17 @@ As of April 30<sup>th</sup>, 2020:
 The goal of this problem is to determine if two given values are associated with
 cousin nodes in a given binary tree. Cousin nodes should have the same depth but
 not the same parent.  
-I tried to solve this problem using the Python language [Problem
+I tried to solve this problem using the Python and Rust languages [Problem
 link](https://leetcode.com/problems/cousins-in-binary-tree/)  
-As of May 7<sup>th</sup>, 2020:
+As of May 8<sup>th</sup>, 2020:
 - [X] Find a first working solution. I run through all nodes in the tree storing
       the parent and depth of wanted nodes in a storage, in this case a hashmap.
       Since I run through each node at the worst the run time complexity is
-      O(N). Extra space needed is O(log N) for recursive call stack for the DFS.
+      O(N). Extra space needed is O(N) for recursive call stack for the DFS.
 - [X] Submit solution. Got correct in 36 ms with 13.8 MB
+- [X] Use a second faster solution. It consists in a BFS on the tree with early
+      stop if answer is found. In the worst case we still need to run through
+      every node in the tree, so the runtime complexity remais O(N). Space
+      needed is still O(N).
+- [X] Submit solution. Got correct in 0 ms with 2.1 MB
 - [X] Problem solved.
