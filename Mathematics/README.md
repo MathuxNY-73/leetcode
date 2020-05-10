@@ -72,3 +72,17 @@ As of April 2<sup>nd</sup>, 2020:
       complexity but now it does not need extra memory space so O(1)
 - [X] Submit solution. Got correct in 0 ms with 5.1 MB
 - [X] Problem solved
+
+### Valid Perfect Square
+The goal of this challenge is to determine if a given number is a perfect
+square, meaning that the number is obtained by squaring an integer.  
+I tried to solve this problem using the C language [Problem
+link](https://leetcode.com/problems/valid-perfect-square/)  
+As of May 10<sup>th</sup>, 2020:
+- [X] Find a first solution. I used the Newton's approach. The principle of this
+      approach is to start from an origin point, say x*x - num and go down to
+      the searched number. Using derivative we can then compute the next point
+      we want to test, $x_{k+1} = \frac{1}{2} (x_k + \frac{num}{x_k})$. The algo
+      then can finish in O(log N) using O(1) extra space.
+- [X] Submit solution. Got correct in 0 ms with 5 MB
+- [X] Problem solved
