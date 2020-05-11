@@ -202,3 +202,19 @@ As of May 11<sup>th</sup>, 2020:
       difference for each person.
 - [X] Submit solution. Got correct in 160 ms with 15.8 MB
 - [X] Problem solved
+
+### Find the celebrity
+The goal of this challenge is to find, if they exist, the celibrity in a given
+group of people labelled from 0 to n - 1. The algorithm should rely on an API to
+know about the knows relationship between 2 given people.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/find-the-celebrity)  
+As of May 11<sup>th</sup>, 2020:
+- [X] Find a first working solution. I first used a brute-force solution that
+      would collect all the relationships and conclude to the result by
+      examining the difference between in and out degree. The algorithm runs in
+      O(N<sup>2</sup>) time and needs O(N) space to store the difference between
+      degrees.
+- [X] Submit solution. Got Time Limit Exceeded
+- [ ] Find another solution.
+- [X] Problem solved.
