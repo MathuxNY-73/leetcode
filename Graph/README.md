@@ -184,3 +184,21 @@ As of May 8<sup>th</sup>, 2020:
       needed is still O(N).
 - [X] Submit solution. Got correct in 0 ms with 2.1 MB
 - [X] Problem solved.
+
+### Find the town judge
+The goal of this challenge is to determine who is the judge in a town with
+individuals represented as integers and given certain trust relationship between
+two individuals.  
+I tried to solve this problem using the C language [Problem
+link](https://leetcode.com/problems/find-the-town-judge/submissions/)  
+As of May 11<sup>th</sup>, 2020:
+- [X] Find a first working solution. My first approach was completely wrong as I
+      decided to use disjoint sets. But it quickly appeared obvious that I
+      needed to take into account the directed character of the trust
+      relationships. Thus I used an array to store the difference between the
+      outbound and the inbound degrees. The individual with the difference = N-1
+      would be the town judge. The algorithm runs in O(E) where E is the number
+      of trust relationships. I need O(N) extra space to store the degree
+      difference for each person.
+- [X] Submit solution. Got correct in 160 ms with 15.8 MB
+- [X] Problem solved
