@@ -64,23 +64,20 @@ class Solution {
         Solution(API api): api(api) {}
 
         int findCelebrity(int n) {
-            int deg[SIZE];
-            memset(deg, 0, sizeof(int) * SIZE);
+            int candidate = 0;
+            for(int i = 1; i < n ; ++i) {
+                if (api.knows(candidate, i)) {
+                    candidate = i;
+                }
+            }
 
             for(int i = 0; i < n ; ++i) {
-                for(int j = 0 ; j < n ; ++j) {
-                    bool k = api.knows(i, j);
-                    deg[j] += (int)k;
-                    deg[i] -= (int)k;
+                if(!api.knows(i, candidate)) {
+                    return -1;
                 }
             }
 
-            for(int i = 0 ; i < n ; ++i) {
-                if(deg[i] == n -1) {
-                    return i;
-                }
-            }
-            return -1;
+            return candidate;
         }
 };
 

@@ -216,5 +216,16 @@ As of May 11<sup>th</sup>, 2020:
       O(N<sup>2</sup>) time and needs O(N) space to store the difference between
       degrees.
 - [X] Submit solution. Got Time Limit Exceeded
-- [ ] Find another solution.
+- [X] Find another solution. This time let us think about the problem. Starting
+      from 0, our candidate celebrity, we can check if this candidate does not
+      know the other people. If we find a people i that the candidate knows then
+      i becomes our new candidate. Indeed, all numbers from 0 to i cannot be
+      celebrity as 0 does not know them. We follow the same process for people
+      i+1 to n. Once this process is over we have a viable candidate k to be the
+      celebrity. However, we still need to check that they do not know anyone
+      between 0 and k, and that everyone knows him/her. If this check fails then
+      there is no celebrity otherwise the celebrity is k.
+      The algorithm needs to run twice over the people, so O(2 * N) = O(N) where
+      N is the number of nodes in the graph. No extra space is needed.
+- [X] Submit solution. Got correct in 116 ms with 9.7 MB
 - [X] Problem solved.
