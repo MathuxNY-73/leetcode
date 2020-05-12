@@ -444,3 +444,18 @@ As of May 12<sup>th</sup>, 2020:
       by O(max(N,M)) ?
 - [X] Submit solution. Got correct in 0 ms with 2.2 MB
 - [X] Problem solved
+
+### Single element in a sorted array
+The goal of this challenge is to find the only non-duplicated element in a
+sorted array where every elements are duplicated except one. The algorithm
+should run in O(log N) using O(1) space.  
+I tried to solve this problem using the C language [Problem
+link](https://leetcode.com/problems/single-element-in-a-sorted-array/)  
+As of May 12<sup>th</sup>, 2020:
+- [X] Find a first working solution. Since we have a constraint on the running
+      time of the algorithm at O(log N) we cannot use the usual XOR trick. We
+      should use binary search instead. That is what I did changing checks
+      whether the mid index is even or odd. The algorithm then runs in O(log N)
+      using O(1) space.
+- [X] Submit solution. Got correct in 8 ms with 6.5 MB
+- [X] Problem solved
