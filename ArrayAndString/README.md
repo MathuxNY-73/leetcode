@@ -428,3 +428,19 @@ As of May 6<sup>th</sup>, 2020:
       needed is constant O(1) but the runtime complexity remains at O(N).
 - [X] Submit solution. Got correct in 32 ms with 19.8 MB
 - [X] Problem solved
+
+### Flood fill
+The goal of this challenge is to apply a transformation to an image by flood
+filling with a new color, pixels of the same original color starting from a
+point specified by coordinates.  
+I tried to solve this problem using the Rust language [Problem
+link](https://leetcode.com/problems/flood-fill/)  
+As of May 12<sup>th</sup>, 2020:
+- [X] Find a first working solution. I decided to use a BFS to find all
+      neighboring pixels that needs to be changed around the start position. At
+      worst, the whole image needs to be changed and in that case we will go
+      through N x M pixels. Thus the runtime complexity of the algorithm is
+      O(N * M). The space needed for storing pixels to be visited can be bounded
+      by O(max(N,M)) ?
+- [X] Submit solution. Got correct in 0 ms with 2.2 MB
+- [X] Problem solved
