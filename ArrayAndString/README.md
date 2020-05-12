@@ -458,4 +458,8 @@ As of May 12<sup>th</sup>, 2020:
       whether the mid index is even or odd. The algorithm then runs in O(log N)
       using O(1) space.
 - [X] Submit solution. Got correct in 8 ms with 6.5 MB
+- [X] We can further optimize the solution by just checking the even indices
+      thus simplifying the code. The runtime complexity is still O(log N) using
+      O(1) extra space
+- [X] Submit solution. Got correct in 8 ms with 6.1 MB
 - [X] Problem solved

@@ -19,28 +19,16 @@
 int singleNonDuplicate(int* nums, int numsSize) {
     int lo = 0, hi = numsSize;
     while (lo < hi) {
-        int m = lo + ((hi - lo) >> 1);
-        if (m & 1) {
-            if (m > 0 && nums[m] == nums[m - 1]) {
-                lo = m + 1;
-            }
-            else if (m < numsSize - 1 && nums[m] == nums[m + 1]) {
-                hi = m - 1;
-            }
-            else {
-                return nums[m];
-            }
+        int m = (lo + ((hi - lo) >> 1));
+        m -= m & 1 ? 1 : 0;
+        if (m > 0 && nums[m] == nums[m - 1]) {
+            hi = m - 2;
+        }
+        else if (m < numsSize - 1 && nums[m] == nums[m + 1]) {
+            lo = m + 2;
         }
         else {
-            if (m > 0 && nums[m] == nums[m - 1]) {
-                hi = m;
-            }
-            else if (m < numsSize - 1 && nums[m] == nums[m + 1]) {
-                lo = m;
-            }
-            else {
-                return nums[m];
-            }
+            return nums[m];
         }
     }
 
