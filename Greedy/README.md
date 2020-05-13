@@ -83,3 +83,16 @@ As of April 25<sup>th</sup>, 2020:
       As no extra space is needed, the space complexity of the algo is O(1)
 - [X] Submit solution. Got correct in 4 ms with 7.9 MB
 - [X] Problem solved
+
+### Remove K digits
+The goal of this challenge is to compute the smallest possible integer we can
+form by removing exactly k digits from the number.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/remove-k-digits/)  
+As of May 15<sup>th</sup>, 2020:
+- [X] Find a first working solution. I run through the digits starting from the
+      left and I keep track of the digits I want to remove to form a increasing
+      subsequence of digits. I run through all the digits so the runtime
+      complexity is O(N) and the space complexity is also O(N).
+- [X] Submit solution. Got correct in 12 ms with 7 MB
+- [X] Problem solved
