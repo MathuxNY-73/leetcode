@@ -178,3 +178,19 @@ As of April 27<sup>th</sup>, 2020:
       extra space is needed.
 - [X] Submit solution. Got correct in 8 ms with 8.8 MB
 - [X] Problem solved
+
+### Maximum sum Circular Subarray
+The goal of this challenge is to compute the maximum sum feasible in a circular
+array. A circular array is an array that starts over once the last index is
+reached.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/maximum-sum-circular-subarray/)  
+As of May 16<sup>th</sup>, 2020:
+- [X] Find a first working solution. I used the Kadane's algorithm in order to
+      find the maximum sum in the array A[j], A[j+1],...,A[(j + A.size() - 1 ) %
+      A.size()] where j runs through 0,1,...,A.size(). I therefore have 2 nested
+      loops thus the runtime complexity of this algorithm is O(N<sup>2</sup>).
+      The space complexity is O(1).
+- [X] Submit solution. Got Time Limit Exceeded
+- [ ] Find a better solution.
+- [ ] Problem solved
