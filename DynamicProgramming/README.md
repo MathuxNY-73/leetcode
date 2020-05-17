@@ -194,3 +194,21 @@ As of May 16<sup>th</sup>, 2020:
 - [X] Submit solution. Got Time Limit Exceeded
 - [ ] Find a better solution.
 - [ ] Problem solved
+
+### Find all anagrams in a string
+The goal of this challenge is to find all starting indices of anagrams of a
+certain pattern in a given string.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/find-all-anagrams-in-a-string/)  
+As of May 17<sup>th</sup>, 2020:
+- [X] Find a first working solution. I basically used the idea of sliding window
+      over the string counting the frequencies of characters in that string. At
+      first I go over the pattern and decrement the frequency of every letter
+      contained in the pattern then increment the frequency of letter of the
+      start of the string from 0 to pattern.size(). Then in a loop I move this
+      window decrementing when a character leaves the window, incrementing when
+      it enters. Whenever all frequencies are zeroes then we found an anagram.
+      The runtime complexity of the algorithm is O(26 * N) where N is the size
+      of the string. The space complexity is O(26) = O(1).
+- [X] Submit solution. Got correct in 12 ms with 8.4 MB
+- [X] Problem solved.
