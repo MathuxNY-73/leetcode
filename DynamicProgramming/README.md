@@ -185,15 +185,29 @@ array. A circular array is an array that starts over once the last index is
 reached.  
 I tried to solve this problem using the C++ language [Problem
 link](https://leetcode.com/problems/maximum-sum-circular-subarray/)  
-As of May 16<sup>th</sup>, 2020:
+As of May 18<sup>th</sup>, 2020:
 - [X] Find a first working solution. I used the Kadane's algorithm in order to
       find the maximum sum in the array A[j], A[j+1],...,A[(j + A.size() - 1 ) %
       A.size()] where j runs through 0,1,...,A.size(). I therefore have 2 nested
       loops thus the runtime complexity of this algorithm is O(N<sup>2</sup>).
       The space complexity is O(1).
 - [X] Submit solution. Got Time Limit Exceeded
-- [ ] Find a better solution.
-- [ ] Problem solved
+- [X] Find a better solution. Instead of run N times the Kadane's algorithm,
+      this time, I will divide the problem into to cases:
+       - The maximum sum in one interval
+       - The maximum sum in two intervals
+      The second problem arises from the fact that in a circular array,
+      intervals of the form A[i], A[i+1], ..., A[A.size() -1], A[0], ..., A[j]
+      with j < i and abs(i - j) <= N, can actually be viewed as being separated
+      by the interval A[j+1], ..., A[i-1] in the array B = A+A. So in that
+      second case we want to find the minimum sum subarray which separates the
+      two ends of the maximum sum subarray in the circular array. There is one
+      small issue though. Since we always want at least one element in the
+      answer then we must circumvent the case where the Kadane's minimum sum
+      algo would return the full array. So we actually will do to run of the
+      algo, one removing the first element and one removing the last.
+- [X] Submit solution. Got correct in 96 ms with 40.1 MB
+- [X] Problem solved
 
 ### Find all anagrams in a string
 The goal of this challenge is to find all starting indices of anagrams of a
