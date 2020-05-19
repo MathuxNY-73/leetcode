@@ -463,3 +463,18 @@ As of May 12<sup>th</sup>, 2020:
       O(1) extra space
 - [X] Submit solution. Got correct in 8 ms with 6.1 MB
 - [X] Problem solved
+
+### Permutation in String
+The goal of this challenge is to check if a given string contains or not a
+permutation of another given string.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/permutation-in-string/)  
+As of May 19<sup>th</sup>, 2020:
+- [X] Find a first working solution. I used an array to keep the number of
+      occurences of each letter in the first string and then ran through the
+      second string checking if each character is a start of a permutation of
+      the first string. This takes actually a lot of time as the time complexity
+      is O(N * M). However, the space complexity is kept at O(1).
+- [X] Submit solution. Got correct in 1712 ms with 7.1 MB. It is very long.
+- [ ] Find a faster solution.
+- [ ] Problem solved
