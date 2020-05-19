@@ -50,6 +50,32 @@ class Solution {
             return true;
         }
     public:
+        bool checkInclusionOpt(string s1, string s2) const {
+            if (s2.size() == 0) {
+                return s1.size() == 0;
+            }
+            else if (s1.size() > s2.size()) {
+                return false;
+            }
+
+            array<int, 26> freq = {0};
+            for(int i = 0 ; i < s1.size() ; ++i) {
+                --freq[s1[i] - 'a'];
+                ++freq[s2[i] - 'a'];
+            }
+
+            for(int i = s1.size() ; i < s2.size() ; ++i) {
+                if(check_empty(freq)) {
+                    return true;
+                }
+                ++freq[s2[i] - 'a'];
+                --freq[s2[i - s1.size()] - 'a'];
+            }
+
+            return check_empty(freq);
+        }
+
+
         bool checkInclusion(string s1, string s2) const {
             if (s2.size() == 0) {
                 return s1.size() == 0;
@@ -100,7 +126,7 @@ int main()
         cin >> s1;
         cin >> s2;
 
-        cout << Solution().checkInclusion(s1, s2) << "\n";
+        cout << Solution().checkInclusionOpt(s1, s2) << "\n";
     }
 
     return 0;

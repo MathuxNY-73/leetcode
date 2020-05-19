@@ -476,5 +476,7 @@ As of May 19<sup>th</sup>, 2020:
       the first string. This takes actually a lot of time as the time complexity
       is O(N * M). However, the space complexity is kept at O(1).
 - [X] Submit solution. Got correct in 1712 ms with 7.1 MB. It is very long.
-- [ ] Find a faster solution.
-- [ ] Problem solved
+- [X] Find a faster solution. Using a sliding window, it possible to bring down
+      the runtime complexity down to O(26 * M) and the extra space needed to O(1).
+- [X] Submit solution. Got correct in 12 ms with 7.2 MB
+- [X] Problem solved
