@@ -178,3 +178,18 @@ As of April 29<sup>th</sup>, 2020:
 - [X] Again instead of recoding the doubly-linked list myself it is possible to
       use the std::list container
 - [X] Problem solved
+
+### Online Stock Spanner
+The goal of this challenge is to implement a class that can compute the span of
+stock prices, that is to say the number of consecutive days during which the
+stock was lower or equal to the new price.  
+I tried to solve this problem using the Rust language [Problem
+link](https://leetcode.com/problems/online-stock-span/)  
+As of May 20<sup>th</sup>, 2020:
+- [X] Find a first working solution. I used a stack to keep track of the span
+      for the prices. Whenever I insert a new price I destack all smaller
+      numbers and add their span to the new price's span. The push operation
+      offers, therefore, an amortized run time complexity of O(1). The space
+      complexity is O(Q) with Q the number of query.
+- [X] Submit solution. Got correct in 44 ms with 5.3 MB
+- [X] Problem solved
