@@ -229,3 +229,19 @@ As of May 11<sup>th</sup>, 2020:
       N is the number of nodes in the graph. No extra space is needed.
 - [X] Submit solution. Got correct in 116 ms with 9.7 MB
 - [X] Problem solved.
+
+### K-th smallest element in a BST
+The goal of this challenge is to find the k<sup>th</sup> element in a given
+Binary Search Tree.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)  
+As May 22<sup>nd</sup>, 2020:
+- [X] Find a first working solution. Using the property of the BST, I decided to
+      just run through the whole binary tree returning an array corresponding to
+      an in-order traversal of the tree. This is also a sorted array. What
+      remains is just to return the k element of the array. Since I need to go
+      through each node of the BST to construct the array of in-order traversal,
+      the runtime of the algorithm is O(N) and I need O(N) extra space.
+- [X] Submit solution. Got correct in 43 ms with 33 MB
+- [ ] There is a faster algorithm that runs in O(log N) to be implemented.
+- [X] Problem solved
