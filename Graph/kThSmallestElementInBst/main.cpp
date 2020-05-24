@@ -58,6 +58,29 @@ class Solution {
         int kthSmallest(TreeNode* root, int k) {
             return run_in_order(root)[k -1];
         }
+
+        int kthSmallestIter(TreeNode* root, int k) {
+            stack<TreeNode*> s;
+            s.push(root);
+
+            while(!s.empty()) {
+                auto cur = s.top();
+                s.pop();
+
+                while(cur) {
+                    s.push(cur);
+                    cur = cur->left;
+                }
+                cur = s.top();
+                s.pop();
+                if (--k == 0) {
+                    return cur->val;
+                }
+                s.push(cur->right);
+            }
+
+            return -1;
+        }
 };
 
 int main()
@@ -74,7 +97,7 @@ int main()
         TreeNode** dummy = new TreeNode*;
         readBinaryTree(dummy, n);
 
-        int res = Solution().kthSmallest(*dummy, k);
+        int res = Solution().kthSmallestIter(*dummy, k);
         printf("%d\n", res);
 
         delete(*dummy);

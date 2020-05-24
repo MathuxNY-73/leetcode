@@ -249,5 +249,9 @@ As May 22<sup>nd</sup>, 2020:
       through each node of the BST to construct the array of in-order traversal,
       the runtime of the algorithm is O(N) and I need O(N) extra space.
 - [X] Submit solution. Got correct in 43 ms with 33 MB
-- [ ] There is a faster algorithm that runs in O(log N) to be implemented.
+- [X] There is a faster algorithm that runs in O(log N) to be implemented. Using
+      iterative solution we can stop as soon as we find the k<sup>th</sup>
+      element in the tree. Thus improving the runtime of the algorithm to O(H) =
+      O(log N) and the space complexity to O(H) = O(log N) as well.
+- [X] Submit solution. Got correct in 20 ms with 24.4 MB
 - [X] Problem solved
