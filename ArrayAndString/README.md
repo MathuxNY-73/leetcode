@@ -480,3 +480,19 @@ As of May 19<sup>th</sup>, 2020:
       the runtime complexity down to O(26 * M) and the extra space needed to O(1).
 - [X] Submit solution. Got correct in 12 ms with 7.2 MB
 - [X] Problem solved
+
+### Interval list intersections
+The goal of this challenge is to build the intersection between two list of
+intervals given in argument.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/interval-list-intersections/)  
+As of May 25<sup>th</sup>, 2020:
+- [X] Find a first working solution. I used two pointers, one on each list, to
+      run through the two lists and merge the interval together taking the max
+      of the starts and the min of the ends of the interval. If the formed pair
+      of integer is a valid interval then we add the interval to the result.
+      Since I run through all the intervals then the runtime complexity is
+      O(N+M) and the extra space is O(N+M) in the worst case as well for the new
+      list of intervals.
+- [X] Submit solution. Got correct in 48 ms with 19.4 MB
+- [X] Problem solved
