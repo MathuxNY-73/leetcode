@@ -140,13 +140,19 @@ The goal of this challenge is to implement a function that would take a BST in
 the form of preorder traversal list and return the reconstructed BST.  
 This problem featured in the the [30-day leetcoding of April
 2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
-I tried to solve this problem using the C++ language [Problem
+I tried to solve this problem using the C++ and Python languages [Problem
 link](https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/)  
-As of April 20<sup>th</sup>, 2020:
+As of May 23<sup>rd</sup>, 2020:
 - [X] Find a first working solution. After scratching my head I came up with a
       recursive solution that runs through the array once so the time complexity
       is O(N). The recursive stack will need at most O(N) extra space
 - [X] Submit solution. Got correct in 4 ms with 12 MB
+- [X] Resolve the problem in Python as part of the May leetcoding challenge. I
+      managed to correctly rewrite the solution from scratch. The run-time
+      complexity of the solution is still O(N) since I need to run through all
+      the elements of the array. The space complexity is still O(N) in the edge
+      case the tree is actually a degenerated line.
+- [X] Submit solution. Got correct in 28 ms with 14 MB
 - [X] Problem solved
 
 ### Check if a string is a valid sequence from root to leaves path in a binary tree
