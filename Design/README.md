@@ -3,12 +3,19 @@ The repsitory contains problems related to Design I have tried to solve on the l
 
 ### Implement Trie
 The goal is to implement a Trie (Prefix Tree) data structure. This is a leetcode challenge.  
-I tried to solve this problem using the C++ and C languages. [Problem link](https://leetcode.com/problems/implement-trie-prefix-tree/)  
-As of July 18<sup>th</sup>, 2019:
+I tried to solve this problem using the C++, C and Rust languages. [Problem
+link](https://leetcode.com/problems/implement-trie-prefix-tree/)  
+As of May 25<sup>th</sup>, 2020:
 - [X] Find a first working solutionn on the sample input.
 - [X] Submit solution. Got correct in 76 ms with 45.4 MB
 - [x] Find a better solution
 - [x] Submit solution. Got correct in 72 ms with 40.1 MB
+- [X] Rewrite a solution in rust for the May 2020 leetcoding challenge. All the
+      operation of my Trie requires O(N) where N is the size of the word runtime
+      complexity as well as O(N) in space complexity for the recursive call
+      stack. This could be improved by using a iterative approach. The Trie
+      itself would take up to O(26 * size_of_vocabulary).
+- [X] Submit solution. Got correct in 36 ms with 15.5 MB
 - [X] Problem solved
 
 ### Find median from a data stream
