@@ -226,3 +226,18 @@ As of May 17<sup>th</sup>, 2020:
       of the string. The space complexity is O(26) = O(1).
 - [X] Submit solution. Got correct in 12 ms with 8.4 MB
 - [X] Problem solved.
+
+### Uncrossed lines
+The goal of this challenge is to find the maximum number of lines that can be
+draw from one set to another without lines crossing. A line can be drawn between
+two equal numbers only.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/uncrossed-lines/)  
+As of May 26<sup>th</sup>, 2020:
+- [X] Find a first working solution. This problem is actually equivalent to the
+      longest common subsequence problem. The goal is then to find the longest
+      common subsequence between the two given arrays. This can be done in O(N *
+      M) with dynamic programming using O(N * M) space.
+- [X] Submit solution. Got correct in 20 ms with 13.1 MB
+- [ ] Optimize space to use only O(max(N, M))
+- [X] Problem solved
