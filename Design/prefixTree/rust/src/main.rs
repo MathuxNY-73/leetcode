@@ -10,9 +10,22 @@ use std::cell::RefCell;
 use std::str::FromStr;
 use std::num::ParseIntError;
 
-struct Trie {
-    letters: Vec<Option<Rc<RefCell<Trie>>>>,
+struct TrieNode {
+    letters: Vec<Option<Rc<RefCell<TrieNode>>>>,
     isLeaf: bool
+}
+
+impl TrieNode {
+    fn new() -> Self {
+        TrieNode {
+            letters: vec![None; 26],
+            isLeaf: false
+        }
+    }
+}
+
+struct Trie {
+    root: Rc<RefCell<TrieNode>>
 }
 
 impl Trie {
@@ -20,52 +33,53 @@ impl Trie {
     /** Initialize your data structure here. */
     fn new() -> Self {
         Trie {
-            letters: vec![None; 26],
-            isLeaf: false,
+            root: Rc::new(RefCell::new(TrieNode::new()))
         }
     }
 
     /** Inserts a word into the trie. */
-    fn insert(&mut self, word: String) {
-        if let Some(c) = word.chars().next() {
-            let idx = (c as u8 - 'a' as u8) as usize;
-            if self.letters[idx].is_none() {
-                self.letters[idx] = Some(Rc::new(RefCell::new(Trie::new())))
+    fn insert(&self, word: String) {
+        let mut cur = self.root.clone();
+        for i in word.chars().map(|c| (c as u32 - 'a' as u32) as usize) {
+            cur = {
+                let mut node = cur.borrow_mut();
+                let next = node.letters[i]
+                    .get_or_insert(Rc::new(RefCell::new(TrieNode::new())));
+                Rc::clone(next)
             }
-            self.letters[idx].as_ref().unwrap().borrow_mut().insert(word[1..].to_string());
-        } else {
-            self.isLeaf = true
         }
+        cur.borrow_mut().isLeaf = true;
     }
 
     /** Returns if the word is in the trie. */
     fn search(&self, word: String) -> bool {
-        if let Some(c) = word.chars().next() {
-            let idx = (c as u8 - 'a' as u8) as usize;
-            if let Some(t) = &self.letters[idx] {
-                t.borrow().search(word[1..].to_string())
+        let mut cur = self.root.clone();
+        for i in word.chars().map(|char| (char as u8 - 'a' as u8) as usize) {
+            cur = {
+                let node = cur.borrow();
+                match node.letters[i].as_ref() {
+                    Some(t) => t.clone(),
+                    None => { return false; },
+                }
             }
-            else {
-                false
-            }
-        } else {
-            self.isLeaf
         }
+        let node = cur.borrow();
+        node.isLeaf
     }
 
     /** Returns if there is any word in the trie that starts with the given prefix. */
     fn starts_with(&self, prefix: String) -> bool {
-        if let Some(c) = prefix.chars().next() {
-            let idx = (c as u8 - 'a' as u8) as usize;
-            if let Some(t) = &self.letters[idx] {
-                t.borrow().starts_with(prefix[1..].to_string())
+        let mut cur = self.root.clone();
+        for i in prefix.chars().map(|char| (char as u8 - 'a' as u8) as usize) {
+            cur = {
+                let node = cur.borrow();
+                match node.letters[i].as_ref() {
+                    Some(t) => t.clone(),
+                    None => { return false; },
+                }
             }
-            else {
-                false
-            }
-        } else {
-            true
         }
+        true
     }
 }
 
@@ -99,7 +113,7 @@ fn main() {
     for _ in 0..t {
         //println!("New Test Case");
         let n = scan.token::<usize>();
-        let mut trie = Trie::new();
+        let trie = Trie::new();
 
         (0..n).for_each( |_| {
             let inst = scan.token::<Operation>();
@@ -111,11 +125,6 @@ fn main() {
                 Operation::Prefix => println!("{}", trie.starts_with(word)),
             }
         });
-        /*for i in &nums {
-            print!("{} ", i);
-        }
-        println!("");*/
-
     }
 }
 
