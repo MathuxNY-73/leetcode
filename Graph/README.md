@@ -255,3 +255,22 @@ As May 22<sup>nd</sup>, 2020:
       O(log N) and the space complexity to O(H) = O(log N) as well.
 - [X] Submit solution. Got correct in 20 ms with 24.4 MB
 - [X] Problem solved
+
+### Possible bipartition
+The goal of this challenge is to check whether a graph of people is bipartite.
+We are given dislike relationships between nodes (ie: people) which means the 2
+nodes linked by this relationship cannot be put together in the same group.
+Basically, we need to check if these dislike relationships define a good
+bipartition of people.  
+I tried to solve this problem using the Python language [Problem
+link](https://leetcode.com/problems/possible-bipartition/)  
+As of May 28<sup>th</sup>, 2020:
+- [X] Find a first working solution. I just use the bipartition check algorithm
+      that is based on BFS. For each non visited nodes we start a BFS assigning
+      colors to nodes. The first is assigned black and then all its adjacent
+      nodes are assigned red. Then, going down in the BFS, the red nodes
+      adjacent nodes will be assigned black. If an adjacent node was already
+      visited and assigned the same color as the current node then it means the
+      graph cannot be bipartite.
+- [X] Submit solution. Got correct in 912 ms with 18.6 MB
+- [X] Problem solved
