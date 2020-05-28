@@ -62,3 +62,25 @@ As of May the 4<sup>th</sup> be with you, 2020:
       time complexity is O(1). No extra space is needed so O(1) complexity.
 - [X] Submit solution. Got correct in 0 ms with 2.1 MB
 - [X] Problem solved
+
+### Counting Bits
+The goal of this challenge is, given a number num, return the array with the set
+bit counts for numbers between 0 and num. The function should have runtime
+complexity of O(N) and should not use builtin functions.  
+I tried to solve this problem using the C language [Problem
+link](https://leetcode.com/problems/counting-bits/)  
+As of May 28<sup>th</sup>, 2020:
+- [X] Find a first working solution. Since we are constrained on the runtime the
+      logical approach is Dynamic Programming. Writing down the number of set
+      bit from 0 to 16 we can see a pattern emerging. It appears that the
+      numbers for [2<sup>n</sup>, 2<sup>n + 1</sup> - 1] can be computed by
+      adding one to the numbers in [0, 2<sup>n</sup> - 1]. This solution indeed
+      does run in O(N) and uses O(N) extra space.
+- [X] Submit solution. Got correct in 32 ms with 10 MB
+- [X] Other interesting approaches are:
+       - By using DP[x] = DP[x/2] + (x mod 2), indeed by dividing by 2 we remove
+         the LSB and so the result can be retrieved by adding 1 if x is odd
+         number
+       - Using the well-known x & (x - 1) trick to remove the last set bit and
+         add 1 to the result.
+- [X] Problem solved
