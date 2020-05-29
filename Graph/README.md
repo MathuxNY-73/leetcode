@@ -274,3 +274,24 @@ As of May 28<sup>th</sup>, 2020:
       graph cannot be bipartite.
 - [X] Submit solution. Got correct in 912 ms with 18.6 MB
 - [X] Problem solved
+
+### Course Schedule
+The goal of this challenge is to check whether, given a list of course
+dependencies, it is possible to do all the courses. In other words, the goal is
+to check if there is no cycle in a graph of courses prerequisites.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/course-schedule/)  
+As of May 29<sup>th</sup>, 2020:
+- [X] Find a first working solution. In order to solve this problem I used a DFS
+      on the graph. For each node I push it on a stack structure along with its
+      list of parents. As soon as an already visited parents is found in a
+      adjacency list then we know there is a cycle. To avoid checking same path
+      several times I remove the edges already visited. Indeed, there is no need
+      in visiting a sub tree again if we already know it does not contain
+      cycles. Since I go through each edge and each node in the graph the
+      runtime complexity of this algorithm is O(N + E). I need O(N + E) map to
+      store the adjacency lists.
+- [X] Submit solution. Got correct in 1488 ms with 684.7 MB which is quite a
+      lot.
+- [ ] Optimize solution.
+- [X] Problem solved
