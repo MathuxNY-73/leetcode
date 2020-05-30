@@ -20,3 +20,19 @@ As of November 3<sup>rd</sup>, 2019:
 - [x] Write a solution that works on sample input.
 - [x] Submit solution. Got correct in 64 ms with 14.1 MB
 - [x] Problem solved
+
+### K Closest Points to Origin
+The goal of this challenge is, given a set of points in the plane R<sup>2</sup>,
+to find the K points that are closest to the origin (0,0). The order of the
+output does not matter.  
+I tried to solve this problem using the Python3 language [Problem
+link](https://leetcode.com/problems/k-closest-points-to-origin/)  
+As of May 30<sup>th</sup>, 2020:
+- [X] Find a first working solution. I chose to use a MaxHeap to hold onto the K
+      closest points, meaning the points with lower distance. The heap property
+      is kept at the cost of O(log K) and since we need to go through all the
+      points the worstcase runtime complexity is O(N * log K). The extra space
+      needed is the size of the resulting set of points so O(K)
+- [X] Submit solution. Got correct in 700 ms with 19.6 MB
+- [ ] Implement the solution that takes average runtime of O(N)
+- [X] Problem solved
