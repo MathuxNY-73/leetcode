@@ -19,13 +19,21 @@ The goal is to implement a function that returns the minimum number of edits to 
 - Replace a character
 - Remove a character
 
-I tried to solved this problem using the C++ language. [Problem link](https://leetcode.com/problems/edit-distance/)  
-As of June 2<sup>nd</sup>, 2019:
+I tried to solved this problem using the C++ and Rust languages. [Problem
+link](https://leetcode.com/problems/edit-distance/)  
+As of May 31<sup>st</sup>, 2020:
 - [X] Find a first working solutionn on the sample input. Solution is recursive thus fails on big inputs
 - [X] Find a DP solution with a 2D array
 - [X] Submit solution. Got correct in 4 ms with 9.6 MB
 - [X] Find a DP solution with a 1D array. Is it possible ?
 - [X] Submit solution. Got correct in 4ms with 8.5 MB
+- [X] Resolve the problem in the course of the may leetcoding challenge. I was
+      able to find the correct DP solution. As we need to go through every
+      character in both strings we need a 2-D DP array. The runtime complexity
+      is therefore O(N * M). Noting that we can store the diagonal element for
+      each step we can optimize the space needed to O(N) or O(M) depending on
+      which word length is used.
+- [X] Submit solution. Got correct in 0 ms with 2.1 MB
 - [X] Problem solved
 
 ### K Inverse Pairs Arrays
