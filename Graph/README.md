@@ -303,3 +303,17 @@ As of June 9<sup>th</sup>, 2020:
       complexity is still O(N + E), and we also need to store O(N + E) objects.
 - [X] Submit solution. Got correct in 40 ms with 13.3 MB
 - [X] Problem solved
+
+### Invert Binary Tree
+The goal of this challenge is to invert a given binary tree, which means
+switching the left child of node with its right child.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/invert-binary-tree/)  
+As of June 1<sup>st</sup>, 2020:
+- [X] Find a first working solution. I just did a simple bfs over the tree
+      switching the two children of every node. The runtime complexity of this
+      algorithm is O(N) since I need to go through every node of the tree and
+      the space complexity is also O(N) since I need to store the nodes of the
+      BFS in a queue.
+- [X] Submit solution. Got correct in 0 ms with 8.7 MB
+- [X] Problem solved
