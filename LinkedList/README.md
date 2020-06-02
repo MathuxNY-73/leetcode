@@ -67,3 +67,20 @@ As of April 8<sup>th</sup>, 2020:
       are running through the list just once. We need only O(1) extra space.
 - [X] Submit solution. Got correct in 0 ms with 5.3 MB
 - [X] Problem solved
+
+### Delete Node in a linked-list
+The goal of this challenge is to implement a function that will delete a given
+node from a singly linked-list. The `delete` function only has access to the
+node to be deleted.  
+I tried to solve this problem using the C language [Problem
+link](https://leetcode.com/problems/delete-node-in-a-linked-list/)  
+As of June 2<sup>nd</sup>, 2020:
+- [X] Find a first working solution. I just assigned the value of the next node
+      in the list to the current node and change the next pointer to point to
+      the next after the next node. We can do that as we are guaranteed that the
+      node to be deleted will never be the tail node of the linked list. Should
+      it happen however, the only thing to do would then be to assign the `NULL`
+      value to the node to be deleted. The algorithm runtime complexity is O(1)
+      and the extra space is also O(1) as actually no extra space is needed.
+- [X] Submit solution. Got correct in 4 ms with 4.1 MB
+- [X] Problem solved
