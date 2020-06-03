@@ -96,3 +96,21 @@ As of May 15<sup>th</sup>, 2020:
       complexity is O(N) and the space complexity is also O(N).
 - [X] Submit solution. Got correct in 12 ms with 7 MB
 - [X] Problem solved
+
+### Two City Scheduling
+The goal of this challenge is to compute the minimum transportation cost for
+sending N people to the city A or B. Each person has a cost of transportation to
+go to city A and to city B. We must however send the same number of people to
+each city.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/two-city-scheduling/)  
+As of June 3<sup>rd</sup>, 2020:
+- [X] Find a first working solution. I sorted the element of the array by their
+      difference in cost between city A and B. That way people for whom it is
+      less expensive to go A are at the beginning of the list. The sorting takes
+      O(N log N) and is the most expensive operation as afterward to compute the
+      answer we just need to go through every element which takes O(N). Since
+      the sorting is done in place there are no extra space needed, so a space
+      complexity of O(1).
+- [X] Submit solution. Got correct in 14 ms with 7.9 MB
+- [X] Problem solved
