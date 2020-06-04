@@ -496,3 +496,18 @@ As of May 25<sup>th</sup>, 2020:
       list of intervals.
 - [X] Submit solution. Got correct in 48 ms with 19.4 MB
 - [X] Problem solved
+
+### Reverse string
+The goal of this challenge is to reverse a given string in place. For example,
+the string "hello" should become "olleh".  
+I tried to solve this problem using the C language [Problem
+link](https://leetcode.com/problems/reverse-string/)  
+As of June 4<sup>th</sup>, 2020:
+- [X] Find a first working solution. The algorithm is very simple as we just
+      need to run through the string with two pointers, whenever the pointers
+      meet then the funtion stops. The algorithm runs actually on only half of
+      the word, thus the runtime complexity of the function is O(N) and since
+      the reverse in done in place there is no extra space needed so the space
+      complexity of this algorithm is O(1).
+- [X] Submit solution. Got correct in 48 ms with 12.2 MB
+- [X] Problem solved
