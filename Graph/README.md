@@ -317,3 +317,21 @@ As of June 1<sup>st</sup>, 2020:
       BFS in a queue.
 - [X] Submit solution. Got correct in 0 ms with 8.7 MB
 - [X] Problem solved
+
+### Count of smaller number after self
+The goal of this challenge is, given an array of integers, for each element in
+the array, count the number of integers that are smaller than this element and
+placed after it in the array. In other words, for an array A we should return B
+where B[i] = Card {A[j] | j > i and A[j] <= A[i]}  
+I tried to solve this problem using the Rust language [Problem
+link](https://leetcode.com/problems/count-of-smaller-numbers-after-self/)  
+As of June 5<sup>th</sup>, 2020:
+- [X] Find a first working solution. Seeing that the naive approach that would
+      run in O(N<sup>2</sup>) is not accepted then we need to be smarter. Using
+      the related topics tag as guidance. I decided to go for a BIT to count the
+      number of element that are smaller in an ordered index array. This
+      solution has a runtime complexity of O(N log N) and needs O(3*N) = O(N) extra
+      space.
+- [X] Submit solution. Got correct in 4 ms wiht 3 MB
+- [ ] Implement in python another possible approach for this problem (ie: Merge Sort, BST)
+- [X] Problem solved
