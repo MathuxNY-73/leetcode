@@ -114,3 +114,22 @@ As of June 3<sup>rd</sup>, 2020:
       complexity of O(1).
 - [X] Submit solution. Got correct in 14 ms with 7.9 MB
 - [X] Problem solved
+
+### Queue reconstruction by height
+The goal of this challenge is, given an array of people represented by their
+heights and the number of people with height greater of equal to theirs and that
+are in front of them in the queue, to reconstruct the original queue of people.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/queue-reconstruction-by-height/)  
+As of June 6<sup>th</sup>, 2020:
+- [X] Find a first working solution. Using a hint, I was able to find a working
+      algorithm based on sorting. Thus we first need to sort the people array by
+      increasing height and then by decreasing number. Once this is done we can
+      easily place the persons in the original queue according to the number of
+      people in front of them. The sorting takes O(N log N) as per the std
+      documentation. Placing the people in the queue correctly takes in the
+      worst case O(N<sup>2</sup>). I need O(N) extra space for the resulting
+      queue.
+- [X] Submit solution. Got correct in 80 ms with 12.4 MB
+- [ ] Find a solution that only takes O(N log N)
+- [X] Problem solved
