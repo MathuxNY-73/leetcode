@@ -249,3 +249,18 @@ As of May 26<sup>th</sup>, 2020:
 - [X] Submit solution. Got correct in 20 ms with 13.1 MB
 - [ ] Optimize space to use only O(max(N, M))
 - [X] Problem solved
+
+### Coin Change 2
+The goal of this challenge does not need to be introduced anymore as it is the
+regular coin change problem. We are given a certain amount to match with a given
+set of coins. Coins are in infinite number.  
+I tried to solve this problem using the C language [Problem
+link](https://leetcode.com/problems/coin-change-2/)  
+As of June 7<sup>th</sup>, 2020:
+- [X] Find first working solution. Since this is a well-known dynamic
+      programming problem the solution came very easily with dynamic
+      programming. The runtime complexity of this algorithm is O(N * M) where N
+      is the given amount to match and M the number of coins. The extra space
+      needed is O(N).
+- [X] Submit solution.Got correct in 4 ms with 5.6 MB
+- [X] Problem solved
