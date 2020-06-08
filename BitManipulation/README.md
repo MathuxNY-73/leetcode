@@ -84,3 +84,17 @@ As of May 28<sup>th</sup>, 2020:
        - Using the well-known x & (x - 1) trick to remove the last set bit and
          add 1 to the result.
 - [X] Problem solved
+
+### Power of Two
+The goal of this challenge is to determine if a given integer is a power of two
+or not. Negative numbers can be passed to the function.  
+I tried to solve this problem using the C language [Problem
+link](https://leetcode.com/problems/power-of-two/)  
+As of June 8<sup>th</sup>, 2020:
+- [X] Find a first working solution. This is a pretty easy problem for which
+      simple bit manipulation will do. We just do a bitwise AND between x and
+      x - 1 (if it is a power of 2 then the result is 0) and then logical AND
+      with x to check x is not zero. That way the runtime complexity of the
+      algorithm is O(1) and the extra space needed is O(1).
+- [X] Subtmit solution. Got correct in 0 ms with 5 MB
+- [X] Problem solved
