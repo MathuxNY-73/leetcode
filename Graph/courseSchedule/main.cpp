@@ -42,42 +42,39 @@ static int fast_stream = []() {
 
 class Solution {
     public:
-        bool canFinish(int numCourses, const vector<vector<int>>& prerequisites) {
+        bool canFinish(int numCourses, const vector<vector<int>>& prerequisites) const {
             vector<forward_list<int>> adj(numCourses, forward_list<int>());
-            unordered_set<int> cycle;
-            cycle.reserve(numCourses);
 
             for (auto& e :prerequisites) {
                 adj[e[0]].push_front(e[1]);
             }
 
+            bool* cycle = new bool[numCourses];
+            memset(cycle, false, sizeof(bool) * numCourses);
             for (int n = 0; n < numCourses ; ++n) {
-                stack<pair<int, unordered_set<int>>> s;
-                unordered_set<int> c; c.reserve(numCourses);
-                s.push(make_pair(n, c));
-
-                while(!s.empty()) {
-                    int cur; unordered_set<int> p;
-                    tie(cur, p) = s.top(); s.pop();
-
-                    cerr << "Poping: " << cur << "\n";
-                    p.insert(cur);
-
-                    cerr << "Adjacent nodes: ";
-                    while(!adj[cur].empty()) {
-                        int a = adj[cur].front(); adj[cur].pop_front();
-                        cerr << a << " ";
-                        if (p.find(a) != p.cend()) {
-                            cerr << "Cycle !\n";
-                            // A cycle exists
-                            return false;
-                        }
-                        s.push(make_pair(a, p));
-                    }
-                    cerr << "\n";
+                if (isCycle(n, adj, (bool (&)[])(*cycle))) {
+                    delete[] cycle;
+                    return false;
                 }
             }
+            delete[] cycle;
             return true;
+        }
+
+
+        bool isCycle(int n, vector<forward_list<int>>& adj, bool (&cycle)[]) const {
+            cycle[n] = true;
+            bool ret = false;
+            while(!adj[n].empty() && !ret) {
+                int a = adj[n].front(); adj[n].pop_front();
+                if (cycle[a]) {
+                    cycle[n] = false;
+                    return true;
+                }
+                ret = isCycle(a, adj, cycle);
+            }
+            cycle[n] = false;
+            return ret;
         }
 };
 

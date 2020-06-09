@@ -281,7 +281,7 @@ dependencies, it is possible to do all the courses. In other words, the goal is
 to check if there is no cycle in a graph of courses prerequisites.  
 I tried to solve this problem using the C++ language [Problem
 link](https://leetcode.com/problems/course-schedule/)  
-As of May 29<sup>th</sup>, 2020:
+As of June 9<sup>th</sup>, 2020:
 - [X] Find a first working solution. In order to solve this problem I used a DFS
       on the graph. For each node I push it on a stack structure along with its
       list of parents. As soon as an already visited parents is found in a
@@ -293,5 +293,9 @@ As of May 29<sup>th</sup>, 2020:
       store the adjacency lists.
 - [X] Submit solution. Got correct in 1488 ms with 684.7 MB which is quite a
       lot.
-- [ ] Optimize solution.
+- [X] Optimize solution. By writing it recursively and using an array or bool
+      instead of a hash table for storing already seen value, the code seems to
+      run faster and is much clearer. However I doubt it is thread safe in that
+      case. The runtime and space complexity remain the same.
+- [X] Submit solution. Got correct in 40 ms with 13.1 MB
 - [X] Problem solved
