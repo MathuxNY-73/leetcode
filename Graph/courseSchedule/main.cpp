@@ -76,6 +76,41 @@ class Solution {
             cycle[n] = false;
             return ret;
         }
+
+
+        bool canFinishTopo(int numCourses, const vector<vector<int>>& prerequisites) const {
+            int* deg = new int[numCourses];
+
+            memset(deg, 0, sizeof(int) * numCourses);
+
+            vector<vector<int>> adj(numCourses, vector<int>());
+            stack<int> roots;
+
+            for (auto& e :prerequisites) {
+                adj[e[0]].push_back(e[1]);
+                ++deg[e[1]];
+            }
+
+            for(int i = 0 ; i < numCourses ; ++i) {
+                if (!deg[i]) {
+                    roots.push(i);
+                }
+            }
+
+            int cnt = 0;
+            while(!roots.empty()) {
+                auto n = roots.top(); roots.pop();
+                for(auto& x: adj[n]) {
+                    if (!(--deg[x])) {
+                        roots.push(x);
+                    }
+                }
+                ++cnt;
+            }
+
+            delete[] deg;
+            return cnt == numCourses;
+        }
 };
 
 int main()

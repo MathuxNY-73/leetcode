@@ -298,4 +298,8 @@ As of June 9<sup>th</sup>, 2020:
       run faster and is much clearer. However I doubt it is thread safe in that
       case. The runtime and space complexity remain the same.
 - [X] Submit solution. Got correct in 40 ms with 13.1 MB
+- [X] Code a new solution this time using Topological Sort and the Khan
+      algorithm. Since we still need to go through each eadge and each node the
+      complexity is still O(N + E), and we also need to store O(N + E) objects.
+- [X] Submit solution. Got correct in 40 ms with 13.3 MB
 - [X] Problem solved
