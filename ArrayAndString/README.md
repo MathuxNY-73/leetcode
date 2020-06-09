@@ -511,3 +511,20 @@ As of June 4<sup>th</sup>, 2020:
       complexity of this algorithm is O(1).
 - [X] Submit solution. Got correct in 48 ms with 12.2 MB
 - [X] Problem solved
+
+### Is Subsequnce
+The goal of this challenge is to determine if, given two strings, one is a
+subsequence of the other. We thus need to check whether one string's characters
+are found in the same order, but not necessarily contiguously, in the second
+string.  
+I tried to solve this challenge using the C language [Problem
+link](https://leetcode.com/problems/is-subsequence/)  
+As of June 9<sup>th</sup>, 2020:
+- [X] Find a first working solution. I just used one pointer on each string
+      running through the longest. When the characters of the 2 strings would
+      match I would increment the pointer on the other string. If at the end of
+      the loop the pointer points to NULL char then it is a subsequence. The
+      algorithm therefore runs in O(max(N,M)) using constant extra space so
+      O(1).
+- [X] Submit solution. Got correct in 4 ms with 5.2 MB
+- [X] Problem solved
