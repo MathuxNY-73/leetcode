@@ -528,3 +528,18 @@ As of June 9<sup>th</sup>, 2020:
       O(1).
 - [X] Submit solution. Got correct in 4 ms with 5.2 MB
 - [X] Problem solved
+
+### Search Insert Position
+The goal of this challenge is to find an element in a given sorted array or, if the
+element is not in the list, find the position where the element would be
+inserted. The element of the given list are supposed to be distinct.  
+I tried to solve this challenge using the Python language [Problem
+link](https://leetcode.com/problems/search-insert-position/)  
+As of June 10<sup>th</sup>, 2020:
+- [X] Find a first working solution. The naive solution is very straightforward.
+      Since the array is sorted the use of binary search is obvious. However,
+      to make the problem a little funnier to implement, I used ternary search
+      instead. Thus the runtime complexity of my solution is O(log N) and no
+      extra space is needed, thus O(1).
+- [X] Submit solution. Got correct in 48 ms with 14.5 MB
+- [X] Problem solved
