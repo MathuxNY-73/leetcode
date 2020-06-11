@@ -543,3 +543,24 @@ As of June 10<sup>th</sup>, 2020:
       extra space is needed, thus O(1).
 - [X] Submit solution. Got correct in 48 ms with 14.5 MB
 - [X] Problem solved
+
+### Sort Colors
+The goal of this challenge is to order an array of colors such that every color
+is gathered together. The array can contain three colors red, white and blue
+which are represented by integers 0, 1 and 2. The sorting should be done
+in-place and one pass over the array.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/sort-colors/)  
+As of June 12<sup>th</sup>, 2020:
+- [X] Find a first working solution. I decided to use two pointers, one pointing
+      at the right most index of the red and the second pointing at the
+      leftmost index of blue. That way when I run over the array depending if
+      the color is red or blue I can swap the color accordingly. Another
+      solution, that I tried, is to hold onto the pointers that point to the
+      rightmost red element and the one that points to the rightmost white. In
+      that last case in order to swap red elements, one first need to swap white
+      element and then red elements. In both cases the algorithm complexity is
+      O(N) as we go through the elements only once and the extra space needed is
+      O(1).
+- [X] Submit solution. Got correct in 0 ms with 8.3 MB
+- [X] Problem solved.
