@@ -193,3 +193,25 @@ As of May 20<sup>th</sup>, 2020:
       complexity is O(Q) with Q the number of query.
 - [X] Submit solution. Got correct in 44 ms with 5.3 MB
 - [X] Problem solved
+
+### Insert Delete GetRandom O(1)
+The goal of this challenge is to implement a structure that can pick random
+number from a mutable set. One can thus add, delete and pick at uniform random
+a number in this structure in average constant time.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/insert-delete-getrandom-o1/)  
+As of June 12<sup>th</sup>, 2020:
+- [X] Find a first working solution. The runtime constraints is guiding me
+      toward the use of HashMap to keep the index of a number in the underlying
+      vector structure that will be used to a number at random. When a number is
+      added then it is appended to the end of the array and the index of
+      insertion is stored in the hash map where the value is the key. When a
+      value is deleted then the last element in the array is then placed at the
+      index of the removed element. A random pick can then simply pick an index
+      between 1 and the count of elements. All those operations can be done in
+      O(1) time in average. In the worst, from time to time when the array and
+      the hash map needs to grow in the memory then the runtime of insertion
+      becomes O(N). The space complexity of the algorithm is O(N) since we need
+      to store the numbers contained in the structure.
+- [X] Submit solution. Got correct in 72 ms with 22.9 MB
+- [X] Problem solved.
