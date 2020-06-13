@@ -264,3 +264,21 @@ As of June 7<sup>th</sup>, 2020:
       needed is O(N).
 - [X] Submit solution.Got correct in 4 ms with 5.6 MB
 - [X] Problem solved
+
+### Largest Divisible Subset
+The goal of this challenge is to form the largest possible subset of numbers
+from a given array of numbers, such that for any pair of integers s[i] % s[j] ==
+0 or s[j] % s[i] == 0.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/largest-divisible-subset/)  
+As of June 13<sup>th</sup>, 2020:
+- [X] Find a first working solution. I went for a DP solution, I first sort the
+      numbers in ascending order and then go through the list. For each integer
+      I check if any previous integer divides it. If so, I increse put the size
+      of the current subset + 1 to the corresponding dp cell. At the end it
+      possible to reconstruct the resulting subset. The solution needs to sort
+      the numbers which is done in O(N log N), then there are two nested loops
+      than run over the array, which takes O( N<sup>2</sup> ) which is the time
+      complexity bound of this algo. The space required is O(N).
+- [X] Submit solution. Got correct in 40 ms with 8.7 MB
+- [X] Problem solved
