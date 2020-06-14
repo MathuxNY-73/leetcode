@@ -335,3 +335,25 @@ As of June 5<sup>th</sup>, 2020:
 - [X] Submit solution. Got correct in 4 ms wiht 3 MB
 - [ ] Implement in python another possible approach for this problem (ie: Merge Sort, BST)
 - [X] Problem solved
+
+### Cheapest fligths within K stops
+The goal of this problem is to determine the cheapest itinerary to go from a
+city of origin to a destination city using a given network of flights and at
+most K stops to reach the destination.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/cheapest-flights-within-k-stops/)  
+As of June 14<sup>th</sup>, 2020:
+- [X] Find a first working solution. I decided to go for a somewhat Breadth
+      First Search approach to compute the shortest path in the weighted graph
+      of flights. Starting from the sources we follow every edges in the graph
+      until every paths contains K vertices. This could mean that we can visit
+      same edge several times. Cycles are not problem with this approach as we
+      stop after K iterations anyway. During this process, everytime we reach
+      the destination node we update the result accordingly if the path found is
+      cheaper. Since every edges of the graph can be visited K times then the
+      runtime complexity of the algorithm is O(E * K). I store the distances in
+      a N * K matrix and I build adjacency dictionary thus the space complexity
+      is O(N * K + E)
+- [X] Submit solution. Got correct in 96 ms with 11.9 MB
+- [ ] Implement another solution (BFS by level, Dijkstra, Bellman-Ford)
+- [X] Problem solved.
