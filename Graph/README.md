@@ -357,3 +357,21 @@ As of June 14<sup>th</sup>, 2020:
 - [X] Submit solution. Got correct in 96 ms with 11.9 MB
 - [ ] Implement another solution (BFS by level, Dijkstra, Bellman-Ford)
 - [X] Problem solved.
+
+### Search in a Binary Search Tree
+The goal of this challenge is to search for a value in a given Binary Search
+Tree. The function should return the root of the subtree at the given value. If
+the value does not exist in the tree then return NULL.  
+I tried to solve this problem using the Python language [Problem
+link](https://leetcode.com/problems/search-in-a-binary-search-tree/)  
+As of June 15<sup>th</sup>, 2020:
+- [X] Find a first working solution. The algorithm to code is just to search
+      through the BST. Move to the left if the value of the current node is
+      bigger than the searched value, move to the right if the searched value
+      is bigger than the current node's value and return the current node if the
+      node is None or if the value of the node equals that that is searched. The
+      runtime complexity of the algorithm is O(log N) where N is the number of
+      nodes in the tree. Since the solution in recursive the extra space needed
+      is that of the recursive call stack, that is to say O(log N).
+- [X] Submit solution. Got correct in 88 ms with 15.8 MB
+- [X] Problem solved
