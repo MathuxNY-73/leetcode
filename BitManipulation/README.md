@@ -98,3 +98,22 @@ As of June 8<sup>th</sup>, 2020:
       algorithm is O(1) and the extra space needed is O(1).
 - [X] Subtmit solution. Got correct in 0 ms with 5 MB
 - [X] Problem solved
+
+### Single number II
+The goal of this challenge is to find the only number that is not duplicated in
+an array where all other numbers are repeated three times. There are constraints
+regarding the runtime complexity of the algorithm, it should run in O(N) using
+constant space.  
+I tried to solve this problem using the C language [Problem
+link](https://leetcode.com/problems/single-number-ii/)  
+As of June 23<sup>rd</sup>, 2020:
+- [X] Find a first working solution. The constraints for this problem force me
+      to use bit manipulation to solve this problem. Taking this problem
+      logically we can that we need to store 2 variables. One containing the
+      numbers that appeared only once so far and the other containing the
+      numbers that appeared twice so far. Then the formulas are pretty
+      straightforward and are as follow:
+        - once = ~twice & (once ^ x)
+        - twice = ~once & (twice ^ x)
+- [X] Submit solution. Got correct in 4 ms with 6.6 MB
+- [X] Problem solved
