@@ -120,9 +120,9 @@ As of March 13<sup>th</sup>, 2020:
 ### Count Complete Tree Nodes
 The goal of this problem is to implement a function that would count the number
 of nodes in a complete binary tree.  
-I tried to solve this problem using the C++ language [Problem
+I tried to solve this problem using the C++ and Python languages [Problem
 link](https://leetcode.com/problems/count-complete-tree-nodes/)  
-As of March 31<sup>st</sup>, 2020:
+As of June 23<sup>rd</sup>, 2020:
 - [X] Find a first working solution. I decided to implement a binary search to
       find the number of nodes in the last level since in a complete binary tree
       the nodes of the last level are as far left as possible. With this
@@ -133,6 +133,9 @@ As of March 31<sup>st</sup>, 2020:
 - [X] Find a better implementation. This time I based my algorithm on the index
       of the leaf node to do the binary search.
 - [X] Submit solution. Got correct in 32 ms with 26.2 MB
+- [X] Reimplement an binary search approach in Python as part of the June
+      leetcoding challenge. The approach I used was the same as before.
+- [X] Submit solution. Got correct in 92 ms with 21.4 MB
 - [X] Problem solved
   
 ### Construct BST from Preorder Traversal
