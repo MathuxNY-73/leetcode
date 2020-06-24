@@ -282,3 +282,22 @@ As of June 13<sup>th</sup>, 2020:
       complexity bound of this algo. The space required is O(N).
 - [X] Submit solution. Got correct in 40 ms with 8.7 MB
 - [X] Problem solved
+
+### Unique Binary Trees
+The goal of this challenge is to determine the number of unique binary trees
+possible containing integers from 1 to n, given a n.  
+I tried to solve this problem using the C language [Problem
+link](https://leetcode.com/problems/unique-binary-search-trees)  
+As of June 24<sup>th</sup>, 2020:
+- [X] Find a first working solution. This problem can be solved recursively and
+      has common subproblems which marks it as a problem that can be solved
+      using Dynamic Programming. For each steps, we need to consider rooting the
+      BST at node i, then the left sub BST contains nodes from 1 to i-1 and the
+      right sub BST contains nodes from i+1 to n. The answer is the product of
+      all possible ways to arrange the two subtrees. We then sum over all
+      possible rooted BSTs. The runtime complexity of the algorithm is therefore
+      O(N<sup>2</sup>) and the space required is O(N).
+- [X] Submit solution. Got correct in 0 ms with 5.3 MB
+- [ ] This problem is a combinatorics problem that actually involves the Catalan
+      sequence of numbers. Code an optimized solution using this sequence.
+- [X] Problem solved.
