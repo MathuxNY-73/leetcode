@@ -117,3 +117,22 @@ As of June 23<sup>rd</sup>, 2020:
         - twice = ~once & (twice ^ x)
 - [X] Submit solution. Got correct in 4 ms with 6.6 MB
 - [X] Problem solved
+
+### Single Number III
+The goal of this challenge is to find the two numbers that are not duplicated in
+a given array that contains duplicated numbers. The algorithm should run in O(N)
+using constant space.  
+I tried to solve this problem using the C language [Problem
+link](https://leetcode.com/problems/single-number-iii/)  
+As of June 25<sup>th</sup>, 2020:
+- [X] Find a first working solution. The constraints for this problem force me
+      to use bit manipulation to solve this problem. The way of doing this is to
+      run first through the entire array doing a XOR of every number. Then use
+      one set bit of the result which will automatically exist as otherwise it
+      would mean that every number is duplicated. Use this set bit to split the
+      numbers into two groups, one with numbers with that bit set and the other
+      with numbers with that bit unset. The two numbers will therefore be in one
+      of the group only. The algorithm therefore runs in O(2 * N) = O(N). The
+      extra space needed is O(1)
+- [X] Submit solution. Got correct in 8 ms with 6.7 MB
+- [X] Problem solved
