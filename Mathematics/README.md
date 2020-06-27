@@ -86,3 +86,19 @@ As of May 10<sup>th</sup>, 2020:
       then can finish in O(log N) using O(1) extra space.
 - [X] Submit solution. Got correct in 0 ms with 5 MB
 - [X] Problem solved
+
+### Perfect squares
+The goal of this challenge is to determine the minimum number of squared number
+that sum up to a given number. That is to say find the minimum number of a_i's
+such that a_1<sup>2</sup> + a_2<sup>2</sup> + ... + a_n<sup>2</sup> = n.
+I tried to solve this problem using the C language [Problem
+link](https://leetcode.com/problems/perfect-squares/)  
+As of June 27<sup>th</sup>, 2020:
+- [X] Find a first working solution. I decided to go for a dynamic programming
+      approach. This problem is analogous to the coin change problem. For every
+      dp[i] we use the following update formula dp[i] = min(dp[i], dp[i - sq] +
+      1) for every squared numbers between 1 and i. This approach allows a
+      runtime complexity of O(N sqrt N) and uses O(N) space for the dp array.
+- [X] Subtmit solution. Got correct in 168 ms with 8.1 MB
+- [ ] Optimize the solution (eg: Greedy, BFS+Greedy, Math-based)
+- [X] Problem solved
