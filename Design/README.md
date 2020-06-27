@@ -215,3 +215,20 @@ As of June 12<sup>th</sup>, 2020:
       to store the numbers contained in the structure.
 - [X] Submit solution. Got correct in 72 ms with 22.9 MB
 - [X] Problem solved.
+
+### Insert Delete GetRandom O(1) - With Duplicates
+The goal of this challenge is to implement a structure that can pick random
+number from a mutable set that can contain duplicates (ie: most added number
+will have higher chances of getting picked). All those operation should be
+performed in O(1) time complexity on average.  
+I tried to solve this problem using the Rust language [Problem
+link](https://leetcode.com/problems/insert-delete-getrandom-o1-duplicates-allowed/)  
+As June 27<sup>th</sup>, 2020:
+- [X] Find a first working solution. The solution is very close to the one used
+      in the Insert Delete GetRandom O(1) problem except that in order to track
+      the indices in the distribution vector, I use a hashset. Hashset is
+      necessary here in order to be able to perform those operations in O(1)
+      time. As per constraints the runtime complexity of all operations is O(1)
+      and the space needed for the structure in O(2 * N) = O(N)
+- [X] Submit solution. Got correct in 12 ms with 6.5 MB
+- [X] Problem solved
