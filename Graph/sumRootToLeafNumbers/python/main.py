@@ -34,6 +34,43 @@ class Solution:
             self.runThruTree(root, 0)
             return self.res
 
+    def sumNumbersMorris(self, root: TreeNode) -> int:
+        cur_res = 0
+        res = 0
+        pred = None
+
+        while root:
+
+            if root.left:
+
+                pred = root.left
+                steps = 1
+                while pred.right and pred.right is not root:
+                    pred = pred.right
+                    steps += 1
+
+                if pred.right is None:
+                    cur_res = cur_res * 10 + root.val
+                    pred.right = root
+                    root = root.left
+                else:
+                    if pred.left is None:
+                        res += cur_res
+
+                    for _ in range(steps):
+                        cur_res = cur_res // 10
+                    pred.right = None
+                    root = root.right
+
+            else:
+                cur_res = cur_res * 10 + root.val
+                if root.right is None:
+                    res += cur_res
+                root = root.right
+
+        return res
+
+
 
 def main():
     T = int(input())
@@ -63,7 +100,7 @@ def main():
                     q.put(cur.right)
                 i += 1
 
-        res = Solution().possibleBipartition(N, dislikes)
+        res = Solution().sumNumbersMorris(root)
 
         print(res)
 

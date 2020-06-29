@@ -31,18 +31,6 @@
 
 using namespace std;
 
-typedef struct TreeNode {
-    int val;
-    TreeNode* left;
-    TreeNode* right;
-
-    TreeNode(int x): val(x), left(NULL), right(NULL) {}
-    ~TreeNode() {
-        delete left;
-        delete right;
-    }
-} TreeNode;
-
 class Solution {
 private:
     int treeDFS(const struct TreeNode* root, int sum) {
