@@ -102,3 +102,23 @@ As of June 27<sup>th</sup>, 2020:
 - [X] Subtmit solution. Got correct in 168 ms with 8.1 MB
 - [ ] Optimize the solution (eg: Greedy, BFS+Greedy, Math-based)
 - [X] Problem solved
+
+### Unique Paths
+The goal of this challenge is to determine how many unique paths there are for a
+robot, to go from the top left corner to the bottom right corner of a m x n
+matrix. The robot can only perform two moves: go down and go right.  
+I tried to solve this problem using the Rust language [Problem
+link](https://leetcode.com/problems/unique-paths/)  
+As of June 29<sup>th</sup>, 2020:
+- [X] Find a first working solution. This problem is a combinatorics problem. It
+      is equivalent as counting the number of permutations of the letters DRRDD
+      where D is a move down and R is a move right. In this word there should be
+      n - 1 Rs and m - 1 Ds. Thus the answer can be found calculating the
+      following formula (m + n - 2)! / ((n - 1)! * (m - 1)!) which equals can be
+      simplified by ((m + n - 2)(m + n - 3)...(n)) / (m - 1)!. Howvever, this
+      computation can still lead to integer overflow. The algorithm has a
+      runtime complexity of O((M + N)(log (M + N) log log (M + N)<sup>2</sup>))
+      and a space complexity of O(1).
+- [X] Submit solution. Got wrong answer due to Integer overflow
+- [ ] Find another solution.
+- [ ] Problem solved
