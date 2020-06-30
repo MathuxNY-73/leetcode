@@ -10,10 +10,21 @@ struct Solution {
 
 impl Solution {
     pub fn unique_paths(m: i32, n: i32) -> i32 {
-        let num: i64 = (n..=(m + n - 2)).fold(1, |a , b| (a as i64) * (b as i64));
-        let den: i64 = (1..=(m - 1)).fold(1, |a , b| (a as i64) * (b as i64));
+        if n == 0 {
+            0
+        }
+        else {
+            let mut dp = vec![1;(n + 1) as usize];
 
-        (num / den) as i32
+            dp[0] = 0;
+            for _ in 1..m {
+                for j in 2..=n {
+                    dp[j as usize] += dp[(j - 1) as usize];
+                }
+            }
+
+            dp[n as usize]
+        }
     }
 }
 

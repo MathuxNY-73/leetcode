@@ -109,7 +109,7 @@ robot, to go from the top left corner to the bottom right corner of a m x n
 matrix. The robot can only perform two moves: go down and go right.  
 I tried to solve this problem using the Rust language [Problem
 link](https://leetcode.com/problems/unique-paths/)  
-As of June 29<sup>th</sup>, 2020:
+As of June 30<sup>th</sup>, 2020:
 - [X] Find a first working solution. This problem is a combinatorics problem. It
       is equivalent as counting the number of permutations of the letters DRRDD
       where D is a move down and R is a move right. In this word there should be
@@ -120,5 +120,9 @@ As of June 29<sup>th</sup>, 2020:
       runtime complexity of O((M + N)(log (M + N) log log (M + N)<sup>2</sup>))
       and a space complexity of O(1).
 - [X] Submit solution. Got wrong answer due to Integer overflow
-- [ ] Find another solution.
-- [ ] Problem solved
+- [X] Find another solution. Using Dynamic Programming it is possible to
+      avoid the integer overflow problem. The solution is actually just building
+      the Pascal Triangle. Thus the time complexity of the algorithm is O(N * M)
+      and I managed to keep the space complexity down to O(N).
+- [X] Submit solution. Got correct in 0 ms with 2 MB
+- [X] Problem solved
