@@ -391,3 +391,29 @@ As of June 15<sup>th</sup>, 2020:
       is that of the recursive call stack, that is to say O(log N).
 - [X] Submit solution. Got correct in 88 ms with 15.8 MB
 - [X] Problem solved
+
+### Word Search II
+The goal of this challenge is to find in a given dictionary of words which of
+those words are present in a board of letters. That is to say, which words can
+be constructed by walking a path of adjacent letters in the given board.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/word-search-ii/)  
+As of June 30<sup>th</sup>, 2020:
+- [X] Find a first working solution. I went for the approach of backtracking
+      here, using a Trie to store the words, as I walk the path of letters in
+      the board I also walk a path in the Trie. Whenever, we reach a leaf node
+      in the Trie then we add the word in the result set and set the node isLeaf
+      flag to false so that we do not match this word again. The runtime
+      complexity of this algorithm is tricky to compute. The complexity of the
+      creation of the Trie is O(D * L) where D is the size of the dictionary and
+      L is the length of the longest word. We can view the exploration of the
+      matrix a the exploration of a tree where each node can have 3 children
+      (ie: the three directions to go to an adjacent cell) except for the start
+      cell which can have 4 directions. Then the runtime complexity of this
+      algorithm is O(N * M * (4 * 3<sup>L - 1</sup>)) where L is the length of
+      the longest word. This bounds the runtime complexity. We need extra space
+      for the storage of the Trie which needs O(26<sup>L</sup>) at most. Then
+      other space is needed for the recursion stack which is O(L).
+- [X] Submit solution. Got correct in 156 ms with 39.7 MB
+- [ ] Optimize the solution. Maybe by removing Trie nodes after a word was matched.
+- [X] Problem solved
