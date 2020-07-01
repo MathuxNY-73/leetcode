@@ -126,3 +126,19 @@ As of June 30<sup>th</sup>, 2020:
       and I managed to keep the space complexity down to O(N).
 - [X] Submit solution. Got correct in 0 ms with 2 MB
 - [X] Problem solved
+
+### Arranging coins
+The goal of this challenge is to determine the number of complete piles of coins
+it is possible to form with a given number of coins. The piles need to be
+incremental, ie the first pile has one coin, the second has 2 coins, the third
+has 3 coins and so on.  
+I tried to solve this problem using the C language [Problem
+link](https://leetcode.com/problems/arranging-coins/)  
+As of July 1<sup>st</sup>, 2020:
+- [X] Find a first working solution. I went for the naive brute-force approach
+      of incrementing a variable and increasing a sum until the sum is greater
+      or equal to the amount of coins. The runtime of this algorithm is O(N) and
+      requires contstant space O(1). Careful with Integer Overflow error.
+- [X] Submit solution. Got correct in 12 ms with 5.3 MB
+- [ ] Find a faster solution.
+- [X] Problem solved
