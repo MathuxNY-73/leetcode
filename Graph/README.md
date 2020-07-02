@@ -417,3 +417,17 @@ As of June 30<sup>th</sup>, 2020:
 - [X] Submit solution. Got correct in 156 ms with 39.7 MB
 - [ ] Optimize the solution. Maybe by removing Trie nodes after a word was matched.
 - [X] Problem solved
+
+### Binary Tree Level Order Traversal II
+The goal of this challenge is to output the tree level traversal of a given
+binary tree.  
+I tried to solve this problem using the Python language [Problem
+solved](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/)  
+As of July 2<sup>nd</sup>, 2020:
+- [X] Find a first working solution. I decided to go for a simple BFS where I
+      store the level with the node to be visited in order to add the value at
+      the right index in the resulting tree level order traversal. The algorithm
+      runs in O(N) as we visit all nodes in the tree and requires O(log N)
+      space.
+- [X] Submit solution. Got correct in 48 ms with 14.2 MB
+- [X] Problem solved.
