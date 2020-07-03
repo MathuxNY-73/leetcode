@@ -117,3 +117,27 @@ As of May 2<sup>nd</sup>, 2020:
       O(1).
 - [X] Submit solution. Got correct in 0 ms with 5.1 MB
 - [X] Problem solved
+
+### Prison cells after N days
+The goal of this challenge is to determine the state of prison cells after N
+days given a starting configuration. The evolution law of occupancy are:
+ - If a cell direct neighbours are both occupied or both vacant then this cell
+   becomes occupied
+ - If not the cell becomes vacant  
+ I tried to solve this problem using the Python language [Problem
+ link](https://leetcode.com/problems/prison-cells-after-n-days/)  
+ As of July 3<sup>rd</sup>, 2020:
+ - [X] Find a first working solution. I firstly used a naive approach to the
+       problem by simply iterating over all days and simulating the
+       configurations. The solution runs in O(8 * N) with memory requirements of
+       O(N). However since N can be very big the number of steps to simulate can
+       be really prohibitive.
+ - [X] Submit solution. Got Time Limit Exceeded
+ - [X] Diving down the configuration that are generated, it appears that
+       actually the state of prison cells loop every 14 days. Then the problem
+       becomes faster to solve. We just store already seen configurations and
+       when we arrive on a configuration that was already seen then the answer
+       is located at index remaining days modulo length of seen configurations.
+       The algo then runs in O(8 * 14) = O(1) and still needs O(N) space.
+ - [X] Submit solution. Got correct in 40 ms with 14 MB
+ - [X] Problem solved
