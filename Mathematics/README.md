@@ -142,3 +142,17 @@ As of July 1<sup>st</sup>, 2020:
 - [X] Submit solution. Got correct in 12 ms with 5.3 MB
 - [ ] Find a faster solution.
 - [X] Problem solved
+
+### Ugly Number II
+The goal of this challenge is to compute the n-th ugly number. An ugly number
+has only 2, 3 and 5 for prime factors.  
+I tried to solve this problem using the C language [Problem
+link](https://leetcode.com/problems/ugly-number-ii/)  
+As of July 4<sup>th</sup>, 2020:
+- [X] Find a first working solution. The approach is simple, I used a Dynamic
+      Programming array to store the ugly numbers once I computed them. At each
+      step I take the min of the multiplications by the 3 prime factors and then
+      increase pointers accordingly. This approach runs in O(N) time with O(N)
+      extra space needed.
+- [X] Submit solution. Got correct in 4 ms with 5.2 MB
+- [X] Problem solved
