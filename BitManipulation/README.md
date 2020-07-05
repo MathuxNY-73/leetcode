@@ -136,3 +136,17 @@ As of June 25<sup>th</sup>, 2020:
       extra space needed is O(1)
 - [X] Submit solution. Got correct in 8 ms with 6.7 MB
 - [X] Problem solved
+
+### Hamming Distance
+The goal of this challenge is to compute the Hamming distance between two given
+numbers. The Hamming distance is defined as the number of bits that differs
+betweent the two numbers.  
+I tried to solve this problem using the Rust language [Problem
+link](https://leetcode.com/problems/hamming-distance/)  
+As of July 5<sup>th</sup>, 2020:
+- [X] Find a first working solution. This is a simple XOR problem where we then
+      needs to compute the number of set bits. Therefore, the solution is simply
+      to XOR the 2 numbers and count the number of set bits in the XOR. This can
+      be done in O(32) = O(1) using constant space O(1).
+- [X] Submit solution. Got correct in 0 ms with 2 MB
+- [X] Problem solved.
