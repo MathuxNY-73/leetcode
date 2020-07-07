@@ -564,3 +564,17 @@ As of June 12<sup>th</sup>, 2020:
       O(1).
 - [X] Submit solution. Got correct in 0 ms with 8.3 MB
 - [X] Problem solved.
+
+### Island Perimeter
+The goal of this challenge is to compute the perimeter of an island represent by
+adjacent ones in a matrix of 0s.  
+I tried to solve this problem using the Python language [Problem
+link](https://leetcode.com/problems/island-perimeter/)  
+As of July 7<sup>th</sup>, 2020:
+- [X] Find a first working solution. The trick is simply to go through every
+      cell of the matrix and add 4 for every land we find, then if looking to
+      the right and to the top, if we find land we need to substract the falsely
+      doubly counted edge. The runtime complexity of this algorithm is O(N * M)
+      and no extra space is needed for this problem so O(1)
+- [X] Submit solution. Got correct in 508 ms with 14.1 MB
+- [X] Problem solved
