@@ -578,3 +578,22 @@ As of July 7<sup>th</sup>, 2020:
       and no extra space is needed for this problem so O(1)
 - [X] Submit solution. Got correct in 508 ms with 14.1 MB
 - [X] Problem solved
+
+### 3 Sum
+The goal of this challenge is to find in a given array all the triplets of
+numbers that sum up to 0. That is to say all the triplets of number a, b and c
+such that a + b + c = 0. The answer should not contain any duplicated triplets.  
+I tried to solve this problem using the Rust language [Problem
+link](https://leetcode.com/problems/3sum/)  
+As of July 9<sup>th</sup>, 2020:
+- [X] Find a first working solution. I used a two-pointers approach to solve
+      this problem. This approach requires a sorting of the array which takes
+      O(N log N) time, then I run through the array fixing the first number of
+      the triplet a. If this a is greater than 0 then we do not need to go
+      further as any subsequent number in the sorted array is also positive and
+      thus cannot sum up to zero. If it negative then we use 2 pointers to go
+      through the rest of the array to find triplets. This overall process takes
+      at most O(N<sup>2</sup>) time. No extra-space is required in this
+      approach, so O(1) space complexity.
+- [X] Submit solution. Got correct in 40 ms with 3.3 MB
+- [X] Problem solved.
