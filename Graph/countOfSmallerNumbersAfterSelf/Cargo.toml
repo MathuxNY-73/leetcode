@@ -6,4 +6,4 @@ edition = "2018"
 
 [dependencies]
 rand = "0.7"
-input = { path = "../../../library/rust/input" }
+input = { path = "../../library/rust/input" }
