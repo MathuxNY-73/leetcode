@@ -431,3 +431,37 @@ As of July 2<sup>nd</sup>, 2020:
       space.
 - [X] Submit solution. Got correct in 48 ms with 14.2 MB
 - [X] Problem solved.
+
+### Maximum width of binary tree
+The goal of this challenge is to compute the maximum width of a binary tree. The
+width of a level of the tree is defined as the number of nodes between the
+leftmost and the rightmost nodes, counting NULL nodes in between. Thus for each
+level we need to compute the width and find the maximum.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/maximum-width-of-binary-tree/)  
+As of June 9<sup>th</sup>, 2020:
+- [X] Find a first working solution. My first approach was assign index to each
+      node on every level with the index of node located most to the left, be it null or
+      not, set to 0. The index is passed down to the children of a node
+      following the rule that its left child will have index = curr_index * 2
+      and its right child will have index = curr_index * 2 + 1. Then we do a BFS
+      by running throught each level at a time and for each level we put the max
+      difference between the rightmost index and the leftmost index of non null
+      nodes. Since we are visiting all the nodes in the tree the algorithm
+      runtime complexity is O(N) and for each level we need to store at most N /
+      2 nodes for a complete binary tree thus a space complexity of O(N).
+- [X] Submit solution. Got Runtime Error due to integer overflow since the tree
+      can be very deep without being very wide the indices increase
+      exponentially.
+- [X] Find a second solution. This time instead of using indices, I decided to
+      use the size of the queue to keep track of the result. Whenever we
+      encounter the leftmost non-null node on a level we start filling up the
+      queue with null ptr when a node does not exist so as to count the number
+      of times we pop a value from the queue in the next level. The runtime
+      complexity remains the same as well as the space complexity but as we are
+      adding more and more useless values the memory can grow very high.
+- [X] Submit solution. Got correct in 1136 ms with 264.2 MB (this is huge)
+- [X] Due to those high numbers I decided to give the first approach another try
+      by using unsigned long long integers instead of normal integers.
+- [X] Submit solution. Got correct in 4 ms with 15.7 MB
+- [X] Problem solved.
