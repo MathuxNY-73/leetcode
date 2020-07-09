@@ -585,7 +585,7 @@ numbers that sum up to 0. That is to say all the triplets of number a, b and c
 such that a + b + c = 0. The answer should not contain any duplicated triplets.  
 I tried to solve this problem using the Rust language [Problem
 link](https://leetcode.com/problems/3sum/)  
-As of July 9<sup>th</sup>, 2020:
+As of July 8<sup>th</sup>, 2020:
 - [X] Find a first working solution. I used a two-pointers approach to solve
       this problem. This approach requires a sorting of the array which takes
       O(N log N) time, then I run through the array fixing the first number of
@@ -596,4 +596,21 @@ As of July 9<sup>th</sup>, 2020:
       at most O(N<sup>2</sup>) time. No extra-space is required in this
       approach, so O(1) space complexity.
 - [X] Submit solution. Got correct in 40 ms with 3.3 MB
+- [X] Problem solved.
+
+### Two Sum
+The goal of this challenge is to find a pair of numbers in a given array that
+sum up to a given target integer. That is to say we want to find (i, j) so that
+i != j and A[i] + A[j] = target.  
+I tried to solve this problem using the Python language [Problem
+link](https://leetcode.com/problems/two-sum/)  
+As of July 9<sup>th</sup>, 2020:
+- [X] Find a first working solution. I used a hashtable to store the numbers and
+      their index. If during the loop over the array we are able to find the
+      complement of the current number (ie: target - current value) in the
+      hashtable then we find a pair that satisfies the constraint of the
+      problem. The runtime complexity of this approach i O(N) as I need to go
+      only once over the array. I need O(N) extra space to store the numbers and
+      their index.
+- [X] Submit solution. Got correct in 44 ms with 15.5 MB
 - [X] Problem solved.
