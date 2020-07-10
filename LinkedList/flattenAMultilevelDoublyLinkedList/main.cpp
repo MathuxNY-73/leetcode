@@ -52,47 +52,22 @@ public:
 class Solution {
     public:
         Node* flatten(Node* head) {
-            if (head == nullptr) {
-                return nullptr;
-            }
-
-            Node* dummy = new_node();
-            Node* tail = dummy;
-
-            stack<Node*> s;
-            s.push(head);
-
-            while(!s.empty()) {
-                auto cur = s.top();
-                s.pop();
-
-                if (cur->next != nullptr) {
-                    s.push(cur->next);
+            auto cur = head;
+            while (cur) {
+                if(cur->child != nullptr) {
+                    auto tmp = cur->next;
+                    cur->next = flatten(cur->child);
+                    cur->child = nullptr;
+                    cur->next->prev = cur;
+                    if (tmp) {
+                        while(cur->next) cur = cur->next;
+                        cur->next = tmp;
+                        cur->next->prev = cur;
+                    }
                 }
-
-                if (cur->child != nullptr) {
-                    s.push(cur->child);
-                }
-
-                tail->next = new_node();
-                tail->next->prev = tail;
-                tail->next->val = cur->val;
-                tail = tail->next;
+                cur = cur->next;
             }
-
-            auto res = dummy->next;
-            res->prev = nullptr;
-            delete dummy;
-            return res;
-        }
-
-        Node* new_node() const {
-            auto node = new Node;
-            node->val = 0;
-            node->prev = nullptr;
-            node->next = nullptr;
-            node->child = nullptr;
-            return node;
+            return head;
         }
 };
 

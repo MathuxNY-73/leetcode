@@ -100,4 +100,9 @@ As of July 10<sup>th</sup>, 2020:
       by the depth of the linked list O(H) which is itself bounded by the number
       of nodes in the list.
 - [X] Submit solution. Got correct in 8 ms with 7.8 MB
+- [X] In a second solution I decided to take a recursive approach and reuse the
+      nodes of the linked list instead of creating new ones. Using this approach
+      the runtime complexity of the algorithm is still O(N) and the recursion
+      stack can take up to O(N) as well if every node is a child node.
+- [X] Submit solution. Got correct in 8 ms with 7.4 MB
 - [X] Problem solved
