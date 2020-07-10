@@ -84,3 +84,20 @@ As of June 2<sup>nd</sup>, 2020:
       and the extra space is also O(1) as actually no extra space is needed.
 - [X] Submit solution. Got correct in 4 ms with 4.1 MB
 - [X] Problem solved
+
+### Flatten multilevel doubly linked list
+The goal of this challenge is to flatten a multilevel doubly linked list. Each
+node has a child node that links to another doubly linked list.  
+I tried to solve this problem using the C++ [Problem
+link](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/)  
+As of July 10<sup>th</sup>, 2020:
+- [X] Find a first working solution. I decided to go with a stack where for each
+      node I stack the next node first and then the child node. This way I am
+      able to construct the resulting flatten doubly linked list correctly and
+      in the right order. Since, all the nodes will be visited only once then
+      the runtime complexity of this algorithm is O(N). Since I am creating a
+      new list I need O(N) extra space. The space used by the stack is bounded
+      by the depth of the linked list O(H) which is itself bounded by the number
+      of nodes in the list.
+- [X] Submit solution. Got correct in 8 ms with 7.8 MB
+- [X] Problem solved
