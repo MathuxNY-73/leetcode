@@ -150,3 +150,24 @@ As of July 5<sup>th</sup>, 2020:
       be done in O(32) = O(1) using constant space O(1).
 - [X] Submit solution. Got correct in 0 ms with 2 MB
 - [X] Problem solved.
+
+### Subsets
+The goal of this challenge is to form all the possible subsets of a given array
+and return the power set in an array.  
+I tried to solve this problem using the C language [Problem
+link](https://leetcode.com/problems/subsets/)  
+As of July 11<sup>th</sup>, 2020:
+- [X] Find a first working solution. I decided to go with the approach of the
+      bitmask. For a given set of N objects there are 2<sup>N</sup> possible
+      subsets depending of the presence or no of elements of the set in a
+      subset. This can easily be computed using the set bits of an unsigned
+      integer. Thus I loop from 0 to 2<sup>N</sup> - 1 each time adding the
+      elements of the set found at the indices of the set bits of the integer.
+      It is easy to see that the runtime complexity of this algorithm is O(N *
+      2<sup>N</sup>), O(2<sup>N</sup>) is due to the loop and the N is due to
+      the fact that we iterate through all bits of the integer which is at most
+      N for our problem. Note that since we are using unsigned int then N cannot
+      be higher that 32 so the overall time complexity is O(2<sup>N</sup>). We
+      also need O(2<sup>N</sup>) extra space.
+- [X] Submit solution. Got correct in 4 ms with 6 MB
+- [X] Problem solved
