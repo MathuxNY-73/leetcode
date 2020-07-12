@@ -171,3 +171,17 @@ As of July 11<sup>th</sup>, 2020:
       also need O(2<sup>N</sup>) extra space.
 - [X] Submit solution. Got correct in 4 ms with 6 MB
 - [X] Problem solved
+
+### Reverse bits
+The goal of this challenge is to reverse the bits of a given unsigned integer
+coded on 32 bits.  
+I tried to solve this problem using the C language [Problem
+link](https://leetcode.com/problems/reverse-bits/)  
+As of July 12<sup>th</sup>, 2020:
+- [X] Find a first working solution. Using a cache to store the already reversed
+      bytes and the following formula to reverse a byte: byte * 0x0202020202 *
+      0x010884422010 % 1023, I then just reverse every bytes of the number one
+      after the other. The algorithm runs in O(1) time complexity using O(1)
+      extra space.
+- [X] Submit solution. Got correct in 0 ms with 5.1 MB
+- [X] Problem solved.
