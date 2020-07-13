@@ -465,3 +465,19 @@ As of June 9<sup>th</sup>, 2020:
       by using unsigned long long integers instead of normal integers.
 - [X] Submit solution. Got correct in 4 ms with 15.7 MB
 - [X] Problem solved.
+
+### Same Tree
+The goal of this challenge is to determine if two given binary trees are exactly
+the same. That is to say, the two binary tree have the same structure and the
+same nodes.  
+I tried to solve this problem using the C language [Problem
+link](https://leetcode.com/problems/same-tree/)  
+As of July 13<sup>th</sup>, 2020:
+- [X] Find a first working solution. I went to the recursive solution which for
+      each node in the tree will check if both value are equal and if they are
+      return the result of the comparison of between the left children and
+      between the right children. Since the algorithm runs through every nodes
+      then the complexity of this approach is O(N) and the space needed is O(log
+      N) for the recursive stack.
+- [X] Submit solution. Got correct in 4 ms with 5.6 MB
+- [X] Problem solved.
