@@ -481,3 +481,20 @@ As of July 13<sup>th</sup>, 2020:
       N) for the recursive stack.
 - [X] Submit solution. Got correct in 4 ms with 5.6 MB
 - [X] Problem solved.
+
+### Surrounded regions
+The goal of this challenge is to switch all surrounded 'O' cells to 'X' cells. A
+group of cells is considered surrounded if its borders have 'X' cells neighbors
+and do not touch the borders of the board.  
+I tried to solve this problem using the Python language [Problem
+link](https://leetcode.com/problems/surrounded-regions/)  
+As of July 14<sup>th</sup>, 2020:
+- [X] Find a first working solution. I am using a BFS approach. I scan the board
+      in order to find a starting 'O' cell and add it to a queue then I BFS to
+      find all the cells in the group. If the group has at least one cell on the
+      border of the board then the group in discarded and remains 'O'. To keep
+      track of visited cells I use a hashset. The solution is running over all
+      cells in the board thus a complexity of O(N * M) and a space complexity of
+      O(N * M) as well since I need to store all visited cells.
+- [X] Submit solution. Got correct in 788 ms with 21.8 MB
+- [X] Problem solved.
