@@ -497,4 +497,13 @@ As of July 14<sup>th</sup>, 2020:
       cells in the board thus a complexity of O(N * M) and a space complexity of
       O(N * M) as well since I need to store all visited cells.
 - [X] Submit solution. Got correct in 788 ms with 21.8 MB
+- [X] Keeping the BFS approach but this time trying another angle. Instead of
+      looking for good surrounded regions let us search for bad ones. Bad ones
+      are obviously located on the borders of the board. Thus, we first build
+      the list of cells on the border of the board and if we find an 'O' cell
+      then we BFS to determine the full region. By marking the visited cells
+      with 'E' we can afterward differentiate them from good region. The
+      algorithm runs again in O(N * M) time complexity and we still need O(N *
+      M) space for the queue of the BFS.
+- [X] Submit solution. Got correct in 300 ms with 15 MB
 - [X] Problem solved.
