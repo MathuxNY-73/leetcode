@@ -156,3 +156,20 @@ As of July 4<sup>th</sup>, 2020:
       extra space needed.
 - [X] Submit solution. Got correct in 4 ms with 5.2 MB
 - [X] Problem solved
+
+### Angle between the hands of clock
+The goal of this challenge is to determine the angle between the hour and the
+minute hands of a clock. The angle should the smallest one, that is to say if
+the angle computed is higher than 180 degrees then the value returned should be
+360 - value computed.  
+I tried to solve this problem using the C language [Problem
+link](https://leetcode.com/problems/angle-between-hands-of-a-clock/)  
+As of July 14<sup>th</sup>, 2020:
+- [X] Find a first working solution. This is a basic math problem. We just need
+      to compute the angle between the minute hand and the 0 and the angle
+      between the hour hand and the zero and compute the absolute value of the
+      difference between them. Then if the angle is higher than 180 degrees we
+      return 360 - computed angle. The runtime complexity of the solution is
+      therefore O(1) same as the extra space needed to solve this problem O(1).
+- [X] Submit solution. Got correct in 0 ms with 5.2 MB
+- [X] Problem solved.
