@@ -3,6 +3,7 @@
 
 void fastscan(int*);
 int fastscan_string_w(char*, int);
+int fastscan_string(char*, int);
 void myQuicksort(int* a, int l, int h);
 
 #endif

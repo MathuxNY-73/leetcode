@@ -58,6 +58,30 @@ int fastscan_string_w(char *str, int buffer_size)
     return  size_of_str;
 }
 
+int fastscan_string(char *str, int buffer_size)
+{
+    char c;
+    int size_of_str = 0;
+
+    // extract current character from buffer
+    c = getchar_unlocked();
+
+    // Keep on extracting characters if they are not
+    // space, carriage return or end of string
+    for (;c != '\n'
+             && c != '\0'
+             && c != EOF
+             && size_of_str < buffer_size;
+         c=getchar_unlocked(),++size_of_str)
+        {
+            if(size_of_str > buffer_size)
+                exit(-1);
+            str[size_of_str] = c;
+        }
+    return  size_of_str;
+
+}
+
 int myPartition(int* a, int l, int h) {
     int p = a[h], i = l;
     for(int j = l ; j < h ; ++j) {

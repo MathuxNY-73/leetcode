@@ -609,8 +609,23 @@ As of July 9<sup>th</sup>, 2020:
       their index. If during the loop over the array we are able to find the
       complement of the current number (ie: target - current value) in the
       hashtable then we find a pair that satisfies the constraint of the
-      problem. The runtime complexity of this approach i O(N) as I need to go
-      only once over the array. I need O(N) extra space to store the numbers and
+      problem. The runtime complexity of this approach i O(N) as I need to go only once over the array. I need O(N) extra space to store the numbers and
       their index.
 - [X] Submit solution. Got correct in 44 ms with 15.5 MB
+- [X] Problem solved.
+
+### Reverse words in a string
+The goal of this challenge is to reverse the order of the words in a given
+string. Doing so we should also erase any trailing spaces and spaces that were
+duplicated. C programs should perform the operation using constant space.  
+I tried to solve this problem using the C language [Problem
+link](https://leetcode.com/problems/reverse-words-in-a-string/)  
+As of July 15<sup>th</sup>, 2020:
+- [X] Find a first working solution. I decided to approach the problem in 2
+      steps. First I would reverse the all string and then reverse again the
+      order of the letters in each word. During the second step I would shift
+      all unecessary spaces to the end of the string and then I would trim the
+      trailing spaces. The algo runs in O(N) using no extra space so O(1) space
+      complexity.
+- [X] Submit solution. Got correct in 0 ms with 5.7 MB
 - [X] Problem solved.
