@@ -12,12 +12,17 @@ As of August 26<sup>th</sup>, 2018:
 
 ### Pow(x, n)
 The goal is to implement a function that compute x raised to the power of n.  
-I solved this problem using the C language. [Problem link](https://leetcode.com/problems/powx-n/description/)  
-As of September 11<sup>th</sup>, 2018:
+I solved this problem using the C and Python languages. [Problem
+link](https://leetcode.com/problems/powx-n/description/)  
+As of July 15<sup>th</sup>, 2020:
 - [X] Find a first working solution on the sample input
 - [X] Submit first solution. Got timeout on bigger testcases
 - [X] Looked at the hints. Code a second solution.
 - [X] Submit second solution. Got correct
+- [X] Reimplement solution in python. Using binary exponentiation, the algorithm
+      can run O(log K) where K is the power. We do not need extra space so space
+      complexity is O(1)
+- [X] Submit solution. Got correct in 20 ms with 13.8 MB
 - [X] Problem solved
 
 ### Add Binary
