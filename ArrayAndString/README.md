@@ -629,3 +629,21 @@ As of July 15<sup>th</sup>, 2020:
       complexity.
 - [X] Submit solution. Got correct in 0 ms with 5.7 MB
 - [X] Problem solved.
+
+### Top K Frequent Element
+The goal of this challenge is to find the top K most frequent numbers in a given
+list that can therefore contain duplicates. The solution must be at most O(N
+log N) complexity.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/top-k-frequent-elements/)  
+As of July 17<sup>th</sup>, 2020:
+- [X] Find a first working solution. I decided to use hash map and then a queue
+      to solve this problem. First I go over every number in the list adding the
+      frequency of the number in a hash map and adding the number to a pool of
+      unique numbers. Then I build a heap with this pool sorting the heap by
+      numbers frequency. Then I pop the first K numbers to have the answer. This
+      algorithm runs in O(N log N) as it is bounded by the head making part and
+      it uses O(N) extra space.
+- [X] Submit solution. Got correct in 36 ms with 13.9 MB
+- [ ] Find another solution (eg: bucket, quickselect)
+- [X] Problem solved
