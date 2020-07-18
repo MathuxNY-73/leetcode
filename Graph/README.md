@@ -507,3 +507,21 @@ As of July 14<sup>th</sup>, 2020:
       M) space for the queue of the BFS.
 - [X] Submit solution. Got correct in 300 ms with 15 MB
 - [X] Problem solved.
+
+### Course Schedule II
+The goal of this challenge is to determine an order to take courses which may
+have prerequisites as per the given lists of prerequisites. If an ordering does
+not exist then an empty array must be returned.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/course-schedule-ii/)  
+As of July 18<sup>th</sup>, 2020:
+- [X] Find a first working solution. I am using the in degrees of the nodes in
+      the course graph to determine a topological order of the courses. I am
+      first populating an adjacency list and then take in the first nodes whose
+      indegree is zero to start the exploration of the graph. As I run through
+      every vertex and edges once then the time complexity of this algorithm is
+      O(V + E) and the extra space needed is also O(V + E) as I need to store
+      the resulting ordered list O(V) and I also need to store all the edges
+      O(E).
+- [X] Submit solution. Got correct in 76 ms with 13.3 MB
+- [X] Problem solved.
