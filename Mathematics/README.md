@@ -27,10 +27,17 @@ As of July 15<sup>th</sup>, 2020:
 
 ### Add Binary
 The goal is to implement a function that performs the sum of two binary numbers passed as strings.  
-I solved this problem using the C++ language. [Problem link](https://leetcode.com/problems/add-binary/description/)  
-As of September 16<sup>th</sup>, 2018:
+I solved this problem using the C++ and C languages. [Problem
+link](https://leetcode.com/problems/add-binary/description/)  
+As of July 19<sup>th</sup>, 2020:
 - [X] Find a first working solution on the sample input
 - [X] Submit solution. Got correct
+- [X] Reimplement a solution in C for the July 2020 leetcoding challenge. The
+      problem is pretty simple. I simply need to go over both string adding
+      numbers together keeping track of the carry. Then I need to reverse the
+      resulting binary string and voila. The algorithm runs in O(max(N,M)) with
+      O(max(N,M)) extra space needed.
+- [X] Submit solution. Got correct in 4 ms with 5.5 MB
 - [X] Problem solved
 
 ### Fibonacci Number
