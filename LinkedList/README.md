@@ -106,3 +106,20 @@ As of July 10<sup>th</sup>, 2020:
       stack can take up to O(N) as well if every node is a child node.
 - [X] Submit solution. Got correct in 8 ms with 7.4 MB
 - [X] Problem solved
+
+### Remove Linked List Elements
+The goal of this challenge is to remove all the nodes of a linked list whose
+value equal to a given value. The nodes should be correctly deleted to avoid
+memory leaks.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/remove-linked-list-elements/)  
+As of July 20<sup>th</sup>, 2020:
+- [X] Find a first working solution. The problem is very simple. I just go
+      through the list and check every nodes next neighbor. If the next node is
+      not null and the value is the one that is searched for then I remove the
+      node. At the end I check if the head is itself the value we are searching
+      for and if so then I move the head to the next node, be it null or not.
+      The runtime complexity of the algorithm is O(N) and the space complexity
+      is O(1) as we do not need extra space.
+- [X] Submit solution. Got correct in 28 ms with 13.7 MB
+- [X] Problem solved.
