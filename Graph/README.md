@@ -525,3 +525,22 @@ As of July 18<sup>th</sup>, 2020:
       O(E).
 - [X] Submit solution. Got correct in 76 ms with 13.3 MB
 - [X] Problem solved.
+
+### Word Search
+The goal of this challenge is to determine if a word exists in a given grid of
+letters. The word can be written with any sequence of adjacent letters in the
+matrix (above, below, left or right).  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/word-search/)  
+As of July 23<sup>rd</sup>, 2020:
+- [X] Find a first working solution. I simply run through every letter and
+      perform a bfs in the matrix. If ever one of the letter does not match that
+      of the word being searched, then I backtrack. The runtime complexity can
+      be decomposed in the exploration of the matrix. Basically, at each letter
+      we can continue the exploration in 3 possible directions, so 3 different
+      choices which can be represented into an explocation tree with
+      3<sup>L</sup> nodes. Thus as we apply the dfs on every letter in the
+      matrix then the runtime complexity is O(N * 3<sup>L</sup>). We need O(L)
+      extra space for the recursive dfs stack.
+- [X] Submit solution. Got correct in 92 ms with 20.2 MB
+- [X] Problem solved.
