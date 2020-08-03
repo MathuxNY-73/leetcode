@@ -647,3 +647,18 @@ As of July 17<sup>th</sup>, 2020:
 - [X] Submit solution. Got correct in 36 ms with 13.9 MB
 - [ ] Find another solution (eg: bucket, quickselect)
 - [X] Problem solved
+
+### Valid Palindrome
+The goal of this challenge is to determine if a given sentence is palindromic,
+taking into account the alphanumeric characters of the sentence.  
+I tried to solve this problem using the C language [Problem
+link](https://leetcode.com/problems/valid-palindrome/)  
+As of August 3<sup>rd</sup>, 2020:
+- [X] Find a first working solution. The problem is a pretty simple one to
+      solve. Just use 2 pointers, one starting at the beginning, the other
+      starting at the end and move them torward the middle, for each skipping
+      non-alphanumeric characters. The algorithm needs to run over all
+      characters of the string so the runtime complexity is O(N) and the only
+      space needed is for the two pointers, so the space complexity is O(1).
+- [X] Submit solution. Got correct in 4 ms with 5.9 MB
+- [X] Problem solved
