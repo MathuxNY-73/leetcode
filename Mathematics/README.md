@@ -185,3 +185,18 @@ As of July 14<sup>th</sup>, 2020:
       therefore O(1) same as the extra space needed to solve this problem O(1).
 - [X] Submit solution. Got correct in 0 ms with 5.2 MB
 - [X] Problem solved.
+
+### Power Of Four
+The goal of this challenge is to determine if a given number is a power of 4. As
+a follow up question, is possible to do it without any loops ?  
+I tried to solve this problem using the C language [Problem
+link](https://leetcode.com/problems/power-of-four/)  
+As August 4<sup>th</sup>, 2020:
+- [X] Find a first working solution. I went for the brute force solution and
+      just try to divide the number by 4 as long as it is divisible by 4. If at
+      the end of this process the number is equal to 1 then the number is a
+      power of 4. The runtime complexity of this algorithm is O(log N) and we do
+      not need more space so O(1) space complexity.
+- [X] Submit solution. Got correct in 0 ms with 5.3 MB
+- [ ] Try to find the solution to do it in O(1) time complexity.
+- [X] Problem solved.
