@@ -198,5 +198,8 @@ As August 4<sup>th</sup>, 2020:
       power of 4. The runtime complexity of this algorithm is O(log N) and we do
       not need more space so O(1) space complexity.
 - [X] Submit solution. Got correct in 0 ms with 5.3 MB
-- [ ] Try to find the solution to do it in O(1) time complexity.
+- [X] Try to find the solution to do it in O(1) time complexity. It is quite
+      simple to do actually. Just check that the number is positive, has only
+      one set bit and that it is equal to 1 modulo 3. So now the runtime
+      complexity of this algorithm is O(1) and the space complexity is still O(1).
 - [X] Problem solved.
