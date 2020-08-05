@@ -232,3 +232,21 @@ As June 27<sup>th</sup>, 2020:
       and the space needed for the structure in O(2 * N) = O(N)
 - [X] Submit solution. Got correct in 12 ms with 6.5 MB
 - [X] Problem solved
+
+### Add and Search Word
+The goal of this challenge is to build a data structure where one can add words
+and then search if a pattern has already been added in the past. This pattern
+can contain '.' character which can represent any letter.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/add-and-search-word-data-structure-design/)  
+As of August 5<sup>th</sup>, 2020:
+- [X] Find a first working solution. It is actually very simple as it is a Trie
+      data structure. In the add operation, we add the word to the Trie data
+      structure and then in the search we do a DFS and whenever we encounter a
+      '.' character then we loop over all the letters of the TrieNode. The
+      runtime complexity of the add method is O(W) and the search method is O(W)
+      when it does not contain '.' character, in the worst case the runtime
+      complexity is O(M * W) where M is the number of '.' character. The space
+      needed is O(W) for the add method and O(W) for the search method.
+- [X] Submit solution. Got correct in 196 ms with 43.4 MB
+- [X] Problem solved.
