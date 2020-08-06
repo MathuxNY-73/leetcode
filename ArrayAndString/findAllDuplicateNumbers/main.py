@@ -9,14 +9,12 @@ import heapq
 
 class Solution:
     def findDuplicates(self, nums: List[int]) -> List[int]:
-        s = set()
         res = []
         for n in nums:
-            if n not in s:
-                s.add(n)
+            if nums[abs(n) - 1] < 0:
+                res.append(abs(n))
             else:
-                res.append(n)
-
+                nums[abs(n) - 1] *= -1
         return res
 
 

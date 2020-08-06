@@ -680,5 +680,10 @@ As of August 5<sup>th</sup>, 2020:
       resulting sets of duplicated numbers. This algorithm runs in O(N) as we
       run through the array only once but it uses O(N) extra space.
 - [X] Submit solution. Got correct in 368 ms with 23.2 MB
-- [ ] Optimize the solution to not use extra space.
-- [ ] Problem solved
+- [X] Optimize the solution to not use extra space. Now, using the fact that all
+      integers in the array lie between 1 and array.size() we can use that to
+      modify the array in place and check if a given number has already been
+      seen. This approach allows for a runtime complexity of O(N) whilst using
+      constant space O(1).
+- [X] Submit solution. Got correct in 404 ms with 21.3 MB
+- [X] Problem solved
