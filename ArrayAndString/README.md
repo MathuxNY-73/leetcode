@@ -666,3 +666,19 @@ As of August 3<sup>rd</sup>, 2020:
       space needed is for the two pointers, so the space complexity is O(1).
 - [X] Submit solution. Got correct in 4 ms with 5.9 MB
 - [X] Problem solved
+
+### Find all the duplicate numbers
+The goal of this challenge is to get all duplicated numbers that are present
+inside a given array. The algorithm should run in O(N) with O(1) extra space
+needed.  
+I tried to solve this problem using the Python language [Problem
+link](https://leetcode.com/problems/find-all-duplicates-in-an-array/)  
+As of August 5<sup>th</sup>, 2020:
+- [X] Find a first working solution. The problem is simple if we remove the
+      constraints for now. Using a HashTable we can thus check if a given number
+      was seen before. If the number is in the hashset then we add it to the
+      resulting sets of duplicated numbers. This algorithm runs in O(N) as we
+      run through the array only once but it uses O(N) extra space.
+- [X] Submit solution. Got correct in 368 ms with 23.2 MB
+- [ ] Optimize the solution to not use extra space.
+- [ ] Problem solved
