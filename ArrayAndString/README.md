@@ -119,13 +119,17 @@ As of February 20<sup>th</sup>, 2020:
 The goal of this challenge is to implement a function that can find the number
 that was duplicated in a array of size N + 1 containing only numbers from 1 to
 N.  
-I tried to solve this problem using the C language [Problem
+I tried to solve this problem using the C and Python languages [Problem
 link](https://leetcode.com/problems/find-the-duplicate-number/)  
-As of February 29<sup>th</sup>, 2020:
+As of August 6<sup>th</sup>, 2020:
 - [X] Write a first solution. This solution is using the Floyd's tortoise and
       hare algorithm to find the cycle in the linked list represented by the
       array of number. It runs in O(N) time complexity using O(1) space.
 - [X] Submit solution. Got correct in 0 ms with 6.8 MB
+- [X] Re implement the solution using the python language. I reused the tortoise
+      and hare solution for this problem making it run in O(N) with O(1) extra
+      space needed.
+- [X] Submit solution. Got correct in 48 ms with 15.3 MB
 - [X] Problem solved
 
 ### Trapping rain water
