@@ -544,3 +544,23 @@ As of July 23<sup>rd</sup>, 2020:
       extra space for the recursive dfs stack.
 - [X] Submit solution. Got correct in 92 ms with 20.2 MB
 - [X] Problem solved.
+
+### Vertical order traversal of a Binary Tree
+The goal of this challenge is to output the vertical order traversal of a binary
+tree. Suppose each node is given coordinates (X, Y). Those coordinates are
+computed with the following rule. For each node with coordinates (X, Y) the
+coordinates of their left (resp. right) child will be (X - 1, Y - 1) (resp. (X +
+1, Y - 1)). Imagining a line perpendicalur to the Y axis going from left to
+right we thus want to output the list of each set of nodes encountered by the
+line. In a set nodes are ordered by their Y coordinate then by their value.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)  
+As of August 7<sup>th</sup>, 2020:
+- [X] Find a first working solution. I used a hash map of priority queue to hold
+      on the value at the same X and the ordering by level and then by value is
+      thus done by the priority queue. Inserting ia priority queue takes O(log
+      M) where M is the number of element in the queue. If the N nodes are
+      splitted in K parts of the X axis then the overall time complexity of the
+      solution is O(N log N/K). This approach requires O(N) space to work.
+- [X] Submit solution. Got correct in 4 ms with 12 MB
+- [X] Problem solved
