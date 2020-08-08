@@ -564,3 +564,15 @@ As of August 7<sup>th</sup>, 2020:
       solution is O(N log N/K). This approach requires O(N) space to work.
 - [X] Submit solution. Got correct in 4 ms with 12 MB
 - [X] Problem solved
+
+### Closest binary search tree value
+The goal of this challenge is to find in a given binary search tree, the node
+value that is closest to a given float number.  
+I tried to solve this problem using the Python language [Problem
+link](https://leetcode.com/problems/closest-binary-search-tree-value/)  
+As of August 8<sup>th</sup>, 2020:
+- [X] Find a first working solution. I simply run through the BST keeping the
+      closest value found so far. The algorithm runs in O(log N) as at most log
+      N nodes will be visited. The approach needs constant extra space, O(1).
+- [X] Submit solution. Got correct in 36 ms with 15.8 MB
+- [X] Problem solved
