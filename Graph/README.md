@@ -576,3 +576,21 @@ As of August 8<sup>th</sup>, 2020:
       N nodes will be visited. The approach needs constant extra space, O(1).
 - [X] Submit solution. Got correct in 36 ms with 15.8 MB
 - [X] Problem solved
+
+### Path sum III
+The goal of this challenge is to count the number of paths that exist in a given
+binary tree, where all node values sums up to a given target. All node in the
+path needs to be adjacent.  
+I tried to solve this problem using the Python language [Problem
+link](https://leetcode.com/problems/path-sum-iii/)  
+As of August 8<sup>th</sup>, 2020:
+- [X] Find a first working solution. This problem is actually analogous to the
+      problem of counting all subarrays where numbers sum up to a given value.
+      In this case an array is formed by every path from root to a leaf and we
+      need to count the number of subsequence of nodes whose values sum up to
+      the target value. Using a hashmap to keep track of the prefix sum count
+      and a dfs with backtracking this problem is trivial to solve. The
+      complexity of this approach is O(N) as we need to visit all nodes in the
+      tree and the space complexity is O(N) also.
+- [X] Submit solution. Got correct in 44 ms with 14.8 MB
+- [X] Problem solved
