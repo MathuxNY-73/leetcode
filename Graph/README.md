@@ -594,3 +594,22 @@ As of August 8<sup>th</sup>, 2020:
       tree and the space complexity is O(N) also.
 - [X] Submit solution. Got correct in 44 ms with 14.8 MB
 - [X] Problem solved
+
+### Rotting oranges
+The goal of this challenge is to determine the number of minutes needed for a
+set of oranges which contains rotten oranges to be all rotten. Every minute the
+oranges that are adjacent to a rotten orange in the grid will rot.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/rotting-oranges/)  
+As of August 9<sup>th</sup>, 2020:
+- [X] Find a first working solution. The solution is pretty straightforward
+      using a breadth first search approach to the problem. We start with all
+      the already rotten oranges in the BFS queue and then for every level of
+      the BFS we increase the minute counter by one. At the end we run through
+      all the grid to see if there are any oranges that are not rotten. The
+      runtime complexity of the algorithm is bounded by the the search of
+      already rotten oranges in the grid and the check at the end thus the
+      overall runtime complexity is O(N * M). The extra space needed is bounded
+      by O(N * M) as well.
+- [X] Submit solution. Got correct in 4 ms with 13 MB
+- [X] Problem solved
