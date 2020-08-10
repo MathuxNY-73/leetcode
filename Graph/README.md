@@ -627,4 +627,7 @@ As of August 10<sup>th</sup>, 2020:
       runs in O(N) time complexity using O(log N) extra space for the recursive
       stack, not counting the space needed for the answer.
 - [X] Submit solution. Got correct in 8 ms using 14 MB
+- [X] Coded a second approach using BFS this time. The algorithm still runs in
+      O(N) time complexity using O(N) extra space this time.
+- [X] Submit solution. Got correct in 4 ms with 12.4 MB
 - [X] Problem solved

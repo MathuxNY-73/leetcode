@@ -62,7 +62,7 @@ class Solution {
             }
         }
     public:
-        vector<vector<int>> zigzagLevelOrder(TreeNode* root) {
+        vector<vector<int>> zigzagLevelOrderDFS(TreeNode* root) {
             vector<deque<int>> traversal;
             dfs(root, 0, traversal);
 
@@ -71,6 +71,39 @@ class Solution {
             for(auto& q: traversal) {
                 res.push_back(vector<int>(q.begin(), q.end()));
             }
+
+            return res;
+        }
+
+        vector<vector<int>> zigzagLevelOrder(TreeNode* root) {
+            queue<TreeNode*> q;
+
+            int lvl = 0;
+
+            vector<vector<int>> res;
+            q.push(root);
+            while(!q.empty()) {
+                int si = q.size();
+                vector<int> level;
+
+                while(si--) {
+                    auto cur = q.front(); q.pop();
+
+                    if(cur) {
+                        level.push_back(cur->val);
+                        q.push(cur->left);
+                        q.push(cur->right);
+                    }
+                }
+
+                if (lvl & 1) {
+                    reverse(level.begin(), level.end());
+                }
+
+                ++lvl;
+                res.push_back(level);
+            }
+            res.pop_back();
 
             return res;
         }
