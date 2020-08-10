@@ -1,7 +1,7 @@
 CXX=g++
 MAKE=make -w
 CXFLAGS=-Wc++17-extensions -Wall -stdlib=libc++ -std=c++17 -pedantic
-LIB_PATH=../../library/cpp
+LIB_PATH=../../../library/cpp
 LDFLAGS=-L$(LIB_PATH) -lmine
 LIBS=-I$(LIB_PATH)
 EXEC=main

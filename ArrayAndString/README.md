@@ -2,9 +2,13 @@
 The repsitory contains the problems related to Array and Strings that I tried to solve on the leetcode [website](https://leetcode.com/problemset/all/)
 
 ### Median Of Two Sorted Arrays
-The goal is to implement a function that compute the median of sorted set of numbers split between in two sorted arrays. The algorithm should have O(log(m+n)) complexity where n and m are the sizes of the two arrays.  
-I tried to solve this problem using the C++, C and Rust languages. [Problem link](https://leetcode.com/problems/median-of-two-sorted-arrays/description/)  
-As of October 14<sup>th</sup>, 2019:
+The goal is to implement a function that compute the median of sorted set of
+numbers split between in two sorted arrays. The algorithm should have
+O(log(m+n)) complexity where n and m are the sizes of the two arrays.  
+I tried to solve this problem using the C++, C, Rust and Python languages.
+[Problem
+link](https://leetcode.com/problems/median-of-two-sorted-arrays/description/)  
+As of August 10<sup>th</sup>, 2020:
 - [X] Find a first working solution on the sample input
 - [X] Submit solution. Got wrong
 - [X] Find a second working solution on the sample input with hints
@@ -13,6 +17,11 @@ As of October 14<sup>th</sup>, 2019:
 - [x] Submit solution. Got correct in 0 ms with 2.5 MB
 - [x] Write a solution in C.
 - [x] Submit solution. Got corret in 12 ms with 7.7 MB
+- [X] Solves the problem again in Python. Once again the goal is to use the
+      solution that run in O(log N + M) by moving a pointer in the smallest array
+      and adapt the pointer on the second one to get a split in two parts for
+      each subarrays which represent the split as if the two arrays were merged.
+- [X] Submit solution. Got correct in 88 ms with 14 MB
 - [X] Problem solved
 
 ### First Missing Positive
