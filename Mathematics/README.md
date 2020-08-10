@@ -203,3 +203,17 @@ As August 4<sup>th</sup>, 2020:
       one set bit and that it is equal to 1 modulo 3. So now the runtime
       complexity of this algorithm is O(1) and the space complexity is still O(1).
 - [X] Problem solved.
+
+### Excel sheet column number
+The goal of this challenge is to determine the column number of an excel sheet
+given the column name. The label system of excel is A, B, C, ... , Z, AA, AB,
+AC, .., AZ, BA, BB, ..., and so on.  
+I tried to solve this problem using the C language [Problem
+link](https://leetcode.com/problems/excel-sheet-column-number/)  
+As of August 10<sup>th</sup>, 2020:
+- [X] Find a first working solution. The approach is very easy, run through all
+      the letter summing and, at each step, multiplying the previous sum by 26.
+      The runtime complexity is O(N) where N is the number of characters in the
+      column name. There is no extra space needed for this approach.
+- [X] Submit solution. Got correct in 0 ms with 5.2 MB
+- [X] Problem solved.
