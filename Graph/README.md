@@ -613,3 +613,18 @@ As of August 9<sup>th</sup>, 2020:
       by O(N * M) as well.
 - [X] Submit solution. Got correct in 4 ms with 13 MB
 - [X] Problem solved
+
+### Binary Tree Zigzag Level Order Traversal
+The goal of this challenge is to perform a traversal of a binary tree zigzaging
+between levels. That is to say for each level we print the nodes in the oposite
+direction as the previous level.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/)  
+As of August 10<sup>th</sup>, 2020:
+- [X] Find a first working solution. I used the DFS approach with a double ended
+      queue for each level. Depending on the current level of the node we either
+      push to the front or the back of the deque of the level. This solution
+      runs in O(N) time complexity using O(log N) extra space for the recursive
+      stack, not counting the space needed for the answer.
+- [X] Submit solution. Got correct in 8 ms using 14 MB
+- [X] Problem solved
