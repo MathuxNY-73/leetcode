@@ -31,4 +31,13 @@ As of July 6<sup>th</sup>, 2020:
       characters in a hashmap, the worst case is when S and T have all unique
       characters and are the same size.
 - [X] Submit solution. Got correct in 60 ms with 7.8 MB
+- [X] Optimized the approach. Instead of working with the full string to search
+      into, I added a preprocessing step to filter the string and store only the
+      letters that are in the pattern along with their indices. This
+      optimization is worth it if the filtered string is much smaller that the
+      original string. There is also an added memory cost. The runtime
+      complexity is now O(2 * FS + S + T) = O(S + T) where FS is the length of
+      the filtered string and the space complexity is O(FS + S + 2 * T) = O(S +
+      T).
+- [X] Submit solution. Got correct in 44 ms with 10.5 MB
 - [X] Problem solved

@@ -44,6 +44,7 @@ class Solution {
 
         string minWindow(string s, string t) {
             unordered_map<char, int> freq, window;
+            vector<pair<char, int>> fs;
 
             int req = 0;
 
@@ -55,30 +56,37 @@ class Solution {
                 ++freq[c];
             }
 
+            for(int i = 0 ; i < s.size() ; ++i) {
+                if(freq.find(s[i]) != freq.cend()) {
+                    fs.push_back(make_pair(s[i], i));
+                }
+            }
+
 
             int l = 0, r = 0, found = 0;
             int min_l = 0, min_r = s.size();
 
-            while(r < s.size()) {
+            for(;r < fs.size(); ++r) {
 
-                // Expand window
-                for(;r < s.size() && found < req; ++r) {
+                char cr = '\0';
+                int idxr = 0;
+                tie(cr, idxr) = fs[r];
 
-                    if(window.find(s[r]) == window.cend()) window.insert(make_pair(s[r], 0));
-                    ++window[s[r]];
+                if(--freq[cr] >= 0) ++found;
 
-                    if(freq.find(s[r]) != freq.cend() && window[s[r]] == freq[s[r]]) ++found;
-                }
+                for(;l <= r && found == t.size();++l) {
 
-                // Reduce window
-                for(;l <= r && found == req; ++l) {
-                    --window[s[l]];
-                    if(freq.find(s[l]) != freq.cend() && window[s[l]] < freq[s[l]]) --found;
-                }
+                    char cl = '\0';
+                    int idxl = 0;
+                    tie(cl, idxl) = fs[l];
 
-                if (r - l < min_r - min_l) {
-                    min_r = r - 1;
-                    min_l = l - 1;
+                    if (idxr - idxl < min_r - min_l) {
+                        min_r = idxr;
+                        min_l = idxl;
+                    }
+
+
+                    if(++freq[cl] > 0) --found;
                 }
             }
 
