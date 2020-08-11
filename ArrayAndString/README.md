@@ -696,3 +696,23 @@ As of August 5<sup>th</sup>, 2020:
       constant space O(1).
 - [X] Submit solution. Got correct in 404 ms with 21.3 MB
 - [X] Problem solved
+
+### H-Index
+The goal of this problem is to compute the h-index of a scientific contributor
+given a list of paper's citations. A scientific contributor is said to have
+index h if h of their contributions have at least h citations and the remaining
+N - h papers have at most h citations.  
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/h-index/)  
+As of August 11<sup>th</sup>, 2020:
+- [X] Find a first working solution. Indeed to determine this h we need to sort
+      the array by number of citations. However, in order to avoid the lower
+      bound of comparison based sorting algorithm I am using the counting sort.
+      Now, as the h-index is a most the number of contribution N we can cap the
+      numbers that are higher than N. Afterward the problem is that we need to
+      find the highest k smaller than the suffix sum of the counts. This
+      approach takes O(N) times but uses also an extra O(N) space.
+- [X] Submit solution. Got correct in 0 ms with 8.9 MB
+- [ ] It is possible to remove extra space needed but at the cost of more
+      computation.
+- [X] Problem solved
