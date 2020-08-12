@@ -631,3 +631,21 @@ As of August 10<sup>th</sup>, 2020:
       O(N) time complexity using O(N) extra space this time.
 - [X] Submit solution. Got correct in 4 ms with 12.4 MB
 - [X] Problem solved
+
+### Network Delay Time
+The goal of this challenge is to compute the minimum needed for a message sent
+from a node to reach all the other nodes of a weighted directed graph. We are
+guaranteed that all the weights are positives. If it is impossible for the
+message to arrive to every node then return -1.  
+I tried to solve this problem using the Python language [Problem
+link](https://leetcode.com/problems/network-delay-time/)  
+As August 12<sup>th</sup>, 2020:
+- [X] Find a first working solution. I simply used the Djiskstra algorithm to
+      find the shortest paths to the other nodes, then the longest of those
+      paths is the minimum time to wait for all the nodes to be reached. I
+      maintain a set of visited nodes, if at the end of the run through the
+      graph, one node has not been seen then I return -1. Since I will visit
+      every node the runtime complexity of this algorithm is O(N), it is
+      possible that I don't visit all the edges. The extra space needed is O(N).
+- [X] Submit solution. Got correct in 536 ms with 5.7 MB
+- [X] Problem solved.
