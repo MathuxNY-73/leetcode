@@ -217,3 +217,13 @@ As of August 10<sup>th</sup>, 2020:
       column name. There is no extra space needed for this approach.
 - [X] Submit solution. Got correct in 0 ms with 5.2 MB
 - [X] Problem solved.
+
+### Pascal's Triangle II
+The goal of this challenge is to generate the n-th row of the Pascal's Triangle.  
+I tried to solve this problem using the C language [Problem link]()
+As of August 12<sup>th</sup>, 2020:
+- [X] Find a first workgin solution. I just iterate from 1 to N each time
+      generating the i-th row of the triangle. The complexity of this algorithm
+      is O(N<sup>2</sup>) using O(N) space
+- [X] Submit solution. Got correct in 0 ms with 5.5 MB
+- [X] Problem solved
