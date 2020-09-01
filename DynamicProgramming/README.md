@@ -2,8 +2,8 @@
 The repsitory contains the problems related to Dynamic Programming I have tried to solve on the leetcode [website](https://leetcode.com/problemset/all/)
 
 ### Regular Expression Matching
-The goal is to implement a function that preforms a regular expression matching with a pattern that can contain '.' and '*' characters.  
-I tried to solve this problem using the C++ language. [Problem link](https://leetcode.com/problems/regular-expression-matching/description/)  
+The goal is to implement a function that preforms a regular expression matching with a pattern that can contain '.' and '*' characters.
+I tried to solve this problem using the C++ language. [Problem link](https://leetcode.com/problems/regular-expression-matching/description/)
 As of October 8<sup>th</sup>, 2018:
 - [X] Find a first working solution on the sample input with hints
 - [X] Submit solution. Got correct
@@ -20,7 +20,7 @@ The goal is to implement a function that returns the minimum number of edits to 
 - Remove a character
 
 I tried to solved this problem using the C++ and Rust languages. [Problem
-link](https://leetcode.com/problems/edit-distance/)  
+link](https://leetcode.com/problems/edit-distance/)
 As of May 31<sup>st</sup>, 2020:
 - [X] Find a first working solutionn on the sample input. Solution is recursive thus fails on big inputs
 - [X] Find a DP solution with a 2D array
@@ -37,8 +37,8 @@ As of May 31<sup>st</sup>, 2020:
 - [X] Problem solved
 
 ### K Inverse Pairs Arrays
-Thie goal is to implement a function that returns the number of arraysof N distinct integers that contains exactly K inverse pairs. A pair of integers is inversed if a[i] > a[j] with i < j.  
-I tried to solve this problem using the C++ language. [Problem link](https://leetcode.com/problems/k-inverse-pairs-array/)  
+Thie goal is to implement a function that returns the number of arraysof N distinct integers that contains exactly K inverse pairs. A pair of integers is inversed if a[i] > a[j] with i < j.
+I tried to solve this problem using the C++ language. [Problem link](https://leetcode.com/problems/k-inverse-pairs-array/)
 As of July 11<sup>th</sup>, 2019:
 - [X] Find a first working solutionn on the sample input.
 - [X] Submit solution. Got correct in 168 ms with 27.2 MB
@@ -49,8 +49,8 @@ As of July 11<sup>th</sup>, 2019:
 - [X] Problem solved
 
 ### Coin change
-The goal of this challenge is to code a function that computes the minimum amount a coins necessary to cash a certain amount. If no coin combination exists then the function returns -1.  
-I tried to solve this problem using the Rust language [Problem link](https://leetcode.com/problems/coin-change/)  
+The goal of this challenge is to code a function that computes the minimum amount a coins necessary to cash a certain amount. If no coin combination exists then the function returns -1.
+I tried to solve this problem using the Rust language [Problem link](https://leetcode.com/problems/coin-change/)
 As of September 10 <sup>th</sup>, 2019:
 - [x] I wrote a solution to the Coin Change problem but actually not the problem at hand. My solution counts the number of ways to add up the coin to that particular amount.
 - [x] Find a first working solution on sample input.
@@ -58,8 +58,8 @@ As of September 10 <sup>th</sup>, 2019:
 - [x] Problem solved
 
 ### Longest Increasing Subsequence
-The goal of this challenge is to code a function that returns the length of the longest subsequence with increasing numbers. The subsequence needs not to be formed of contiguous numbers in the array.  
-I tried to solve this problem using the C and C++ languages [Problem link](https://leetcode.com/problems/longest-increasing-subsequence/)  
+The goal of this challenge is to code a function that returns the length of the longest subsequence with increasing numbers. The subsequence needs not to be formed of contiguous numbers in the array.
+I tried to solve this problem using the C and C++ languages [Problem link](https://leetcode.com/problems/longest-increasing-subsequence/)
 As of January 20<sup>th</sup>, 2019:
 - [x] I wrote a solution to the problem that finds the longest increasing subarray (ie: formed of contiguous elements).
 - [x] Find a first working solution on sample input.
@@ -73,9 +73,9 @@ As of January 20<sup>th</sup>, 2019:
 - [x] Problem solved
 
 ### Find Number of LIS (Longest Increasing Subsequence)
-The goal of this challenge is to code a function that finds the number of Longest Increasing Subsequence. The subsequence needs not be contiguous.  
-The first approach I used is the Dynamic Programming approach to find the length of the LIS and then find the number of LIS in the array.  
-I tried to solve this problem using the C++, rust and Python languages [Problem link](https://leetcode.com/problems/number-of-longest-increasing-subsequence/)  
+The goal of this challenge is to code a function that finds the number of Longest Increasing Subsequence. The subsequence needs not be contiguous.
+The first approach I used is the Dynamic Programming approach to find the length of the LIS and then find the number of LIS in the array.
+I tried to solve this problem using the C++, rust and Python languages [Problem link](https://leetcode.com/problems/number-of-longest-increasing-subsequence/)
 As of February 4<sup>th</sup>, 2020:
 - [x] I wrote a solution using Dynamic Programing and thus a O(N<sup>2</sup>) solution.
 - [x] Submit solution. Got right in 40 ms with 9.2 MB
@@ -95,9 +95,9 @@ As of February 4<sup>th</sup>, 2020:
 
 ### Longest palindromic substring
 The goal of this challenge is to implement a function that finds the longest
-palindromic substring contained in a given string.  
+palindromic substring contained in a given string.
 I tried to solve this problem using the Python, C++, C and Rust languages [Problem
-link](https://leetcode.com/problems/longest-palindromic-substring/)  
+link](https://leetcode.com/problems/longest-palindromic-substring/)
 As of March 3<sup>rd</sup>, 2020:
 - [X] Write a first solution. This solution is brute force so the time
       complexity is O(N * N * N/2) = O(N<sup>3</sup>) in time complexity and
@@ -121,11 +121,11 @@ As of March 3<sup>rd</sup>, 2020:
 
 ### Maximum Subarray
 The goal of this challenge is to compute the maximum sum that can be formed with
-a subarray of contiguous intergers, which can be either positive or negative.  
+a subarray of contiguous intergers, which can be either positive or negative.
 This problem featured in the the [30-day leetcoding of April
-2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)
 I tried to solve this problem with the C language [Problem
-link](https://leetcode.com/problems/maximum-subarray/)  
+link](https://leetcode.com/problems/maximum-subarray/)
 As of April 4<sup>th</sup>, 2020:
 - [X] Find a first working solution. I decided to use a form of a dynamic
       programming and run through all elements in the array. Thus the time
@@ -139,11 +139,11 @@ As of April 4<sup>th</sup>, 2020:
 
 ### Minimum Path Sum
 The goal of this challenge is to compute the sum of the minimum path in a given
-matrix, to go from the top left corner down to the bottom right corner.  
+matrix, to go from the top left corner down to the bottom right corner.
 This problem featured in the the [30-day leetcoding of April
-2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)
 I tried to solve this problem using the C++ language [Problem
-link](https://leetcode.com/problems/minimum-path-sum/)  
+link](https://leetcode.com/problems/minimum-path-sum/)
 As of April 18<sup>th</sup>, 2020:
 - [X] Find a first working solution. I decided to use dynamic programming to
       solve this problem by modifying the grid in place. I run through the
@@ -156,11 +156,11 @@ As of April 18<sup>th</sup>, 2020:
 
 ### Longest Common Subsequence
 The goal of this challenge is to compute the length of the longest common
-subsequence between two strings.  
+subsequence between two strings.
 This problem featured in the the [30-day leetcoding of April
-2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)
 I tried to solve this problem using the C language [Problem
-link](https://leetcode.com/problems/longest-common-subsequence/)  
+link](https://leetcode.com/problems/longest-common-subsequence/)
 As of April 26<sup>th</sup>, 2020:
 - [X] Find a first working solution. I decided to take the dynamic programming
       approach to compute this length. That way the run time complexity of the
@@ -171,11 +171,11 @@ As of April 26<sup>th</sup>, 2020:
 
 ### Maximal Square
 The goal of this challenge is to compute the area of the largest square formed
-by 1 in a matrix of 0s and 1s.  
+by 1 in a matrix of 0s and 1s.
 This problem featured in the the [30-day leetcoding of April
-2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)
 I tried to solve this problem using the C++ language [Problem
-link](https://leetcode.com/problems/maximal-square/)  
+link](https://leetcode.com/problems/maximal-square/)
 As of April 27<sup>th</sup>, 2020:
 - [X] Find a first working solution. I decided to go for the dynamic programming
       approach, going through all elements in the matrix storing at dp\[i\]\[j\]
@@ -190,9 +190,9 @@ As of April 27<sup>th</sup>, 2020:
 ### Maximum sum Circular Subarray
 The goal of this challenge is to compute the maximum sum feasible in a circular
 array. A circular array is an array that starts over once the last index is
-reached.  
+reached.
 I tried to solve this problem using the C++ language [Problem
-link](https://leetcode.com/problems/maximum-sum-circular-subarray/)  
+link](https://leetcode.com/problems/maximum-sum-circular-subarray/)
 As of May 18<sup>th</sup>, 2020:
 - [X] Find a first working solution. I used the Kadane's algorithm in order to
       find the maximum sum in the array A[j], A[j+1],...,A[(j + A.size() - 1 ) %
@@ -219,9 +219,9 @@ As of May 18<sup>th</sup>, 2020:
 
 ### Find all anagrams in a string
 The goal of this challenge is to find all starting indices of anagrams of a
-certain pattern in a given string.  
+certain pattern in a given string.
 I tried to solve this problem using the C++ language [Problem
-link](https://leetcode.com/problems/find-all-anagrams-in-a-string/)  
+link](https://leetcode.com/problems/find-all-anagrams-in-a-string/)
 As of May 17<sup>th</sup>, 2020:
 - [X] Find a first working solution. I basically used the idea of sliding window
       over the string counting the frequencies of characters in that string. At
@@ -238,9 +238,9 @@ As of May 17<sup>th</sup>, 2020:
 ### Uncrossed lines
 The goal of this challenge is to find the maximum number of lines that can be
 draw from one set to another without lines crossing. A line can be drawn between
-two equal numbers only.  
+two equal numbers only.
 I tried to solve this problem using the C++ language [Problem
-link](https://leetcode.com/problems/uncrossed-lines/)  
+link](https://leetcode.com/problems/uncrossed-lines/)
 As of May 26<sup>th</sup>, 2020:
 - [X] Find a first working solution. This problem is actually equivalent to the
       longest common subsequence problem. The goal is then to find the longest
@@ -253,9 +253,9 @@ As of May 26<sup>th</sup>, 2020:
 ### Coin Change 2
 The goal of this challenge does not need to be introduced anymore as it is the
 regular coin change problem. We are given a certain amount to match with a given
-set of coins. Coins are in infinite number.  
+set of coins. Coins are in infinite number.
 I tried to solve this problem using the C language [Problem
-link](https://leetcode.com/problems/coin-change-2/)  
+link](https://leetcode.com/problems/coin-change-2/)
 As of June 7<sup>th</sup>, 2020:
 - [X] Find first working solution. Since this is a well-known dynamic
       programming problem the solution came very easily with dynamic
@@ -268,9 +268,9 @@ As of June 7<sup>th</sup>, 2020:
 ### Largest Divisible Subset
 The goal of this challenge is to form the largest possible subset of numbers
 from a given array of numbers, such that for any pair of integers s[i] % s[j] ==
-0 or s[j] % s[i] == 0.  
+0 or s[j] % s[i] == 0.
 I tried to solve this problem using the C++ language [Problem
-link](https://leetcode.com/problems/largest-divisible-subset/)  
+link](https://leetcode.com/problems/largest-divisible-subset/)
 As of June 13<sup>th</sup>, 2020:
 - [X] Find a first working solution. I went for a DP solution, I first sort the
       numbers in ascending order and then go through the list. For each integer
@@ -285,9 +285,9 @@ As of June 13<sup>th</sup>, 2020:
 
 ### Unique Binary Trees
 The goal of this challenge is to determine the number of unique binary trees
-possible containing integers from 1 to n, given a n.  
+possible containing integers from 1 to n, given a n.
 I tried to solve this problem using the C language [Problem
-link](https://leetcode.com/problems/unique-binary-search-trees)  
+link](https://leetcode.com/problems/unique-binary-search-trees)
 As of June 24<sup>th</sup>, 2020:
 - [X] Find a first working solution. This problem can be solved recursively and
       has common subproblems which marks it as a problem that can be solved
@@ -301,3 +301,11 @@ As of June 24<sup>th</sup>, 2020:
 - [ ] This problem is a combinatorics problem that actually involves the Catalan
       sequence of numbers. Code an optimized solution using this sequence.
 - [X] Problem solved.
+
+### Partition to K equal sum subset
+The goal of this challenge is to determine if, given an array of integers, it is possible to partition this array in k subsets which sum up to the same amount.
+I tried to solve this problem using the C++ language [Problem link](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/)
+As of February 17<sup>th</sup>, 2020:
+- [X] Find a first working solution. The first solution I found is not actually working as I consider only subsets of 2 integers only. Firstly, I check that the total sum of the array is itself divisible by k. Indeed it would not be possible to partition an array of integers if the sum of those integers is not divisible by k. Then I create a map mapping numbers and their occurences and then run over this map matching the integers together.
+- [ ] Submit solution. Got wrong answer error
+- [ ] Problem solved.
