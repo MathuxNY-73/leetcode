@@ -4,10 +4,10 @@ The repsitory contains the problems related to Array and Strings that I tried to
 ### Median Of Two Sorted Arrays
 The goal is to implement a function that compute the median of sorted set of
 numbers split between in two sorted arrays. The algorithm should have
-O(log(m+n)) complexity where n and m are the sizes of the two arrays.  
+O(log(m+n)) complexity where n and m are the sizes of the two arrays.
 I tried to solve this problem using the C++, C, Rust and Python languages.
 [Problem
-link](https://leetcode.com/problems/median-of-two-sorted-arrays/description/)  
+link](https://leetcode.com/problems/median-of-two-sorted-arrays/description/)
 As of August 10<sup>th</sup>, 2020:
 - [X] Find a first working solution on the sample input
 - [X] Submit solution. Got wrong
@@ -25,8 +25,8 @@ As of August 10<sup>th</sup>, 2020:
 - [X] Problem solved
 
 ### First Missing Positive
-The goal is to implement a function that finds the first missing positive integers from a given list. As constraints the algorithm should only take O(n) time and take up only a constant extra space.  
-I tried to solve this problem using the C++ language. [Problem link](https://leetcode.com/problems/first-missing-positive/description/)  
+The goal is to implement a function that finds the first missing positive integers from a given list. As constraints the algorithm should only take O(n) time and take up only a constant extra space.
+I tried to solve this problem using the C++ language. [Problem link](https://leetcode.com/problems/first-missing-positive/description/)
 As of October 8<sup>th</sup>, 2018:
 - [X] Find a first working solution on the sample input. Solution sorts the array thus it takes O(n*log n) time.
 - [X] Submit solution. Got correct
@@ -36,8 +36,8 @@ As of October 8<sup>th</sup>, 2018:
 - [X] Problem solved
 
 ### Merge Intervals
-The goal is to implement a function that will, given a list of intervals, merge all the intervals that overlap.  
-I tried to solve this problem using the C++ and Python languages. [Problem link](https://leetcode.com/problems/merge-intervals/)  
+The goal is to implement a function that will, given a list of intervals, merge all the intervals that overlap.
+I tried to solve this problem using the C++ and Python languages. [Problem link](https://leetcode.com/problems/merge-intervals/)
 As of March 29<sup>th</sup>, 2020:
 - [X] Find a first working solutionn on the sample input.
 - [X] Submit solution. Got correct in 28 ms with 12.5 MB
@@ -49,8 +49,8 @@ As of March 29<sup>th</sup>, 2020:
 - [X] Problem solved
 
 ### Insert Interval
-The goal is to implement a function that takes in a list of intervals and an interval to be inserted in the list of intervals. Should the new interval overlap others then a merging of overlapping interval is necessary.  
-I tried to solve this problem using the C++ language. [Problem link](https://leetcode.com/problems/insert-interval/)  
+The goal is to implement a function that takes in a list of intervals and an interval to be inserted in the list of intervals. Should the new interval overlap others then a merging of overlapping interval is necessary.
+I tried to solve this problem using the C++ language. [Problem link](https://leetcode.com/problems/insert-interval/)
 As of July 23<sup>rd</sup>, 2019:
 - [X] Find a first working solutionn on the sample input.
 - [X] Submit solution. Got correct in 20 ms with 12.6 MB
@@ -63,8 +63,8 @@ As of July 23<sup>rd</sup>, 2019:
 - [X] Problem solved
 
 ### Shortest Subarray with sum at least K
-The goal of this challenge is to code a function that finds the length of the shortest subarray which element sums up to at least a given K.  
-I tried to solve this problem using the C++ language [Problem link](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/)  
+The goal of this challenge is to code a function that finds the length of the shortest subarray which element sums up to at least a given K.
+I tried to solve this problem using the C++ language [Problem link](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/)
 As of September 6<sup>th</sup>, 2019:
 - [x] I wrote a smart BruteForce solution which in the worst case runs in O(n<sup>2</sup>).
 - [x] Submit solution. Got Time Limit Exceeded Error, of course
@@ -73,9 +73,9 @@ As of September 6<sup>th</sup>, 2019:
 - [x] Problem solved
 
 ### Find Minimum In Rotated Sorted Arrays
-The goal of this challenge is to code a function that returns the minimum element of a sorted element that has be rotated at one pivot point.  
-The first approach I used is the brute force search through the array in O(N), but I think it is possible to do it in O(log N) since the array is originally sorted.  
-I tried to solve this problem using the C++ language [Problem link](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)  
+The goal of this challenge is to code a function that returns the minimum element of a sorted element that has be rotated at one pivot point.
+The first approach I used is the brute force search through the array in O(N), but I think it is possible to do it in O(log N) since the array is originally sorted.
+I tried to solve this problem using the C++ language [Problem link](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
 As of October 9<sup>th</sup>, 2019:
 - [x] I wrote a solution brute forcing the problem.
 - [x] Submit solution. Got right in 4 ms with 8.9 MB
@@ -84,16 +84,16 @@ As of October 9<sup>th</sup>, 2019:
 - [x] Problem solved
 
 ### Pancake Sort
-The goal of this challenge is to sort an array of integers using only flips, meaning flipping the n<sup>th</sup> first integers of the array. The output is the sequence of those k, with k meaning that the k<sup>th</sup> first integers of the array will be flipped.  
-I tried to solve this problem using the C language [Problem link](https://leetcode.com/problems/pancake-sorting/)  
+The goal of this challenge is to sort an array of integers using only flips, meaning flipping the n<sup>th</sup> first integers of the array. The output is the sequence of those k, with k meaning that the k<sup>th</sup> first integers of the array will be flipped.
+I tried to solve this problem using the C language [Problem link](https://leetcode.com/problems/pancake-sorting/)
 As of October 9<sup>th</sup>, 2019:
 - [x] I wrote a naive solution in O(N<sup>2</sup>).
 - [x] Submit solution. Got right in 4 ms with 7.4 MB
 - [x] Problem solved
 
 ### Longest Continuous Increasing Subsequence
-The goal of this challenge is to code a function that computes the length of the longest continuously increasing subsequence in a given array.  
-I tried to solve this problem using the C++ language [Problem link](https://leetcode.com/problems/longest-continuous-increasing-subsequence)  
+The goal of this challenge is to code a function that computes the length of the longest continuously increasing subsequence in a given array.
+I tried to solve this problem using the C++ language [Problem link](https://leetcode.com/problems/longest-continuous-increasing-subsequence)
 As February 3<sup>rd</sup>, 2020:
 - [x] Write a solution that works on the sample input. The solution I have is in O(n) time complexity and O(1) memory
 - [x] Submit solution. Got correct in 0 ms with 9.4 MB
@@ -101,9 +101,9 @@ As February 3<sup>rd</sup>, 2020:
 
 ### Increasing Triplet Subsequence
 The goal of this challenge is to verify that there exists a triplet of numbers in an array such that:
-$arr[i] < arr[j] < arr[k] with 0 <= i < j < k <= n-1$  
-The solution should run in O(n) time with O(1) memory.  
-I tried to solve this problem using the C++ language [Problem link](https://leetcode.com/problems/increasing-triplet-subsequence)  
+$arr[i] < arr[j] < arr[k] with 0 <= i < j < k <= n-1$
+The solution should run in O(n) time with O(1) memory.
+I tried to solve this problem using the C++ language [Problem link](https://leetcode.com/problems/increasing-triplet-subsequence)
 As of February 5<sup>th</sup>, 2020:
 - [x] Write the brute-force solution. Run in O(n<sup>3</sup>) with O(1) memory
 - [x] Submit solution. Got correct in 148 ms with 9.1 MB
@@ -114,9 +114,9 @@ As of February 5<sup>th</sup>, 2020:
 ### Queens that can attack the king
 The goal of this challenge is to code a function that output the coordinates of
 queens on a chessboard which can directly attack the king. There should not be
-any obstacle on the path between the queens and the king.  
+any obstacle on the path between the queens and the king.
 I tried to solve this problem using the Python language [Problem
-link](https://leetcode.com/problems/queens-that-can-attack-the-king)  
+link](https://leetcode.com/problems/queens-that-can-attack-the-king)
 As of February 20<sup>th</sup>, 2020:
 - [X] Write a first solution using the BFS. The solution is O(1) in time
       complexity as at most 7 * 3 squares will be put into the queue. The space
@@ -127,9 +127,9 @@ As of February 20<sup>th</sup>, 2020:
 ### Find the duplicate number
 The goal of this challenge is to implement a function that can find the number
 that was duplicated in a array of size N + 1 containing only numbers from 1 to
-N.  
+N.
 I tried to solve this problem using the C and Python languages [Problem
-link](https://leetcode.com/problems/find-the-duplicate-number/)  
+link](https://leetcode.com/problems/find-the-duplicate-number/)
 As of August 6<sup>th</sup>, 2020:
 - [X] Write a first solution. This solution is using the Floyd's tortoise and
       hare algorithm to find the cycle in the linked list represented by the
@@ -144,9 +144,9 @@ As of August 6<sup>th</sup>, 2020:
 ### Trapping rain water
 The goal of the challenge is to find the amount of water that could be trapped
 in between walls of a certain height. We are given the array of those heights
-and must find the volume of water that could be trapped in between the walls.  
+and must find the volume of water that could be trapped in between the walls.
 I tried to solve this problem using the Python, C and C++ languages [Problem
-link](https://leetcode.com/problems/trapping-rain-water)  
+link](https://leetcode.com/problems/trapping-rain-water)
 As of March 5<sup>th</sup>, 2020:
 - [X] Find a first solution. A smart brute-force that iterates through the
       number in order of height then indices and find surrounding bars. The
@@ -164,9 +164,9 @@ As of March 5<sup>th</sup>, 2020:
 
 ### Plus one
 The goal of this challenge is to add one to a number represented by an array of
-its digits.  
+its digits.
 I tried to solve this problem using the C++ language [Problem
-link](https://leetcode.com/problems/plus-one/)  
+link](https://leetcode.com/problems/plus-one/)
 As of March 14<sup>th</sup>, 2020:
 - [X] Find a first working solution. I simply run through the array storing the
       carry-on one digit to the next. The algo runs in O(N) times as it goes
@@ -180,9 +180,9 @@ As of March 14<sup>th</sup>, 2020:
 The goal of this challenge is to code a function that would return the index of
 the max number in the array formatted as a mountain, which means that, if index
 i is the peak of the mountain then A[0] < A[1] < ... < A[i-1] < A[i] > A[i+1] >
-... > A[n-2] > A[n-1]  
+... > A[n-2] > A[n-1]
 I tried to solve this problem using the Python language [Problem
-link](https://leetcode.com/problems/peak-index-in-a-mountain-array/)  
+link](https://leetcode.com/problems/peak-index-in-a-mountain-array/)
 As of March 14<sup>th</sup>, 2020:
 - [X] Find a first working solution. I brute-forced the problem by simply
       passing over each element and finding the peak. It is O(N) time complexity
@@ -195,9 +195,9 @@ As of March 14<sup>th</sup>, 2020:
 
 ### Merge sorted arrays
 The goal of this challenge is to code a function that merges two sorted arrays
-into one of the array.  
+into one of the array.
 I tried to solve this problem using the C language [Problem
-link](https://leetcode.com/problems/merge-sorted-array/)  
+link](https://leetcode.com/problems/merge-sorted-array/)
 As of March 16<sup>th</sup>, 2020:
 - [X] Find a first working solution. I just made a copy of the first array and
       use two pointers, one on each array, adding numbers one after the other
@@ -215,9 +215,9 @@ The goal of this challenge is to code a function that can find the index of the
 first target element and the index of the last in a sorted array. The target
 element is an integer that can be duplicated many times or not exist at all in
 the array. The goal is to find an algorithm that can perform the search in O(log
-N) time.  
+N) time.
 I tried to solve this problem using the C language [Problem
-link](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)  
+link](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
 As of March 17<sup>th</sup>, 2020:
 - [X] Find a first working solution. I decided to go with ternary search making
       the search for one of the element run in O(log N) time but then starting
@@ -233,11 +233,11 @@ As of March 17<sup>th</sup>, 2020:
 ### Backspace string compare
 The of this challenge is to code a function that compares 2 strings with a
 special character '#' is used to represent a backspace. The goal is to implement
-this comparison in O(N) time and using O(1) extra space.  
+this comparison in O(N) time and using O(1) extra space.
 This problem is featured of the [30-day leetcoding of April
-2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)
 I tried to solve this problem using the C++, C and Python languages [Problem
-link](https://leetcode.com/problems/backspace-string-compare/)  
+link](https://leetcode.com/problems/backspace-string-compare/)
 As of April 9<sup>th</sup>, 2020:
 - [X] Find a first working solution. I decided to use 2 pointers to modify the
       string in place and then do the comparison to the two modified string with
@@ -255,11 +255,11 @@ As of April 9<sup>th</sup>, 2020:
 The goal of this challenge is, given an array of integers, move all the zeroes
 of the array to the end of the array. The algorithm should keep the original
 ordering of the element, be done in-place and optimize the number of operation
-to be done.  
+to be done.
 This problem featured in the the [30-day leetcoding of April
-2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)
 I tried to solve this problem with the C++ language [Problem
-link](https://leetcode.com/problems/move-zeroes/)  
+link](https://leetcode.com/problems/move-zeroes/)
 As of April 4<sup>th</sup>, 2020:
 - [X] Find a first working solution. I decided to use a 2-pointers solution. One
       moving slower everytime a zero is found and then swap the non-zero
@@ -270,10 +270,10 @@ As of April 4<sup>th</sup>, 2020:
 
 ### Perform string shifts
 The goal of this challenge is to perform a serie of string shifts on a given
-string and return the result of the application of those shifts on the string.  
+string and return the result of the application of those shifts on the string.
 The problem featured in the [30-day leetcoding of April
-2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
-I tried to solve this problem using the C++ language [Problem link]()  
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)
+I tried to solve this problem using the C++ language [Problem link]()
 As of April 14<sup>th</sup>, 2020:
 - [X] Find a first working solution. I just summed up the shifts, considering
       left shifts as moving a cursor to the right, so a positive move, and
@@ -289,11 +289,11 @@ As of April 14<sup>th</sup>, 2020:
 The goal of this challenge is, given an array of integers, to compute for each
 element, the product of all the integers in the array without this element. That
 is to say res[i] = product of all nums[j] where j != i.
-The problem should be solved in O(N) without using division.  
+The problem should be solved in O(N) without using division.
 The problem featured in the [30-day leetcoding of April
-2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)
 I tried to solve this problem using the C language [Problem
-link](https://leetcode.com/problems/product-of-array-except-self/)  
+link](https://leetcode.com/problems/product-of-array-except-self/)
 As of April 15<sup>th</sup>, 2020:
 - [X] Find a first working solution. I used two arrays to store the prefix and
       suffix products of the nums array and then the result res[i] is basically
@@ -316,11 +316,11 @@ As of April 15<sup>th</sup>, 2020:
 The goal of this challenge is to determine if a given string containing only the
 characters '(', ')' and '*', where '*' can either be '(', ')' or the empty
 string, can be made valid (ie: every '(' has a corresponding ')' further down in
-the string)  
+the string)
 The problem featured in the [30-day leetcoding of April
-2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)
 I tried to solve this problem using the Python language [Problem
-link](https://leetcode.com/problems/valid-parenthesis-string/)  
+link](https://leetcode.com/problems/valid-parenthesis-string/)
 As of April 17<sup>th</sup>, 2020:
 - [X] Find a first working solution. I used two stacks holding the indices of
       opening parenthesis and stars and went through the string pop the stacks
@@ -339,11 +339,11 @@ As of April 17<sup>th</sup>, 2020:
 ### Search in rotated sorted array
 The goal of this challenge is to search for a given element in a rotated sorted
 array. It means that the array was sorted and then rotated at a given index. The
-algorithm should run in O(log N).  
+algorithm should run in O(log N).
 The problem featured in the [30-day leetcoding of April
-2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)
 I tried to solve this problem using the C++ language [Problem
-link](https://leetcode.com/problems/search-in-rotated-sorted-array/)  
+link](https://leetcode.com/problems/search-in-rotated-sorted-array/)
 As of April 19<sup>th</sup>, 2020:
 - [X] Find a first working solution. The run time complexity constraint forces
       me to use binary search on the array. In the algorithm I then consider the
@@ -357,10 +357,10 @@ As of April 19<sup>th</sup>, 2020:
 The goal of this challenge is to code a function that uses the given API of a
 binary matrix to find the leftmost column that contains at least a one. It is an
 interactive problem and the function should less than 1000 requests with
-matrices that can be as big as 100x100.  
+matrices that can be as big as 100x100.
 The problem featured in the [30-day leetcoding of April
-2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
-I tried to solve this problem using the C++ language [Problem link]()  
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)
+I tried to solve this problem using the C++ language [Problem link]()
 As of April 21<sup>st</sup>, 2020:
 - [X] Find a first working solution. My idea was to do binary search on each row
       and return the minimum column index found when running over all the
@@ -379,9 +379,9 @@ As of April 21<sup>st</sup>, 2020:
 
 ### First Bad Version
 The goal of this challenge is to code a function that returns the first bad
-version of a software by using a simple `isBadVersion` API.  
+version of a software by using a simple `isBadVersion` API.
 I tried to solve this problem using the C language [Problem
-link](https://leetcode.com/problems/first-bad-version/)  
+link](https://leetcode.com/problems/first-bad-version/)
 As of May 1<sup>st</sup>, 2020:
 - [X] Find a first working solution. This is a simple binary search problem. The
       runtime of my algorithm is therefore O(log N). No extra space is needed,
@@ -391,9 +391,9 @@ As of May 1<sup>st</sup>, 2020:
 
 ### Ransom Note
 The goal of this challenge is to determine if it is possible to build a ransom
-note from a given set of magazine's lowercase letters.  
+note from a given set of magazine's lowercase letters.
 I tried to solve this problem using the Python language [Problem
-link](https://leetcode.com/problems/ransom-note/)  
+link](https://leetcode.com/problems/ransom-note/)
 As of May 3<sup>rd</sup>, 2020:
 - [X] Find a first working solution. I simply used a hash map to count the
       frequencies of letters in the magazine's letters and then ran through the
@@ -409,9 +409,9 @@ As of May 3<sup>rd</sup>, 2020:
 
 ### First Unique Character in a string
 The goal of this challenge is to retrieve the first non-repeating character in a
-given string.  
+given string.
 I tried to solve this problem using the C++ language [Problem
-link](https://leetcode.com/problems/first-unique-character-in-a-string/)  
+link](https://leetcode.com/problems/first-unique-character-in-a-string/)
 As of May 5<sup>th</sup>, 2020:
 - [X] Find a first working solution. I used a hash table approach to store the
       frequencies of each character in the string. In a second pass over the
@@ -425,9 +425,9 @@ As of May 5<sup>th</sup>, 2020:
 
 ### Majority Element
 The goal of this challenge is to retrieve, in a given array, the element that
-appears more than floor(n/2). This element is guaranteed to exist.  
+appears more than floor(n/2). This element is guaranteed to exist.
 I tried to solve this problem using the C++ language [Problem
-link](https://leetcode.com/problems/majority-element/)  
+link](https://leetcode.com/problems/majority-element/)
 As of May 6<sup>th</sup>, 2020:
 - [X] Find a first working solution. I first used a hash table approach to count
       the number of occurences of each element in the array. After, I would run
@@ -445,9 +445,9 @@ As of May 6<sup>th</sup>, 2020:
 ### Flood fill
 The goal of this challenge is to apply a transformation to an image by flood
 filling with a new color, pixels of the same original color starting from a
-point specified by coordinates.  
+point specified by coordinates.
 I tried to solve this problem using the Rust language [Problem
-link](https://leetcode.com/problems/flood-fill/)  
+link](https://leetcode.com/problems/flood-fill/)
 As of May 12<sup>th</sup>, 2020:
 - [X] Find a first working solution. I decided to use a BFS to find all
       neighboring pixels that needs to be changed around the start position. At
@@ -461,9 +461,9 @@ As of May 12<sup>th</sup>, 2020:
 ### Single element in a sorted array
 The goal of this challenge is to find the only non-duplicated element in a
 sorted array where every elements are duplicated except one. The algorithm
-should run in O(log N) using O(1) space.  
+should run in O(log N) using O(1) space.
 I tried to solve this problem using the C language [Problem
-link](https://leetcode.com/problems/single-element-in-a-sorted-array/)  
+link](https://leetcode.com/problems/single-element-in-a-sorted-array/)
 As of May 12<sup>th</sup>, 2020:
 - [X] Find a first working solution. Since we have a constraint on the running
       time of the algorithm at O(log N) we cannot use the usual XOR trick. We
@@ -479,9 +479,9 @@ As of May 12<sup>th</sup>, 2020:
 
 ### Permutation in String
 The goal of this challenge is to check if a given string contains or not a
-permutation of another given string.  
+permutation of another given string.
 I tried to solve this problem using the C++ language [Problem
-link](https://leetcode.com/problems/permutation-in-string/)  
+link](https://leetcode.com/problems/permutation-in-string/)
 As of May 19<sup>th</sup>, 2020:
 - [X] Find a first working solution. I used an array to keep the number of
       occurences of each letter in the first string and then ran through the
@@ -496,9 +496,9 @@ As of May 19<sup>th</sup>, 2020:
 
 ### Interval list intersections
 The goal of this challenge is to build the intersection between two list of
-intervals given in argument.  
+intervals given in argument.
 I tried to solve this problem using the C++ language [Problem
-link](https://leetcode.com/problems/interval-list-intersections/)  
+link](https://leetcode.com/problems/interval-list-intersections/)
 As of May 25<sup>th</sup>, 2020:
 - [X] Find a first working solution. I used two pointers, one on each list, to
       run through the two lists and merge the interval together taking the max
@@ -512,9 +512,9 @@ As of May 25<sup>th</sup>, 2020:
 
 ### Reverse string
 The goal of this challenge is to reverse a given string in place. For example,
-the string "hello" should become "olleh".  
+the string "hello" should become "olleh".
 I tried to solve this problem using the C language [Problem
-link](https://leetcode.com/problems/reverse-string/)  
+link](https://leetcode.com/problems/reverse-string/)
 As of June 4<sup>th</sup>, 2020:
 - [X] Find a first working solution. The algorithm is very simple as we just
       need to run through the string with two pointers, whenever the pointers
@@ -529,9 +529,9 @@ As of June 4<sup>th</sup>, 2020:
 The goal of this challenge is to determine if, given two strings, one is a
 subsequence of the other. We thus need to check whether one string's characters
 are found in the same order, but not necessarily contiguously, in the second
-string.  
+string.
 I tried to solve this challenge using the C language [Problem
-link](https://leetcode.com/problems/is-subsequence/)  
+link](https://leetcode.com/problems/is-subsequence/)
 As of June 9<sup>th</sup>, 2020:
 - [X] Find a first working solution. I just used one pointer on each string
       running through the longest. When the characters of the 2 strings would
@@ -545,9 +545,9 @@ As of June 9<sup>th</sup>, 2020:
 ### Search Insert Position
 The goal of this challenge is to find an element in a given sorted array or, if the
 element is not in the list, find the position where the element would be
-inserted. The element of the given list are supposed to be distinct.  
+inserted. The element of the given list are supposed to be distinct.
 I tried to solve this challenge using the Python language [Problem
-link](https://leetcode.com/problems/search-insert-position/)  
+link](https://leetcode.com/problems/search-insert-position/)
 As of June 10<sup>th</sup>, 2020:
 - [X] Find a first working solution. The naive solution is very straightforward.
       Since the array is sorted the use of binary search is obvious. However,
@@ -561,9 +561,9 @@ As of June 10<sup>th</sup>, 2020:
 The goal of this challenge is to order an array of colors such that every color
 is gathered together. The array can contain three colors red, white and blue
 which are represented by integers 0, 1 and 2. The sorting should be done
-in-place and one pass over the array.  
+in-place and one pass over the array.
 I tried to solve this problem using the C++ language [Problem
-link](https://leetcode.com/problems/sort-colors/)  
+link](https://leetcode.com/problems/sort-colors/)
 As of June 12<sup>th</sup>, 2020:
 - [X] Find a first working solution. I decided to use two pointers, one pointing
       at the right most index of the red and the second pointing at the
@@ -580,9 +580,9 @@ As of June 12<sup>th</sup>, 2020:
 
 ### Island Perimeter
 The goal of this challenge is to compute the perimeter of an island represent by
-adjacent ones in a matrix of 0s.  
+adjacent ones in a matrix of 0s.
 I tried to solve this problem using the Python language [Problem
-link](https://leetcode.com/problems/island-perimeter/)  
+link](https://leetcode.com/problems/island-perimeter/)
 As of July 7<sup>th</sup>, 2020:
 - [X] Find a first working solution. The trick is simply to go through every
       cell of the matrix and add 4 for every land we find, then if looking to
@@ -595,9 +595,9 @@ As of July 7<sup>th</sup>, 2020:
 ### 3 Sum
 The goal of this challenge is to find in a given array all the triplets of
 numbers that sum up to 0. That is to say all the triplets of number a, b and c
-such that a + b + c = 0. The answer should not contain any duplicated triplets.  
+such that a + b + c = 0. The answer should not contain any duplicated triplets.
 I tried to solve this problem using the Rust language [Problem
-link](https://leetcode.com/problems/3sum/)  
+link](https://leetcode.com/problems/3sum/)
 As of July 8<sup>th</sup>, 2020:
 - [X] Find a first working solution. I used a two-pointers approach to solve
       this problem. This approach requires a sorting of the array which takes
@@ -614,9 +614,9 @@ As of July 8<sup>th</sup>, 2020:
 ### Two Sum
 The goal of this challenge is to find a pair of numbers in a given array that
 sum up to a given target integer. That is to say we want to find (i, j) so that
-i != j and A[i] + A[j] = target.  
+i != j and A[i] + A[j] = target.
 I tried to solve this problem using the Python language [Problem
-link](https://leetcode.com/problems/two-sum/)  
+link](https://leetcode.com/problems/two-sum/)
 As of July 9<sup>th</sup>, 2020:
 - [X] Find a first working solution. I used a hashtable to store the numbers and
       their index. If during the loop over the array we are able to find the
@@ -630,9 +630,9 @@ As of July 9<sup>th</sup>, 2020:
 ### Reverse words in a string
 The goal of this challenge is to reverse the order of the words in a given
 string. Doing so we should also erase any trailing spaces and spaces that were
-duplicated. C programs should perform the operation using constant space.  
+duplicated. C programs should perform the operation using constant space.
 I tried to solve this problem using the C language [Problem
-link](https://leetcode.com/problems/reverse-words-in-a-string/)  
+link](https://leetcode.com/problems/reverse-words-in-a-string/)
 As of July 15<sup>th</sup>, 2020:
 - [X] Find a first working solution. I decided to approach the problem in 2
       steps. First I would reverse the all string and then reverse again the
@@ -646,9 +646,9 @@ As of July 15<sup>th</sup>, 2020:
 ### Top K Frequent Element
 The goal of this challenge is to find the top K most frequent numbers in a given
 list that can therefore contain duplicates. The solution must be at most O(N
-log N) complexity.  
+log N) complexity.
 I tried to solve this problem using the C++ language [Problem
-link](https://leetcode.com/problems/top-k-frequent-elements/)  
+link](https://leetcode.com/problems/top-k-frequent-elements/)
 As of July 17<sup>th</sup>, 2020:
 - [X] Find a first working solution. I decided to use hash map and then a queue
       to solve this problem. First I go over every number in the list adding the
@@ -663,9 +663,9 @@ As of July 17<sup>th</sup>, 2020:
 
 ### Valid Palindrome
 The goal of this challenge is to determine if a given sentence is palindromic,
-taking into account the alphanumeric characters of the sentence.  
+taking into account the alphanumeric characters of the sentence.
 I tried to solve this problem using the C language [Problem
-link](https://leetcode.com/problems/valid-palindrome/)  
+link](https://leetcode.com/problems/valid-palindrome/)
 As of August 3<sup>rd</sup>, 2020:
 - [X] Find a first working solution. The problem is a pretty simple one to
       solve. Just use 2 pointers, one starting at the beginning, the other
@@ -679,9 +679,9 @@ As of August 3<sup>rd</sup>, 2020:
 ### Find all the duplicate numbers
 The goal of this challenge is to get all duplicated numbers that are present
 inside a given array. The algorithm should run in O(N) with O(1) extra space
-needed.  
+needed.
 I tried to solve this problem using the Python language [Problem
-link](https://leetcode.com/problems/find-all-duplicates-in-an-array/)  
+link](https://leetcode.com/problems/find-all-duplicates-in-an-array/)
 As of August 5<sup>th</sup>, 2020:
 - [X] Find a first working solution. The problem is simple if we remove the
       constraints for now. Using a HashTable we can thus check if a given number
@@ -701,9 +701,9 @@ As of August 5<sup>th</sup>, 2020:
 The goal of this problem is to compute the h-index of a scientific contributor
 given a list of paper's citations. A scientific contributor is said to have
 index h if h of their contributions have at least h citations and the remaining
-N - h papers have at most h citations.  
+N - h papers have at most h citations.
 I tried to solve this problem using the C++ language [Problem
-link](https://leetcode.com/problems/h-index/)  
+link](https://leetcode.com/problems/h-index/)
 As of August 11<sup>th</sup>, 2020:
 - [X] Find a first working solution. Indeed to determine this h we need to sort
       the array by number of citations. However, in order to avoid the lower
@@ -716,3 +716,6 @@ As of August 11<sup>th</sup>, 2020:
 - [ ] It is possible to remove extra space needed but at the cost of more
       computation.
 - [X] Problem solved
+
+### Contains duplicate III
+I tried to solve this problem using the Python language [Problem link](https://leetcode.com/problems/contains-duplicate-iii/)
