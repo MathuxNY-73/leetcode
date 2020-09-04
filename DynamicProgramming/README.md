@@ -311,3 +311,6 @@ As of February 17<sup>th</sup>, 2020:
 - [ ] Find a second solution. Based on the constraints of the problem it seems that we need to test all possible combination possible meaning that the complexity will soar up to O(2<sup>N</sup>). Using dynamic programming we can avoid resolving subproblems. The end solution takes O(N * 2<sup>N</sup>) and O(2<sup>N</sup>) space.
 - [X] Submit solution. Got correct in 8 ms with 9.8 MB
 - [X] Problem solved.
+
+### Partition labels
+I tried to solve this problem using the C++ language [Problem link](https://leetcode.com/problems/partition-labels/submissions/)
