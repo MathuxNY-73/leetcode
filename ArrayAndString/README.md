@@ -719,3 +719,10 @@ As of August 11<sup>th</sup>, 2020:
 
 ### Contains duplicate III
 I tried to solve this problem using the Python language [Problem link](https://leetcode.com/problems/contains-duplicate-iii/)
+
+### Word Pattern II
+I tried to solve this problem using the C++ language [Problem link](https://leetcode.com/problems/word-pattern-ii/).
+As of February 20<sup>th</sup>, 2021:
+ - Find a solution using backtracking taking O() time with O() space.
+ - Submit solution. Got correct in 0 ms with 7.3 MB
+ - Problem solved
