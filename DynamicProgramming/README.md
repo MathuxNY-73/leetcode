@@ -314,3 +314,14 @@ As of February 17<sup>th</sup>, 2020:
 
 ### Partition labels
 I tried to solve this problem using the C++ language [Problem link](https://leetcode.com/problems/partition-labels/submissions/)
+As of February 18<sup>th</sup>, 2021:
+ - Find solution that runs in O(n) time with O(n) space
+ - Submit solution. Got correct in 4 ms with 6.8 MB
+ - Problem solved
+
+### Combination sum III
+I tried to solve this problem using the C++ language [Problem link](https://leetcode.com/problems/combination-sum-ii/)
+As of February 19<sup>th</sup>, 2021:
+ - Find solution that runs in O(2<sup>n</sup>) time with O(n) space.
+ - Submit solution. Got correct in 8 ms with 11.4 MB
+ - Problem solved
