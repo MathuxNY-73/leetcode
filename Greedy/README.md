@@ -4,9 +4,9 @@ The repsitory contains the problems related to Greedy algorithm I have tried to 
 ### Meeting Room II
 The goal of this problem is to determine the minimum number of meeting rooms
 needed to accomodate every meetings given by an interval with a start and an end
-date.  
+date.
 I tried to solve this problem using the Python language [Problem
-link](https://leetcode.com/problems/meeting-rooms-ii/)  
+link](https://leetcode.com/problems/meeting-rooms-ii/)
 As of March 12<sup>th</sup>, 2020:
 - [X] Find a first solution. I used a priority queue to determine the number of
       meeting occuring at the same time. The algo runs in O(N log N)
@@ -16,11 +16,11 @@ As of March 12<sup>th</sup>, 2020:
 
 ### Best time to buy and sell stock II
 The goal of this challenge is, given an array of prices for each day, find the
-maximum profit that can be made by buying and selling stocks at those prices.  
+maximum profit that can be made by buying and selling stocks at those prices.
 This problem featured in the the [30-day leetcoding of April
-2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)
 I tried to solve this problem using the Python language [Problem
-link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)  
+link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)
 As of April 5<sup>th</sup>, 2020:
 - [X] Find a first working solution. I decided to simply use the peak and valley
       approach. When the trend of number starts going down then simply add the
@@ -38,9 +38,9 @@ the last remaining stone after applying the following process:
   - if $x = y$ then the stones
   - if $x \neq y$ then y becomes a stone of weight $y-x$
 The problem featured in the [30-day leetcoding of April
-2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)
 I tried to solve this problem using the C++ language [Problem
-link](https://leetcode.com/problems/last-stone-weight/)  
+link](https://leetcode.com/problems/last-stone-weight/)
 As of April 12<sup>th</sup>, 2020:
 - [X] Find a first working solution. I used a priority queue to keep the
       element sorted. The time complexity for building a heap is O(N log N), the
@@ -55,9 +55,9 @@ As of April 12<sup>th</sup>, 2020:
 
 ### Best time to buy and sell stock
 The goal of this challenge is, given an array of prices for each day, find the
-maximum profit that can be made by buying and selling stocks only once at those prices.  
+maximum profit that can be made by buying and selling stocks only once at those prices.
 I tried to solve this problem using the Python language [Problem
-link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)  
+link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 As of April 15<sup>th</sup>, 2020:
 - [X] Find a first working solution. Following on the peak and valley approach I
       run through the array to find the maximum difference between peak and
@@ -69,11 +69,11 @@ As of April 15<sup>th</sup>, 2020:
 ### Jump Game
 The goal of this challenge is to determine if it is possible to jump to the last
 element of an array where each integer represent the maximum length of the jump
-we can make from this index.  
+we can make from this index.
 The problem featured in the [30-day leetcoding of April
-2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)
 I tried to solve this problem using the C++ language [Problem
-link](https://leetcode.com/problems/jump-game/)  
+link](https://leetcode.com/problems/jump-game/)
 As of April 25<sup>th</sup>, 2020:
 - [X] Find a first working solution. In my solution, I maintain a max variable
       which holds the maximum index that we can reach running through every
@@ -86,9 +86,9 @@ As of April 25<sup>th</sup>, 2020:
 
 ### Remove K digits
 The goal of this challenge is to compute the smallest possible integer we can
-form by removing exactly k digits from the number.  
+form by removing exactly k digits from the number.
 I tried to solve this problem using the C++ language [Problem
-link](https://leetcode.com/problems/remove-k-digits/)  
+link](https://leetcode.com/problems/remove-k-digits/)
 As of May 15<sup>th</sup>, 2020:
 - [X] Find a first working solution. I run through the digits starting from the
       left and I keep track of the digits I want to remove to form a increasing
@@ -101,9 +101,9 @@ As of May 15<sup>th</sup>, 2020:
 The goal of this challenge is to compute the minimum transportation cost for
 sending N people to the city A or B. Each person has a cost of transportation to
 go to city A and to city B. We must however send the same number of people to
-each city.  
+each city.
 I tried to solve this problem using the C++ language [Problem
-link](https://leetcode.com/problems/two-city-scheduling/)  
+link](https://leetcode.com/problems/two-city-scheduling/)
 As of June 3<sup>rd</sup>, 2020:
 - [X] Find a first working solution. I sorted the element of the array by their
       difference in cost between city A and B. That way people for whom it is
@@ -118,9 +118,9 @@ As of June 3<sup>rd</sup>, 2020:
 ### Queue reconstruction by height
 The goal of this challenge is, given an array of people represented by their
 heights and the number of people with height greater of equal to theirs and that
-are in front of them in the queue, to reconstruct the original queue of people.  
+are in front of them in the queue, to reconstruct the original queue of people.
 I tried to solve this problem using the C++ language [Problem
-link](https://leetcode.com/problems/queue-reconstruction-by-height/)  
+link](https://leetcode.com/problems/queue-reconstruction-by-height/)
 As of June 6<sup>th</sup>, 2020:
 - [X] Find a first working solution. Using a hint, I was able to find a working
       algorithm based on sorting. Thus we first need to sort the people array by
@@ -132,4 +132,11 @@ As of June 6<sup>th</sup>, 2020:
       queue.
 - [X] Submit solution. Got correct in 80 ms with 12.4 MB
 - [ ] Find a solution that only takes O(N log N)
+- [X] Problem solved
+
+### Car poolinng
+I tried to solve this problem using the C++ language [Prolem link](https://leetcode.com/problems/car-pooling/).
+As March 13<sup>th</sup>, 2021:
+- [X] Find a first working solution. I just put the trips in an array setting starts as negative capacity and ends as positive capacity. Then I sort and there it goes. It takes O(N log N) times using O(N) space.
+- [X] Submit solution. Got correct in 12 ms with 9.5 MB
 - [X] Problem solved
