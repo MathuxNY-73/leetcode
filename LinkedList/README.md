@@ -2,8 +2,8 @@
 The repsitory contains the problems related to Linked List I have tried to solve on the leetcode [website](https://leetcode.com/problemset/all/)
 
 ### Merge K Sorted Lists
-The goal is to implement a function that merges K sorted single linked lists. The complexity of the solution is a least O(N*log(k)) where N is the total number of nodes.  
-I tried to solve this problem using the C++ language. [Problem link](https://leetcode.com/problems/merge-k-sorted-lists/description/)  
+The goal is to implement a function that merges K sorted single linked lists. The complexity of the solution is a least O(N*log(k)) where N is the total number of nodes.
+I tried to solve this problem using the C++ language. [Problem link](https://leetcode.com/problems/merge-k-sorted-lists/description/)
 As of October 2<sup>nd</sup>, 2018:
 - [X] Find a first working solution on the sample input
 - [X] Submit solution. Got correct
@@ -12,8 +12,8 @@ As of October 2<sup>nd</sup>, 2018:
 - [X] Problem solved
 
 ### Remove Nth Node From End of List
-The goal of this challenge is to remove the n<sup>th</sup> starting from the end of a linked list.  
-I tried to solve this problem using the C++ language [Problem link](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)  
+The goal of this challenge is to remove the n<sup>th</sup> starting from the end of a linked list.
+I tried to solve this problem using the C++ language [Problem link](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
 As of October 14<sup>th</sup>, 2019:
 - [x] I wrote a recursive solution.
 - [x] Submit solution. Got right in 0 ms with 8.5 MB
@@ -24,9 +24,9 @@ As of October 14<sup>th</sup>, 2019:
 ### Copy list with random pointers
 The goal of this problem is to implement a function that does a deep copy of a
 linked list where nodes hold a next node pointer as well as a random node
-pointer, that can point to any node in the linked list.  
+pointer, that can point to any node in the linked list.
 I tried to solve this problem using the C++ language [Problem
-link](https://leetcode.com/problems/copy-list-with-random-pointer/)  
+link](https://leetcode.com/problems/copy-list-with-random-pointer/)
 As of March 24<sup>th</sup>, 2020:
 - [X] Find a first working solution. I decided to go with a solution that
       intertwine nodes from the original list with nodes from the new list so
@@ -39,9 +39,9 @@ As of March 24<sup>th</sup>, 2020:
 
 ### Merge Two Sorted Lists
 The goal of this problem is to implemented a function that merges 2 sorted
-singly linked list.  
+singly linked list.
 I tried to solve this problem using the C and Python language [Problem
-link](https://leetcode.com/problems/merge-two-sorted-lists)  
+link](https://leetcode.com/problems/merge-two-sorted-lists)
 As of March 25<sup>th</sup>, 2020:
 - [X] Find a first working solution. I decided to go with function that creates
       a new list instead of just using the node from the previous ones. Thus it
@@ -54,11 +54,11 @@ As of March 25<sup>th</sup>, 2020:
 
 ### Middle of the Linked List
 The goal of this challenge is find and return the middle node of a given linked
-list.  
+list.
 The problem featured in the [30-day leetcoding of April
-2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)  
+2020](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)
 I tried to solve this problem using the C language [Problem
-link](https://leetcode.com/problems/middle-of-the-linked-list/)  
+link](https://leetcode.com/problems/middle-of-the-linked-list/)
 As of April 8<sup>th</sup>, 2020:
 - [X] Find a first working solution. I went with the 2 pointers solution. I have
       one pointer moving through the list twice as fast as the other. When the
@@ -71,9 +71,9 @@ As of April 8<sup>th</sup>, 2020:
 ### Delete Node in a linked-list
 The goal of this challenge is to implement a function that will delete a given
 node from a singly linked-list. The `delete` function only has access to the
-node to be deleted.  
+node to be deleted.
 I tried to solve this problem using the C language [Problem
-link](https://leetcode.com/problems/delete-node-in-a-linked-list/)  
+link](https://leetcode.com/problems/delete-node-in-a-linked-list/)
 As of June 2<sup>nd</sup>, 2020:
 - [X] Find a first working solution. I just assigned the value of the next node
       in the list to the current node and change the next pointer to point to
@@ -87,9 +87,9 @@ As of June 2<sup>nd</sup>, 2020:
 
 ### Flatten multilevel doubly linked list
 The goal of this challenge is to flatten a multilevel doubly linked list. Each
-node has a child node that links to another doubly linked list.  
+node has a child node that links to another doubly linked list.
 I tried to solve this problem using the C++ [Problem
-link](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/)  
+link](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/)
 As of July 10<sup>th</sup>, 2020:
 - [X] Find a first working solution. I decided to go with a stack where for each
       node I stack the next node first and then the child node. This way I am
@@ -110,9 +110,9 @@ As of July 10<sup>th</sup>, 2020:
 ### Remove Linked List Elements
 The goal of this challenge is to remove all the nodes of a linked list whose
 value equal to a given value. The nodes should be correctly deleted to avoid
-memory leaks.  
+memory leaks.
 I tried to solve this problem using the C++ language [Problem
-link](https://leetcode.com/problems/remove-linked-list-elements/)  
+link](https://leetcode.com/problems/remove-linked-list-elements/)
 As of July 20<sup>th</sup>, 2020:
 - [X] Find a first working solution. The problem is very simple. I just go
       through the list and check every nodes next neighbor. If the next node is
@@ -123,3 +123,10 @@ As of July 20<sup>th</sup>, 2020:
       is O(1) as we do not need extra space.
 - [X] Submit solution. Got correct in 28 ms with 13.7 MB
 - [X] Problem solved.
+
+### Insert into a sorted circular linked list
+I tried to solve this problem using the C++ language [Problem link](https://leetcode.com/problems/insert-into-a-sorted-circular-linked-list)
+As of March 14<sup>th</sup>, 2021:
+ - Find a first working solution. The solution uses 2 pointers moving in the LL and once the right position is found we insert the new node between those 2 pointers. It runs in O(N) using O(1) space.
+ - Submit solution. Got correct in 4 ms with 8.1 MB
+ - Problem solved
