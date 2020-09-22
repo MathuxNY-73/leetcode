@@ -726,3 +726,10 @@ As of February 20<sup>th</sup>, 2021:
  - Find a solution using backtracking taking O() time with O() space.
  - Submit solution. Got correct in 0 ms with 7.3 MB
  - Problem solved
+
+### Majority element II
+I tried to solve this problem using the C++ language [Problem link](https://leetcode.com/problems/majority-element-ii/) .
+As of March 13<sup>th</sup>, 2021:
+ - Find a first working solution. This solution is based on my previous solution of the majority element problem. It runs through the array finding the 2 most occurring elements and check that the number of occurences of those elements is higher than n / 3. It runs in O(N) time using O(1) space
+ - Submit solution. Got correct in 8 ms with 15.7 MB
+ - Problem solved
