@@ -135,8 +135,15 @@ As of June 6<sup>th</sup>, 2020:
 - [X] Problem solved
 
 ### Car poolinng
-I tried to solve this problem using the C++ language [Prolem link](https://leetcode.com/problems/car-pooling/).
+I tried to solve this problem using the C++ language [Problem link](https://leetcode.com/problems/car-pooling/).
 As March 13<sup>th</sup>, 2021:
 - [X] Find a first working solution. I just put the trips in an array setting starts as negative capacity and ends as positive capacity. Then I sort and there it goes. It takes O(N log N) times using O(N) space.
 - [X] Submit solution. Got correct in 12 ms with 9.5 MB
 - [X] Problem solved
+
+### Gas station
+I tried to solve this problem using the C++ language [Problem link](https://leetcode.com/problems/gas-station).
+As March 15<sup>th</sup>, 2021:
+ - Find a first working solution. Going through the array the start index would be the index where the difference between gas and cost becomes positive and stays positive for the remaining of the array. Of course if the total amount of gas available is strictly smaller than the costs then it is not possible to complete the tour. The solution runs in O(N) using O(1) space.
+ - Submit solution. Got correct in 4 ms with 9.7 MB
+ - Problem solved
