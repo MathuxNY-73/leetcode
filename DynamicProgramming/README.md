@@ -325,3 +325,10 @@ As of February 19<sup>th</sup>, 2021:
  - Find solution that runs in O(2<sup>n</sup>) time with O(n) space.
  - Submit solution. Got correct in 8 ms with 11.4 MB
  - Problem solved
+
+### Find biggest range
+I tried to solve this problem using the C++ language [Problem link](https://www.algoexpert.io/questions/Largest%20Range)
+As March 16<sup>th</sup>, 2021:
+ - Find a working solution. Using a hash table I can know if a given number is in the array. Using that I can construct a range of numbers little by little. Since I am traversing the array twice the code runs with a time complexity of O(N) and I need O(N) space of the hash table.
+ - Submit solution. Got correct
+ - Problem solved
