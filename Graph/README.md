@@ -656,3 +656,12 @@ As of March 8<sup>th</sup>, 2021:
 - Find a first working solution. Used backtracking with DFS approach to test all paths possible. The runtime complexity is O(3<sup>N</sup>) using O(N) space.
 - Submit solution. Got correct in 0 ms with 7.1 MB
 - Problem solved
+
+### Minimum Tree Heights
+The goal of this challenge is to compute the list of root nodes that yield the tree of minimum height. That is to say in an acyclic graph with n nodes return the list of nodes that are roots of a tree of minimal height.
+I tried to solve this problem using the C++ language [Problem
+link](https://leetcode.com/problems/minimum-height-trees/)
+As February 13<sup>th</sup>, 2021:
+- [X] Find a first working solution. I wrote a brute-force solution that iterates over all the nodes taking them as the root of a tree. Then I compute de height of this tree using a dfs. Then I compute the minimum height and return the nodes that yielded this height.
+- [X] Submit solution. Got Time Limit Exceeded
+- [ ] Problem solved.
