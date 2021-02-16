@@ -43,13 +43,24 @@ class Solution {
 
 private:
 
-    int dfs(int root, unordered_set<int>& visited, const unordered_map<int,vector<int>>& adj) {
-        int h = 0;
-        visited.insert(root);
-        for(auto& c: adj.at(root)) {
-            if(visited.find(c) == visited.cend()) h = max(h, dfs(c, visited, adj));
+    void bfs(int n, const unordered_map<int,vector<int>>& adj, vector<int>& deg, vector<bool>& visited) {
+        queue<int> q;
+        for(auto& [k, v]: adj) {
+            if(deg[k] == 1) q.push(k);
         }
-        return h + 1;
+
+        while(!q.empty() && n > 2) {
+            int q_s = q.size();
+            while(q_s--) {
+                int cur = q.front(); q.pop();
+                if(visited[cur]) continue;
+                visited[cur]= true;
+                --n;
+                for(auto& c: adj.at(cur)) {
+                    if(--deg[c] == 1) q.push(c);
+                }
+            }
+        }
     }
 public:
     vector<int> findMinHeightTrees(int n, vector<vector<int>>& edges) {
@@ -58,27 +69,22 @@ public:
         if(n == 2) return {0, 1};
 
         unordered_map<int, vector<int>> adj;
+        vector<int> deg(n, 0);
 
         for(auto& edge: edges) {
             if(adj.find(edge[0]) == adj.cend()) adj[edge[0]] = vector<int>();
             adj[edge[0]].push_back(edge[1]);
             if(adj.find(edge[1]) == adj.cend()) adj[edge[1]] = vector<int>();
             adj[edge[1]].push_back(edge[0]);
+            ++deg[edge[0]];
+            ++deg[edge[1]];
         }
 
-        vector<int> hs(n, 0);
-        int min_h=numeric_limits<int>::max();
-        unordered_set<int> visited;
-        for(int i = 0 ; i < n ; ++i) {
-            hs[i] = dfs(i, visited, adj);
-            cout << "Rooted tree at i=" << i << " has h=" << hs[i] << "\n";
-            min_h = min(min_h, hs[i]);
-            visited.clear();
-        }
-
+        vector<bool> visited(n, false);
+        bfs(n, adj, deg, visited);
         vector<int> res;
-        for(int i = 0 ; i < n ; ++i) {
-            if(hs[i] == min_h) res.push_back(i);
+        for(int i =0 ; i < n; ++i) {
+            if(!visited[i]) res.push_back(i);
         }
 
         return res;

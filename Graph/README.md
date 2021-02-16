@@ -661,7 +661,9 @@ As of March 8<sup>th</sup>, 2021:
 The goal of this challenge is to compute the list of root nodes that yield the tree of minimum height. That is to say in an acyclic graph with n nodes return the list of nodes that are roots of a tree of minimal height.
 I tried to solve this problem using the C++ language [Problem
 link](https://leetcode.com/problems/minimum-height-trees/)
-As February 13<sup>th</sup>, 2021:
+As February 16<sup>th</sup>, 2021:
 - [X] Find a first working solution. I wrote a brute-force solution that iterates over all the nodes taking them as the root of a tree. Then I compute de height of this tree using a dfs. Then I compute the minimum height and return the nodes that yielded this height.
 - [X] Submit solution. Got Time Limit Exceeded
-- [ ] Problem solved.
+- [X] In order to find an optimal solution, we need to think about the problem a little bit more. Once we know that there can be at most 2 centroids in a graph (ie: 2 nodes that are closest to other nodes) we can then start moving through the graph starting from the leaves going up the graph while removing edges to get the next leaves. There cannot be more than 2 centroids as if there was more then a cycle would exist and thus a tree cannot be formed.
+- [X] Submit solution. Got correct in 76 ms with 30.6 MB
+- [X] Problem solved.
