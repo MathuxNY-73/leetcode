@@ -307,5 +307,7 @@ The goal of this challenge is to determine if, given an array of integers, it is
 I tried to solve this problem using the C++ language [Problem link](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/)
 As of February 17<sup>th</sup>, 2020:
 - [X] Find a first working solution. The first solution I found is not actually working as I consider only subsets of 2 integers only. Firstly, I check that the total sum of the array is itself divisible by k. Indeed it would not be possible to partition an array of integers if the sum of those integers is not divisible by k. Then I create a map mapping numbers and their occurences and then run over this map matching the integers together.
-- [ ] Submit solution. Got wrong answer error
-- [ ] Problem solved.
+- [X] Submit solution. Got wrong answer error
+- [ ] Find a second solution. Based on the constraints of the problem it seems that we need to test all possible combination possible meaning that the complexity will soar up to O(2<sup>N</sup>). Using dynamic programming we can avoid resolving subproblems. The end solution takes O(N * 2<sup>N</sup>) and O(2<sup>N</sup>) space.
+- [X] Submit solution. Got correct in 8 ms with 9.8 MB
+- [X] Problem solved.

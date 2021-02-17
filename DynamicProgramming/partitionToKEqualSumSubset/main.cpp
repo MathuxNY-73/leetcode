@@ -41,13 +41,20 @@ static int fast_stream = []() {
 
 class Solution {
     private:
-    unordered_map<int, int> getNumberOcc(const vector<int>& nums) {
-        unordered_map<int, int> occ;
-        for(auto&& num: nums) {
-            if(occ.find(num) == occ.cend()) occ[num] = 0;
-            ++occ[num];
+    bool search(int n, const vector<int>& nums, vector<bool>& dp, vector<bool>& visited, int goal, int combi, int& target) {
+        if(!visited[combi]) {
+            visited[combi] = true;
+            int subgoal = (goal - 1) % target + 1;
+            for(int i = 0 ; i < n ; ++i) {
+                if((combi & (1 << i)) == 0 && nums[i] <= subgoal) {
+                    if(search(n, nums, dp, visited, goal - nums[i], combi | (1 << i), target)) {
+                        dp[combi] = true;
+                        break;
+                    }
+                }
+            }
         }
-        return occ;
+        return dp[combi];
     }
     public:
     bool canPartitionKSubsets(const vector<int>& nums, int k) {
@@ -59,25 +66,15 @@ class Solution {
 
         cout << " Sum is " << sum << "\n";
         if(sum % k != 0) return false;
+        int target = sum / k;
 
-        unordered_map<int,int> occ = getNumberOcc(nums);
-        int sub_sum = sum / k;
-
-        for(auto& [k,v]: occ) {
-            if(v == 0) continue;
-
-            int diff = sub_sum - k;
-            auto it = occ.find(diff);
-
-            if(diff < 0) return false;
-            else if(diff == 0) continue;
-
-            if(it == occ.cend() || it->second == 0) return false;
-            --it->second;
-            --v;
+        for(auto& num: nums) {
+            if(num > target) return false;
         }
 
-        return true;
+        vector<bool> dp(1<<n, false), visited(1 << n, false);
+        dp[(1<<n) - 1] = true;
+        return search(n, nums, dp, visited, sum, 0, target);
     }
 };
 
